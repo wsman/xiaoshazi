@@ -1,0 +1,20 @@
+{
+  "name": "xiaoshazi",
+  "version": "1.0.0",
+  "description": "HTTPS测试网站 - 443端口",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["https", "express", "443", "test-website"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0"
+  }
+}
