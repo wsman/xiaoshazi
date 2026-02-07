@@ -13,7 +13,7 @@ const generateMockData = () => [
     inputCost: 5.00,
     outputCost: 15.00,
     efficiencyScore: 92,
-    latency: 18,
+    latency: 245,
     status: 'excellent',
     trend: 'stable'
   },
@@ -23,7 +23,7 @@ const generateMockData = () => [
     inputCost: 3.00,
     outputCost: 15.00,
     efficiencyScore: 95,
-    latency: 15,
+    latency: 180,
     status: 'excellent',
     trend: 'improving'
   },
@@ -33,7 +33,7 @@ const generateMockData = () => [
     inputCost: 3.50,
     outputCost: 10.50,
     efficiencyScore: 88,
-    latency: 22,
+    latency: 420,
     status: 'good',
     trend: 'stable'
   },
@@ -43,7 +43,7 @@ const generateMockData = () => [
     inputCost: 2.00,
     outputCost: 2.00,
     efficiencyScore: 85,
-    latency: 25,
+    latency: 650,
     status: 'good',
     trend: 'worsening'
   },
@@ -53,7 +53,7 @@ const generateMockData = () => [
     inputCost: 0.59,
     outputCost: 0.79,
     efficiencyScore: 98,
-    latency: 5,
+    latency: 12,
     status: 'excellent',
     trend: 'improving'
   },
@@ -63,7 +63,7 @@ const generateMockData = () => [
     inputCost: 2.50,
     outputCost: 7.50,
     efficiencyScore: 82,
-    latency: 20,
+    latency: 380,
     status: 'average',
     trend: 'stable'
   }
@@ -71,7 +71,7 @@ const generateMockData = () => [
 
 export const CostEfficiencyDashboard = ({
   initialData,
-  refreshInterval = 5000
+  refreshInterval = 3000
 }) => {
   const [data, setData] = useState(initialData || generateMockData());
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -83,7 +83,7 @@ export const CostEfficiencyDashboard = ({
       // Simulate slight data changes
       setData(prevData => prevData.map(item => ({
         ...item,
-        latency: Math.max(1, Math.floor(item.latency + (Math.random() * 4 - 2))),
+        latency: Math.max(1, Math.floor(item.latency + (Math.random() * 20 - 10))),
         efficiencyScore: Math.min(100, Math.max(0, Math.floor(item.efficiencyScore + (Math.random() * 2 - 1))))
       })));
     }, refreshInterval);
@@ -109,55 +109,67 @@ export const CostEfficiencyDashboard = ({
   const avgLatency = data.reduce((acc, curr) => acc + curr.latency, 0) / data.length;
 
   return (
-    <div className="cost-dashboard">
-      <header className="dashboard-header">
+    <div className="cost-dashboard bg-transparent p-8">
+      <header className="dashboard-header flex justify-between items-end mb-10">
         <div>
-          <h2 className="dashboard-title">Token Efficiency Market</h2>
-          <p className="text-gray-400 text-sm mt-1">Real-time cost & performance tracking</p>
+          <div className="flex items-center gap-2 mb-1">
+             <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500">Live Infrastructure Node</span>
+          </div>
+          <h2 className="text-4xl font-black tracking-tighter text-white">Token Economic Matrix</h2>
+          <p className="text-gray-500 font-bold mt-1 uppercase tracking-tighter text-xs">Unit Cost per 1,000,000 Tokens (USD) • TTFT Latency (ms)</p>
         </div>
         <button 
-          className="refresh-button" 
+          className={`px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 ${isRefreshing ? 'bg-white/5 text-gray-500' : 'bg-white/10 text-white hover:bg-white/20 border border-white/5 hover:border-white/10 shadow-2xl'}`} 
           onClick={handleRefresh}
           disabled={isRefreshing}
         >
-          {isRefreshing ? 'Syncing...' : 'Refresh Market'}
+          {isRefreshing ? 'Re-Indexing...' : 'Refresh Market'}
         </button>
       </header>
 
       <main>
-        <div className="section-title">Model Efficiency Index</div>
-        <div className="model-grid">
+        {/* Horizontal Scroll Container for Matrix Elements */}
+        <div className="flex gap-6 mb-12 overflow-x-auto pb-12 pt-4 no-scrollbar">
           {data.map((item) => (
             <div 
               key={item.model}
-              className={`model-card ${selectedModel === item.model ? 'selected' : ''}`}
+              className={`flex-none w-[320px] transition-all duration-500 transform ${selectedModel === item.model ? 'ring-2 ring-blue-500/50 scale-[1.02]' : 'hover:scale-[1.01]'}`}
             >
               <CostEfficiencyDisplay 
                 data={item}
                 variant="detailed"
-                size="medium"
+                size="large"
                 onClick={handleModelClick}
               />
             </div>
           ))}
         </div>
 
-        <div className="metrics-section">
-          <div className="section-title">Market Metrics (Avg)</div>
-          <div className="metrics-grid">
-            <div className="metric-item">
-              <span className="metric-label">Input Cost (1M)</span>
-              <span className="metric-value">${avgInput.toFixed(2)}</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 px-1 rounded-3xl bg-white/[0.02] border border-white/5 overflow-hidden">
+            <div className="flex flex-col p-8 border-r border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent">
+              <span className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Global Avg Input</span>
+              <div className="flex items-baseline gap-1">
+                 <span className="text-3xl font-black text-white">${avgInput.toFixed(2)}</span>
+                 <span className="text-xs font-bold text-gray-600">/1M</span>
+              </div>
             </div>
-            <div className="metric-item">
-              <span className="metric-label">Output Cost (1M)</span>
-              <span className="metric-value">${avgOutput.toFixed(2)}</span>
+            
+            <div className="flex flex-col p-8 border-r border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent">
+              <span className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Global Avg Output</span>
+              <div className="flex items-baseline gap-1">
+                 <span className="text-3xl font-black text-white">${avgOutput.toFixed(2)}</span>
+                 <span className="text-xs font-bold text-gray-600">/1M</span>
+              </div>
             </div>
-            <div className="metric-item">
-              <span className="metric-label">Avg Latency</span>
-              <span className="metric-value">{avgLatency.toFixed(1)}ms</span>
+
+            <div className="flex flex-col p-8 bg-gradient-to-br from-white/[0.02] to-transparent">
+              <span className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Network Latency (Avg)</span>
+              <div className="flex items-baseline gap-1">
+                 <span className="text-3xl font-black text-blue-400">{Math.round(avgLatency)}ms</span>
+                 <span className="text-xs font-bold text-gray-600">TTFT</span>
+              </div>
             </div>
-          </div>
         </div>
       </main>
     </div>

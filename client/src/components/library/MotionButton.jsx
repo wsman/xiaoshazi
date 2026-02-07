@@ -33,6 +33,7 @@ export const MotionButton = ({
   size = 'md',
   disabled = false,
   loading = false,
+  active = false,
   onClick,
   showRipple = true,
   showHover = true,
@@ -42,29 +43,30 @@ export const MotionButton = ({
 }) => {
   const [ripples, setRipples] = useState([]);
   
-  // 基础样式类名
-  const baseClass = 'btn inline-flex items-center justify-center gap-2 font-medium border rounded-md cursor-pointer relative overflow-hidden transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500';
+  // 基础样式类名 - 优化排版和视觉
+  const baseClass = 'btn inline-flex items-center justify-center gap-2 font-semibold tracking-wide border rounded-lg cursor-pointer relative overflow-hidden transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-blue-500 select-none';
   
-  // 变体样式 - 适配 AgentStats 暗色主题
+  // 变体样式 - 适配 AgentStats 暗色主题，增强对比度和层级
   const variantClasses = {
-    primary: 'bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700',
-    secondary: 'bg-gray-700 text-white border-gray-700 hover:bg-gray-600 hover:border-gray-600',
-    ghost: 'bg-transparent text-gray-300 border-transparent hover:bg-gray-800 hover:text-white',
-    danger: 'bg-red-600 text-white border-red-600 hover:bg-red-700 hover:border-red-700',
+    primary: 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent shadow-md shadow-blue-900/20 hover:shadow-lg hover:shadow-blue-900/40 hover:from-blue-500 hover:to-indigo-500',
+    secondary: 'bg-gray-800/50 text-gray-400 border-gray-700/50 backdrop-blur-sm hover:bg-gray-700/80 hover:text-white hover:border-gray-600 hover:shadow-md',
+    ghost: 'bg-transparent text-gray-400 border-transparent hover:bg-gray-800/50 hover:text-white',
+    danger: 'bg-gradient-to-r from-red-600 to-pink-600 text-white border-transparent shadow-md shadow-red-900/20 hover:shadow-lg hover:shadow-red-900/40',
   };
   
-  // 尺寸样式
+  // 尺寸样式 - 增加内边距提升呼吸感
   const sizeClasses = {
-    sm: 'h-8 px-3 text-sm',
-    md: 'h-10 px-4 text-base',
-    lg: 'h-12 px-6 text-lg',
+    sm: 'h-8 px-4 text-xs uppercase', // 小尺寸适合紧凑布局
+    md: 'h-10 px-6 text-sm',           // 标准尺寸
+    lg: 'h-12 px-8 text-base',         // 大尺寸强调
   };
   
   // 状态样式
-  const stateClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
+  const stateClasses = disabled ? 'opacity-50 cursor-not-allowed grayscale' : '';
+  const activeClasses = active ? 'ring-2 ring-blue-500 ring-offset-1 ring-offset-gray-900' : '';
   const widthClass = fullWidth ? 'w-full' : '';
   
-  const buttonClass = `${baseClass} ${variantClasses[variant] || variantClasses.primary} ${sizeClasses[size]} ${stateClasses} ${widthClass} ${className}`.trim();
+  const buttonClass = `${baseClass} ${variantClasses[variant] || variantClasses.primary} ${sizeClasses[size]} ${stateClasses} ${activeClasses} ${widthClass} ${className}`.trim();
   
   // 处理点击事件
   const handleClick = (event) => {
