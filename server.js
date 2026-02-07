@@ -232,6 +232,38 @@ app.post('/api/echo', (req, res) => {
     });
 });
 
+// Mock DPS Data Endpoint
+app.get('/api/dps', (req, res) => {
+    const dpsData = [
+        { id: 1, rank: 1, diff: 0, spec: "Vengeance", class: "Demon Hunter", avgDps: 45200, topDps: 48500, tier: "S", runs: 1250 },
+        { id: 2, rank: 2, diff: 1, spec: "Havoc", class: "Demon Hunter", avgDps: 44100, topDps: 47200, tier: "S", runs: 1180 },
+        { id: 3, rank: 3, diff: -1, spec: "Augmentation", class: "Evoker", avgDps: 43800, topDps: 46500, tier: "S", runs: 1100 },
+        { id: 4, rank: 4, diff: 2, spec: "Frost", class: "Death Knight", avgDps: 41200, topDps: 44800, tier: "A", runs: 980 },
+        { id: 5, rank: 5, diff: -1, spec: "Unholy", class: "Death Knight", avgDps: 40500, topDps: 43500, tier: "A", runs: 950 },
+        { id: 6, rank: 6, diff: 0, spec: "Survival", class: "Hunter", avgDps: 39800, topDps: 42100, tier: "A", runs: 920 },
+        { id: 7, rank: 7, diff: -2, spec: "Outlaw", class: "Rogue", avgDps: 38500, topDps: 41500, tier: "B", runs: 850 },
+        { id: 8, rank: 8, diff: 1, spec: "Arcane", class: "Mage", avgDps: 38200, topDps: 41200, tier: "B", runs: 810 },
+        { id: 9, rank: 9, diff: 0, spec: "Fire", class: "Mage", avgDps: 37800, topDps: 40800, tier: "B", runs: 790 },
+        { id: 10, rank: 10, diff: -1, spec: "Shadow", class: "Priest", avgDps: 36500, topDps: 39500, tier: "B", runs: 750 },
+        { id: 11, rank: 11, diff: 1, spec: "Elemental", class: "Shaman", avgDps: 35500, topDps: 38800, tier: "C", runs: 680 },
+        { id: 12, rank: 12, diff: -1, spec: "Enhancement", class: "Shaman", avgDps: 34800, topDps: 38200, tier: "C", runs: 650 },
+        { id: 13, rank: 13, diff: 0, spec: "Destruction", class: "Warlock", avgDps: 34200, topDps: 37500, tier: "C", runs: 620 },
+        { id: 14, rank: 14, diff: 0, spec: "Affliction", class: "Warlock", avgDps: 33800, topDps: 36800, tier: "C", runs: 600 },
+        { id: 15, rank: 15, diff: -2, spec: "Retribution", class: "Paladin", avgDps: 32500, topDps: 35800, tier: "D", runs: 550 },
+        { id: 16, rank: 16, diff: 1, spec: "Holy", class: "Paladin", avgDps: 31500, topDps: 34500, tier: "D", runs: 520 },
+        { id: 17, rank: 17, diff: -1, spec: "Balance", class: "Druid", avgDps: 30500, topDps: 33800, tier: "D", runs: 480 },
+        { id: 18, rank: 18, diff: 0, spec: "Feral", class: "Druid", avgDps: 29500, topDps: 32500, tier: "F", runs: 420 },
+        { id: 19, rank: 19, diff: 1, spec: "Guardian", class: "Druid", avgDps: 28500, topDps: 31500, tier: "F", runs: 400 },
+        { id: 20, rank: 20, diff: -1, spec: "Brewmaster", class: "Monk", avgDps: 27500, topDps: 30500, tier: "F", runs: 380 },
+    ];
+    
+    res.json({
+        success: true,
+        data: dpsData,
+        timestamp: Date.now()
+    });
+});
+
 // 404处理
 app.use((req, res) => {
     res.status(404).json({
