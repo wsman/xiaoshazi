@@ -1,0 +1,71 @@
+/* ScrollingEconomicColumn.css */
+
+.scrolling-column-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  z-index: 5;
+}
+
+.scrolling-column-container::before,
+.scrolling-column-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 150px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scrolling-column-container::before {
+  top: 0;
+  background: linear-gradient(to bottom, #0b0e14 0%, transparent 100%);
+}
+
+.scrolling-column-container::after {
+  bottom: 0;
+  background: linear-gradient(to top, #0b0e14 0%, transparent 100%);
+}
+
+.scrolling-column-track {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-vertical linear infinite;
+}
+
+.scrolling-column-container:hover .scrolling-column-track {
+  animation-play-state: paused;
+}
+
+.scrolling-item-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.scrolling-item-wrapper:hover {
+  transform: scale(1.05);
+  z-index: 20;
+}
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Scroll through half the repeated items */
+  }
+}
+
+/* Variant styles if needed */
+.scrolling-column-container.down .scrolling-column-track {
+  /* Direction handled by animationDirection in JS */
+}
+
+/* High-end decorative border */
+.scrolling-column-container {
+  border-left: 1px solid rgba(255, 255, 255, 0.03);
+  border-right: 1px solid rgba(255, 255, 255, 0.03);
+}

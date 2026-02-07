@@ -227,17 +227,6 @@ const AgentRankings = () => {
             );
           })}
         </div>
-
-        {/* Cost Efficiency Dashboard Integration */}
-        <section className="mt-24">
-           <div className="mb-10 text-center">
-             <h2 className="text-3xl font-black tracking-tight mb-2">Economics & Efficiency</h2>
-             <p className="text-gray-500 font-medium">Comparative analysis of token costs versus output performance</p>
-           </div>
-           <div className="rounded-[2.5rem] border border-white/5 bg-white/[0.01] p-1 shadow-3xl">
-              <CostEfficiencyDashboard />
-           </div>
-        </section>
       </div>
     </RouteTransition>
   );
