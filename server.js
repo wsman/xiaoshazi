@@ -10,8 +10,9 @@ app.use(express.json()); // 解析JSON请求体
 app.use(express.urlencoded({ extended: true })); // 解析URL编码请求体
 
 // 提供静态文件服务
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client/dist')));
 
+/*
 // 基本路由 - 主页
 app.get('/', (req, res) => {
     res.send(`
@@ -175,6 +176,7 @@ app.get('/', (req, res) => {
         </html>
     `);
 });
+*/
 
 // API路由 - 动态功能
 app.get('/api/time', (req, res) => {
@@ -232,34 +234,29 @@ app.post('/api/echo', (req, res) => {
     });
 });
 
-// Mock DPS Data Endpoint
-app.get('/api/dps', (req, res) => {
-    const dpsData = [
-        { id: 1, rank: 1, diff: 0, spec: "Vengeance", class: "Demon Hunter", avgDps: 45200, topDps: 48500, tier: "S", runs: 1250 },
-        { id: 2, rank: 2, diff: 1, spec: "Havoc", class: "Demon Hunter", avgDps: 44100, topDps: 47200, tier: "S", runs: 1180 },
-        { id: 3, rank: 3, diff: -1, spec: "Augmentation", class: "Evoker", avgDps: 43800, topDps: 46500, tier: "S", runs: 1100 },
-        { id: 4, rank: 4, diff: 2, spec: "Frost", class: "Death Knight", avgDps: 41200, topDps: 44800, tier: "A", runs: 980 },
-        { id: 5, rank: 5, diff: -1, spec: "Unholy", class: "Death Knight", avgDps: 40500, topDps: 43500, tier: "A", runs: 950 },
-        { id: 6, rank: 6, diff: 0, spec: "Survival", class: "Hunter", avgDps: 39800, topDps: 42100, tier: "A", runs: 920 },
-        { id: 7, rank: 7, diff: -2, spec: "Outlaw", class: "Rogue", avgDps: 38500, topDps: 41500, tier: "B", runs: 850 },
-        { id: 8, rank: 8, diff: 1, spec: "Arcane", class: "Mage", avgDps: 38200, topDps: 41200, tier: "B", runs: 810 },
-        { id: 9, rank: 9, diff: 0, spec: "Fire", class: "Mage", avgDps: 37800, topDps: 40800, tier: "B", runs: 790 },
-        { id: 10, rank: 10, diff: -1, spec: "Shadow", class: "Priest", avgDps: 36500, topDps: 39500, tier: "B", runs: 750 },
-        { id: 11, rank: 11, diff: 1, spec: "Elemental", class: "Shaman", avgDps: 35500, topDps: 38800, tier: "C", runs: 680 },
-        { id: 12, rank: 12, diff: -1, spec: "Enhancement", class: "Shaman", avgDps: 34800, topDps: 38200, tier: "C", runs: 650 },
-        { id: 13, rank: 13, diff: 0, spec: "Destruction", class: "Warlock", avgDps: 34200, topDps: 37500, tier: "C", runs: 620 },
-        { id: 14, rank: 14, diff: 0, spec: "Affliction", class: "Warlock", avgDps: 33800, topDps: 36800, tier: "C", runs: 600 },
-        { id: 15, rank: 15, diff: -2, spec: "Retribution", class: "Paladin", avgDps: 32500, topDps: 35800, tier: "D", runs: 550 },
-        { id: 16, rank: 16, diff: 1, spec: "Holy", class: "Paladin", avgDps: 31500, topDps: 34500, tier: "D", runs: 520 },
-        { id: 17, rank: 17, diff: -1, spec: "Balance", class: "Druid", avgDps: 30500, topDps: 33800, tier: "D", runs: 480 },
-        { id: 18, rank: 18, diff: 0, spec: "Feral", class: "Druid", avgDps: 29500, topDps: 32500, tier: "F", runs: 420 },
-        { id: 19, rank: 19, diff: 1, spec: "Guardian", class: "Druid", avgDps: 28500, topDps: 31500, tier: "F", runs: 400 },
-        { id: 20, rank: 20, diff: -1, spec: "Brewmaster", class: "Monk", avgDps: 27500, topDps: 30500, tier: "F", runs: 380 },
+// Mock Agent Data Endpoint
+app.get('/api/agents', (req, res) => {
+    const agentData = [
+        { id: 1, rank: 1, diff: 0, tier: "S", provider: "Anthropic", model: "Claude 3.5 Sonnet", avgPerf: 88.5, peakPerf: 94.2, samples: 15420 },
+        { id: 2, rank: 2, diff: 1, tier: "S", provider: "OpenAI", model: "GPT-4o", avgPerf: 87.2, peakPerf: 93.5, samples: 18200 },
+        { id: 3, rank: 3, diff: -1, tier: "S", provider: "Google", model: "Gemini 1.5 Pro", avgPerf: 85.1, peakPerf: 91.8, samples: 12050 },
+        { id: 4, rank: 4, diff: 2, tier: "A", provider: "DeepSeek", model: "DeepSeek Coder V2", avgPerf: 82.4, peakPerf: 89.5, samples: 8500 },
+        { id: 5, rank: 5, diff: -1, tier: "A", provider: "OpenAI", model: "GPT-4 Turbo", avgPerf: 81.0, peakPerf: 88.2, samples: 15000 },
+        { id: 6, rank: 6, diff: 0, tier: "A", provider: "Anthropic", model: "Claude 3 Opus", avgPerf: 80.5, peakPerf: 92.0, samples: 6500 },
+        { id: 7, rank: 7, diff: -2, tier: "B", provider: "Mistral", model: "Mistral Large", avgPerf: 78.2, peakPerf: 85.4, samples: 5200 },
+        { id: 8, rank: 8, diff: 1, tier: "B", provider: "Meta", model: "Llama 3.1 405B", avgPerf: 76.5, peakPerf: 84.1, samples: 9800 },
+        { id: 9, rank: 9, diff: 0, tier: "B", provider: "Google", model: "Gemini 1.5 Flash", avgPerf: 75.0, peakPerf: 82.5, samples: 11000 },
+        { id: 10, rank: 10, diff: -1, tier: "C", provider: "Cohere", model: "Command R+", avgPerf: 72.1, peakPerf: 79.8, samples: 4100 },
+        { id: 11, rank: 11, diff: 1, tier: "C", provider: "DeepSeek", model: "DeepSeek Chat V2", avgPerf: 70.5, peakPerf: 78.2, samples: 7500 },
+        { id: 12, rank: 12, diff: -1, tier: "C", provider: "Mistral", model: "Mistral Nemo", avgPerf: 68.2, peakPerf: 75.5, samples: 4800 },
+        { id: 13, rank: 13, diff: 0, tier: "D", provider: "OpenAI", model: "GPT-3.5 Turbo", avgPerf: 65.0, peakPerf: 72.0, samples: 25000 },
+        { id: 14, rank: 14, diff: 0, tier: "D", provider: "Meta", model: "Llama 3.1 70B", avgPerf: 62.5, peakPerf: 70.5, samples: 8900 },
+        { id: 15, rank: 15, diff: -2, tier: "D", provider: "Groq", model: "Llama 3 Groq", avgPerf: 60.1, peakPerf: 68.2, samples: 3500 },
     ];
-    
+
     res.json({
         success: true,
-        data: dpsData,
+        data: agentData,
         timestamp: Date.now()
     });
 });
