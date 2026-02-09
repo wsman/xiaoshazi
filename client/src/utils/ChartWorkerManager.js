@@ -220,7 +220,7 @@ export class ChartWorkerManager {
   }
 
   // Calculate Indicators (Main Entry)
-  async calculateIndicators(data, indicators, batchSize = 50) {
+  async calculateIndicators(data, indicators, batchSize = 50, scenario = null) {
     const startTime = performance.now();
     
     try {
@@ -233,7 +233,8 @@ export class ChartWorkerManager {
         type: 'calculate_indicators',
         data,
         indicators,
-        batchSize
+        batchSize,
+        scenario
       });
 
       if (response.type === 'indicator_result' || response.type === 'batch_result') {
@@ -332,21 +333,14 @@ export class ChartWorkerManager {
 }
 
 // ============ Main Thread Fallback Functions ============
-// Simple stubs to prevent crashing when dependencies are missing
 
 export function calculateIndicatorsInMainThread(data, indicators) {
-  // Mock implementation since we don't have the actual calculation logic
-  // in this isolated environment
-  console.log('Calculating indicators in main thread (Stub)');
-  const results = {};
-  
-  indicators.forEach(ind => {
-    if (ind.visible === false) return;
-    // Return dummy data matching input length
-    results[ind.type] = data.map(d => d.close);
-  });
-
-  return results;
+  // Return the original data sorted as a fallback
+  console.log('Calculating indicators in main thread (Fallback)');
+  return [...data].sort((a, b) => b.avgPerf - a.avgPerf).map((item, index) => ({
+    ...item,
+    rank: index + 1
+  }));
 }
 
 // Default Export

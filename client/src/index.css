@@ -7,23 +7,25 @@
 }
 
 body {
-  @apply bg-gray-900 text-white;
+  @apply bg-[#f1f4f9] text-slate-900;
+  background-image: radial-gradient(#d1d9e6 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-800;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-600 rounded;
+  @apply bg-slate-300 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-500;
+  @apply bg-slate-400;
 }

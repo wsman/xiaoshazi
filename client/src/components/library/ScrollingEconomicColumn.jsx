@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CostEfficiencyDisplay from './CostEfficiencyDisplay';
 import './ScrollingEconomicColumn.css';
 
-const ScrollingEconomicColumn = ({ data, direction = 'down', speed = 20 }) => {
+const ScrollingEconomicColumn = ({ data, direction = 'down', speed = 20, width = '100%' }) => {
   // To create a seamless loop, we double the data
   const [displayData, setDisplayData] = useState([]);
 
@@ -14,7 +14,7 @@ const ScrollingEconomicColumn = ({ data, direction = 'down', speed = 20 }) => {
   }, [data]);
 
   return (
-    <div className={`scrolling-column-container ${direction}`}>
+    <div className={`scrolling-column-container ${direction} pointer-events-none`}>
       <div 
         className="scrolling-column-track"
         style={{ 
@@ -23,13 +23,19 @@ const ScrollingEconomicColumn = ({ data, direction = 'down', speed = 20 }) => {
         }}
       >
         {displayData.map((item, index) => (
-          <div key={`${item.model}-${index}`} className="scrolling-item-wrapper p-2">
-            <CostEfficiencyDisplay 
-              data={item}
-              variant="detailed"
-              size="small"
-              showDetailsOnHover={true}
-            />
+          <div 
+            key={`${item.model}-${index}`} 
+            className="scrolling-item-wrapper p-2" 
+            style={{ width: width, height: '140px' }}
+          >
+            <div className="w-full h-full">
+              <CostEfficiencyDisplay 
+                data={item}
+                variant="detailed"
+                size="small"
+                showDetailsOnHover={false}
+              />
+            </div>
           </div>
         ))}
       </div>

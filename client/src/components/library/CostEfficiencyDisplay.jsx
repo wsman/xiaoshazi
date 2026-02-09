@@ -83,17 +83,25 @@ export const CostEfficiencyDisplay = ({
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <div className="cost-header">
-              <span className="font-bold">{data.model}</span>
-              <span className="opacity-75">{data.provider}</span>
+            <div className="flex flex-col gap-1">
+              <div className="flex justify-between items-start">
+                <span className="font-black text-sm tracking-tight leading-tight max-w-[160px] truncate">{data.model}</span>
+                <span className="text-[10px] font-black px-1.5 py-0.5 rounded bg-black/5 uppercase tracking-tighter">{data.status}</span>
+              </div>
+              <span className="text-[10px] font-bold opacity-40 uppercase tracking-widest">{data.provider}</span>
             </div>
-            <div className="cost-main">
-              <span className="cost-value">{data.efficiencyScore}/100</span>
-              <span className="cost-sub">{data.latency}ms/tok</span>
+
+            <div className="flex items-center justify-between mt-auto pt-4 border-t border-black/[0.03]">
+              <div className="flex flex-col">
+                <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">Efficiency</span>
+                <span className="text-xl font-black tracking-tighter leading-none">{data.efficiencyScore}</span>
+              </div>
+              <div className="flex flex-col items-end text-right">
+                <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">Latency</span>
+                <span className="text-sm font-bold tracking-tighter leading-none">{data.latency}ms</span>
+              </div>
             </div>
-            <div className="text-xs opacity-60 mt-1">
-              In: ${data.inputCost} | Out: ${data.outputCost}
-            </div>
+            
             {isHovering && showDetailsOnHover && (
               <div className="cost-tooltip">
                 <div className="tooltip-row">

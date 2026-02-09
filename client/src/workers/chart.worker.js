@@ -21,12 +21,8 @@ self.onmessage = (event) => {
     // For AgentStats, 'calculate_indicators' is repurposed for 'filter_and_sort'
     let processedData = [...data];
 
-    // Filter by scenario if provided
-    if (scenario && scenario !== 'All Scenarios') {
-        processedData = processedData.filter(item => 
-            item.scenarios && item.scenarios.includes(scenario.toLowerCase())
-        );
-    }
+    // Note: Backend server.js already handles scenario filtering via query params.
+    // This worker handles sorting and ranking based on the filtered set.
 
     // Sort by avgPerf descending
     processedData.sort((a, b) => b.avgPerf - a.avgPerf);

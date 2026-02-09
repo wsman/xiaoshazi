@@ -1,9 +1,8 @@
 /* ScrollingEconomicColumn.css */
 
 .scrolling-column-container {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  position: relative;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background: transparent;
@@ -16,38 +15,39 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 150px;
-  z-index: 10;
+  height: 100px;
+  z-index: 15;
   pointer-events: none;
 }
 
 .scrolling-column-container::before {
   top: 0;
-  background: linear-gradient(to bottom, #0b0e14 0%, transparent 100%);
+  background: linear-gradient(to bottom, #f1f4f9 0%, transparent 100%);
 }
 
 .scrolling-column-container::after {
   bottom: 0;
-  background: linear-gradient(to top, #0b0e14 0%, transparent 100%);
+  background: linear-gradient(to top, #f1f4f9 0%, transparent 100%);
 }
 
 .scrolling-column-track {
   display: flex;
   flex-direction: column;
   animation: scroll-vertical linear infinite;
-}
-
-.scrolling-column-container:hover .scrolling-column-track {
-  animation-play-state: paused;
+  will-change: transform;
 }
 
 .scrolling-item-wrapper {
-  transition: transform 0.3s ease;
+  opacity: 0.85;
+  filter: grayscale(0.2) contrast(0.95);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.scrolling-item-wrapper:hover {
-  transform: scale(1.05);
-  z-index: 20;
+/* Decorative glass effect for the sticky headers in sidebars */
+.sticky-sidebar-header {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03) !important;
 }
 
 @keyframes scroll-vertical {
@@ -55,17 +55,19 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-50%); /* Scroll through half the repeated items */
+    transform: translateY(-50%);
   }
 }
 
-/* Variant styles if needed */
-.scrolling-column-container.down .scrolling-column-track {
-  /* Direction handled by animationDirection in JS */
+.scrolling-column-container {
+  border-left: 1px solid rgba(0, 0, 0, 0.02);
+  border-right: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-/* High-end decorative border */
-.scrolling-column-container {
-  border-left: 1px solid rgba(255, 255, 255, 0.03);
-  border-right: 1px solid rgba(255, 255, 255, 0.03);
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

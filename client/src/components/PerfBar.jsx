@@ -6,7 +6,7 @@ const PerfBar = ({ avgPerf, peakPerf, maxPerf, color }) => {
   const peakWidth = (peakPerf / maxPerf) * 100;
 
   return (
-    <div className="w-full relative h-6 bg-gray-800 rounded-full overflow-hidden flex items-center">
+    <div className="w-full relative h-6 bg-slate-200 rounded-full overflow-hidden flex items-center">
       {/* Peak Capability Layer (Background/Faded) */}
       <div
         className="absolute h-full opacity-30"
