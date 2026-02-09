@@ -3,6 +3,7 @@
 // Refactored for Token Cost Efficiency Display
 
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './CostEfficiencyDisplay.css';
 
 export const CostEfficiencyDisplay = ({
@@ -12,6 +13,7 @@ export const CostEfficiencyDisplay = ({
   variant = 'standard',
   onClick,
 }) => {
+  const { t } = useTranslation();
   const [flash, setFlash] = useState(null);
   const prevDataRef = useRef(data);
   const [isHovering, setIsHovering] = useState(false);
@@ -71,7 +73,7 @@ export const CostEfficiencyDisplay = ({
             onMouseLeave={() => setIsHovering(false)}
           >
             <span className="cost-value">{data.efficiencyScore}</span>
-            <span className="cost-sub">Eff.</span>
+            <span className="cost-sub">{t('efficiency.eff')}</span>
           </div>
         );
 
@@ -86,18 +88,18 @@ export const CostEfficiencyDisplay = ({
             <div className="flex flex-col gap-1">
               <div className="flex justify-between items-start">
                 <span className="font-black text-sm tracking-tight leading-tight max-w-[160px] truncate">{data.model}</span>
-                <span className="text-[10px] font-black px-1.5 py-0.5 rounded bg-black/5 uppercase tracking-tighter">{data.status}</span>
+                <span className="text-[10px] font-black px-1.5 py-0.5 rounded bg-black/5 uppercase tracking-tighter">{t(`efficiency.status.${data.status}`)}</span>
               </div>
               <span className="text-[10px] font-bold opacity-40 uppercase tracking-widest">{data.provider}</span>
             </div>
 
             <div className="flex items-center justify-between mt-auto pt-4 border-t border-black/[0.03]">
               <div className="flex flex-col">
-                <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">Efficiency</span>
+                <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">{t('efficiency.efficiency')}</span>
                 <span className="text-xl font-black tracking-tighter leading-none">{data.efficiencyScore}</span>
               </div>
               <div className="flex flex-col items-end text-right">
-                <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">Latency</span>
+                <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">{t('efficiency.latency')}</span>
                 <span className="text-sm font-bold tracking-tighter leading-none">{data.latency}ms</span>
               </div>
             </div>
@@ -105,15 +107,15 @@ export const CostEfficiencyDisplay = ({
             {isHovering && showDetailsOnHover && (
               <div className="cost-tooltip">
                 <div className="tooltip-row">
-                  <span>Input (1M):</span>
+                  <span>{t('efficiency.input')}:</span>
                   <span className="font-mono">${data.inputCost.toFixed(2)}</span>
                 </div>
                 <div className="tooltip-row">
-                  <span>Output (1M):</span>
+                  <span>{t('efficiency.output')}:</span>
                   <span className="font-mono">${data.outputCost.toFixed(2)}</span>
                 </div>
                 <div className="tooltip-row">
-                  <span>Latency:</span>
+                  <span>{t('efficiency.latency')}:</span>
                   <span className="font-mono">{data.latency}ms</span>
                 </div>
               </div>
@@ -135,16 +137,16 @@ export const CostEfficiencyDisplay = ({
             {isHovering && showDetailsOnHover && (
               <div className="cost-tooltip">
                 <div className="tooltip-row">
-                  <span>Provider:</span>
+                  <span>{t('efficiency.provider')}:</span>
                   <span>{data.provider}</span>
                 </div>
                 <div className="tooltip-row">
-                  <span>Model:</span>
+                  <span>{t('efficiency.model')}:</span>
                   <span>{data.model}</span>
                 </div>
                 <div className="tooltip-row">
-                  <span>Status:</span>
-                  <span className="capitalize">{data.status}</span>
+                  <span>{t('efficiency.status_label')}:</span>
+                  <span className="capitalize">{t(`efficiency.status.${data.status}`)}</span>
                 </div>
               </div>
             )}

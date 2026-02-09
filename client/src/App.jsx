@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { Suspense, lazy } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import AgentRankings from './components/AgentRankings';
 import ScrollingEconomicColumn from './components/library/ScrollingEconomicColumn';
 import './components/library/RouteTransition.css';
+
+// Lazy load EntropyDashboard
+const EntropyDashboard = lazy(() => import('./components/EntropyDashboard'));
 
 // Mock Data for Sidebars (reused from CostEfficiencyDashboard)
 const sidebarData = [
@@ -16,6 +21,15 @@ const sidebarData = [
 ];
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    // 使用 resolvedLanguage 获取当前真正被解析的语言，如果没有则回退到 language 或 'en'
+    const currentLang = i18n.resolvedLanguage || i18n.language || 'en';
+    const nextLang = currentLang.startsWith('en') ? 'zh' : 'en';
+    i18n.changeLanguage(nextLang);
+  };
+
   return (
     <div className="h-screen w-screen overflow-hidden bg-[#f1f4f9] text-slate-900 font-sans selection:bg-blue-200">
       {/* Three Column Layout with Sidebars */}
@@ -24,7 +38,7 @@ function App() {
         {/* Left Sidebar - Scrolling Down */}
         <aside className="hidden xl:block w-[300px] shrink-0 border-r border-slate-300/50 bg-[#f8fafc] h-full relative overflow-hidden shadow-[10px_0_30px_-15px_rgba(0,0,0,0.05)] z-20">
           <div className="sticky top-0 p-3 z-30 sticky-sidebar-header border-b border-slate-200">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-blue-600/80">Global Economy</h3>
+            <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-blue-600/80">{t('app.global_economy')}</h3>
           </div>
           <div className="h-[calc(100vh-45px)] overflow-hidden">
             <ScrollingEconomicColumn data={sidebarData} direction="down" speed={60} width="280px" />
@@ -43,33 +57,44 @@ function App() {
 
             <div className="container mx-auto px-8 relative z-10 flex items-center justify-between gap-6">
               <div className="flex items-center gap-6">
-                <h1 className="text-2xl font-black tracking-[calc(-0.05em)] text-slate-900">
+                <h1 className="text-2xl font-black tracking-[calc(-0.05em)] text-slate-900 shrink-0">
                   AgentStats<span className="text-blue-600">.</span>
                 </h1>
                 
-                <div className="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-50 border border-blue-100/50 text-blue-600 text-[8px] font-black uppercase tracking-widest animate-fade-in">
-                  <span className="relative flex h-1 w-1">
+                <div className="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 min-w-[100px] justify-center rounded-full bg-blue-50 border border-blue-100/50 text-blue-600 text-[8px] font-black uppercase tracking-widest animate-fade-in">
+                  <span className="relative flex h-1 w-1 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-1 w-1 bg-blue-600"></span>
                   </span>
-                  System Active
+                  <span className="truncate">{t('app.system_active')}</span>
                 </div>
               </div>
               
               <div className="flex items-center gap-10">
-                <div className="flex flex-col items-end text-right">
-                  <span className="text-sm font-black text-slate-900 leading-none tabular-nums">154</span>
-                  <span className="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-black mt-1">Models</span>
-                </div>
-                <div className="w-[1px] h-5 bg-slate-100"></div>
-                <div className="flex flex-col items-end text-right">
-                  <span className="text-sm font-black text-slate-900 leading-none tabular-nums">1.2M</span>
-                  <span className="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-black mt-1">Queries</span>
-                </div>
-                <div className="w-[1px] h-5 bg-slate-100"></div>
-                <div className="flex flex-col items-end text-right">
-                  <span className="text-sm font-black text-blue-600 leading-none tracking-tighter tabular-nums">Realtime</span>
-                  <span className="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-black mt-1">Status</span>
+                {/* Language Toggle */}
+                <button 
+                  onClick={toggleLanguage}
+                  className="flex items-center justify-center w-8 h-8 shrink-0 rounded-full border border-slate-200 bg-white hover:bg-slate-50 transition-colors shadow-sm active:scale-95 group"
+                  title="Toggle Language"
+                >
+                  <span className="text-[10px] font-black text-slate-600 group-hover:text-blue-600">
+                    {t('common.language')}
+                  </span>
+                </button>
+
+                <div className="grid grid-cols-3 divide-x divide-slate-100 shrink-0">
+                  <div className="flex flex-col items-end text-right pr-5 w-32">
+                    <span className="text-sm font-black text-slate-900 leading-none tabular-nums">154</span>
+                    <span className="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-black mt-1 truncate w-full">{t('app.models')}</span>
+                  </div>
+                  <div className="flex flex-col items-end text-right px-5 w-32">
+                    <span className="text-sm font-black text-slate-900 leading-none tabular-nums">1.2M</span>
+                    <span className="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-black mt-1 truncate w-full">{t('app.queries')}</span>
+                  </div>
+                  <div className="flex flex-col items-end text-right pl-5 w-32">
+                    <span className="text-sm font-black text-blue-600 leading-none tracking-tighter tabular-nums truncate w-full">{t('app.realtime')}</span>
+                    <span className="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-black mt-1 truncate w-full">{t('app.status')}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -77,27 +102,42 @@ function App() {
 
           {/* Scrollable Model Area */}
           <div className="flex-1 overflow-y-auto no-scrollbar scroll-smooth bg-[#fcfdfe]">
-            <div className="container mx-auto py-6 pb-6">
-              <main className="px-4">
-                <AgentRankings />
-              </main>
+            <Routes>
+              <Route path="/" element={
+                <div className="container mx-auto py-6 pb-6">
+                  <main className="px-4">
+                    <AgentRankings />
+                  </main>
 
-              <footer className="mt-6 py-4 border-t border-slate-50 text-center text-slate-300 text-[10px] px-6">
-                <div className="flex justify-center gap-8 mb-2">
-                  <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Protocol</a>
-                  <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Endpoint</a>
-                  <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Matrix</a>
+                  <footer className="mt-6 py-4 border-t border-slate-50 text-center text-slate-300 text-[10px] px-6">
+                    <div className="flex justify-center gap-8 mb-2">
+                      <Link to="/admin/dashboard" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Dashboard</Link>
+                      <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">{t('app.protocol')}</a>
+                      <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">{t('app.endpoint')}</a>
+                      <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">{t('app.matrix')}</a>
+                    </div>
+                    <p className="mt-1 opacity-30 uppercase tracking-[0.3em] font-black">{t('app.copyright')}</p>
+                  </footer>
                 </div>
-                <p className="mt-1 opacity-30 uppercase tracking-[0.3em] font-black">© 2026 AgentStats • Tech Standard</p>
-              </footer>
-            </div>
+              } />
+              
+              <Route path="/admin/dashboard" element={
+                <Suspense fallback={
+                  <div className="flex items-center justify-center h-full bg-[#f1f4f9]">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                  </div>
+                }>
+                  <EntropyDashboard />
+                </Suspense>
+              } />
+            </Routes>
           </div>
         </div>
 
         {/* Right Sidebar - Scrolling Up */}
-        <aside className="hidden xl:block w-[300px] shrink-0 border-l border-slate-300/50 bg-[#f8fafc] h-full relative overflow-hidden shadow-[-10px_0_30px_-15px_rgba(0,0,0,0.05)] z-20">
+        <aside className="hidden xl:block w-[300px] shrink-0 border-l border-slate-300/50 bg-[#f8fafc] h-full relative overflow-hidden shadow-[-10px_0_30_30px_-15px_rgba(0,0,0,0.05)] z-20">
           <div className="sticky top-0 p-3 z-30 text-right sticky-sidebar-header border-b border-slate-200">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-purple-600/80">Efficiency Matrix</h3>
+            <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-purple-600/80">{t('app.efficiency_matrix')}</h3>
           </div>
           <div className="h-[calc(100vh-45px)] overflow-hidden">
             <ScrollingEconomicColumn data={sidebarData} direction="up" speed={55} width="280px" />

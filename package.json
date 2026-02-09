@@ -8,13 +8,20 @@
     "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["https", "express", "443", "test-website"],
+  "keywords": [
+    "https",
+    "express",
+    "443",
+    "test-website"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "compression": "^1.8.1",
     "express": "^5.2.1",
     "fs": "^0.0.1-security",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "redis": "^5.10.0"
   }
 }

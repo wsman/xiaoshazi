@@ -1,0 +1,21 @@
+{
+  "provider": "OpenAI",
+  "models": [
+    {
+      "id": "gpt-5.3",
+      "model": "GPT-5.3",
+      "specs": {
+        "context": "5M",
+        "swe_bench": "72%",
+        "mmlu": "96.5%",
+        "params": "Unknown (MoE)"
+      },
+      "pricing": {
+        "input": "$10/1M",
+        "output": "$30/1M"
+      },
+      "url": "https://openai.com/gpt-5-3",
+      "avgPerf": 99.2
+    }
+  ]
+}

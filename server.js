@@ -1,13 +1,89 @@
 const express = require('express');
 const http = require('http');
 const path = require('path');
+const redis = require('redis');
+const compression = require('compression');
+const os = require('os');
 
 // 创建Express应用
 const app = express();
 
+// Redis Client Configuration
+const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
+let redisClient = null;
+let isRedisAvailable = false;
+
+// Mock Agent Data
+const MOCK_AGENTS = [
+    { id: 1, rank: 1, diff: 0, tier: "S", provider: "Anthropic", model: "Claude 3.5 Sonnet", avgPerf: 88.5, peakPerf: 94.2, samples: 15420, scenarios: ["coding", "reasoning", "creative"] },
+    { id: 2, rank: 2, diff: 1, tier: "S", provider: "OpenAI", model: "GPT-4o", avgPerf: 87.2, peakPerf: 93.5, samples: 18200, scenarios: ["coding", "reasoning", "creative"] },
+    { id: 3, rank: 3, diff: -1, tier: "S", provider: "Google", model: "Gemini 1.5 Pro", avgPerf: 85.1, peakPerf: 91.8, samples: 12050, scenarios: ["coding", "reasoning", "creative"] },
+    { id: 4, rank: 4, diff: 2, tier: "A", provider: "DeepSeek", model: "DeepSeek Coder V2", avgPerf: 82.4, peakPerf: 89.5, samples: 8500, scenarios: ["coding"] },
+    { id: 5, rank: 5, diff: -1, tier: "A", provider: "OpenAI", model: "GPT-4 Turbo", avgPerf: 81.0, peakPerf: 88.2, samples: 15000, scenarios: ["coding", "reasoning"] },
+    { id: 6, rank: 6, diff: 0, tier: "A", provider: "Anthropic", model: "Claude 3 Opus", avgPerf: 80.5, peakPerf: 92.0, samples: 6500, scenarios: ["reasoning", "creative"] },
+    { id: 7, rank: 7, diff: -2, tier: "B", provider: "Mistral", model: "Mistral Large", avgPerf: 78.2, peakPerf: 85.4, samples: 5200, scenarios: ["creative"] },
+    { id: 8, rank: 8, diff: 1, tier: "B", provider: "Meta", model: "Llama 3.1 405B", avgPerf: 76.5, peakPerf: 84.1, samples: 9800, scenarios: ["reasoning", "coding"] },
+    { id: 9, rank: 9, diff: 0, tier: "B", provider: "Google", model: "Gemini 1.5 Flash", avgPerf: 75.0, peakPerf: 82.5, samples: 11000, scenarios: ["coding"] },
+    { id: 10, rank: 10, diff: -1, tier: "C", provider: "Cohere", model: "Command R+", avgPerf: 72.1, peakPerf: 79.8, samples: 4100, scenarios: ["creative", "reasoning"] },
+    { id: 11, rank: 11, diff: 1, tier: "C", provider: "DeepSeek", model: "DeepSeek Chat V2", avgPerf: 70.5, peakPerf: 78.2, samples: 7500, scenarios: ["creative"] },
+    { id: 12, rank: 12, diff: -1, tier: "C", provider: "Mistral", model: "Mistral Nemo", avgPerf: 68.2, peakPerf: 75.5, samples: 4800, scenarios: ["coding"] },
+    { id: 13, rank: 13, diff: 0, tier: "D", provider: "OpenAI", model: "GPT-3.5 Turbo", avgPerf: 65.0, peakPerf: 72.0, samples: 25000, scenarios: ["creative"] },
+    { id: 14, rank: 14, diff: 0, tier: "D", provider: "Meta", model: "Llama 3.1 70B", avgPerf: 62.5, peakPerf: 70.5, samples: 8900, scenarios: ["coding"] },
+    { id: 15, rank: 15, diff: -2, tier: "D", provider: "Groq", model: "Llama 3 Groq", avgPerf: 60.1, peakPerf: 68.2, samples: 3500, scenarios: ["reasoning"] },
+];
+
+async function initRedis() {
+    try {
+        redisClient = redis.createClient({ 
+            url: REDIS_URL,
+            socket: {
+                reconnectStrategy: (retries) => {
+                    if (retries > 2) {
+                        console.warn('⚠️ Redis connection failed after 3 retries, disabling Redis.');
+                        return new Error('Redis connection failed');
+                    }
+                    return 500; // retry after 500ms
+                }
+            }
+        });
+        
+        redisClient.on('error', (err) => {
+            // Only log if it was previously available to avoid spamming
+            if (isRedisAvailable) {
+                console.warn('⚠️ Redis Error (Fallback to memory active):', err.message);
+            }
+            isRedisAvailable = false;
+        });
+
+        await redisClient.connect();
+        console.log('✅ Redis connected successfully');
+        isRedisAvailable = true;
+        
+        // Seed data if empty
+        const count = await redisClient.exists('agent:rankings');
+        if (count === 0) {
+            console.log('🌱 Seeding Redis with mock data...');
+            await redisClient.set('agent:rankings', JSON.stringify(MOCK_AGENTS));
+            console.log('✅ Mock data seeded to Redis');
+        }
+    } catch (error) {
+        console.warn('❌ Redis connection error, falling back to in-memory store:', error.message);
+        isRedisAvailable = false;
+    }
+}
+
 // 中间件配置
+app.use(compression()); // 启用Gzip压缩
 app.use(express.json()); // 解析JSON请求体
 app.use(express.urlencoded({ extended: true })); // 解析URL编码请求体
+
+// CORS Middleware
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+});
 
 // 提供静态文件服务
 app.use(express.static(path.join(__dirname, 'client/dist')));
@@ -194,6 +270,8 @@ app.get('/api/health', (req, res) => {
         status: 'healthy',
         uptime: process.uptime(),
         memory: process.memoryUsage(),
+        cpu: process.cpuUsage(),
+        load: os.loadavg(),
         timestamp: Date.now()
     });
 });
@@ -235,46 +313,83 @@ app.post('/api/echo', (req, res) => {
 });
 
 // Mock Agent Data Endpoint with Scenario Support
-app.get('/api/agents', (req, res) => {
+app.get('/api/agents', async (req, res) => {
     const { scenario } = req.query;
     
-    let agentData = [
-        { id: 1, rank: 1, diff: 0, tier: "S", provider: "Anthropic", model: "Claude 3.5 Sonnet", avgPerf: 88.5, peakPerf: 94.2, samples: 15420, scenarios: ["coding", "reasoning", "creative"] },
-        { id: 2, rank: 2, diff: 1, tier: "S", provider: "OpenAI", model: "GPT-4o", avgPerf: 87.2, peakPerf: 93.5, samples: 18200, scenarios: ["coding", "reasoning", "creative"] },
-        { id: 3, rank: 3, diff: -1, tier: "S", provider: "Google", model: "Gemini 1.5 Pro", avgPerf: 85.1, peakPerf: 91.8, samples: 12050, scenarios: ["coding", "reasoning", "creative"] },
-        { id: 4, rank: 4, diff: 2, tier: "A", provider: "DeepSeek", model: "DeepSeek Coder V2", avgPerf: 82.4, peakPerf: 89.5, samples: 8500, scenarios: ["coding"] },
-        { id: 5, rank: 5, diff: -1, tier: "A", provider: "OpenAI", model: "GPT-4 Turbo", avgPerf: 81.0, peakPerf: 88.2, samples: 15000, scenarios: ["coding", "reasoning"] },
-        { id: 6, rank: 6, diff: 0, tier: "A", provider: "Anthropic", model: "Claude 3 Opus", avgPerf: 80.5, peakPerf: 92.0, samples: 6500, scenarios: ["reasoning", "creative"] },
-        { id: 7, rank: 7, diff: -2, tier: "B", provider: "Mistral", model: "Mistral Large", avgPerf: 78.2, peakPerf: 85.4, samples: 5200, scenarios: ["creative"] },
-        { id: 8, rank: 8, diff: 1, tier: "B", provider: "Meta", model: "Llama 3.1 405B", avgPerf: 76.5, peakPerf: 84.1, samples: 9800, scenarios: ["reasoning", "coding"] },
-        { id: 9, rank: 9, diff: 0, tier: "B", provider: "Google", model: "Gemini 1.5 Flash", avgPerf: 75.0, peakPerf: 82.5, samples: 11000, scenarios: ["coding"] },
-        { id: 10, rank: 10, diff: -1, tier: "C", provider: "Cohere", model: "Command R+", avgPerf: 72.1, peakPerf: 79.8, samples: 4100, scenarios: ["creative", "reasoning"] },
-        { id: 11, rank: 11, diff: 1, tier: "C", provider: "DeepSeek", model: "DeepSeek Chat V2", avgPerf: 70.5, peakPerf: 78.2, samples: 7500, scenarios: ["creative"] },
-        { id: 12, rank: 12, diff: -1, tier: "C", provider: "Mistral", model: "Mistral Nemo", avgPerf: 68.2, peakPerf: 75.5, samples: 4800, scenarios: ["coding"] },
-        { id: 13, rank: 13, diff: 0, tier: "D", provider: "OpenAI", model: "GPT-3.5 Turbo", avgPerf: 65.0, peakPerf: 72.0, samples: 25000, scenarios: ["creative"] },
-        { id: 14, rank: 14, diff: 0, tier: "D", provider: "Meta", model: "Llama 3.1 70B", avgPerf: 62.5, peakPerf: 70.5, samples: 8900, scenarios: ["coding"] },
-        { id: 15, rank: 15, diff: -2, tier: "D", provider: "Groq", model: "Llama 3 Groq", avgPerf: 60.1, peakPerf: 68.2, samples: 3500, scenarios: ["reasoning"] },
-    ];
+    // Configure proper Cache-Control headers
+    res.set('Cache-Control', 'public, max-age=60, s-maxage=60');
+
+    let agentData = [];
+    let source = 'memory';
+
+    try {
+        if (isRedisAvailable) {
+            // New Mission Strategy: leaderboard:overall (ZSet) -> agent:metadata:{id} (Hash)
+            const ids = await redisClient.zRange('leaderboard:overall', 0, -1, { REV: true });
+            
+            if (ids && ids.length > 0) {
+                // Fetch all details using a pipeline
+                const pipeline = redisClient.multi();
+                ids.forEach(id => {
+                    pipeline.hGetAll(`agent:metadata:${id}`);
+                });
+                const rawDetails = await pipeline.exec();
+                
+                // Process and format data
+                agentData = rawDetails.map((details, index) => {
+                    return {
+                        ...details,
+                        rank: index + 1,
+                        avgPerf: parseFloat(details.avgPerf || details.overall_score || 0),
+                        // Scenarios might be stored as comma-separated string or array
+                        scenarios: details.scenarios ? details.scenarios.split(',') : ["reasoning", "general"]
+                    };
+                });
+                source = 'redis';
+            } else {
+                // Fallback to old key or file
+                const cachedData = await redisClient.get('agent:rankings');
+                if (cachedData) {
+                    agentData = JSON.parse(cachedData);
+                    source = 'redis-legacy';
+                } else {
+                    source = 'file-fallback';
+                }
+            }
+        }
+        
+        // If Redis failed or was empty, use file fallback
+        if (agentData.length === 0) {
+            const fs = require('fs');
+            const path = require('path');
+            const filePath = path.join(__dirname, 'server/data/rankings.json');
+            if (fs.existsSync(filePath)) {
+                agentData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                if (source === 'memory') source = 'file';
+            } else {
+                agentData = MOCK_AGENTS;
+            }
+        }
+    } catch (error) {
+        console.error('Data retrieval error (falling back to memory):', error.message);
+        agentData = MOCK_AGENTS;
+    }
 
     if (scenario && scenario !== 'all') {
-        agentData = agentData.filter(a => a.scenarios.includes(scenario));
+        agentData = agentData.filter(a => a.scenarios && a.scenarios.includes(scenario));
     }
 
     res.json({
         success: true,
         data: agentData,
-        timestamp: Date.now()
+        timestamp: Date.now(),
+        source: source
     });
 });
 
-// 404处理
-app.use((req, res) => {
-    res.status(404).json({
-        error: '未找到路由',
-        path: req.path,
-        method: req.method,
-        timestamp: Date.now()
-    });
+// Catch-all route for SPA
+app.get(/.*/, (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
 });
 
 // 错误处理中间件
@@ -291,17 +406,21 @@ app.use((err, req, res, next) => {
 const PORT = 14514;
 const server = http.createServer(app);
 
-// 启动服务器
-server.listen(PORT, () => {
-    console.log(`✅ HTTP服务器已在端口 ${PORT} 启动`);
-    console.log(`🌐 访问地址: http://localhost:${PORT}`);
-    console.log(`🔗 通过IIS反向代理访问: https://localhost`);
-    console.log(`📊 API端点示例:`);
-    console.log(`   - GET http://localhost:${PORT}/api/time`);
-    console.log(`   - GET http://localhost:${PORT}/api/health`);
-    console.log(`   - GET http://localhost:${PORT}/api/users`);
-    console.log(`   - POST http://localhost:${PORT}/api/echo`);
-});
+// 初始化Redis并启动服务器
+async function startServer() {
+    await initRedis();
+    
+    server.listen(PORT, () => {
+        console.log(`✅ Backend Server started on port ${PORT}`);
+        console.log(`🌐 Local address: http://localhost:${PORT}`);
+        console.log(`📊 API Endpoints:`);
+        console.log(`   - GET http://localhost:${PORT}/api/time`);
+        console.log(`   - GET http://localhost:${PORT}/api/health`);
+        console.log(`   - GET http://localhost:${PORT}/api/agents`);
+    });
+}
+
+startServer();
 
 // 优雅关闭
 process.on('SIGTERM', () => {

@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "collection_date": "2026-02-08",
+    "source": "MOFA Intelligence Collection",
+    "currency_rate_cny_to_usd": 7.2,
+    "sources": [
+      "github.com/QwenLM/Qwen-Agent",
+      "qwenlm.github.io/blog/qwen-agent-2405",
+      "huggingface.co/Qwen",
+      "lmsys/chatbot-arena"
+    ]
+  },
+  "provider": {
+    "id": "alibaba_cloud",
+    "name": "Alibaba Cloud (阿里云)",
+    "brand_name": "Qwen (通义千问)",
+    "headquarters": "China",
+    "api_gateway": "https://dashscope.console.aliyun.com/"
+  },
+  "models": {
+    "Qwen2.5-72B-Instruct": {
+      "id": "Qwen2.5-72B-Instruct",
+      "cn_name": "通义千问2.5-720亿参数",
+      "status": "open_source",
+      "type": "text_generation",
+      "parameters_billions": 72,
+      "context_window_tokens": 131072,
+      "max_output_tokens": 8192,
+      "license": "Qwen License",
+      "benchmark_performance": {
+        "MMLU": null,
+        "C-Eval": null,
+        "GSM8K": null,
+        "HumanEval": null,
+        "BBH": null
+      },
+      "pricing": {
+        "input_per_million_tokens_usd": 0,
+        "output_per_million_tokens_usd": 0,
+        "notes": "Open source model - self-hosted only"
+      },
+      "deployment_options": ["self_hosted", "HuggingFace", "ModelScope"],
+      "_meta": {
+        "elo_rating": 1155,
+        "quality_score": "high",
+        "last_updated": "2026-02-08"
+      }
+    },
+    "Qwen2.5-32B-Instruct": {
+      "id": "Qwen2.5-32B-Instruct",
+      "cn_name": "通义千问2.5-320亿参数",
+      "status": "open_source",
+      "type": "text_generation",
+      "parameters_billions": 32,
+      "context_window_tokens": 131072,
+      "max_output_tokens": 8192,
+      "license": "Qwen License",
+      "benchmark_performance": {
+        "MMLU": null,
+        "C-Eval": null,
+        "GSM8K": null,
+        "HumanEval": null,
+        "BBH": null
+      },
+      "pricing": {
+        "input_per_million_tokens_usd": 0,
+        "output_per_million_tokens_usd": 0,
+        "notes": "Open source model - self-hosted only"
+      },
+      "deployment_options": ["self_hosted", "HuggingFace", "ModelScope"],
+      "_meta": {
+        "elo_rating": null,
+        "quality_score": "medium",
+        "last_updated": "2026-02-08"
+      }
+    },
+    "Qwen2.5-Max": {
+      "id": "Qwen2.5-Max",
+      "cn_name": "通义千问2.5-Max",
+      "status": "api_only",
+      "type": "text_generation",
+      "context_window_tokens": 131072,
+      "max_output_tokens": 16384,
+      "license": "proprietary",
+      "benchmark_performance": {
+        "MMLU": null,
+        "C-Eval": null,
+        "GSM8K": null,
+        "HumanEval": null,
+        "BBH": null
+      },
+      "pricing": {
+        "input_per_million_tokens_usd": 0.20,
+        "output_per_million_tokens_usd": 0.40,
+        "input_per_million_tokens_cny": 1.44,
+        "output_per_million_tokens_cny": 2.88,
+        "notes": "Premium tier model"
+      },
+      "deployment_options": ["aliyun_dashscope_api"],
+      "_meta": {
+        "elo_rating": 1205,
+        "quality_score": "high",
+        "last_updated": "2026-02-08"
+      }
+    },
+    "Qwen-Max": {
+      "id": "Qwen-Max",
+      "cn_name": "通义千问Max",
+      "status": "api_only",
+      "type": "text_generation",
+      "context_window_tokens": 128000,
+      "max_output_tokens": 6000,
+      "license": "proprietary",
+      "benchmark_performance": {
+        "MMLU": null,
+        "C-Eval": null,
+        "GSM8K": null,
+        "HumanEval": null,
+        "BBH": null
+      },
+      "pricing": {
+        "input_per_million_tokens_usd": 1.25,
+        "output_per_million_tokens_usd": 2.50,
+        "input_per_million_tokens_cny": 9.00,
+        "output_per_million_tokens_cny": 18.00,
+        "notes": "Premium closed-source model"
+      },
+      "deployment_options": ["aliyun_dashscope_api"],
+      "_meta": {
+        "elo_rating": null,
+        "quality_score": "high",
+        "last_updated": "2026-02-08"
+      }
+    },
+    "Qwen-Plus": {
+      "id": "Qwen-Plus",
+      "cn_name": "通义千问Plus",
+      "status": "api_only",
+      "type": "text_generation",
+      "context_window_tokens": 128000,
+      "max_output_tokens": 6000,
+      "license": "proprietary",
+      "benchmark_performance": {
+        "MMLU": null,
+        "C-Eval": null,
+        "GSM8K": null,
+        "HumanEval": null,
+        "BBH": null
+      },
+      "pricing": {
+        "input_per_million_tokens_usd": 0.35,
+        "output_per_million_tokens_usd": 0.70,
+        "input_per_million_tokens_cny": 2.52,
+        "output_per_million_tokens_cny": 5.04,
+        "notes": "Mid-tier commercial model"
+      },
+      "deployment_options": ["aliyun_dashscope_api"],
+      "_meta": {
+        "elo_rating": null,
+        "quality_score": "medium",
+        "last_updated": "2026-02-08"
+      }
+    },
+    "QwQ-32B-Preview": {
+      "id": "QwQ-32B-Preview",
+      "cn_name": "QwQ-32B-Preview",
+      "status": "open_source",
+      "type": "reasoning",
+      "parameters_billions": 32,
+      "_meta": {
+        "elo_rating": 1250,
+        "quality_score": "high",
+        "last_updated": "2026-02-08"
+      }
+    },
+    "Qwen2.5-Coder-32B-Instruct": {
+      "id": "Qwen2.5-Coder-32B-Instruct",
+      "cn_name": "Qwen2.5-Coder-32B",
+      "status": "open_source",
+      "type": "coding",
+      "parameters_billions": 32,
+      "_meta": {
+        "elo_rating": 1180,
+        "quality_score": "high",
+        "last_updated": "2026-02-08"
+      }
+    }
+  },
+  "frameworks": {
+    "Qwen-Agent": {
+      "id": "qwen-agent",
+      "cn_name": "通义千问Agent框架",
+      "version": "latest",
+      "repository": "https://github.com/QwenLM/Qwen-Agent",
+      "license": "Apache 2.0",
+      "capabilities": {
+        "function_calling": {
+          "enabled": true,
+          "description": "Native function calling / tool use support"
+        },
+        "code_interpreter": {
+          "enabled": true,
+          "sandbox": "docker",
+          "description": "Docker container-based code execution with filesystem isolation"
+        },
+        "rag_long_context": {
+          "enabled": true,
+          "max_context_tokens": 1048576,
+          "description": "Retrieval-Augmented Generation capable of handling 1M token contexts"
+        },
+        "multi_step_reasoning": {
+          "enabled": true,
+          "description": "Step-by-step reasoning and multi-hop question answering"
+        }
+      },
+      "architecture_levels": [
+        {
+          "level": 1,
+          "name": "RAG",
+          "description": "Keyword-based retrieval augmented generation"
+        },
+        {
+          "level": 2,
+          "name": "Chunk-by-Chunk Reading",
+          "description": "Parallel chunk relevance assessment"
+        },
+        {
+          "level": 3,
+          "name": "Step-by-Step Reasoning",
+          "description": "Multi-hop reasoning via tool-calling agent"
+        }
+      ],
+      "benchmarks": {
+        "NeedleBench": {
+          "description": "Needle-in-haystack multi-needle retrieval benchmark",
+          "context_length": "256k"
+        },
+        "LV-Eval": {
+          "description": "Multi-evidence comprehension benchmark"
+        }
+      },
+      "_meta": {
+        "last_updated": "2026-02-08"
+      }
+    }
+  },
+  "market_positioning": {
+    "tier": "global_top_tier",
+    "primary_market": "China",
+    "global_competitors": ["OpenAI GPT-4", "Anthropic Claude 3", "Google Gemini"],
+    "chinese_competitors": ["Baidu ERNIE", "Tencent Hunyuan", "Byte跳动 Doubao", "Moonshot Kimi"],
+    "key_differentiators": [
+      "Strong open-source ecosystem (Qwen 2.5 series)",
+      "Cost-effective API pricing",
+      "Native Chinese language capabilities",
+      "1M context handling via Qwen-Agent"
+    ]
+  },
+  "risk_assessment": {
+    "availability": "medium",
+    "reliability": "high",
+    "geographic_restrictions": "partial (API may be restricted in some regions)",
+    "data_privacy": "standard",
+    "notes": "Model outputs should be validated for sensitive applications"
+  }
+}

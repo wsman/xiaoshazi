@@ -1,53 +1,22 @@
-# MythicStats Frontend Implementation
+# AgentStats
 
-This project implements a Mythic+ DPS ranking page using React, Vite, and Tailwind CSS.
+AgentStats is a high-performance benchmarking and visualization platform designed for the next generation of AI agents. It provides deep insights into agent behavior, performance metrics, and economic efficiency.
 
-## Project Structure
+## 🚀 Key Features
 
-- `client/`: React frontend source code
-- `server.js`: Node.js backend serving the frontend and API
+- **Zero-Latency UX**: Built with React 19 and Vite for an ultra-responsive interface that handles real-time data streams effortlessly.
+- **Qwen-Specific Scoring**: Custom scoring algorithms tailored for the Qwen series of models, providing more accurate performance evaluations.
+- **EntropyDashboard**: A unique visualization tool for monitoring system state and agent decision-making processes, helping developers identify bottlenecks and optimize performance.
 
-## How to Run
+## 🛠️ Tech Stack
 
-1. **Install Dependencies**:
-   ```bash
-   cd client
-   npm install
-   ```
+- **Frontend**: React 19, Vite, Framer Motion
+- **Backend**: Express 5 (Node.js)
+- **Cache/Data**: Redis
+- **Styling**: Vanilla CSS
 
-2. **Start Development Server** (Frontend only):
-   ```bash
-   cd client
-   npm run dev
-   ```
-   Access at `http://localhost:5173`
+## ⚡ Quick Start
 
-3. **Build for Production**:
-   ```bash
-   cd client
-   npm run build
-   ```
-   The built files will be in `client/dist`.
-
-4. **Run Full Stack**:
-   Start the backend which serves the built frontend:
-   ```bash
-   node server.js
-   ```
-   Access at `http://localhost:14514`
-
-## Features
-
-- **Dark Mode UI**: Replicates the MythicStats dark aesthetic.
-- **Class Colors**: Dynamic coloring based on WoW class.
-- **Tier System**: S/A/B/C/D/F tier indicators.
-- **Dual-Layer Bars**: Visualizes Average vs Top 5% DPS.
-- **Mock Data**: API endpoint `/api/dps` provides ranking data.
-
-## Technology Stack
-
-- React 18
-- Vite 7
-- Tailwind CSS 3.4
-- Axios
-- Node.js/Express
+```bash
+npm install && cd client && npm install && cd .. && npm run build && node server.js
+```

@@ -1,0 +1,765 @@
+{
+  "GPT-4o": {
+    "elo": 1287,
+    "tks_per_sec": 85,
+    "price_in": 5,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "high"
+    }
+  },
+  "Claude 3.5 Sonnet": {
+    "elo": 1271,
+    "tks_per_sec": 90,
+    "price_in": 3,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-4 Turbo": {
+    "elo": 1254,
+    "tks_per_sec": 65,
+    "price_in": 10,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "high"
+    }
+  },
+  "Gemini 1.5 Pro": {
+    "elo": 1240,
+    "tks_per_sec": 60,
+    "price_in": 7,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude 3 Opus": {
+    "elo": 1238,
+    "tks_per_sec": 50,
+    "price_in": 15,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "high"
+    }
+  },
+  "Claude 3.5 Haiku": {
+    "elo": 1220,
+    "tks_per_sec": 150,
+    "price_in": 0.25,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "medium"
+    }
+  },
+  "DeepSeek V3": {
+    "elo": 1215,
+    "tks_per_sec": 60,
+    "price_in": 0.14,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "medium"
+    }
+  },
+  "Llama 3.1 405B": {
+    "elo": 1210,
+    "tks_per_sec": 25,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "high"
+    }
+  },
+  "Qwen 2.5 Max": {
+    "elo": 1205,
+    "tks_per_sec": 70,
+    "price_in": 0.2,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "high"
+    }
+  },
+  "Gemini 1.5 Flash": {
+    "elo": 1200,
+    "tks_per_sec": 120,
+    "price_in": 0.075,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.676Z",
+      "data_quality": "medium"
+    }
+  },
+  "Mistral Large": {
+    "elo": 1185,
+    "tks_per_sec": 55,
+    "price_in": 2,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Claude 3 Sonnet": {
+    "elo": 1175,
+    "tks_per_sec": 75,
+    "price_in": 3,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Llama 3.1 70B": {
+    "elo": 1165,
+    "tks_per_sec": 55,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Qwen 2.5 72B": {
+    "elo": 1155,
+    "tks_per_sec": 45,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "DeepSeek Chat": {
+    "elo": 1150,
+    "tks_per_sec": 55,
+    "price_in": 0.14,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "MiniMax-M2.1": {
+    "elo": 1140,
+    "tks_per_sec": 180,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "GPT-3.5 Turbo": {
+    "elo": 1120,
+    "tks_per_sec": 250,
+    "price_in": 0.5,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Mistral Medium": {
+    "elo": 1115,
+    "tks_per_sec": 80,
+    "price_in": 0.7,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Llama 3.1 8B": {
+    "elo": 1105,
+    "tks_per_sec": 120,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "MiniMax-M2": {
+    "elo": 1085,
+    "tks_per_sec": 160,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Mistral Small": {
+    "elo": 1070,
+    "tks_per_sec": 130,
+    "price_in": 0.2,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Mixtral 8x7B": {
+    "elo": 1055,
+    "tks_per_sec": 70,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Gemma 3 27B": {
+    "elo": 1045,
+    "tks_per_sec": 40,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Llama 3 70B": {
+    "elo": 1035,
+    "tks_per_sec": 45,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Llama 3 8B": {
+    "elo": 1015,
+    "tks_per_sec": 100,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "lmsys",
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "high"
+    }
+  },
+  "Claude Opus 4.6 (Adaptive)": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-5.2 (xhigh)": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude Opus 4.5": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-5.2 Codex (xhigh)": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Gemini 3 Pro Preview (high)": {
+    "elo": null,
+    "tks_per_sec": 70,
+    "price_in": 3.5,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-5.1 (high)": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Kimi K2.5": {
+    "elo": null,
+    "tks_per_sec": 75,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-5.2 (medium)": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Gemini 3 Flash": {
+    "elo": null,
+    "tks_per_sec": 140,
+    "price_in": 0.1,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude Opus 4.6": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-5 (high)": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude 4.5 Sonnet": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GLM-4.7": {
+    "elo": null,
+    "tks_per_sec": 50,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "DeepSeek V3.2": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Grok 4": {
+    "elo": null,
+    "tks_per_sec": 50,
+    "price_in": 5,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-5 mini (high)": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "o3": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "MiMo-V2-Flash": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude 4 Sonnet": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "KAT-Coder-Pro V1": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude 3.7 Sonnet": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Gemini 2.5 Pro": {
+    "elo": null,
+    "tks_per_sec": 80,
+    "price_in": 5,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "DeepSeek V3.2 Speciale": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-4": {
+    "elo": null,
+    "tks_per_sec": 45,
+    "price_in": 30,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "GPT-4o mini": {
+    "elo": null,
+    "tks_per_sec": 150,
+    "price_in": 0.15,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude 3 Haiku": {
+    "elo": null,
+    "tks_per_sec": 120,
+    "price_in": 0.25,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude 2.1": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude 2.0": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Claude Instant": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Mistral 7B": {
+    "elo": null,
+    "tks_per_sec": 100,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Mixtral 8x22B": {
+    "elo": null,
+    "tks_per_sec": 45,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Gemini 1.0 Pro": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Gemini 1.0 Ultra": {
+    "elo": null,
+    "tks_per_sec": null,
+    "price_in": null,
+    "_meta": {
+      "sources": [
+        "artificial-analysis"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  },
+  "Qwen 2 72B": {
+    "elo": null,
+    "tks_per_sec": 40,
+    "price_in": 0,
+    "_meta": {
+      "sources": [
+        "artificial-analysis",
+        "provider-docs"
+      ],
+      "last_updated": "2026-02-08T07:00:09.677Z",
+      "data_quality": "medium"
+    }
+  }
+}

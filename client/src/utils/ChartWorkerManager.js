@@ -1,25 +1,20 @@
 // ChartWorkerManager - Web Worker Management Service
-// Adapted from Technology Department Library
-// Target: xiaoshazi/client/src/utils/ChartWorkerManager.js
-
-// ============ Worker Manager Class ============
+// Mission: Offload heavy scoring and sorting logic to a Web Worker
 
 export class ChartWorkerManager {
-  // Singleton Pattern
   constructor() {
     this.worker = null;
     this.requestQueue = new Map();
     this.isInitialized = false;
     this.workerReady = false;
-    this.fallbackToMainThread = true; // Default to main thread as worker file might be missing
+    this.fallbackToMainThread = false;
     
     this.metrics = {
       totalRequests: 0,
       successfulRequests: 0,
       failedRequests: 0,
       avgLatency: 0,
-      lastHealthCheck: null,
-      workerReady: false
+      lastHealthCheck: null
     };
   }
 
@@ -30,62 +25,37 @@ export class ChartWorkerManager {
     return ChartWorkerManager.instance;
   }
 
-  // Initialize Worker
   async initialize() {
-    if (this.isInitialized) {
-      return this.workerReady;
-    }
+    if (this.isInitialized) return this.workerReady;
 
     try {
-      // Try to create Web Worker
-      // Note: We assume the worker file might not exist in this target project yet
-      // So we wrap in try-catch and fallback
-      try {
-        this.worker = new Worker(new URL('../workers/chart.worker.js', import.meta.url), {
-          type: 'module'
-        });
+      this.worker = new Worker(new URL('../workers/scoring.worker.js', import.meta.url), { type: 'module' });
 
-        // Set message handlers
-        this.worker.onmessage = this.handleWorkerMessage.bind(this);
-        this.worker.onerror = this.handleWorkerError.bind(this);
-        
-        // Wait for Worker initialization
-        const initSuccess = await this.waitForWorkerInitialization(2000);
-        
-        if (initSuccess) {
-          this.workerReady = true;
-          this.isInitialized = true;
-          this.fallbackToMainThread = false;
-          console.log('[ChartWorkerManager] Worker initialized successfully');
-          
-          // Initial Health Check
-          this.checkHealth().then(health => {
-            this.metrics.lastHealthCheck = health;
-            console.log('[ChartWorkerManager] Initial health check:', health);
-          });
-          
-          return true;
-        } else {
-          throw new Error('Timeout waiting for worker');
-        }
-      } catch (e) {
-        // console.warn('[ChartWorkerManager] Worker initialization failed, falling back to main thread', e);
-        this.fallbackToMainThread = true;
+      this.worker.onmessage = this.handleWorkerMessage.bind(this);
+      this.worker.onerror = this.handleWorkerError.bind(this);
+      
+      const initSuccess = await this.waitForWorkerInitialization(3000);
+      
+      if (initSuccess) {
+        this.workerReady = true;
         this.isInitialized = true;
-        return false;
+        this.fallbackToMainThread = false;
+        console.log('[ChartWorkerManager] Worker initialized successfully');
+        return true;
+      } else {
+        throw new Error('Timeout waiting for worker initialization');
       }
-    } catch (error) {
-      console.error('[ChartWorkerManager] Failed to initialize manager:', error);
+    } catch (e) {
+      console.warn('[ChartWorkerManager] Worker initialization failed, falling back to main thread', e);
       this.fallbackToMainThread = true;
+      this.isInitialized = true;
       return false;
     }
   }
 
-  // Wait for Worker Initialization
   waitForWorkerInitialization(timeoutMs) {
     return new Promise((resolve) => {
       let resolved = false;
-      
       const timeoutId = setTimeout(() => {
         if (!resolved) {
           resolved = true;
@@ -94,123 +64,66 @@ export class ChartWorkerManager {
       }, timeoutMs);
 
       const messageHandler = (event) => {
-        const message = event.data;
-        if (message.type === 'initialized') {
+        if (event.data.type === 'initialized') {
           if (!resolved) {
             resolved = true;
             clearTimeout(timeoutId);
+            this.worker.removeEventListener('message', messageHandler);
             resolve(true);
           }
         }
       };
-
-      if (this.worker) {
-        this.worker.addEventListener('message', messageHandler);
-        
-        // Remove listener after timeout + buffer
-        setTimeout(() => {
-          if (this.worker) {
-            this.worker.removeEventListener('message', messageHandler);
-          }
-        }, timeoutMs + 100);
-      } else {
-        resolve(false);
-      }
+      this.worker.addEventListener('message', messageHandler);
     });
   }
 
-  // Handle Worker Message
   handleWorkerMessage(event) {
     const response = event.data;
+    if (response.type === 'initialized') return;
     
-    // Handle initialization message
-    if (response.type === 'initialized') {
-      console.log('[ChartWorkerManager] Worker initialization confirmed:', response);
-      return;
-    }
-    
-    // Handle termination message
-    if (response.type === 'terminated') {
-      console.log('[ChartWorkerManager] Worker terminated:', response);
-      this.workerReady = false;
-      return;
-    }
-    
-    // Find request
     const requestItem = this.requestQueue.get(response.id);
-    if (!requestItem) {
-      // console.warn('[ChartWorkerManager] Received response for unknown request:', response.id);
-      return;
-    }
+    if (!requestItem) return;
 
-    // Clear timeout
     clearTimeout(requestItem.timeoutId);
     this.requestQueue.delete(response.id);
-
-    // Update metrics
     this.metrics.totalRequests++;
     
     if (response.type === 'error') {
       this.metrics.failedRequests++;
-      console.error('[ChartWorkerManager] Worker error:', response.error);
-      requestItem.reject(new Error(response.error || 'Unknown worker error'));
+      requestItem.reject(new Error(response.error || 'Worker error'));
     } else {
       this.metrics.successfulRequests++;
       requestItem.resolve(response);
     }
   }
 
-  // Handle Worker Error
   handleWorkerError(error) {
     console.error('[ChartWorkerManager] Worker error:', error);
-    
-    // Mark fallback
     this.fallbackToMainThread = true;
     this.workerReady = false;
-    
-    // Reject pending requests
-    this.requestQueue.forEach((item) => {
-      item.reject(new Error('Worker error: ' + error.message));
-    });
+    this.requestQueue.forEach(item => item.reject(new Error('Worker error')));
     this.requestQueue.clear();
   }
 
-  // Send Request to Worker
   async sendRequest(request, timeoutMs = 10000) {
-    // If fallback or worker not ready, throw error to trigger catch block in caller
     if (this.fallbackToMainThread || !this.workerReady) {
-      throw new Error('Worker is unavailable, falling back to main thread calculation');
+      throw new Error('Worker unavailable');
     }
 
-    // Generate Request ID
     const requestId = `${request.type}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const requestWithId = { ...request, id: requestId };
 
     return new Promise((resolve, reject) => {
-      // Set Timeout
       const timeoutId = setTimeout(() => {
         this.requestQueue.delete(requestId);
         this.metrics.failedRequests++;
         reject(new Error(`Worker request timeout after ${timeoutMs}ms`));
       }, timeoutMs);
 
-      // Add to Queue
-      this.requestQueue.set(requestId, {
-        request: requestWithId,
-        resolve,
-        reject,
-        timeoutId
-      });
+      this.requestQueue.set(requestId, { resolve, reject, timeoutId });
 
-      // Post Message
       try {
-        if (this.worker) {
-          this.worker.postMessage(requestWithId);
-        } else {
-          clearTimeout(timeoutId);
-          this.requestQueue.delete(requestId);
-          reject(new Error('Worker not available'));
-        }
+        this.worker.postMessage(requestWithId);
       } catch (error) {
         clearTimeout(timeoutId);
         this.requestQueue.delete(requestId);
@@ -219,129 +132,113 @@ export class ChartWorkerManager {
     });
   }
 
-  // Calculate Indicators (Main Entry)
-  async calculateIndicators(data, indicators, batchSize = 50, scenario = null) {
+  async processData(agents, scenario) {
     const startTime = performance.now();
-    
     try {
-      if (this.fallbackToMainThread) {
-        throw new Error('Fallback mode active');
-      }
+      if (this.fallbackToMainThread) throw new Error('Fallback active');
 
       const response = await this.sendRequest({
-        id: 'temp',
-        type: 'calculate_indicators',
-        data,
-        indicators,
-        batchSize,
+        type: 'process_data',
+        data: agents,
         scenario
       });
 
-      if (response.type === 'indicator_result' || response.type === 'batch_result') {
+      if (response.type === 'process_result') {
         const latency = performance.now() - startTime;
         this.updateLatencyMetrics(latency);
-        return response.result || {};
-      } else {
-        throw new Error(`Unexpected response type: ${response.type}`);
+        return response.result;
       }
+      throw new Error('Unexpected response type');
     } catch (error) {
-      // Fallback to Main Thread
-      console.warn('[ChartWorkerManager] Using main thread fallback', error);
-      return calculateIndicatorsInMainThread(data, indicators);
+      console.warn('[ChartWorkerManager] Falling back to main thread calculation', error);
+      return this.processDataOnMainThread(agents, scenario);
     }
   }
 
-  // Health Check
-  async checkHealth() {
-    try {
-      const response = await this.sendRequest({
-        id: 'health_check',
-        type: 'health_check'
-      }, 5000);
+  processDataOnMainThread(agents, scenario) {
+    // Scenario-Based Weighting Logic (Synced with Worker)
+    const weighted = agents.map(item => {
+        let multiplier = 1.0;
+        const modelName = (item.model || '').toLowerCase();
+        const modelId = (item.id || '').toLowerCase();
+        const searchStr = `${modelName} ${modelId}`;
 
-      if (response.type === 'health_response' && response.result) {
-        const health = {
-          status: 'healthy',
-          workerType: 'chart_calculation',
-          memory: response.result.memory || 'unknown',
-          latency: this.metrics.avgLatency,
-          timestamp: response.result.timestamp || Date.now()
-        };
+        // 1. Scenario: Coding
+        if (scenario === 'coding') {
+          const isBonus = searchStr.includes('coder') || searchStr.includes('sonnet 3.5') || 
+                          searchStr.includes('sonnet-3-5') || searchStr.includes('deepseek-coder');
+          const isWeak = searchStr.includes('flash') || searchStr.includes('mini') || 
+                         searchStr.includes('turbo') || searchStr.includes('small') ||
+                         searchStr.includes('haiku');
+
+          if (isBonus) multiplier = 1.0;
+          else if (isWeak) multiplier = 0.85;
+          else multiplier = 0.95;
+        } 
+        // 2. Scenario: Reasoning
+        else if (scenario === 'reasoning') {
+          const isBonus = searchStr.includes('qwq') || searchStr.includes('o1') || 
+                          searchStr.includes('r1') || searchStr.includes('opus');
+          const isPenalty = searchStr.includes('turbo') || searchStr.includes('flash') || 
+                            searchStr.includes('mini');
+          
+          if (isBonus) multiplier = 1.0;
+          else if (isPenalty) multiplier = 0.90;
+        } 
+        // 3. Scenario: Creative
+        else if (scenario === 'creative') {
+          const isBonus = searchStr.includes('opus') || searchStr.includes('gpt-4o') || 
+                          searchStr.includes('gemini pro') || searchStr.includes('gemini-pro');
+          const isPenalty = searchStr.includes('coder') || searchStr.includes('math');
+          
+          if (isBonus) multiplier = 1.0;
+          else if (isPenalty) multiplier = 0.85;
+        }
+
+        const baseScore = item.avgPerf || item.overall_score || item.score || 0;
+        const newAvgPerf = parseFloat(baseScore) * multiplier;
         
-        this.metrics.lastHealthCheck = health;
-        return health;
-      } else {
-        throw new Error('Invalid health response');
-      }
-    } catch (error) {
-      // console.error('[ChartWorkerManager] Health check failed:', error);
-      
-      const health = {
-        status: 'unhealthy',
-        workerType: 'chart_calculation',
-        memory: 'unknown',
-        latency: null,
-        timestamp: Date.now()
-      };
-      
-      this.metrics.lastHealthCheck = health;
-      return health;
-    }
+        // Dynamic Tier Recalculation
+        let newTier = item.tier;
+        if (scenario !== 'all' && scenario) {
+          if (newAvgPerf >= 85) newTier = 'S';
+          else if (newAvgPerf >= 75) newTier = 'A';
+          else if (newAvgPerf >= 60) newTier = 'B';
+          else if (newAvgPerf >= 40) newTier = 'C';
+          else newTier = 'D';
+        }
+
+        return {
+          ...item,
+          avgPerf: newAvgPerf,
+          tier: newTier
+        };
+    });
+
+    // Sort by avgPerf descending
+    weighted.sort((a, b) => b.avgPerf - a.avgPerf);
+
+    // Update ranks based on sorted order
+    return weighted.map((item, index) => ({
+        ...item,
+        rank: index + 1
+    }));
   }
 
-  // Update Latency Metrics
   updateLatencyMetrics(latency) {
-    if (this.metrics.avgLatency === 0) {
-      this.metrics.avgLatency = latency;
-    } else {
-      // SMA
-      this.metrics.avgLatency = (this.metrics.avgLatency * 0.7 + latency * 0.3);
-    }
+    this.metrics.avgLatency = this.metrics.avgLatency === 0 
+      ? latency 
+      : (this.metrics.avgLatency * 0.7 + latency * 0.3);
   }
 
-  // Get Metrics
-  getMetrics() {
-    return { ...this.metrics };
-  }
-
-  // Check Availability
-  isWorkerAvailable() {
-    return this.workerReady && !this.fallbackToMainThread;
-  }
-
-  // Terminate Worker
-  async terminate() {
-    try {
-      if (this.worker) {
-        this.worker.postMessage({ type: 'terminate' });
-        this.worker.terminate();
-      }
-    } catch (error) {
-      console.error('[ChartWorkerManager] Error terminating worker:', error);
-    } finally {
+  terminate() {
+    if (this.worker) {
+      this.worker.terminate();
       this.worker = null;
       this.workerReady = false;
       this.isInitialized = false;
-      this.requestQueue.clear();
-      console.log('[ChartWorkerManager] Worker terminated');
     }
   }
-
-  cleanup() {
-    this.terminate();
-  }
 }
 
-// ============ Main Thread Fallback Functions ============
-
-export function calculateIndicatorsInMainThread(data, indicators) {
-  // Return the original data sorted as a fallback
-  console.log('Calculating indicators in main thread (Fallback)');
-  return [...data].sort((a, b) => b.avgPerf - a.avgPerf).map((item, index) => ({
-    ...item,
-    rank: index + 1
-  }));
-}
-
-// Default Export
 export default ChartWorkerManager.getInstance();

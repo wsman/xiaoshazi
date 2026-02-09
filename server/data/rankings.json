@@ -1,0 +1,9042 @@
+[
+  {
+    "id": 1,
+    "rank": 1,
+    "diff": 0,
+    "tier": "S",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-72B-Instruct",
+    "fullName": "Qwen/Qwen2.5-72B-Instruct",
+    "avgPerf": 100,
+    "peakPerf": 105,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 2,
+    "rank": 2,
+    "diff": 0,
+    "tier": "S",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-32B-Instruct",
+    "fullName": "Qwen/Qwen2.5-32B-Instruct",
+    "avgPerf": 99.93,
+    "peakPerf": 104.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 3,
+    "rank": 3,
+    "diff": 0,
+    "tier": "S",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-Large-Instruct-2411",
+    "fullName": "mistralai/Mistral-Large-Instruct-2411",
+    "avgPerf": 95.03,
+    "peakPerf": 99.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 4,
+    "rank": 4,
+    "diff": 0,
+    "tier": "S",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-72B-Instruct",
+    "fullName": "Qwen/Qwen2-72B-Instruct",
+    "avgPerf": 93.49,
+    "peakPerf": 98.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 5,
+    "rank": 5,
+    "diff": 0,
+    "tier": "S",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
+    "fullName": "meta-llama/Llama-3.3-70B-Instruct",
+    "avgPerf": 91.6,
+    "peakPerf": 96.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 6,
+    "rank": 6,
+    "diff": 0,
+    "tier": "A",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-14B-Instruct-1M",
+    "fullName": "Qwen/Qwen2.5-14B-Instruct-1M",
+    "avgPerf": 89.13,
+    "peakPerf": 93.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 7,
+    "rank": 7,
+    "diff": 0,
+    "tier": "A",
+    "provider": "VAGOsolutions",
+    "model": "VAGOsolutions/Llama-3.1-SauerkrautLM-70b-Instruct",
+    "fullName": "VAGOsolutions/Llama-3.1-SauerkrautLM-70b-Instruct",
+    "avgPerf": 88.67,
+    "peakPerf": 93.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 8,
+    "rank": 8,
+    "diff": 0,
+    "tier": "A",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.1-70B-Instruct",
+    "fullName": "meta-llama/Llama-3.1-70B-Instruct",
+    "avgPerf": 88.66,
+    "peakPerf": 93.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 9,
+    "rank": 9,
+    "diff": 0,
+    "tier": "A",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "fullName": "Qwen/Qwen2.5-14B-Instruct",
+    "avgPerf": 88.59,
+    "peakPerf": 93,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 10,
+    "rank": 10,
+    "diff": 0,
+    "tier": "A",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-70B",
+    "fullName": "allenai/Llama-3.1-Tulu-3-70B",
+    "avgPerf": 86.46,
+    "peakPerf": 90.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 11,
+    "rank": 11,
+    "diff": 0,
+    "tier": "A",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-70B-DPO",
+    "fullName": "allenai/Llama-3.1-Tulu-3-70B-DPO",
+    "avgPerf": 86.24,
+    "peakPerf": 90.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 12,
+    "rank": 12,
+    "diff": 0,
+    "tier": "A",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "fullName": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "avgPerf": 85.54,
+    "peakPerf": 89.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 13,
+    "rank": 13,
+    "diff": 0,
+    "tier": "A",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-VL-72B-Instruct",
+    "fullName": "Qwen/Qwen2-VL-72B-Instruct",
+    "avgPerf": 84.79,
+    "peakPerf": 89,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 14,
+    "rank": 14,
+    "diff": 0,
+    "tier": "A",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-70B",
+    "fullName": "allenai/Llama-3.1-Tulu-3-70B",
+    "avgPerf": 84.67,
+    "peakPerf": 88.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 15,
+    "rank": 15,
+    "diff": 0,
+    "tier": "A",
+    "provider": "nbeerbower",
+    "model": "nbeerbower/Llama-3.1-Nemotron-lorablated-70B",
+    "fullName": "nbeerbower/Llama-3.1-Nemotron-lorablated-70B",
+    "avgPerf": 83.49,
+    "peakPerf": 87.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 16,
+    "rank": 16,
+    "diff": 0,
+    "tier": "A",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-72B",
+    "fullName": "Qwen/Qwen2.5-72B",
+    "avgPerf": 82.44,
+    "peakPerf": 86.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 17,
+    "rank": 17,
+    "diff": 0,
+    "tier": "A",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+    "fullName": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+    "avgPerf": 81.97,
+    "peakPerf": 86.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 18,
+    "rank": 18,
+    "diff": 0,
+    "tier": "A",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-Math-72B-Instruct",
+    "fullName": "Qwen/Qwen2-Math-72B-Instruct",
+    "avgPerf": 81.54,
+    "peakPerf": 85.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 19,
+    "rank": 19,
+    "diff": 0,
+    "tier": "A",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-32B",
+    "fullName": "Qwen/Qwen2.5-32B",
+    "avgPerf": 81.51,
+    "peakPerf": 85.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 20,
+    "rank": 20,
+    "diff": 0,
+    "tier": "B",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-70B-SFT",
+    "fullName": "allenai/Llama-3.1-Tulu-3-70B-SFT",
+    "avgPerf": 79.35,
+    "peakPerf": 83.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 21,
+    "rank": 21,
+    "diff": 0,
+    "tier": "B",
+    "provider": "gbueno86",
+    "model": "gbueno86/Meta-LLama-3-Cat-Smaug-LLama-70b",
+    "fullName": "gbueno86/Meta-LLama-3-Cat-Smaug-LLama-70b",
+    "avgPerf": 79.04,
+    "peakPerf": 83,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 22,
+    "rank": 22,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Math-72B-Instruct",
+    "fullName": "Qwen/Qwen2.5-Math-72B-Instruct",
+    "avgPerf": 78.97,
+    "peakPerf": 82.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 23,
+    "rank": 23,
+    "diff": 0,
+    "tier": "B",
+    "provider": "NousResearch",
+    "model": "NousResearch/Hermes-3-Llama-3.1-70B",
+    "fullName": "NousResearch/Hermes-3-Llama-3.1-70B",
+    "avgPerf": 78.67,
+    "peakPerf": 82.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 24,
+    "rank": 24,
+    "diff": 0,
+    "tier": "B",
+    "provider": "VAGOsolutions",
+    "model": "VAGOsolutions/Llama-3-SauerkrautLM-70b-Instruct",
+    "fullName": "VAGOsolutions/Llama-3-SauerkrautLM-70b-Instruct",
+    "avgPerf": 77.63,
+    "peakPerf": 81.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 25,
+    "rank": 25,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-72B",
+    "fullName": "Qwen/Qwen2-72B",
+    "avgPerf": 76.04,
+    "peakPerf": 79.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 26,
+    "rank": 26,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "fullName": "Qwen/Qwen2.5-7B-Instruct",
+    "avgPerf": 75.49,
+    "peakPerf": 79.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 27,
+    "rank": 27,
+    "diff": 0,
+    "tier": "B",
+    "provider": "nvidia",
+    "model": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "fullName": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "avgPerf": 75.38,
+    "peakPerf": 79.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 28,
+    "rank": 28,
+    "diff": 0,
+    "tier": "B",
+    "provider": "meta-llama",
+    "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "fullName": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "avgPerf": 74.29,
+    "peakPerf": 78,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 29,
+    "rank": 29,
+    "diff": 0,
+    "tier": "B",
+    "provider": "gbueno86",
+    "model": "gbueno86/Brinebreath-Llama-3.1-70B",
+    "fullName": "gbueno86/Brinebreath-Llama-3.1-70B",
+    "avgPerf": 74.05,
+    "peakPerf": 77.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 30,
+    "rank": 30,
+    "diff": 0,
+    "tier": "B",
+    "provider": "google",
+    "model": "google/gemma-2-27b-it",
+    "fullName": "google/gemma-2-27b-it",
+    "avgPerf": 73.89,
+    "peakPerf": 77.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 31,
+    "rank": 31,
+    "diff": 0,
+    "tier": "B",
+    "provider": "dnhkng",
+    "model": "dnhkng/RYS-Llama-3-Large-Instruct",
+    "fullName": "dnhkng/RYS-Llama-3-Large-Instruct",
+    "avgPerf": 73.49,
+    "peakPerf": 77.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 32,
+    "rank": 32,
+    "diff": 0,
+    "tier": "B",
+    "provider": "failspy",
+    "model": "failspy/llama-3-70B-Instruct-abliterated",
+    "fullName": "failspy/llama-3-70B-Instruct-abliterated",
+    "avgPerf": 73.31,
+    "peakPerf": 77,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 33,
+    "rank": 33,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/QwQ-32B-Preview",
+    "fullName": "Qwen/QwQ-32B-Preview",
+    "avgPerf": 73.17,
+    "peakPerf": 76.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 34,
+    "rank": 34,
+    "diff": 0,
+    "tier": "B",
+    "provider": "abacusai",
+    "model": "abacusai/Smaug-Llama-3-70B-Instruct-32K",
+    "fullName": "abacusai/Smaug-Llama-3-70B-Instruct-32K",
+    "avgPerf": 73.05,
+    "peakPerf": 76.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 35,
+    "rank": 35,
+    "diff": 0,
+    "tier": "B",
+    "provider": "cloudyu",
+    "model": "cloudyu/Llama-3-70Bx2-MOE",
+    "fullName": "cloudyu/Llama-3-70Bx2-MOE",
+    "avgPerf": 72.85,
+    "peakPerf": 76.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 36,
+    "rank": 36,
+    "diff": 0,
+    "tier": "B",
+    "provider": "migtissera",
+    "model": "migtissera/Llama-3-70B-Synthia-v3.5",
+    "fullName": "migtissera/Llama-3-70B-Synthia-v3.5",
+    "avgPerf": 72.65,
+    "peakPerf": 76.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 37,
+    "rank": 37,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Coder-32B",
+    "fullName": "Qwen/Qwen2.5-Coder-32B",
+    "avgPerf": 71.34,
+    "peakPerf": 74.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 38,
+    "rank": 38,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-110B-Chat",
+    "fullName": "Qwen/Qwen1.5-110B-Chat",
+    "avgPerf": 71.05,
+    "peakPerf": 74.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 39,
+    "rank": 39,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-57B-A14B-Instruct",
+    "fullName": "Qwen/Qwen2-57B-A14B-Instruct",
+    "avgPerf": 70.81,
+    "peakPerf": 74.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 40,
+    "rank": 40,
+    "diff": 0,
+    "tier": "B",
+    "provider": "dnhkng",
+    "model": "dnhkng/RYS-Llama-3-Huge-Instruct",
+    "fullName": "dnhkng/RYS-Llama-3-Huge-Instruct",
+    "avgPerf": 70.76,
+    "peakPerf": 74.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 41,
+    "rank": 41,
+    "diff": 0,
+    "tier": "B",
+    "provider": "glaiveai",
+    "model": "glaiveai/Reflection-Llama-3.1-70B",
+    "fullName": "glaiveai/Reflection-Llama-3.1-70B",
+    "avgPerf": 70.51,
+    "peakPerf": 74,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 42,
+    "rank": 42,
+    "diff": 0,
+    "tier": "B",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-7B-Instruct-1M",
+    "fullName": "Qwen/Qwen2.5-7B-Instruct-1M",
+    "avgPerf": 70.27,
+    "peakPerf": 73.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 43,
+    "rank": 43,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+    "fullName": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+    "avgPerf": 69.21,
+    "peakPerf": 72.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 44,
+    "rank": 44,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+    "fullName": "Qwen/Qwen2.5-Coder-14B-Instruct",
+    "avgPerf": 68.89,
+    "peakPerf": 72.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 45,
+    "rank": 45,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-14B",
+    "fullName": "Qwen/Qwen2.5-14B",
+    "avgPerf": 68.52,
+    "peakPerf": 71.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 46,
+    "rank": 46,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bosonai",
+    "model": "bosonai/Higgs-Llama-3-70B",
+    "fullName": "bosonai/Higgs-Llama-3-70B",
+    "avgPerf": 68.48,
+    "peakPerf": 71.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 47,
+    "rank": 47,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-34B-Chat",
+    "fullName": "01-ai/Yi-1.5-34B-Chat",
+    "avgPerf": 68.13,
+    "peakPerf": 71.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 48,
+    "rank": 48,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-9b-it",
+    "fullName": "google/gemma-2-9b-it",
+    "avgPerf": 65.51,
+    "peakPerf": 68.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 49,
+    "rank": 49,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mlabonne",
+    "model": "mlabonne/Hermes-3-Llama-3.1-70B-lorablated",
+    "fullName": "mlabonne/Hermes-3-Llama-3.1-70B-lorablated",
+    "avgPerf": 64.84,
+    "peakPerf": 68.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 50,
+    "rank": 50,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-110B",
+    "fullName": "Qwen/Qwen1.5-110B",
+    "avgPerf": 63.98,
+    "peakPerf": 67.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 51,
+    "rank": 51,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-32B-Chat",
+    "fullName": "Qwen/Qwen1.5-32B-Chat",
+    "avgPerf": 62.75,
+    "peakPerf": 65.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 52,
+    "rank": 52,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mmnga",
+    "model": "mmnga/Llama-3-70B-japanese-suzume-vector-v0.1",
+    "fullName": "mmnga/Llama-3-70B-japanese-suzume-vector-v0.1",
+    "avgPerf": 62.05,
+    "peakPerf": 65.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 53,
+    "rank": 53,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Joseph717171",
+    "model": "Joseph717171/Llama-3.1-SuperNova-8B-Lite_TIES_with_Base",
+    "fullName": "Joseph717171/Llama-3.1-SuperNova-8B-Lite_TIES_with_Base",
+    "avgPerf": 61.78,
+    "peakPerf": 64.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 54,
+    "rank": 54,
+    "diff": 0,
+    "tier": "C",
+    "provider": "arcee-ai",
+    "model": "arcee-ai/Llama-3.1-SuperNova-Lite",
+    "fullName": "arcee-ai/Llama-3.1-SuperNova-Lite",
+    "avgPerf": 61.67,
+    "peakPerf": 64.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 55,
+    "rank": 55,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.1-MedIT-SUN-8B",
+    "fullName": "meditsolutions/Llama-3.1-MedIT-SUN-8B",
+    "avgPerf": 61.67,
+    "peakPerf": 64.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 56,
+    "rank": 56,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Dampfinchen",
+    "model": "Dampfinchen/Llama-3.1-8B-Ultra-Instruct",
+    "fullName": "Dampfinchen/Llama-3.1-8B-Ultra-Instruct",
+    "avgPerf": 61.6,
+    "peakPerf": 64.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 57,
+    "rank": 57,
+    "diff": 0,
+    "tier": "C",
+    "provider": "failspy",
+    "model": "failspy/Meta-Llama-3-70B-Instruct-abliterated-v3.5",
+    "fullName": "failspy/Meta-Llama-3-70B-Instruct-abliterated-v3.5",
+    "avgPerf": 61.54,
+    "peakPerf": 64.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 58,
+    "rank": 58,
+    "diff": 0,
+    "tier": "C",
+    "provider": "akjindal53244",
+    "model": "akjindal53244/Llama-3.1-Storm-8B",
+    "fullName": "akjindal53244/Llama-3.1-Storm-8B",
+    "avgPerf": 61.16,
+    "peakPerf": 64.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 59,
+    "rank": 59,
+    "diff": 0,
+    "tier": "C",
+    "provider": "VAGOsolutions",
+    "model": "VAGOsolutions/Llama-3.1-SauerkrautLM-8b-Instruct",
+    "fullName": "VAGOsolutions/Llama-3.1-SauerkrautLM-8b-Instruct",
+    "avgPerf": 61.13,
+    "peakPerf": 64.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 60,
+    "rank": 60,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-Small-Instruct-2409",
+    "fullName": "mistralai/Mistral-Small-Instruct-2409",
+    "avgPerf": 61.11,
+    "peakPerf": 64.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 61,
+    "rank": 61,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/ldm_soup_Llama-3.1-8B-Inst",
+    "fullName": "DeepAutoAI/ldm_soup_Llama-3.1-8B-Inst",
+    "avgPerf": 60.99,
+    "peakPerf": 64,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 62,
+    "rank": 62,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/ldm_soup_Llama-3.1-8B-Instruct-v0.0",
+    "fullName": "DeepAutoAI/ldm_soup_Llama-3.1-8B-Instruct-v0.0",
+    "avgPerf": 60.73,
+    "peakPerf": 63.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 63,
+    "rank": 63,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/ldm_soup_Llama-3.1-8B-Instruct-v0.1",
+    "fullName": "DeepAutoAI/ldm_soup_Llama-3.1-8B-Instruct-v0.1",
+    "avgPerf": 60.73,
+    "peakPerf": 63.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 64,
+    "rank": 64,
+    "diff": 0,
+    "tier": "C",
+    "provider": "T145",
+    "model": "T145/Llama-3.1-8B-Instruct-Zeus",
+    "fullName": "T145/Llama-3.1-8B-Instruct-Zeus",
+    "avgPerf": 60.56,
+    "peakPerf": 63.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 65,
+    "rank": 65,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepMount00",
+    "model": "DeepMount00/Llama-3.1-Distilled",
+    "fullName": "DeepMount00/Llama-3.1-Distilled",
+    "avgPerf": 60.52,
+    "peakPerf": 63.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 66,
+    "rank": 66,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-9B-Chat",
+    "fullName": "01-ai/Yi-1.5-9B-Chat",
+    "avgPerf": 60.32,
+    "peakPerf": 63.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 67,
+    "rank": 67,
+    "diff": 0,
+    "tier": "C",
+    "provider": "SentientAGI",
+    "model": "SentientAGI/Dobby-Mini-Leashed-Llama-3.1-8B",
+    "fullName": "SentientAGI/Dobby-Mini-Leashed-Llama-3.1-8B",
+    "avgPerf": 60.13,
+    "peakPerf": 63.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 68,
+    "rank": 68,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-34B-Chat-16K",
+    "fullName": "01-ai/Yi-1.5-34B-Chat-16K",
+    "avgPerf": 60.06,
+    "peakPerf": 63.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 69,
+    "rank": 69,
+    "diff": 0,
+    "tier": "C",
+    "provider": "akjindal53244",
+    "model": "akjindal53244/Llama-3.1-Storm-8B",
+    "fullName": "akjindal53244/Llama-3.1-Storm-8B",
+    "avgPerf": 59.98,
+    "peakPerf": 63,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 70,
+    "rank": 70,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/d2nwg_Llama-3.1-8B-Instruct-v0.0",
+    "fullName": "DeepAutoAI/d2nwg_Llama-3.1-8B-Instruct-v0.0",
+    "avgPerf": 59.92,
+    "peakPerf": 62.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 71,
+    "rank": 71,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-7B-Instruct",
+    "fullName": "Qwen/Qwen2-7B-Instruct",
+    "avgPerf": 59.91,
+    "peakPerf": 62.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 72,
+    "rank": 72,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ZeroXClem",
+    "model": "ZeroXClem/Llama-3.1-8B-SpecialTitanFusion",
+    "fullName": "ZeroXClem/Llama-3.1-8B-SpecialTitanFusion",
+    "avgPerf": 59.71,
+    "peakPerf": 62.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 73,
+    "rank": 73,
+    "diff": 0,
+    "tier": "C",
+    "provider": "AALF",
+    "model": "AALF/FuseChat-Llama-3.1-8B-SFT-preview",
+    "fullName": "AALF/FuseChat-Llama-3.1-8B-SFT-preview",
+    "avgPerf": 59.69,
+    "peakPerf": 62.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 74,
+    "rank": 74,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/Explore_Llama-3.1-8B-Inst",
+    "fullName": "DeepAutoAI/Explore_Llama-3.1-8B-Inst",
+    "avgPerf": 59.08,
+    "peakPerf": 62,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 75,
+    "rank": 75,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers-Dev",
+    "model": "PJMixers-Dev/LLaMa-3.1-Instruct-Interleaved-Zeroed-13B",
+    "fullName": "PJMixers-Dev/LLaMa-3.1-Instruct-Interleaved-Zeroed-13B",
+    "avgPerf": 59.02,
+    "peakPerf": 62,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 76,
+    "rank": 76,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers-Dev",
+    "model": "PJMixers-Dev/LLaMa-3.1-RomboTiesTest-8B",
+    "fullName": "PJMixers-Dev/LLaMa-3.1-RomboTiesTest-8B",
+    "avgPerf": 58.86,
+    "peakPerf": 61.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 77,
+    "rank": 77,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers-Dev",
+    "model": "PJMixers-Dev/LLaMa-3.1-RomboTiesTest2-8B",
+    "fullName": "PJMixers-Dev/LLaMa-3.1-RomboTiesTest2-8B",
+    "avgPerf": 58.86,
+    "peakPerf": 61.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 78,
+    "rank": 78,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-32B",
+    "fullName": "Qwen/Qwen1.5-32B",
+    "avgPerf": 58.55,
+    "peakPerf": 61.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 79,
+    "rank": 79,
+    "diff": 0,
+    "tier": "C",
+    "provider": "FuseAI",
+    "model": "FuseAI/FuseChat-Llama-3.1-8B-Instruct",
+    "fullName": "FuseAI/FuseChat-Llama-3.1-8B-Instruct",
+    "avgPerf": 58.41,
+    "peakPerf": 61.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 80,
+    "rank": 80,
+    "diff": 0,
+    "tier": "C",
+    "provider": "AALF",
+    "model": "AALF/FuseChat-Llama-3.1-8B-Instruct-preview",
+    "fullName": "AALF/FuseChat-Llama-3.1-8B-Instruct-preview",
+    "avgPerf": 58.35,
+    "peakPerf": 61.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 81,
+    "rank": 81,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/HyperLlama-3.1-8B",
+    "fullName": "bunnycore/HyperLlama-3.1-8B",
+    "avgPerf": 58.11,
+    "peakPerf": 61,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 82,
+    "rank": 82,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ZeroXClem",
+    "model": "ZeroXClem/Llama-3.1-8B-SuperNova-EtherealHermes",
+    "fullName": "ZeroXClem/Llama-3.1-8B-SuperNova-EtherealHermes",
+    "avgPerf": 58.02,
+    "peakPerf": 60.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 83,
+    "rank": 83,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Orenguteng",
+    "model": "Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2",
+    "fullName": "Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2",
+    "avgPerf": 57.99,
+    "peakPerf": 60.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 84,
+    "rank": 84,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepMount00",
+    "model": "DeepMount00/Llama-3.1-8b-ITA",
+    "fullName": "DeepMount00/Llama-3.1-8b-ITA",
+    "avgPerf": 57.66,
+    "peakPerf": 60.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 85,
+    "rank": 85,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "fullName": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "avgPerf": 57.3,
+    "peakPerf": 60.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 86,
+    "rank": 86,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-VL-7B-Instruct",
+    "fullName": "Qwen/Qwen2-VL-7B-Instruct",
+    "avgPerf": 56.82,
+    "peakPerf": 59.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 87,
+    "rank": 87,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "fullName": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "avgPerf": 56.8,
+    "peakPerf": 59.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 88,
+    "rank": 88,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NAPS-ai",
+    "model": "NAPS-ai/naps-llama-3_1-8b-instruct-v0.4",
+    "fullName": "NAPS-ai/naps-llama-3_1-8b-instruct-v0.4",
+    "avgPerf": 56.61,
+    "peakPerf": 59.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 89,
+    "rank": 89,
+    "diff": 0,
+    "tier": "C",
+    "provider": "SentientAGI",
+    "model": "SentientAGI/Dobby-Mini-Unhinged-Llama-3.1-8B",
+    "fullName": "SentientAGI/Dobby-Mini-Unhinged-Llama-3.1-8B",
+    "avgPerf": 56.08,
+    "peakPerf": 58.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 90,
+    "rank": 90,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-7B",
+    "fullName": "Qwen/Qwen2.5-7B",
+    "avgPerf": 55.8,
+    "peakPerf": 58.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 91,
+    "rank": 91,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/deepseek-llm-67b-chat",
+    "fullName": "deepseek-ai/deepseek-llm-67b-chat",
+    "avgPerf": 55.78,
+    "peakPerf": 58.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 92,
+    "rank": 92,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-Small-24B-Base-2501",
+    "fullName": "mistralai/Mistral-Small-24B-Base-2501",
+    "avgPerf": 55.55,
+    "peakPerf": 58.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 93,
+    "rank": 93,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Orenguteng",
+    "model": "Orenguteng/Llama-3.1-8B-Lexi-Uncensored",
+    "fullName": "Orenguteng/Llama-3.1-8B-Lexi-Uncensored",
+    "avgPerf": 55.51,
+    "peakPerf": 58.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 94,
+    "rank": 94,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "fullName": "Qwen/Qwen2.5-3B-Instruct",
+    "avgPerf": 55.48,
+    "peakPerf": 58.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 95,
+    "rank": 95,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/DeepSauerHuatuoSkywork-R1-o1-Llama-3.1-8B",
+    "fullName": "grimjim/DeepSauerHuatuoSkywork-R1-o1-Llama-3.1-8B",
+    "avgPerf": 55.03,
+    "peakPerf": 57.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 96,
+    "rank": 96,
+    "diff": 0,
+    "tier": "C",
+    "provider": "MaziyarPanahi",
+    "model": "MaziyarPanahi/Llama-3-8B-Instruct-v0.8",
+    "fullName": "MaziyarPanahi/Llama-3-8B-Instruct-v0.8",
+    "avgPerf": 54.92,
+    "peakPerf": 57.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 97,
+    "rank": 97,
+    "diff": 0,
+    "tier": "C",
+    "provider": "leafspark",
+    "model": "leafspark/Llama-3.1-8B-MultiReflection-Instruct",
+    "fullName": "leafspark/Llama-3.1-8B-MultiReflection-Instruct",
+    "avgPerf": 54.9,
+    "peakPerf": 57.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 98,
+    "rank": 98,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepMount00",
+    "model": "DeepMount00/Llama-3-8b-Ita",
+    "fullName": "DeepMount00/Llama-3-8b-Ita",
+    "avgPerf": 54.73,
+    "peakPerf": 57.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 99,
+    "rank": 99,
+    "diff": 0,
+    "tier": "C",
+    "provider": "MaziyarPanahi",
+    "model": "MaziyarPanahi/Llama-3-8B-Instruct-v0.10",
+    "fullName": "MaziyarPanahi/Llama-3-8B-Instruct-v0.10",
+    "avgPerf": 54.73,
+    "peakPerf": 57.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 100,
+    "rank": 100,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ZeroXClem",
+    "model": "ZeroXClem/Llama-3.1-8B-AthenaSky-MegaMix",
+    "fullName": "ZeroXClem/Llama-3.1-8B-AthenaSky-MegaMix",
+    "avgPerf": 54.72,
+    "peakPerf": 57.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 101,
+    "rank": 101,
+    "diff": 0,
+    "tier": "C",
+    "provider": "MaziyarPanahi",
+    "model": "MaziyarPanahi/Llama-3-8B-Instruct-v0.9",
+    "fullName": "MaziyarPanahi/Llama-3-8B-Instruct-v0.9",
+    "avgPerf": 54.71,
+    "peakPerf": 57.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 102,
+    "rank": 102,
+    "diff": 0,
+    "tier": "C",
+    "provider": "dnhkng",
+    "model": "dnhkng/RYS-Llama-3.1-8B-Instruct",
+    "fullName": "dnhkng/RYS-Llama-3.1-8B-Instruct",
+    "avgPerf": 54.67,
+    "peakPerf": 57.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 103,
+    "rank": 103,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-34B-32K",
+    "fullName": "01-ai/Yi-1.5-34B-32K",
+    "avgPerf": 54.59,
+    "peakPerf": 57.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 104,
+    "rank": 104,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Meta-Llama-3-70B",
+    "fullName": "meta-llama/Meta-Llama-3-70B",
+    "avgPerf": 54.55,
+    "peakPerf": 57.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 105,
+    "rank": 105,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/SauerHuatuoSkywork-o1-Llama-3.1-8B",
+    "fullName": "grimjim/SauerHuatuoSkywork-o1-Llama-3.1-8B",
+    "avgPerf": 54.5,
+    "peakPerf": 57.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 106,
+    "rank": 106,
+    "diff": 0,
+    "tier": "C",
+    "provider": "VAGOsolutions",
+    "model": "VAGOsolutions/Llama-3-SauerkrautLM-8b-Instruct",
+    "fullName": "VAGOsolutions/Llama-3-SauerkrautLM-8b-Instruct",
+    "avgPerf": 54.47,
+    "peakPerf": 57.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 107,
+    "rank": 107,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mukaj",
+    "model": "mukaj/Llama-3.1-Hawkish-8B",
+    "fullName": "mukaj/Llama-3.1-Hawkish-8B",
+    "avgPerf": 54.29,
+    "peakPerf": 57,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 108,
+    "rank": 108,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Etherll",
+    "model": "Etherll/Herplete-LLM-Llama-3.1-8b-Ties",
+    "fullName": "Etherll/Herplete-LLM-Llama-3.1-8b-Ties",
+    "avgPerf": 54.19,
+    "peakPerf": 56.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 109,
+    "rank": 109,
+    "diff": 0,
+    "tier": "C",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-8B-DPO",
+    "fullName": "allenai/Llama-3.1-Tulu-3-8B-DPO",
+    "avgPerf": 54.05,
+    "peakPerf": 56.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 110,
+    "rank": 110,
+    "diff": 0,
+    "tier": "C",
+    "provider": "MaziyarPanahi",
+    "model": "MaziyarPanahi/Llama-3-70B-Instruct-v0.1",
+    "fullName": "MaziyarPanahi/Llama-3-70B-Instruct-v0.1",
+    "avgPerf": 53.79,
+    "peakPerf": 56.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 111,
+    "rank": 111,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-57B-A14B",
+    "fullName": "Qwen/Qwen2-57B-A14B",
+    "avgPerf": 53.69,
+    "peakPerf": 56.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 112,
+    "rank": 112,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepMount00",
+    "model": "DeepMount00/Llama-3.1-8b-Ita",
+    "fullName": "DeepMount00/Llama-3.1-8b-Ita",
+    "avgPerf": 53.65,
+    "peakPerf": 56.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 113,
+    "rank": 113,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Etherll",
+    "model": "Etherll/Herplete-LLM-Llama-3.1-8b",
+    "fullName": "Etherll/Herplete-LLM-Llama-3.1-8b",
+    "avgPerf": 53.64,
+    "peakPerf": 56.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 114,
+    "rank": 114,
+    "diff": 0,
+    "tier": "C",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-8B",
+    "fullName": "allenai/Llama-3.1-Tulu-3-8B",
+    "avgPerf": 53.64,
+    "peakPerf": 56.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 115,
+    "rank": 115,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-Small-Instruct-2409",
+    "fullName": "mistralai/Mistral-Small-Instruct-2409",
+    "avgPerf": 53.64,
+    "peakPerf": 56.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 116,
+    "rank": 116,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.1-70B",
+    "fullName": "meta-llama/Llama-3.1-70B",
+    "avgPerf": 53.51,
+    "peakPerf": 56.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 117,
+    "rank": 117,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Coder-14B",
+    "fullName": "Qwen/Qwen2.5-Coder-14B",
+    "avgPerf": 53.25,
+    "peakPerf": 55.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 118,
+    "rank": 118,
+    "diff": 0,
+    "tier": "C",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-8B",
+    "fullName": "allenai/Llama-3.1-Tulu-3-8B",
+    "avgPerf": 53.18,
+    "peakPerf": 55.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 119,
+    "rank": 119,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-ORPO-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-ORPO-v0.2",
+    "avgPerf": 53.04,
+    "peakPerf": 55.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 120,
+    "rank": 120,
+    "diff": 0,
+    "tier": "C",
+    "provider": "OpenScholar",
+    "model": "OpenScholar/Llama-3.1_OpenScholar-8B",
+    "fullName": "OpenScholar/Llama-3.1_OpenScholar-8B",
+    "avgPerf": 53.03,
+    "peakPerf": 55.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 121,
+    "rank": 121,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Lyte",
+    "model": "Lyte/Llama-3.1-8B-Instruct-Reasoner-1o1_v0.3",
+    "fullName": "Lyte/Llama-3.1-8B-Instruct-Reasoner-1o1_v0.3",
+    "avgPerf": 52.6,
+    "peakPerf": 55.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 122,
+    "rank": 122,
+    "diff": 0,
+    "tier": "C",
+    "provider": "FuseAI",
+    "model": "FuseAI/FuseChat-Llama-3.2-3B-Instruct",
+    "fullName": "FuseAI/FuseChat-Llama-3.2-3B-Instruct",
+    "avgPerf": 52.59,
+    "peakPerf": 55.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 123,
+    "rank": 123,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mixtral-8x22B-v0.1",
+    "fullName": "mistralai/Mixtral-8x22B-v0.1",
+    "avgPerf": 52.58,
+    "peakPerf": 55.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 124,
+    "rank": 124,
+    "diff": 0,
+    "tier": "C",
+    "provider": "qingy2024",
+    "model": "qingy2024/Benchmaxx-Llama-3.2-1B-Instruct",
+    "fullName": "qingy2024/Benchmaxx-Llama-3.2-1B-Instruct",
+    "avgPerf": 52.49,
+    "peakPerf": 55.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 125,
+    "rank": 125,
+    "diff": 0,
+    "tier": "C",
+    "provider": "sethuiyer",
+    "model": "sethuiyer/Llama-3.1-8B-Experimental-1206-Instruct",
+    "fullName": "sethuiyer/Llama-3.1-8B-Experimental-1206-Instruct",
+    "avgPerf": 52.46,
+    "peakPerf": 55.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 126,
+    "rank": 126,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-34B",
+    "fullName": "01-ai/Yi-1.5-34B",
+    "avgPerf": 52.38,
+    "peakPerf": 55,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 127,
+    "rank": 127,
+    "diff": 0,
+    "tier": "C",
+    "provider": "cognitivecomputations",
+    "model": "cognitivecomputations/dolphin-2.9.1-llama-3-70b",
+    "fullName": "cognitivecomputations/dolphin-2.9.1-llama-3-70b",
+    "avgPerf": 52.15,
+    "peakPerf": 54.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 128,
+    "rank": 128,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Hastagaras",
+    "model": "Hastagaras/Llama-3.1-Jamet-8B-MK.I",
+    "fullName": "Hastagaras/Llama-3.1-Jamet-8B-MK.I",
+    "avgPerf": 51.93,
+    "peakPerf": 54.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 129,
+    "rank": 129,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF",
+    "avgPerf": 51.69,
+    "peakPerf": 54.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 130,
+    "rank": 130,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3b-RP-Toxic-Fuse",
+    "fullName": "bunnycore/Llama-3.2-3b-RP-Toxic-Fuse",
+    "avgPerf": 51.63,
+    "peakPerf": 54.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 131,
+    "rank": 131,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-DPO-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-DPO-v0.2",
+    "avgPerf": 51.49,
+    "peakPerf": 54.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 132,
+    "rank": 132,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-7B",
+    "fullName": "Qwen/Qwen2-7B",
+    "avgPerf": 51.31,
+    "peakPerf": 53.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 133,
+    "rank": 133,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-RDPO-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RDPO-v0.2",
+    "avgPerf": 51.13,
+    "peakPerf": 53.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 134,
+    "rank": 134,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.1-8B-TitanFusion-Mix",
+    "fullName": "bunnycore/Llama-3.1-8B-TitanFusion-Mix",
+    "avgPerf": 51.09,
+    "peakPerf": 53.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 135,
+    "rank": 135,
+    "diff": 0,
+    "tier": "C",
+    "provider": "haoranxu",
+    "model": "haoranxu/Llama-3-Instruct-8B-SimPO",
+    "fullName": "haoranxu/Llama-3-Instruct-8B-SimPO",
+    "avgPerf": 51.04,
+    "peakPerf": 53.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 136,
+    "rank": 136,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Replete-AI",
+    "model": "Replete-AI/Replete-LLM-V2-Llama-3.1-8b",
+    "fullName": "Replete-AI/Replete-LLM-V2-Llama-3.1-8b",
+    "avgPerf": 51.02,
+    "peakPerf": 53.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 137,
+    "rank": 137,
+    "diff": 0,
+    "tier": "C",
+    "provider": "T145",
+    "model": "T145/Meta-Llama-3.1-8B-Instruct-TIES",
+    "fullName": "T145/Meta-Llama-3.1-8B-Instruct-TIES",
+    "avgPerf": 51.01,
+    "peakPerf": 53.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 138,
+    "rank": 138,
+    "diff": 0,
+    "tier": "C",
+    "provider": "haoranxu",
+    "model": "haoranxu/Llama-3-Instruct-8B-CPO-SimPO",
+    "fullName": "haoranxu/Llama-3-Instruct-8B-CPO-SimPO",
+    "avgPerf": 50.88,
+    "peakPerf": 53.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 139,
+    "rank": 139,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-CPO-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-CPO-v0.2",
+    "avgPerf": 50.83,
+    "peakPerf": 53.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 140,
+    "rank": 140,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NousResearch",
+    "model": "NousResearch/Hermes-2-Theta-Llama-3-8B",
+    "fullName": "NousResearch/Hermes-2-Theta-Llama-3-8B",
+    "avgPerf": 50.63,
+    "peakPerf": 53.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 141,
+    "rank": 141,
+    "diff": 0,
+    "tier": "C",
+    "provider": "UCLA-AGI",
+    "model": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter1",
+    "fullName": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter1",
+    "avgPerf": 50.58,
+    "peakPerf": 53.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 142,
+    "rank": 142,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-SimPO-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SimPO-v0.2",
+    "avgPerf": 50.55,
+    "peakPerf": 53.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 143,
+    "rank": 143,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-14B-Chat",
+    "fullName": "Qwen/Qwen1.5-14B-Chat",
+    "avgPerf": 50.54,
+    "peakPerf": 53.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 144,
+    "rank": 144,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-Nemo-Instruct-2407",
+    "fullName": "mistralai/Mistral-Nemo-Instruct-2407",
+    "avgPerf": 50.38,
+    "peakPerf": 52.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 145,
+    "rank": 145,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-KTO-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-KTO-v0.2",
+    "avgPerf": 50.37,
+    "peakPerf": 52.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 146,
+    "rank": 146,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/Llama-3-Instruct-8B-SimPO-v0.2",
+    "fullName": "Jimmy19991222/Llama-3-Instruct-8B-SimPO-v0.2",
+    "avgPerf": 50.23,
+    "peakPerf": 52.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 147,
+    "rank": 147,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/HuatuoSkywork-o1-Llama-3.1-8B",
+    "fullName": "grimjim/HuatuoSkywork-o1-Llama-3.1-8B",
+    "avgPerf": 50,
+    "peakPerf": 52.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 148,
+    "rank": 148,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mattshumer",
+    "model": "mattshumer/Reflection-Llama-3.1-70B",
+    "fullName": "mattshumer/Reflection-Llama-3.1-70B",
+    "avgPerf": 49.82,
+    "peakPerf": 52.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 149,
+    "rank": 149,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-rouge2-beta10-1minus-gamma0.3-rerun",
+    "fullName": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-rouge2-beta10-1minus-gamma0.3-rerun",
+    "avgPerf": 49.81,
+    "peakPerf": 52.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 150,
+    "rank": 150,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lordjia",
+    "model": "lordjia/Llama-3-Cantonese-8B-Instruct",
+    "fullName": "lordjia/Llama-3-Cantonese-8B-Instruct",
+    "avgPerf": 49.57,
+    "peakPerf": 52,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 151,
+    "rank": 151,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-34B-Chat",
+    "fullName": "01-ai/Yi-34B-Chat",
+    "avgPerf": 49.48,
+    "peakPerf": 52,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 152,
+    "rank": 152,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.1-8B-TitanFusion-v3",
+    "fullName": "bunnycore/Llama-3.1-8B-TitanFusion-v3",
+    "avgPerf": 49.47,
+    "peakPerf": 51.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 153,
+    "rank": 153,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-rouge2-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "fullName": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-rouge2-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "avgPerf": 49.45,
+    "peakPerf": 51.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 154,
+    "rank": 154,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "fullName": "meta-llama/Llama-3.2-3B-Instruct",
+    "avgPerf": 49.44,
+    "peakPerf": 51.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 155,
+    "rank": 155,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Ministral-8B-Instruct-2410",
+    "fullName": "mistralai/Ministral-8B-Instruct-2410",
+    "avgPerf": 49.4,
+    "peakPerf": 51.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 156,
+    "rank": 156,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers",
+    "model": "PJMixers/LLaMa-3-CursedStock-v2.0-8B",
+    "fullName": "PJMixers/LLaMa-3-CursedStock-v2.0-8B",
+    "avgPerf": 49.36,
+    "peakPerf": 51.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 157,
+    "rank": 157,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bert-f1-beta10-gamma0.3-lr1.0e-6-1minus-rerun",
+    "fullName": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bert-f1-beta10-gamma0.3-lr1.0e-6-1minus-rerun",
+    "avgPerf": 49.32,
+    "peakPerf": 51.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 158,
+    "rank": 158,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DebateLabKIT",
+    "model": "DebateLabKIT/Llama-3.1-Argunaut-1-8B-SFT",
+    "fullName": "DebateLabKIT/Llama-3.1-Argunaut-1-8B-SFT",
+    "avgPerf": 49.25,
+    "peakPerf": 51.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 159,
+    "rank": 159,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bert_f1-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "fullName": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bert_f1-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "avgPerf": 49.22,
+    "peakPerf": 51.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 160,
+    "rank": 160,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-RRHF",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RRHF",
+    "avgPerf": 49.19,
+    "peakPerf": 51.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 161,
+    "rank": 161,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-rougeL-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "fullName": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-rougeL-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "avgPerf": 49.14,
+    "peakPerf": 51.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 162,
+    "rank": 162,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ZhangShenao",
+    "model": "ZhangShenao/SELM-Llama-3-8B-Instruct-iter-3",
+    "fullName": "ZhangShenao/SELM-Llama-3-8B-Instruct-iter-3",
+    "avgPerf": 49.11,
+    "peakPerf": 51.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 163,
+    "rank": 163,
+    "diff": 0,
+    "tier": "C",
+    "provider": "UCLA-AGI",
+    "model": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter2",
+    "fullName": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter2",
+    "avgPerf": 49.1,
+    "peakPerf": 51.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 164,
+    "rank": 164,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/Llama-3-Instruct-8B-SimPO-SPPO-Iter3-merge",
+    "fullName": "grimjim/Llama-3-Instruct-8B-SimPO-SPPO-Iter3-merge",
+    "avgPerf": 49.1,
+    "peakPerf": 51.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 165,
+    "rank": 165,
+    "diff": 0,
+    "tier": "C",
+    "provider": "jebish7",
+    "model": "jebish7/Llama-3.1-8B-Instruct",
+    "fullName": "jebish7/Llama-3.1-8B-Instruct",
+    "avgPerf": 49.07,
+    "peakPerf": 51.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 166,
+    "rank": 166,
+    "diff": 0,
+    "tier": "C",
+    "provider": "noname0202",
+    "model": "noname0202/Llama-3.2-4x3B-Instruct",
+    "fullName": "noname0202/Llama-3.2-4x3B-Instruct",
+    "avgPerf": 49.04,
+    "peakPerf": 51.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 167,
+    "rank": 167,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-CPO",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-CPO",
+    "avgPerf": 49.02,
+    "peakPerf": 51.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 168,
+    "rank": 168,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lightblue",
+    "model": "lightblue/suzume-llama-3-8B-multilingual",
+    "fullName": "lightblue/suzume-llama-3-8B-multilingual",
+    "avgPerf": 48.99,
+    "peakPerf": 51.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 169,
+    "rank": 169,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ArliAI",
+    "model": "ArliAI/Llama-3.1-8B-ArliAI-RPMax-v1.1",
+    "fullName": "ArliAI/Llama-3.1-8B-ArliAI-RPMax-v1.1",
+    "avgPerf": 48.9,
+    "peakPerf": 51.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 170,
+    "rank": 170,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code",
+    "avgPerf": 48.89,
+    "peakPerf": 51.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 171,
+    "rank": 171,
+    "diff": 0,
+    "tier": "C",
+    "provider": "failspy",
+    "model": "failspy/Meta-Llama-3-8B-Instruct-abliterated-v3",
+    "fullName": "failspy/Meta-Llama-3-8B-Instruct-abliterated-v3",
+    "avgPerf": 48.88,
+    "peakPerf": 51.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 172,
+    "rank": 172,
+    "diff": 0,
+    "tier": "C",
+    "provider": "khoantap",
+    "model": "khoantap/llama-3-8b-stock-merge",
+    "fullName": "khoantap/llama-3-8b-stock-merge",
+    "avgPerf": 48.88,
+    "peakPerf": 51.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 173,
+    "rank": 173,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-27b",
+    "fullName": "google/gemma-2-27b",
+    "avgPerf": 48.87,
+    "peakPerf": 51.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 174,
+    "rank": 174,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "fullName": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "avgPerf": 48.83,
+    "peakPerf": 51.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 175,
+    "rank": 175,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.004-128K-code-ds-auto",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.004-128K-code-ds-auto",
+    "avgPerf": 48.76,
+    "peakPerf": 51.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 176,
+    "rank": 176,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Locutusque",
+    "model": "Locutusque/Hercules-6.0-Llama-3.1-8B",
+    "fullName": "Locutusque/Hercules-6.0-Llama-3.1-8B",
+    "avgPerf": 48.69,
+    "peakPerf": 51.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 177,
+    "rank": 177,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "fullName": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "avgPerf": 48.65,
+    "peakPerf": 51.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 178,
+    "rank": 178,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mkxu",
+    "model": "mkxu/llama-3-8b-instruct-fpo",
+    "fullName": "mkxu/llama-3-8b-instruct-fpo",
+    "avgPerf": 48.64,
+    "peakPerf": 51.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 179,
+    "rank": 179,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-9B-Chat-16K",
+    "fullName": "01-ai/Yi-1.5-9B-Chat-16K",
+    "avgPerf": 48.54,
+    "peakPerf": 51,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 180,
+    "rank": 180,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "fullName": "meta-llama/Llama-3.1-8B-Instruct",
+    "avgPerf": 48.54,
+    "peakPerf": 51,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 181,
+    "rank": 181,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-RRHF-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RRHF-v0.2",
+    "avgPerf": 48.52,
+    "peakPerf": 50.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 182,
+    "rank": 182,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto",
+    "avgPerf": 48.51,
+    "peakPerf": 50.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 183,
+    "rank": 183,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF-v0.2",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF-v0.2",
+    "avgPerf": 48.47,
+    "peakPerf": 50.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 184,
+    "rank": 184,
+    "diff": 0,
+    "tier": "C",
+    "provider": "UCLA-AGI",
+    "model": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter3",
+    "fullName": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter3",
+    "avgPerf": 48.39,
+    "peakPerf": 50.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 185,
+    "rank": 185,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lightblue",
+    "model": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-top25",
+    "fullName": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-top25",
+    "avgPerf": 48.38,
+    "peakPerf": 50.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 186,
+    "rank": 186,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-SimPO",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SimPO",
+    "avgPerf": 48.33,
+    "peakPerf": 50.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 187,
+    "rank": 187,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lightblue",
+    "model": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-top75",
+    "fullName": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-top75",
+    "avgPerf": 48.3,
+    "peakPerf": 50.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 188,
+    "rank": 188,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto",
+    "avgPerf": 48.26,
+    "peakPerf": 50.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 189,
+    "rank": 189,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-ORPO",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-ORPO",
+    "avgPerf": 48.25,
+    "peakPerf": 50.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 190,
+    "rank": 190,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-RDPO",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RDPO",
+    "avgPerf": 48.21,
+    "peakPerf": 50.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 191,
+    "rank": 191,
+    "diff": 0,
+    "tier": "C",
+    "provider": "CarrotAI",
+    "model": "CarrotAI/Llama-3.2-Rabbit-Ko-3B-Instruct",
+    "fullName": "CarrotAI/Llama-3.2-Rabbit-Ko-3B-Instruct",
+    "avgPerf": 48.02,
+    "peakPerf": 50.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 192,
+    "rank": 192,
+    "diff": 0,
+    "tier": "C",
+    "provider": "sethuiyer",
+    "model": "sethuiyer/Llama-3.1-8B-Experimental-1208-Instruct",
+    "fullName": "sethuiyer/Llama-3.1-8B-Experimental-1208-Instruct",
+    "avgPerf": 48.02,
+    "peakPerf": 50.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 193,
+    "rank": 193,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-DPO",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-DPO",
+    "avgPerf": 48,
+    "peakPerf": 50.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 194,
+    "rank": 194,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NousResearch",
+    "model": "NousResearch/Hermes-3-Llama-3.1-8B",
+    "fullName": "NousResearch/Hermes-3-Llama-3.1-8B",
+    "avgPerf": 47.98,
+    "peakPerf": 50.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 195,
+    "rank": 195,
+    "diff": 0,
+    "tier": "C",
+    "provider": "nhyha",
+    "model": "nhyha/N3N_Llama-3.1-8B-Instruct_1028_0216",
+    "fullName": "nhyha/N3N_Llama-3.1-8B-Instruct_1028_0216",
+    "avgPerf": 47.96,
+    "peakPerf": 50.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 196,
+    "rank": 196,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Edgerunners",
+    "model": "Edgerunners/meta-llama-3-8b-instruct-hf-ortho-baukit-34fail-3000total-bf16",
+    "fullName": "Edgerunners/meta-llama-3-8b-instruct-hf-ortho-baukit-34fail-3000total-bf16",
+    "avgPerf": 47.89,
+    "peakPerf": 50.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 197,
+    "rank": 197,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Reasoning-Llama-3.2-3B-Math-Instruct-RE1-ORPO",
+    "fullName": "EpistemeAI/Reasoning-Llama-3.2-3B-Math-Instruct-RE1-ORPO",
+    "avgPerf": 47.86,
+    "peakPerf": 50.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 198,
+    "rank": 198,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Instruct-8B-KTO",
+    "fullName": "princeton-nlp/Llama-3-Instruct-8B-KTO",
+    "avgPerf": 47.83,
+    "peakPerf": 50.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 199,
+    "rank": 199,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bleu-beta0.1-no-length-scale-gamma0.4",
+    "fullName": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bleu-beta0.1-no-length-scale-gamma0.4",
+    "avgPerf": 47.78,
+    "peakPerf": 50.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 200,
+    "rank": 200,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-Empathy",
+    "fullName": "EpistemeAI/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-Empathy",
+    "avgPerf": 47.63,
+    "peakPerf": 50,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 201,
+    "rank": 201,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ZeroXClem",
+    "model": "ZeroXClem/Llama-3.1-8B-SuperTulu-LexiNova",
+    "fullName": "ZeroXClem/Llama-3.1-8B-SuperTulu-LexiNova",
+    "avgPerf": 47.59,
+    "peakPerf": 50,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 202,
+    "rank": 202,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NAPS-ai",
+    "model": "NAPS-ai/naps-llama-3_1-8b-instruct-v0.3",
+    "fullName": "NAPS-ai/naps-llama-3_1-8b-instruct-v0.3",
+    "avgPerf": 47.55,
+    "peakPerf": 49.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 203,
+    "rank": 203,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Codestral-22B-v0.1",
+    "fullName": "mistralai/Codestral-22B-v0.1",
+    "avgPerf": 47.55,
+    "peakPerf": 49.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 204,
+    "rank": 204,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Nekochu",
+    "model": "Nekochu/Llama-3.1-8B-German-ORPO",
+    "fullName": "Nekochu/Llama-3.1-8B-German-ORPO",
+    "avgPerf": 47.5,
+    "peakPerf": 49.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 205,
+    "rank": 205,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Joseph717171",
+    "model": "Joseph717171/Hermes-3-Llama-3.1-8B_TIES_with_Base_Embeds_Initialized_to_Special_Instruct_Toks_dtypeF32",
+    "fullName": "Joseph717171/Hermes-3-Llama-3.1-8B_TIES_with_Base_Embeds_Initialized_to_Special_Instruct_Toks_dtypeF32",
+    "avgPerf": 47.49,
+    "peakPerf": 49.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 206,
+    "rank": 206,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/Llama-3.1-8B-Instruct-abliterated_via_adapter",
+    "fullName": "grimjim/Llama-3.1-8B-Instruct-abliterated_via_adapter",
+    "avgPerf": 47.42,
+    "peakPerf": 49.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 207,
+    "rank": 207,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-RP-DeepThink",
+    "fullName": "bunnycore/Llama-3.2-3B-RP-DeepThink",
+    "avgPerf": 47.41,
+    "peakPerf": 49.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 208,
+    "rank": 208,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-Logic",
+    "fullName": "EpistemeAI/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-Logic",
+    "avgPerf": 47.4,
+    "peakPerf": 49.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 209,
+    "rank": 209,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mlabonne",
+    "model": "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated",
+    "fullName": "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated",
+    "avgPerf": 47.39,
+    "peakPerf": 49.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 210,
+    "rank": 210,
+    "diff": 0,
+    "tier": "C",
+    "provider": "refuelai",
+    "model": "refuelai/Llama-3-Refueled",
+    "fullName": "refuelai/Llama-3-Refueled",
+    "avgPerf": 47.35,
+    "peakPerf": 49.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 211,
+    "rank": 211,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds",
+    "avgPerf": 47.27,
+    "peakPerf": 49.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 212,
+    "rank": 212,
+    "diff": 0,
+    "tier": "C",
+    "provider": "UCLA-AGI",
+    "model": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter3",
+    "fullName": "UCLA-AGI/Llama-3-Instruct-8B-SPPO-Iter3",
+    "avgPerf": 47.1,
+    "peakPerf": 49.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 213,
+    "rank": 213,
+    "diff": 0,
+    "tier": "C",
+    "provider": "chujiezheng",
+    "model": "chujiezheng/Llama-3-Instruct-8B-SimPO-ExPO",
+    "fullName": "chujiezheng/Llama-3-Instruct-8B-SimPO-ExPO",
+    "avgPerf": 47.09,
+    "peakPerf": 49.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 214,
+    "rank": 214,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Jimmy19991222",
+    "model": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bert_p-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "fullName": "Jimmy19991222/llama-3-8b-instruct-gapo-v2-bert_p-beta10-gamma0.3-lr1.0e-6-scale-log",
+    "avgPerf": 47.05,
+    "peakPerf": 49.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 215,
+    "rank": 215,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-divergent",
+    "fullName": "EpistemeAI/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-divergent",
+    "avgPerf": 47.03,
+    "peakPerf": 49.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 216,
+    "rank": 216,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-8B-ProLong-64k-Instruct",
+    "fullName": "princeton-nlp/Llama-3-8B-ProLong-64k-Instruct",
+    "avgPerf": 47.02,
+    "peakPerf": 49.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 217,
+    "rank": 217,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "fullName": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "avgPerf": 46.9,
+    "peakPerf": 49.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 218,
+    "rank": 218,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-All-Mix",
+    "fullName": "bunnycore/Llama-3.2-3B-All-Mix",
+    "avgPerf": 46.87,
+    "peakPerf": 49.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 219,
+    "rank": 219,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/OpenReasoner-Llama-3.2-3B-rs1.0",
+    "fullName": "EpistemeAI/OpenReasoner-Llama-3.2-3B-rs1.0",
+    "avgPerf": 46.85,
+    "peakPerf": 49.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 220,
+    "rank": 220,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/Llama-3.1-Bonsaikraft-8B-Instruct",
+    "fullName": "grimjim/Llama-3.1-Bonsaikraft-8B-Instruct",
+    "avgPerf": 46.68,
+    "peakPerf": 49,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 221,
+    "rank": 221,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ZeroXClem",
+    "model": "ZeroXClem/Llama-3.1-8B-RainbowLight-EtherealMix",
+    "fullName": "ZeroXClem/Llama-3.1-8B-RainbowLight-EtherealMix",
+    "avgPerf": 46.63,
+    "peakPerf": 49,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 222,
+    "rank": 222,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-6B-Chat",
+    "fullName": "01-ai/Yi-1.5-6B-Chat",
+    "avgPerf": 46.54,
+    "peakPerf": 48.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 223,
+    "rank": 223,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI2",
+    "model": "EpistemeAI2/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-math",
+    "fullName": "EpistemeAI2/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-math",
+    "avgPerf": 46.42,
+    "peakPerf": 48.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 224,
+    "rank": 224,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Locutusque",
+    "model": "Locutusque/Hercules-6.1-Llama-3.1-8B",
+    "fullName": "Locutusque/Hercules-6.1-Llama-3.1-8B",
+    "avgPerf": 46.41,
+    "peakPerf": 48.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 225,
+    "rank": 225,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers-Dev",
+    "model": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMix-v0.1-SFT-3B",
+    "fullName": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMix-v0.1-SFT-3B",
+    "avgPerf": 46.37,
+    "peakPerf": 48.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 226,
+    "rank": 226,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-RRStock",
+    "fullName": "bunnycore/Llama-3.2-3B-RRStock",
+    "avgPerf": 46.31,
+    "peakPerf": 48.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 227,
+    "rank": 227,
+    "diff": 0,
+    "tier": "C",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-8B-SFT",
+    "fullName": "allenai/Llama-3.1-Tulu-3-8B-SFT",
+    "avgPerf": 46.15,
+    "peakPerf": 48.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 228,
+    "rank": 228,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "fullName": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "avgPerf": 46.01,
+    "peakPerf": 48.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 229,
+    "rank": 229,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Smol-Llama-3.2-3B",
+    "fullName": "bunnycore/Smol-Llama-3.2-3B",
+    "avgPerf": 46,
+    "peakPerf": 48.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 230,
+    "rank": 230,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.1-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.1-gamma-0.01",
+    "avgPerf": 45.84,
+    "peakPerf": 48.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 231,
+    "rank": 231,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Triangle104",
+    "model": "Triangle104/DS-Distilled-Hermes-Llama-3.1",
+    "fullName": "Triangle104/DS-Distilled-Hermes-Llama-3.1",
+    "avgPerf": 45.72,
+    "peakPerf": 48,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 232,
+    "rank": 232,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-34B",
+    "fullName": "01-ai/Yi-34B",
+    "avgPerf": 45.7,
+    "peakPerf": 48,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 233,
+    "rank": 233,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.5-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.5-gamma-0.1",
+    "avgPerf": 45.69,
+    "peakPerf": 48,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 234,
+    "rank": 234,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ehristoforu",
+    "model": "ehristoforu/mllama-3.1-8b-it",
+    "fullName": "ehristoforu/mllama-3.1-8b-it",
+    "avgPerf": 45.3,
+    "peakPerf": 47.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 235,
+    "rank": 235,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.1-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.1-gamma-0.01",
+    "avgPerf": 45.29,
+    "peakPerf": 47.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 236,
+    "rank": 236,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-9B",
+    "fullName": "01-ai/Yi-1.5-9B",
+    "avgPerf": 45.25,
+    "peakPerf": 47.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 237,
+    "rank": 237,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NousResearch",
+    "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+    "fullName": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+    "avgPerf": 45.08,
+    "peakPerf": 47.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 238,
+    "rank": 238,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
+    "fullName": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
+    "avgPerf": 44.82,
+    "peakPerf": 47.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 239,
+    "rank": 239,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.9-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.9-gamma-0.1",
+    "avgPerf": 44.8,
+    "peakPerf": 47,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 240,
+    "rank": 240,
+    "diff": 0,
+    "tier": "C",
+    "provider": "dnhkng",
+    "model": "dnhkng/RYS-Llama-3-8B-Instruct",
+    "fullName": "dnhkng/RYS-Llama-3-8B-Instruct",
+    "avgPerf": 44.78,
+    "peakPerf": 47,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 241,
+    "rank": 241,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-14B",
+    "fullName": "Qwen/Qwen1.5-14B",
+    "avgPerf": 44.72,
+    "peakPerf": 47,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 242,
+    "rank": 242,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.3-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.3-gamma-0.1",
+    "avgPerf": 44.59,
+    "peakPerf": 46.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 243,
+    "rank": 243,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers-Dev",
+    "model": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMix-v0.2-SFT-HailMary-v0.1-KTO-3B",
+    "fullName": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMix-v0.2-SFT-HailMary-v0.1-KTO-3B",
+    "avgPerf": 44.58,
+    "peakPerf": 46.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 244,
+    "rank": 244,
+    "diff": 0,
+    "tier": "C",
+    "provider": "TheDrummer",
+    "model": "TheDrummer/Llama-3SOME-8B-v2",
+    "fullName": "TheDrummer/Llama-3SOME-8B-v2",
+    "avgPerf": 44.55,
+    "peakPerf": 46.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 245,
+    "rank": 245,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Columbia-NLP",
+    "model": "Columbia-NLP/LION-LLaMA-3-8b-dpo-v1.0",
+    "fullName": "Columbia-NLP/LION-LLaMA-3-8b-dpo-v1.0",
+    "avgPerf": 44.5,
+    "peakPerf": 46.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 246,
+    "rank": 246,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers-Dev",
+    "model": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMix-v0.2-SFT-3B",
+    "fullName": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMix-v0.2-SFT-3B",
+    "avgPerf": 44.47,
+    "peakPerf": 46.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 247,
+    "rank": 247,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.7-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.7-gamma-0.1",
+    "avgPerf": 44.47,
+    "peakPerf": 46.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 248,
+    "rank": 248,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+    "fullName": "Qwen/Qwen2.5-Math-7B-Instruct",
+    "avgPerf": 44.46,
+    "peakPerf": 46.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 249,
+    "rank": 249,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Xkev",
+    "model": "Xkev/Llama-3.2V-11B-cot",
+    "fullName": "Xkev/Llama-3.2V-11B-cot",
+    "avgPerf": 44.44,
+    "peakPerf": 46.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 250,
+    "rank": 250,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-Mix-Skill",
+    "fullName": "bunnycore/Llama-3.2-3B-Mix-Skill",
+    "avgPerf": 44.4,
+    "peakPerf": 46.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 251,
+    "rank": 251,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/llama-3-Nephilim-v1-8B",
+    "fullName": "grimjim/llama-3-Nephilim-v1-8B",
+    "avgPerf": 44.38,
+    "peakPerf": 46.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 252,
+    "rank": 252,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.3-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.3-gamma-0.1",
+    "avgPerf": 44.37,
+    "peakPerf": 46.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 253,
+    "rank": 253,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Etherll",
+    "model": "Etherll/Replete-LLM-V3-Llama-3.1-8b",
+    "fullName": "Etherll/Replete-LLM-V3-Llama-3.1-8b",
+    "avgPerf": 44.33,
+    "peakPerf": 46.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 254,
+    "rank": 254,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Nekochu",
+    "model": "Nekochu/Llama-3.1-8B-french-DPO",
+    "fullName": "Nekochu/Llama-3.1-8B-french-DPO",
+    "avgPerf": 44.32,
+    "peakPerf": 46.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 255,
+    "rank": 255,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-8B-ProLong-512k-Base",
+    "fullName": "princeton-nlp/Llama-3-8B-ProLong-512k-Base",
+    "avgPerf": 44.28,
+    "peakPerf": 46.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 256,
+    "rank": 256,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-8B-ProLong-64k-Base",
+    "fullName": "princeton-nlp/Llama-3-8B-ProLong-64k-Base",
+    "avgPerf": 44.22,
+    "peakPerf": 46.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 257,
+    "rank": 257,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.7-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.7-gamma-0.1",
+    "avgPerf": 44.17,
+    "peakPerf": 46.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 258,
+    "rank": 258,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BlackBeenie",
+    "model": "BlackBeenie/llama-3-luminous-merged",
+    "fullName": "BlackBeenie/llama-3-luminous-merged",
+    "avgPerf": 44.16,
+    "peakPerf": 46.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 259,
+    "rank": 259,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-0.001-128K-auto",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-0.001-128K-auto",
+    "avgPerf": 44.05,
+    "peakPerf": 46.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 260,
+    "rank": 260,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-Booval",
+    "fullName": "bunnycore/Llama-3.2-3B-Booval",
+    "avgPerf": 44.05,
+    "peakPerf": 46.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 261,
+    "rank": 261,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lightblue",
+    "model": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-half",
+    "fullName": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-half",
+    "avgPerf": 43.93,
+    "peakPerf": 46.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 262,
+    "rank": 262,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Groq",
+    "model": "Groq/Llama-3-Groq-8B-Tool-Use",
+    "fullName": "Groq/Llama-3-Groq-8B-Tool-Use",
+    "avgPerf": 43.8,
+    "peakPerf": 46,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 263,
+    "rank": 263,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.1-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.1-gamma-0.1",
+    "avgPerf": 43.8,
+    "peakPerf": 46,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 264,
+    "rank": 264,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.5-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.5-gamma-0.1",
+    "avgPerf": 43.8,
+    "peakPerf": 46,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 265,
+    "rank": 265,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BlackBeenie",
+    "model": "BlackBeenie/Llama-3.1-8B-OpenO1-SFT-v0.1",
+    "fullName": "BlackBeenie/Llama-3.1-8B-OpenO1-SFT-v0.1",
+    "avgPerf": 43.71,
+    "peakPerf": 45.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 266,
+    "rank": 266,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_linear",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_linear",
+    "avgPerf": 43.65,
+    "peakPerf": 45.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 267,
+    "rank": 267,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.9-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.9-gamma-0.1",
+    "avgPerf": 43.63,
+    "peakPerf": 45.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 268,
+    "rank": 268,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Reasoning-Llama-3.1-CoT-RE1-NMT-V2-ORPO",
+    "fullName": "EpistemeAI/Reasoning-Llama-3.1-CoT-RE1-NMT-V2-ORPO",
+    "avgPerf": 43.57,
+    "peakPerf": 45.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 269,
+    "rank": 269,
+    "diff": 0,
+    "tier": "C",
+    "provider": "nbeerbower",
+    "model": "nbeerbower/llama-3-gutenberg-8B",
+    "fullName": "nbeerbower/llama-3-gutenberg-8B",
+    "avgPerf": 43.52,
+    "peakPerf": 45.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 270,
+    "rank": 270,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.1-gamma-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.1-gamma-0.1",
+    "avgPerf": 43.51,
+    "peakPerf": 45.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 271,
+    "rank": 271,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.2-8B-Instruct-agent-003-128k-code-DPO",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.2-8B-Instruct-agent-003-128k-code-DPO",
+    "avgPerf": 43.49,
+    "peakPerf": 45.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 272,
+    "rank": 272,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-ToxicKod",
+    "fullName": "bunnycore/Llama-3.2-3B-ToxicKod",
+    "avgPerf": 43.44,
+    "peakPerf": 45.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 273,
+    "rank": 273,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Kukedlc",
+    "model": "Kukedlc/NeuralLLaMa-3-8b-DT-v0.1",
+    "fullName": "Kukedlc/NeuralLLaMa-3-8b-DT-v0.1",
+    "avgPerf": 43.42,
+    "peakPerf": 45.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 274,
+    "rank": 274,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-9b",
+    "fullName": "google/gemma-2-9b",
+    "avgPerf": 43.31,
+    "peakPerf": 45.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 275,
+    "rank": 275,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Lyte",
+    "model": "Lyte/Llama-3.2-3B-Overthinker",
+    "fullName": "Lyte/Llama-3.2-3B-Overthinker",
+    "avgPerf": 43.23,
+    "peakPerf": 45.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 276,
+    "rank": 276,
+    "diff": 0,
+    "tier": "C",
+    "provider": "maldv",
+    "model": "maldv/badger-kappa-llama-3-8b",
+    "fullName": "maldv/badger-kappa-llama-3-8b",
+    "avgPerf": 43.23,
+    "peakPerf": 45.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 277,
+    "rank": 277,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Alpaca-Llama-3.1-8B-Philos-DPO-200",
+    "fullName": "EpistemeAI/Fireball-Alpaca-Llama-3.1-8B-Philos-DPO-200",
+    "avgPerf": 43.16,
+    "peakPerf": 45.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 278,
+    "rank": 278,
+    "diff": 0,
+    "tier": "C",
+    "provider": "khulaifi95",
+    "model": "khulaifi95/Llama-3.1-8B-Reason-Blend-888k",
+    "fullName": "khulaifi95/Llama-3.1-8B-Reason-Blend-888k",
+    "avgPerf": 43.1,
+    "peakPerf": 45.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 279,
+    "rank": 279,
+    "diff": 0,
+    "tier": "C",
+    "provider": "maldv",
+    "model": "maldv/badger-writer-llama-3-8b",
+    "fullName": "maldv/badger-writer-llama-3-8b",
+    "avgPerf": 43.09,
+    "peakPerf": 45.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 280,
+    "rank": 280,
+    "diff": 0,
+    "tier": "C",
+    "provider": "prithivMLmods",
+    "model": "prithivMLmods/Llama-3.1-8B-Open-SFT",
+    "fullName": "prithivMLmods/Llama-3.1-8B-Open-SFT",
+    "avgPerf": 42.98,
+    "peakPerf": 45.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 281,
+    "rank": 281,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI2",
+    "model": "EpistemeAI2/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.005-128K-code-COT",
+    "fullName": "EpistemeAI2/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.005-128K-code-COT",
+    "avgPerf": 42.97,
+    "peakPerf": 45.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 282,
+    "rank": 282,
+    "diff": 0,
+    "tier": "C",
+    "provider": "gaverfraxz",
+    "model": "gaverfraxz/Meta-Llama-3.1-8B-Instruct-HalfAbliterated-TIES",
+    "fullName": "gaverfraxz/Meta-Llama-3.1-8B-Instruct-HalfAbliterated-TIES",
+    "avgPerf": 42.89,
+    "peakPerf": 45,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 283,
+    "rank": 283,
+    "diff": 0,
+    "tier": "C",
+    "provider": "athirdpath",
+    "model": "athirdpath/Llama-3.1-Instruct_NSFW-pretrained_e1-plus_reddit",
+    "fullName": "athirdpath/Llama-3.1-Instruct_NSFW-pretrained_e1-plus_reddit",
+    "avgPerf": 42.83,
+    "peakPerf": 45,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 284,
+    "rank": 284,
+    "diff": 0,
+    "tier": "C",
+    "provider": "prithivMLmods",
+    "model": "prithivMLmods/Deepthink-Llama-3-8B-Preview",
+    "fullName": "prithivMLmods/Deepthink-Llama-3-8B-Preview",
+    "avgPerf": 42.81,
+    "peakPerf": 45,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 285,
+    "rank": 285,
+    "diff": 0,
+    "tier": "C",
+    "provider": "maldv",
+    "model": "maldv/badger-lambda-llama-3-8b",
+    "fullName": "maldv/badger-lambda-llama-3-8b",
+    "avgPerf": 42.78,
+    "peakPerf": 44.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 286,
+    "rank": 286,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.004-128K-code-COT",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.004-128K-code-COT",
+    "avgPerf": 42.6,
+    "peakPerf": 44.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 287,
+    "rank": 287,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/Llama-3-Instruct-8B-SPPO-Iter3-SimPO-merge",
+    "fullName": "grimjim/Llama-3-Instruct-8B-SPPO-Iter3-SimPO-merge",
+    "avgPerf": 42.56,
+    "peakPerf": 44.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 288,
+    "rank": 288,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Skywork",
+    "model": "Skywork/Skywork-o1-Open-Llama-3.1-8B",
+    "fullName": "Skywork/Skywork-o1-Open-Llama-3.1-8B",
+    "avgPerf": 42.39,
+    "peakPerf": 44.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 289,
+    "rank": 289,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Columbia-NLP",
+    "model": "Columbia-NLP/LION-LLaMA-3-8b-sft-v1.0",
+    "fullName": "Columbia-NLP/LION-LLaMA-3-8b-sft-v1.0",
+    "avgPerf": 42.38,
+    "peakPerf": 44.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 290,
+    "rank": 290,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mlabonne",
+    "model": "mlabonne/ChimeraLlama-3-8B-v3",
+    "fullName": "mlabonne/ChimeraLlama-3-8B-v3",
+    "avgPerf": 42.27,
+    "peakPerf": 44.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 291,
+    "rank": 291,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K",
+    "avgPerf": 42.13,
+    "peakPerf": 44.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 292,
+    "rank": 292,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "fullName": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "avgPerf": 42.09,
+    "peakPerf": 44.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 293,
+    "rank": 293,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/llama-3-Nephilim-v2-8B",
+    "fullName": "grimjim/llama-3-Nephilim-v2-8B",
+    "avgPerf": 42.08,
+    "peakPerf": 44.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 294,
+    "rank": 294,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/llama-3-Nephilim-v3-8B",
+    "fullName": "grimjim/llama-3-Nephilim-v3-8B",
+    "avgPerf": 42.08,
+    "peakPerf": 44.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 295,
+    "rank": 295,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.3-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.3-gamma-0.01",
+    "avgPerf": 42.05,
+    "peakPerf": 44.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 296,
+    "rank": 296,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Math",
+    "fullName": "EpistemeAI/Fireball-Meta-Llama-3.1-8B-Instruct-Math",
+    "avgPerf": 41.99,
+    "peakPerf": 44.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 297,
+    "rank": 297,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Locutusque",
+    "model": "Locutusque/Llama-3-Yggdrasil-2.0-8B",
+    "fullName": "Locutusque/Llama-3-Yggdrasil-2.0-8B",
+    "avgPerf": 41.79,
+    "peakPerf": 43.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 298,
+    "rank": 298,
+    "diff": 0,
+    "tier": "C",
+    "provider": "grimjim",
+    "model": "grimjim/llama-3-Nephilim-v2.1-8B",
+    "fullName": "grimjim/llama-3-Nephilim-v2.1-8B",
+    "avgPerf": 41.74,
+    "peakPerf": 43.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 299,
+    "rank": 299,
+    "diff": 0,
+    "tier": "C",
+    "provider": "VIRNECT",
+    "model": "VIRNECT/llama-3-Korean-8B",
+    "fullName": "VIRNECT/llama-3-Korean-8B",
+    "avgPerf": 41.73,
+    "peakPerf": 43.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 300,
+    "rank": 300,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_ties-density-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_ties-density-0.1",
+    "avgPerf": 41.73,
+    "peakPerf": 43.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 301,
+    "rank": 301,
+    "diff": 0,
+    "tier": "C",
+    "provider": "MLP-KTLim",
+    "model": "MLP-KTLim/llama-3-Korean-Bllossom-8B",
+    "fullName": "MLP-KTLim/llama-3-Korean-Bllossom-8B",
+    "avgPerf": 41.66,
+    "peakPerf": 43.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 302,
+    "rank": 302,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI2",
+    "model": "EpistemeAI2/Fireball-Llama-3.1-8B-Philos-Reflection",
+    "fullName": "EpistemeAI2/Fireball-Llama-3.1-8B-Philos-Reflection",
+    "avgPerf": 41.62,
+    "peakPerf": 43.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 303,
+    "rank": 303,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ehristoforu",
+    "model": "ehristoforu/mllama-3.1-8b-instruct",
+    "fullName": "ehristoforu/mllama-3.1-8b-instruct",
+    "avgPerf": 41.57,
+    "peakPerf": 43.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 304,
+    "rank": 304,
+    "diff": 0,
+    "tier": "C",
+    "provider": "maldv",
+    "model": "maldv/badger-mu-llama-3-8b",
+    "fullName": "maldv/badger-mu-llama-3-8b",
+    "avgPerf": 41.51,
+    "peakPerf": 43.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 305,
+    "rank": 305,
+    "diff": 0,
+    "tier": "C",
+    "provider": "CarrotAI",
+    "model": "CarrotAI/Llama-3.2-Rabbit-Ko-3B-Instruct-2412",
+    "fullName": "CarrotAI/Llama-3.2-Rabbit-Ko-3B-Instruct-2412",
+    "avgPerf": 41.47,
+    "peakPerf": 43.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 306,
+    "rank": 306,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lightblue",
+    "model": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-full",
+    "fullName": "lightblue/suzume-llama-3-8B-multilingual-orpo-borda-full",
+    "avgPerf": 41.47,
+    "peakPerf": 43.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 307,
+    "rank": 307,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.3-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.3-gamma-0.01",
+    "avgPerf": 41.42,
+    "peakPerf": 43.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 308,
+    "rank": 308,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.5-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.5-gamma-0.01",
+    "avgPerf": 41.36,
+    "peakPerf": 43.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 309,
+    "rank": 309,
+    "diff": 0,
+    "tier": "C",
+    "provider": "VIRNECT",
+    "model": "VIRNECT/llama-3-Korean-8B",
+    "fullName": "VIRNECT/llama-3-Korean-8B",
+    "avgPerf": 41.35,
+    "peakPerf": 43.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 310,
+    "rank": 310,
+    "diff": 0,
+    "tier": "C",
+    "provider": "KingNish",
+    "model": "KingNish/Reasoning-Llama-3b-v0.1",
+    "fullName": "KingNish/Reasoning-Llama-3b-v0.1",
+    "avgPerf": 41.28,
+    "peakPerf": 43.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 311,
+    "rank": 311,
+    "diff": 0,
+    "tier": "C",
+    "provider": "MoonRide",
+    "model": "MoonRide/Llama-3.2-3B-Khelavaster",
+    "fullName": "MoonRide/Llama-3.2-3B-Khelavaster",
+    "avgPerf": 41.15,
+    "peakPerf": 43.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 312,
+    "rank": 312,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mlabonne",
+    "model": "mlabonne/ChimeraLlama-3-8B-v2",
+    "fullName": "mlabonne/ChimeraLlama-3-8B-v2",
+    "avgPerf": 41.1,
+    "peakPerf": 43.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 313,
+    "rank": 313,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavidAU",
+    "model": "DavidAU/DeepSeek-MOE-4X8B-R1-Distill-Llama-3.1-Deep-Thinker-Uncensored-24B",
+    "fullName": "DavidAU/DeepSeek-MOE-4X8B-R1-Distill-Llama-3.1-Deep-Thinker-Uncensored-24B",
+    "avgPerf": 40.92,
+    "peakPerf": 43,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 314,
+    "rank": 314,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-34B-200K",
+    "fullName": "01-ai/Yi-34B-200K",
+    "avgPerf": 40.88,
+    "peakPerf": 42.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 315,
+    "rank": 315,
+    "diff": 0,
+    "tier": "C",
+    "provider": "cloudyu",
+    "model": "cloudyu/S1-Llama-3.2-3Bx4-MoE",
+    "fullName": "cloudyu/S1-Llama-3.2-3Bx4-MoE",
+    "avgPerf": 40.77,
+    "peakPerf": 42.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 316,
+    "rank": 316,
+    "diff": 0,
+    "tier": "C",
+    "provider": "migtissera",
+    "model": "migtissera/Llama-3-8B-Synthia-v3.5",
+    "fullName": "migtissera/Llama-3-8B-Synthia-v3.5",
+    "avgPerf": 40.74,
+    "peakPerf": 42.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 317,
+    "rank": 317,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Hastagaras",
+    "model": "Hastagaras/Zabuza-8B-Llama-3.1",
+    "fullName": "Hastagaras/Zabuza-8B-Llama-3.1",
+    "avgPerf": 40.7,
+    "peakPerf": 42.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 318,
+    "rank": 318,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ContactDoctor",
+    "model": "ContactDoctor/Bio-Medical-Llama-3-8B",
+    "fullName": "ContactDoctor/Bio-Medical-Llama-3-8B",
+    "avgPerf": 40.68,
+    "peakPerf": 42.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 319,
+    "rank": 319,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-SimPO",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-SimPO",
+    "avgPerf": 40.56,
+    "peakPerf": 42.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 320,
+    "rank": 320,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Columbia-NLP",
+    "model": "Columbia-NLP/LION-LLaMA-3-8b-odpo-v1.0",
+    "fullName": "Columbia-NLP/LION-LLaMA-3-8b-odpo-v1.0",
+    "avgPerf": 40.55,
+    "peakPerf": 42.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 321,
+    "rank": 321,
+    "diff": 0,
+    "tier": "C",
+    "provider": "argilla-warehouse",
+    "model": "argilla-warehouse/Llama-3.1-8B-MagPie-Ultra",
+    "fullName": "argilla-warehouse/Llama-3.1-8B-MagPie-Ultra",
+    "avgPerf": 40.54,
+    "peakPerf": 42.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 322,
+    "rank": 322,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lemon07r",
+    "model": "lemon07r/llama-3-NeuralMahou-8b",
+    "fullName": "lemon07r/llama-3-NeuralMahou-8b",
+    "avgPerf": 40.54,
+    "peakPerf": 42.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 323,
+    "rank": 323,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-Long-Think",
+    "fullName": "bunnycore/Llama-3.2-3B-Long-Think",
+    "avgPerf": 40.49,
+    "peakPerf": 42.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 324,
+    "rank": 324,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-9B-32K",
+    "fullName": "01-ai/Yi-1.5-9B-32K",
+    "avgPerf": 40.46,
+    "peakPerf": 42.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 325,
+    "rank": 325,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mkxu",
+    "model": "mkxu/llama-3-8b-po1",
+    "fullName": "mkxu/llama-3-8b-po1",
+    "avgPerf": 40.37,
+    "peakPerf": 42.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 326,
+    "rank": 326,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-SLiC-HF",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-SLiC-HF",
+    "avgPerf": 40.33,
+    "peakPerf": 42.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 327,
+    "rank": 327,
+    "diff": 0,
+    "tier": "C",
+    "provider": "PJMixers-Dev",
+    "model": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMixBread-v0.1-3B",
+    "fullName": "PJMixers-Dev/LLaMa-3.2-Instruct-JankMixBread-v0.1-3B",
+    "avgPerf": 40.31,
+    "peakPerf": 42.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 328,
+    "rank": 328,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mixtral-8x7B-v0.1",
+    "fullName": "mistralai/Mixtral-8x7B-v0.1",
+    "avgPerf": 40.17,
+    "peakPerf": 42.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 329,
+    "rank": 329,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Etherll",
+    "model": "Etherll/Herplete-LLM-Llama-3.1-8b",
+    "fullName": "Etherll/Herplete-LLM-Llama-3.1-8b",
+    "avgPerf": 40.01,
+    "peakPerf": 42,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 330,
+    "rank": 330,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mixtral-8x7B-v0.1",
+    "fullName": "mistralai/Mixtral-8x7B-v0.1",
+    "avgPerf": 39.96,
+    "peakPerf": 42,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 331,
+    "rank": 331,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BlackBeenie",
+    "model": "BlackBeenie/Neos-Llama-3.1-8B",
+    "fullName": "BlackBeenie/Neos-Llama-3.1-8B",
+    "avgPerf": 39.85,
+    "peakPerf": 41.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 332,
+    "rank": 332,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.5-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.5-gamma-0.01",
+    "avgPerf": 39.72,
+    "peakPerf": 41.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 333,
+    "rank": 333,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lemon07r",
+    "model": "lemon07r/Llama-3-RedMagic4-8B",
+    "fullName": "lemon07r/Llama-3-RedMagic4-8B",
+    "avgPerf": 39.69,
+    "peakPerf": 41.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 334,
+    "rank": 334,
+    "diff": 0,
+    "tier": "C",
+    "provider": "chargoddard",
+    "model": "chargoddard/prometheus-2-llama-3-8b",
+    "fullName": "chargoddard/prometheus-2-llama-3-8b",
+    "avgPerf": 39.46,
+    "peakPerf": 41.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 335,
+    "rank": 335,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.7-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.7-gamma-0.01",
+    "avgPerf": 39.4,
+    "peakPerf": 41.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 336,
+    "rank": 336,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-ORPO",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-ORPO",
+    "avgPerf": 39.36,
+    "peakPerf": 41.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 337,
+    "rank": 337,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
+    "fullName": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
+    "avgPerf": 39.3,
+    "peakPerf": 41.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 338,
+    "rank": 338,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "fullName": "mistralai/Mistral-7B-Instruct-v0.3",
+    "avgPerf": 39.27,
+    "peakPerf": 41.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 339,
+    "rank": 339,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/recurrentgemma-9b-it",
+    "fullName": "google/recurrentgemma-9b-it",
+    "avgPerf": 39.25,
+    "peakPerf": 41.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 340,
+    "rank": 340,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Coder-7B",
+    "fullName": "Qwen/Qwen2.5-Coder-7B",
+    "avgPerf": 39.24,
+    "peakPerf": 41.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 341,
+    "rank": 341,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Reasoning-Llama-3.1-CoT-RE1-NMT",
+    "fullName": "EpistemeAI/Reasoning-Llama-3.1-CoT-RE1-NMT",
+    "avgPerf": 39.23,
+    "peakPerf": 41.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 342,
+    "rank": 342,
+    "diff": 0,
+    "tier": "C",
+    "provider": "failspy",
+    "model": "failspy/Llama-3-8B-Instruct-abliterated",
+    "fullName": "failspy/Llama-3-8B-Instruct-abliterated",
+    "avgPerf": 39.2,
+    "peakPerf": 41.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 343,
+    "rank": 343,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-RDPO",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-RDPO",
+    "avgPerf": 39.1,
+    "peakPerf": 41.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 344,
+    "rank": 344,
+    "diff": 0,
+    "tier": "C",
+    "provider": "SicariusSicariiStuff",
+    "model": "SicariusSicariiStuff/LLAMA-3_8B_Unaligned_BETA",
+    "fullName": "SicariusSicariiStuff/LLAMA-3_8B_Unaligned_BETA",
+    "avgPerf": 39.09,
+    "peakPerf": 41,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 345,
+    "rank": 345,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavidAU",
+    "model": "DavidAU/DeepSeek-BlackRoot-R1-Distill-Llama-3.1-8B",
+    "fullName": "DavidAU/DeepSeek-BlackRoot-R1-Distill-Llama-3.1-8B",
+    "avgPerf": 38.96,
+    "peakPerf": 40.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 346,
+    "rank": 346,
+    "diff": 0,
+    "tier": "C",
+    "provider": "abacusai",
+    "model": "abacusai/Llama-3-Smaug-8B",
+    "fullName": "abacusai/Llama-3-Smaug-8B",
+    "avgPerf": 38.95,
+    "peakPerf": 40.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 347,
+    "rank": 347,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.9-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs_ties-density-0.9-gamma-0.01",
+    "avgPerf": 38.93,
+    "peakPerf": 40.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 348,
+    "rank": 348,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Bllossom",
+    "model": "Bllossom/llama-3.2-Korean-Bllossom-AICA-5B",
+    "fullName": "Bllossom/llama-3.2-Korean-Bllossom-AICA-5B",
+    "avgPerf": 38.83,
+    "peakPerf": 40.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 349,
+    "rank": 349,
+    "diff": 0,
+    "tier": "C",
+    "provider": "cloudyu",
+    "model": "cloudyu/Llama-3.2-3Bx4",
+    "fullName": "cloudyu/Llama-3.2-3Bx4",
+    "avgPerf": 38.8,
+    "peakPerf": 40.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 350,
+    "rank": 350,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Llama-3.2-3B-Agent007-Coder",
+    "fullName": "EpistemeAI/Llama-3.2-3B-Agent007-Coder",
+    "avgPerf": 38.63,
+    "peakPerf": 40.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 351,
+    "rank": 351,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_ties-density-0.3",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_ties-density-0.3",
+    "avgPerf": 38.51,
+    "peakPerf": 40.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 352,
+    "rank": 352,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavidAU",
+    "model": "DavidAU/DeepSeek-MOE-4X8B-R1-Distill-Llama-3.1-Mad-Scientist-24B",
+    "fullName": "DavidAU/DeepSeek-MOE-4X8B-R1-Distill-Llama-3.1-Mad-Scientist-24B",
+    "avgPerf": 38.41,
+    "peakPerf": 40.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 353,
+    "rank": 353,
+    "diff": 0,
+    "tier": "C",
+    "provider": "VIRNECT",
+    "model": "VIRNECT/llama-3-Korean-8B-r-v-0.1",
+    "fullName": "VIRNECT/llama-3-Korean-8B-r-v-0.1",
+    "avgPerf": 38.3,
+    "peakPerf": 40.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 354,
+    "rank": 354,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-IPO",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-IPO",
+    "avgPerf": 38.24,
+    "peakPerf": 40.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 355,
+    "rank": 355,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-KTO",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-KTO",
+    "avgPerf": 38.08,
+    "peakPerf": 40,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 356,
+    "rank": 356,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Salesforce",
+    "model": "Salesforce/LLaMA-3-8B-SFR-Iterative-DPO-R",
+    "fullName": "Salesforce/LLaMA-3-8B-SFR-Iterative-DPO-R",
+    "avgPerf": 37.84,
+    "peakPerf": 39.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 357,
+    "rank": 357,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.9-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.9-gamma-0.01",
+    "avgPerf": 37.8,
+    "peakPerf": 39.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 358,
+    "rank": 358,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "fullName": "mistralai/Mistral-7B-Instruct-v0.2",
+    "avgPerf": 37.8,
+    "peakPerf": 39.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 359,
+    "rank": 359,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.7-gamma-0.01",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_breadcrumbs-density-0.7-gamma-0.01",
+    "avgPerf": 37.75,
+    "peakPerf": 39.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 360,
+    "rank": 360,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavidAU",
+    "model": "DavidAU/DeepHermes-3-Llama-3-8B-Preview-16.5B-Brainstorm",
+    "fullName": "DavidAU/DeepHermes-3-Llama-3-8B-Preview-16.5B-Brainstorm",
+    "avgPerf": 37.69,
+    "peakPerf": 39.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 361,
+    "rank": 361,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-Deep-Test",
+    "fullName": "bunnycore/Llama-3.2-3B-Deep-Test",
+    "avgPerf": 37.67,
+    "peakPerf": 39.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 362,
+    "rank": 362,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "fullName": "Qwen/Qwen2.5-1.5B-Instruct",
+    "avgPerf": 37.64,
+    "peakPerf": 39.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 363,
+    "rank": 363,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BlackBeenie",
+    "model": "BlackBeenie/llama-3.1-8B-Galore-openassistant-guanaco",
+    "fullName": "BlackBeenie/llama-3.1-8B-Galore-openassistant-guanaco",
+    "avgPerf": 37.53,
+    "peakPerf": 39.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 364,
+    "rank": 364,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-2-70b-hf",
+    "fullName": "meta-llama/Llama-2-70b-hf",
+    "avgPerf": 37.53,
+    "peakPerf": 39.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 365,
+    "rank": 365,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-DPO",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-DPO",
+    "avgPerf": 37.53,
+    "peakPerf": 39.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 366,
+    "rank": 366,
+    "diff": 0,
+    "tier": "C",
+    "provider": "dfurman",
+    "model": "dfurman/Llama-3-70B-Orpo-v0.1",
+    "fullName": "dfurman/Llama-3-70B-Orpo-v0.1",
+    "avgPerf": 37.38,
+    "peakPerf": 39.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 367,
+    "rank": 367,
+    "diff": 0,
+    "tier": "C",
+    "provider": "gradientai",
+    "model": "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+    "fullName": "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+    "avgPerf": 37.34,
+    "peakPerf": 39.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 368,
+    "rank": 368,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_ties-density-0.5",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_ties-density-0.5",
+    "avgPerf": 37.22,
+    "peakPerf": 39.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 369,
+    "rank": 369,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_ties-density-0.9",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_ties-density-0.9",
+    "avgPerf": 37.04,
+    "peakPerf": 38.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 370,
+    "rank": 370,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Enno-Ai",
+    "model": "Enno-Ai/EnnoAi-Pro-Llama-3-8B-v0.3",
+    "fullName": "Enno-Ai/EnnoAi-Pro-Llama-3-8B-v0.3",
+    "avgPerf": 37.03,
+    "peakPerf": 38.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 371,
+    "rank": 371,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-3B",
+    "fullName": "Qwen/Qwen2.5-3B",
+    "avgPerf": 36.97,
+    "peakPerf": 38.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 372,
+    "rank": 372,
+    "diff": 0,
+    "tier": "C",
+    "provider": "jebish7",
+    "model": "jebish7/Llama-3-Nanda-10B-Chat",
+    "fullName": "jebish7/Llama-3-Nanda-10B-Chat",
+    "avgPerf": 36.9,
+    "peakPerf": 38.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 373,
+    "rank": 373,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_ties-density-0.7",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_ties-density-0.7",
+    "avgPerf": 36.88,
+    "peakPerf": 38.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 374,
+    "rank": 374,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-Bespoke-Thought",
+    "fullName": "bunnycore/Llama-3.2-3B-Bespoke-Thought",
+    "avgPerf": 36.79,
+    "peakPerf": 38.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 375,
+    "rank": 375,
+    "diff": 0,
+    "tier": "C",
+    "provider": "kms7530",
+    "model": "kms7530/chemeng_llama-3-8b-Instruct-bnb-4bit_24_1_100_1",
+    "fullName": "kms7530/chemeng_llama-3-8b-Instruct-bnb-4bit_24_1_100_1",
+    "avgPerf": 36.76,
+    "peakPerf": 38.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 376,
+    "rank": 376,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Magpie-Align",
+    "model": "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.1",
+    "fullName": "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.1",
+    "avgPerf": 36.72,
+    "peakPerf": 38.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 377,
+    "rank": 377,
+    "diff": 0,
+    "tier": "C",
+    "provider": "collaiborateorg",
+    "model": "collaiborateorg/Collaiborator-MEDLLM-Llama-3-8B-v2",
+    "fullName": "collaiborateorg/Collaiborator-MEDLLM-Llama-3-8B-v2",
+    "avgPerf": 36.64,
+    "peakPerf": 38.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 378,
+    "rank": 378,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Math-7B",
+    "fullName": "Qwen/Qwen2.5-Math-7B",
+    "avgPerf": 36.43,
+    "peakPerf": 38.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 379,
+    "rank": 379,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-9B",
+    "fullName": "01-ai/Yi-9B",
+    "avgPerf": 36.38,
+    "peakPerf": 38.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 380,
+    "rank": 380,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Reasoning-Llama-3.2-3B-Math-Instruct-RE1",
+    "fullName": "EpistemeAI/Reasoning-Llama-3.2-3B-Math-Instruct-RE1",
+    "avgPerf": 36.32,
+    "peakPerf": 38.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 381,
+    "rank": 381,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Kukedlc",
+    "model": "Kukedlc/NeuralLLaMa-3-8b-ORPO-v0.3",
+    "fullName": "Kukedlc/NeuralLLaMa-3-8b-ORPO-v0.3",
+    "avgPerf": 36.25,
+    "peakPerf": 38.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 382,
+    "rank": 382,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-9B-200K",
+    "fullName": "01-ai/Yi-9B-200K",
+    "avgPerf": 36.21,
+    "peakPerf": 38,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 383,
+    "rank": 383,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-1.1-7b-it",
+    "fullName": "google/gemma-1.1-7b-it",
+    "avgPerf": 36.14,
+    "peakPerf": 37.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 384,
+    "rank": 384,
+    "diff": 0,
+    "tier": "C",
+    "provider": "riaz",
+    "model": "riaz/FineLlama-3.1-8B",
+    "fullName": "riaz/FineLlama-3.1-8B",
+    "avgPerf": 36.07,
+    "peakPerf": 37.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 385,
+    "rank": 385,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-7B-Chat",
+    "fullName": "Qwen/Qwen1.5-7B-Chat",
+    "avgPerf": 35.99,
+    "peakPerf": 37.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 386,
+    "rank": 386,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Triangle104",
+    "model": "Triangle104/Hermes-Llama-3.2-CoT",
+    "fullName": "Triangle104/Hermes-Llama-3.2-CoT",
+    "avgPerf": 35.99,
+    "peakPerf": 37.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 387,
+    "rank": 387,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Magpie-Align",
+    "model": "Magpie-Align/Llama-3-8B-Magpie-Align-SFT-v0.3",
+    "fullName": "Magpie-Align/Llama-3-8B-Magpie-Align-SFT-v0.3",
+    "avgPerf": 35.85,
+    "peakPerf": 37.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 388,
+    "rank": 388,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Magpie-Align",
+    "model": "Magpie-Align/Llama-3.1-8B-Magpie-Align-v0.1",
+    "fullName": "Magpie-Align/Llama-3.1-8B-Magpie-Align-v0.1",
+    "avgPerf": 35.84,
+    "peakPerf": 37.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 389,
+    "rank": 389,
+    "diff": 0,
+    "tier": "C",
+    "provider": "prithivMLmods",
+    "model": "prithivMLmods/Llama-3.2-3B-Math-Oct",
+    "fullName": "prithivMLmods/Llama-3.2-3B-Math-Oct",
+    "avgPerf": 35.63,
+    "peakPerf": 37.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 390,
+    "rank": 390,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Magpie-Align",
+    "model": "Magpie-Align/Llama-3-8B-Magpie-Align-v0.3",
+    "fullName": "Magpie-Align/Llama-3-8B-Magpie-Align-v0.3",
+    "avgPerf": 35.54,
+    "peakPerf": 37.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 391,
+    "rank": 391,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ewre324",
+    "model": "ewre324/Thinker-Llama-3.2-3B-Instruct-Reasoning",
+    "fullName": "ewre324/Thinker-Llama-3.2-3B-Instruct-Reasoning",
+    "avgPerf": 35.4,
+    "peakPerf": 37.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 392,
+    "rank": 392,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.9",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.9",
+    "avgPerf": 35.36,
+    "peakPerf": 37.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 393,
+    "rank": 393,
+    "diff": 0,
+    "tier": "C",
+    "provider": "insightfactory",
+    "model": "insightfactory/Llama-3.2-3B-Instruct-unsloth-bnb-4bitlora_model",
+    "fullName": "insightfactory/Llama-3.2-3B-Instruct-unsloth-bnb-4bitlora_model",
+    "avgPerf": 35.1,
+    "peakPerf": 36.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 394,
+    "rank": 394,
+    "diff": 0,
+    "tier": "C",
+    "provider": "riaz",
+    "model": "riaz/FineLlama-3.1-8B",
+    "fullName": "riaz/FineLlama-3.1-8B",
+    "avgPerf": 35.02,
+    "peakPerf": 36.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 395,
+    "rank": 395,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-2b-jpn-it",
+    "fullName": "google/gemma-2-2b-jpn-it",
+    "avgPerf": 34.96,
+    "peakPerf": 36.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 396,
+    "rank": 396,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-2b-it",
+    "fullName": "google/gemma-2-2b-it",
+    "avgPerf": 34.82,
+    "peakPerf": 36.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 397,
+    "rank": 397,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mkurman",
+    "model": "mkurman/llama-3.2-MEDIT-3B-o1",
+    "fullName": "mkurman/llama-3.2-MEDIT-3B-o1",
+    "avgPerf": 34.78,
+    "peakPerf": 36.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 398,
+    "rank": 398,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-Coder-9B-Chat",
+    "fullName": "01-ai/Yi-Coder-9B-Chat",
+    "avgPerf": 34.69,
+    "peakPerf": 36.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 399,
+    "rank": 399,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Gryphe",
+    "model": "Gryphe/Pantheon-RP-1.0-8b-Llama-3",
+    "fullName": "Gryphe/Pantheon-RP-1.0-8b-Llama-3",
+    "avgPerf": 34.46,
+    "peakPerf": 36.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 400,
+    "rank": 400,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.7",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.7",
+    "avgPerf": 34.26,
+    "peakPerf": 36,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 401,
+    "rank": 401,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Triangle104",
+    "model": "Triangle104/Hermes-Llama-3.2-CoT-Summary",
+    "fullName": "Triangle104/Hermes-Llama-3.2-CoT-Summary",
+    "avgPerf": 34.24,
+    "peakPerf": 36,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 402,
+    "rank": 402,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-1.5-6B",
+    "fullName": "01-ai/Yi-1.5-6B",
+    "avgPerf": 34.2,
+    "peakPerf": 35.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 403,
+    "rank": 403,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-2b-jpn-it",
+    "fullName": "google/gemma-2-2b-jpn-it",
+    "avgPerf": 34.07,
+    "peakPerf": 35.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 404,
+    "rank": 404,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Magpie-Align",
+    "model": "Magpie-Align/Llama-3-8B-Magpie-Align-v0.1",
+    "fullName": "Magpie-Align/Llama-3-8B-Magpie-Align-v0.1",
+    "avgPerf": 33.67,
+    "peakPerf": 35.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 405,
+    "rank": 405,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Magpie-Align",
+    "model": "Magpie-Align/Llama-3-8B-Magpie-Align-v0.1",
+    "fullName": "Magpie-Align/Llama-3-8B-Magpie-Align-v0.1",
+    "avgPerf": 33.65,
+    "peakPerf": 35.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 406,
+    "rank": 406,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-ProdigyPlus",
+    "fullName": "bunnycore/Llama-3.2-3B-ProdigyPlus",
+    "avgPerf": 33.41,
+    "peakPerf": 35.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 407,
+    "rank": 407,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-RRHF",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-RRHF",
+    "avgPerf": 33.26,
+    "peakPerf": 34.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 408,
+    "rank": 408,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavidAU",
+    "model": "DavidAU/DeepThought-MOE-8X3B-R1-Llama-3.2-Reasoning-18B",
+    "fullName": "DavidAU/DeepThought-MOE-8X3B-R1-Llama-3.2-Reasoning-18B",
+    "avgPerf": 32.94,
+    "peakPerf": 34.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 409,
+    "rank": 409,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Locutusque",
+    "model": "Locutusque/Llama-3-NeuralHercules-5.0-8B",
+    "fullName": "Locutusque/Llama-3-NeuralHercules-5.0-8B",
+    "avgPerf": 32.77,
+    "peakPerf": 34.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 410,
+    "rank": 410,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-7B",
+    "fullName": "Qwen/Qwen1.5-7B",
+    "avgPerf": 32.73,
+    "peakPerf": 34.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 411,
+    "rank": 411,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NAPS-ai",
+    "model": "NAPS-ai/naps-llama-3_1-instruct-v0.5.0",
+    "fullName": "NAPS-ai/naps-llama-3_1-instruct-v0.5.0",
+    "avgPerf": 32.68,
+    "peakPerf": 34.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 412,
+    "rank": 412,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.3",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.3",
+    "avgPerf": 32.62,
+    "peakPerf": 34.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 413,
+    "rank": 413,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT",
+    "avgPerf": 32.61,
+    "peakPerf": 34.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 414,
+    "rank": 414,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Magpie-Align",
+    "model": "Magpie-Align/Llama-3-8B-Magpie-Align-SFT-v0.1",
+    "fullName": "Magpie-Align/Llama-3-8B-Magpie-Align-SFT-v0.1",
+    "avgPerf": 32.59,
+    "peakPerf": 34.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 415,
+    "rank": 415,
+    "diff": 0,
+    "tier": "C",
+    "provider": "princeton-nlp",
+    "model": "princeton-nlp/Llama-3-Base-8B-SFT-CPO",
+    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-CPO",
+    "avgPerf": 32.59,
+    "peakPerf": 34.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 416,
+    "rank": 416,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.2-SUN-HDIC-1B-Instruct",
+    "fullName": "meditsolutions/Llama-3.2-SUN-HDIC-1B-Instruct",
+    "avgPerf": 32.48,
+    "peakPerf": 34.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 417,
+    "rank": 417,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-MoE-A2.7B-Chat",
+    "fullName": "Qwen/Qwen1.5-MoE-A2.7B-Chat",
+    "avgPerf": 32.44,
+    "peakPerf": 34.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 418,
+    "rank": 418,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NAPS-ai",
+    "model": "NAPS-ai/naps-llama-3_1_instruct-v0.6.0",
+    "fullName": "NAPS-ai/naps-llama-3_1_instruct-v0.6.0",
+    "avgPerf": 32.23,
+    "peakPerf": 33.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 419,
+    "rank": 419,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Enno-Ai",
+    "model": "Enno-Ai/EnnoAi-Pro-French-Llama-3-8B-v0.4",
+    "fullName": "Enno-Ai/EnnoAi-Pro-French-Llama-3-8B-v0.4",
+    "avgPerf": 32.04,
+    "peakPerf": 33.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 420,
+    "rank": 420,
+    "diff": 0,
+    "tier": "C",
+    "provider": "failspy",
+    "model": "failspy/Llama-3-8B-Instruct-MopeyMule",
+    "fullName": "failspy/Llama-3-8B-Instruct-MopeyMule",
+    "avgPerf": 31.94,
+    "peakPerf": 33.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 421,
+    "rank": 421,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EnnoAi",
+    "model": "EnnoAi/EnnoAi-Pro-Llama-3.1-8B-v1.0",
+    "fullName": "EnnoAi/EnnoAi-Pro-Llama-3.1-8B-v1.0",
+    "avgPerf": 31.86,
+    "peakPerf": 33.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 422,
+    "rank": 422,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Enno-Ai",
+    "model": "Enno-Ai/EnnoAi-Pro-Llama-3.1-8B-v0.9",
+    "fullName": "Enno-Ai/EnnoAi-Pro-Llama-3.1-8B-v0.9",
+    "avgPerf": 31.81,
+    "peakPerf": 33.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 423,
+    "rank": 423,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.2-SUN-1B-Instruct",
+    "fullName": "meditsolutions/Llama-3.2-SUN-1B-Instruct",
+    "avgPerf": 31.71,
+    "peakPerf": 33.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 424,
+    "rank": 424,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-7b",
+    "fullName": "google/gemma-7b",
+    "avgPerf": 31.54,
+    "peakPerf": 33.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 425,
+    "rank": 425,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NousResearch",
+    "model": "NousResearch/Hermes-3-Llama-3.2-3B",
+    "fullName": "NousResearch/Hermes-3-Llama-3.2-3B",
+    "avgPerf": 31.13,
+    "peakPerf": 32.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 426,
+    "rank": 426,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-Nemo-Base-2407",
+    "fullName": "mistralai/Mistral-Nemo-Base-2407",
+    "avgPerf": 31.13,
+    "peakPerf": 32.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 427,
+    "rank": 427,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavidAU",
+    "model": "DavidAU/DeepSeek-V2-Grand-Horror-SMB-R1-Distill-Llama-3.1-Uncensored-16.5B",
+    "fullName": "DavidAU/DeepSeek-V2-Grand-Horror-SMB-R1-Distill-Llama-3.1-Uncensored-16.5B",
+    "avgPerf": 30.98,
+    "peakPerf": 32.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 428,
+    "rank": 428,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mlabonne",
+    "model": "mlabonne/OrpoLlama-3-8B",
+    "fullName": "mlabonne/OrpoLlama-3-8B",
+    "avgPerf": 30.96,
+    "peakPerf": 32.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 429,
+    "rank": 429,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "fullName": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "avgPerf": 30.63,
+    "peakPerf": 32.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 430,
+    "rank": 430,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/deepseek-llm-7b-chat",
+    "fullName": "deepseek-ai/deepseek-llm-7b-chat",
+    "avgPerf": 30.28,
+    "peakPerf": 31.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 431,
+    "rank": 431,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavidAU",
+    "model": "DavidAU/DeepSeek-Grand-Horror-SMB-R1-Distill-Llama-3.1-16B",
+    "fullName": "DavidAU/DeepSeek-Grand-Horror-SMB-R1-Distill-Llama-3.1-16B",
+    "avgPerf": 30.15,
+    "peakPerf": 31.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 432,
+    "rank": 432,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-R1-Llama-3.1-8B",
+    "fullName": "EpistemeAI/Fireball-R1-Llama-3.1-8B",
+    "avgPerf": 30.09,
+    "peakPerf": 31.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 433,
+    "rank": 433,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BEE-spoke-data",
+    "model": "BEE-spoke-data/Meta-Llama-3-8Bee",
+    "fullName": "BEE-spoke-data/Meta-Llama-3-8Bee",
+    "avgPerf": 29.94,
+    "peakPerf": 31.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 434,
+    "rank": 434,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Lyte",
+    "model": "Lyte/Llama-3.2-1B-Instruct-COT-RL-Expriement1-EP04",
+    "fullName": "Lyte/Llama-3.2-1B-Instruct-COT-RL-Expriement1-EP04",
+    "avgPerf": 29.92,
+    "peakPerf": 31.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 435,
+    "rank": 435,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-7B-v0.1",
+    "fullName": "mistralai/Mistral-7B-v0.1",
+    "avgPerf": 29.77,
+    "peakPerf": 31.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 436,
+    "rank": 436,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-R1-Llama-3.1-8B-Medical-COT",
+    "fullName": "EpistemeAI/Fireball-R1-Llama-3.1-8B-Medical-COT",
+    "avgPerf": 29.59,
+    "peakPerf": 31.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 437,
+    "rank": 437,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.2-1B-Instruct",
+    "fullName": "meta-llama/Llama-3.2-1B-Instruct",
+    "avgPerf": 29.5,
+    "peakPerf": 31,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 438,
+    "rank": 438,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.1-8B",
+    "fullName": "meta-llama/Llama-3.1-8B",
+    "avgPerf": 29.45,
+    "peakPerf": 30.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 439,
+    "rank": 439,
+    "diff": 0,
+    "tier": "C",
+    "provider": "AI-Sweden-Models",
+    "model": "AI-Sweden-Models/Llama-3-8B-instruct",
+    "fullName": "AI-Sweden-Models/Llama-3-8B-instruct",
+    "avgPerf": 29.3,
+    "peakPerf": 30.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 440,
+    "rank": 440,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/Explore_Llama-3.2-1B-Inst_v1.1",
+    "fullName": "DeepAutoAI/Explore_Llama-3.2-1B-Inst_v1.1",
+    "avgPerf": 29.23,
+    "peakPerf": 30.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 441,
+    "rank": 441,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-7B-v0.3",
+    "fullName": "mistralai/Mistral-7B-v0.3",
+    "avgPerf": 29.06,
+    "peakPerf": 30.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 442,
+    "rank": 442,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-1.5B-Instruct",
+    "fullName": "Qwen/Qwen2-1.5B-Instruct",
+    "avgPerf": 28.88,
+    "peakPerf": 30.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 443,
+    "rank": 443,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_dare_linear",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_dare_linear",
+    "avgPerf": 28.85,
+    "peakPerf": 30.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 444,
+    "rank": 444,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-6B-Chat",
+    "fullName": "01-ai/Yi-6B-Chat",
+    "avgPerf": 28.84,
+    "peakPerf": 30.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 445,
+    "rank": 445,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Corianas",
+    "model": "Corianas/llama-3-reactor",
+    "fullName": "Corianas/llama-3-reactor",
+    "avgPerf": 28.59,
+    "peakPerf": 30,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 446,
+    "rank": 446,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.2-SUN-2.5B-chat",
+    "fullName": "meditsolutions/Llama-3.2-SUN-2.5B-chat",
+    "avgPerf": 28.57,
+    "peakPerf": 30,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 447,
+    "rank": 447,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-MoE-A2.7B",
+    "fullName": "Qwen/Qwen1.5-MoE-A2.7B",
+    "avgPerf": 28.48,
+    "peakPerf": 29.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 448,
+    "rank": 448,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Sakalti",
+    "model": "Sakalti/llama-3-yanyuedao-8b-instruct",
+    "fullName": "Sakalti/llama-3-yanyuedao-8b-instruct",
+    "avgPerf": 28.46,
+    "peakPerf": 29.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 449,
+    "rank": 449,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/Explore_Llama-3.2-1B-Inst",
+    "fullName": "DeepAutoAI/Explore_Llama-3.2-1B-Inst",
+    "avgPerf": 28.39,
+    "peakPerf": 29.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 450,
+    "rank": 450,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-1.5B",
+    "fullName": "Qwen/Qwen2.5-1.5B",
+    "avgPerf": 28.29,
+    "peakPerf": 29.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 451,
+    "rank": 451,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/recurrentgemma-9b",
+    "fullName": "google/recurrentgemma-9b",
+    "avgPerf": 28,
+    "peakPerf": 29.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 452,
+    "rank": 452,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/flan-ul2",
+    "fullName": "google/flan-ul2",
+    "avgPerf": 27.93,
+    "peakPerf": 29.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 453,
+    "rank": 453,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/flan-t5-xxl",
+    "fullName": "google/flan-t5-xxl",
+    "avgPerf": 27.9,
+    "peakPerf": 29.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 454,
+    "rank": 454,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.2-SUN-1B-chat",
+    "fullName": "meditsolutions/Llama-3.2-SUN-1B-chat",
+    "avgPerf": 27.86,
+    "peakPerf": 29.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 455,
+    "rank": 455,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Meta-Llama-3-8B",
+    "fullName": "meta-llama/Meta-Llama-3-8B",
+    "avgPerf": 27.83,
+    "peakPerf": 29.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 456,
+    "rank": 456,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-6B",
+    "fullName": "01-ai/Yi-6B",
+    "avgPerf": 27.8,
+    "peakPerf": 29.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 457,
+    "rank": 457,
+    "diff": 0,
+    "tier": "C",
+    "provider": "LEESM",
+    "model": "LEESM/llama-3-Korean-Bllossom-8B-trexlab-oki10p",
+    "fullName": "LEESM/llama-3-Korean-Bllossom-8B-trexlab-oki10p",
+    "avgPerf": 27.59,
+    "peakPerf": 29,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 458,
+    "rank": 458,
+    "diff": 0,
+    "tier": "C",
+    "provider": "agentlans",
+    "model": "agentlans/Llama-3.2-1B-Instruct-CrashCourse12K",
+    "fullName": "agentlans/Llama-3.2-1B-Instruct-CrashCourse12K",
+    "avgPerf": 27.45,
+    "peakPerf": 28.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 459,
+    "rank": 459,
+    "diff": 0,
+    "tier": "C",
+    "provider": "aloobun",
+    "model": "aloobun/Meta-Llama-3-7B-28Layers",
+    "fullName": "aloobun/Meta-Llama-3-7B-28Layers",
+    "avgPerf": 27.32,
+    "peakPerf": 28.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 460,
+    "rank": 460,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/Explore_Llama-3.2-1B-Inst_v0",
+    "fullName": "DeepAutoAI/Explore_Llama-3.2-1B-Inst_v0",
+    "avgPerf": 27.29,
+    "peakPerf": 28.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 461,
+    "rank": 461,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.2-SUN-2.4B-v1.0.0",
+    "fullName": "meditsolutions/Llama-3.2-SUN-2.4B-v1.0.0",
+    "avgPerf": 27.2,
+    "peakPerf": 28.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 462,
+    "rank": 462,
+    "diff": 0,
+    "tier": "C",
+    "provider": "fulim",
+    "model": "fulim/FineLlama-3.1-8B",
+    "fullName": "fulim/FineLlama-3.1-8B",
+    "avgPerf": 27.06,
+    "peakPerf": 28.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 463,
+    "rank": 463,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-2-70b-chat-hf",
+    "fullName": "meta-llama/Llama-2-70b-chat-hf",
+    "avgPerf": 26.7,
+    "peakPerf": 28,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 464,
+    "rank": 464,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-7b-it",
+    "fullName": "google/gemma-7b-it",
+    "avgPerf": 26.69,
+    "peakPerf": 28,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 465,
+    "rank": 465,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "fullName": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "avgPerf": 26.67,
+    "peakPerf": 28,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 466,
+    "rank": 466,
+    "diff": 0,
+    "tier": "C",
+    "provider": "mistralai",
+    "model": "mistralai/Mistral-7B-Instruct-v0.1",
+    "fullName": "mistralai/Mistral-7B-Instruct-v0.1",
+    "avgPerf": 26.09,
+    "peakPerf": 27.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 467,
+    "rank": 467,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-4B-Chat",
+    "fullName": "Qwen/Qwen1.5-4B-Chat",
+    "avgPerf": 25.79,
+    "peakPerf": 27.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 468,
+    "rank": 468,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Enno-Ai",
+    "model": "Enno-Ai/EnnoAi-Pro-Llama-3-8B",
+    "fullName": "Enno-Ai/EnnoAi-Pro-Llama-3-8B",
+    "avgPerf": 25.56,
+    "peakPerf": 26.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 469,
+    "rank": 469,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ModelCloud",
+    "model": "ModelCloud/Llama-3.2-1B-Instruct-gptqmodel-4bit-vortex-v1",
+    "fullName": "ModelCloud/Llama-3.2-1B-Instruct-gptqmodel-4bit-vortex-v1",
+    "avgPerf": 25.39,
+    "peakPerf": 26.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 470,
+    "rank": 470,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/QwQ-32B",
+    "fullName": "Qwen/QwQ-32B",
+    "avgPerf": 24.95,
+    "peakPerf": 26.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 471,
+    "rank": 471,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-Della",
+    "fullName": "bunnycore/Llama-3.2-3B-Della",
+    "avgPerf": 24.95,
+    "peakPerf": 26.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 472,
+    "rank": 472,
+    "diff": 0,
+    "tier": "C",
+    "provider": "gaverfraxz",
+    "model": "gaverfraxz/Meta-Llama-3.1-8B-Instruct-HalfAbliterated-DELLA",
+    "fullName": "gaverfraxz/Meta-Llama-3.1-8B-Instruct-HalfAbliterated-DELLA",
+    "avgPerf": 24.73,
+    "peakPerf": 26,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 473,
+    "rank": 473,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+    "fullName": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+    "avgPerf": 24.56,
+    "peakPerf": 25.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 474,
+    "rank": 474,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-Math-7B",
+    "fullName": "Qwen/Qwen2-Math-7B",
+    "avgPerf": 24.54,
+    "peakPerf": 25.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 475,
+    "rank": 475,
+    "diff": 0,
+    "tier": "C",
+    "provider": "01-ai",
+    "model": "01-ai/Yi-6B-200K",
+    "fullName": "01-ai/Yi-6B-200K",
+    "avgPerf": 24.5,
+    "peakPerf": 25.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 476,
+    "rank": 476,
+    "diff": 0,
+    "tier": "C",
+    "provider": "lodrick-the-lafted",
+    "model": "lodrick-the-lafted/llama-3.1-8b-instruct-ortho-v7",
+    "fullName": "lodrick-the-lafted/llama-3.1-8b-instruct-ortho-v7",
+    "avgPerf": 24.13,
+    "peakPerf": 25.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 477,
+    "rank": 477,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-4B",
+    "fullName": "Qwen/Qwen1.5-4B",
+    "avgPerf": 24.04,
+    "peakPerf": 25.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 478,
+    "rank": 478,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/flan-t5-xl",
+    "fullName": "google/flan-t5-xl",
+    "avgPerf": 23.91,
+    "peakPerf": 25.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 479,
+    "rank": 479,
+    "diff": 0,
+    "tier": "C",
+    "provider": "nvidia",
+    "model": "nvidia/Llama-3.1-Minitron-4B-Depth-Base",
+    "fullName": "nvidia/Llama-3.1-Minitron-4B-Depth-Base",
+    "avgPerf": 23.81,
+    "peakPerf": 25,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 480,
+    "rank": 480,
+    "diff": 0,
+    "tier": "C",
+    "provider": "johnsutor",
+    "model": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.1",
+    "fullName": "johnsutor/Llama-3-8B-Instruct_dare_ties-density-0.1",
+    "avgPerf": 23.76,
+    "peakPerf": 24.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 481,
+    "rank": 481,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/flan-t5-xl",
+    "fullName": "google/flan-t5-xl",
+    "avgPerf": 23.67,
+    "peakPerf": 24.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 482,
+    "rank": 482,
+    "diff": 0,
+    "tier": "C",
+    "provider": "3rd-Degree-Burn",
+    "model": "3rd-Degree-Burn/Llama-3.1-8B-Squareroot",
+    "fullName": "3rd-Degree-Burn/Llama-3.1-8B-Squareroot",
+    "avgPerf": 22.92,
+    "peakPerf": 24.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 483,
+    "rank": 483,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-2-13b-chat-hf",
+    "fullName": "meta-llama/Llama-2-13b-chat-hf",
+    "avgPerf": 22.73,
+    "peakPerf": 23.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 484,
+    "rank": 484,
+    "diff": 0,
+    "tier": "C",
+    "provider": "dfurman",
+    "model": "dfurman/Llama-3-8B-Orpo-v0.1",
+    "fullName": "dfurman/Llama-3-8B-Orpo-v0.1",
+    "avgPerf": 22.62,
+    "peakPerf": 23.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 485,
+    "rank": 485,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-2-13b-hf",
+    "fullName": "meta-llama/Llama-2-13b-hf",
+    "avgPerf": 22.6,
+    "peakPerf": 23.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 486,
+    "rank": 486,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DeepAutoAI",
+    "model": "DeepAutoAI/Explore_Llama-3.2-1B-Inst_v1",
+    "fullName": "DeepAutoAI/Explore_Llama-3.2-1B-Inst_v1",
+    "avgPerf": 22.31,
+    "peakPerf": 23.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 487,
+    "rank": 487,
+    "diff": 0,
+    "tier": "C",
+    "provider": "dfurman",
+    "model": "dfurman/Llama-3-8B-Orpo-v0.1",
+    "fullName": "dfurman/Llama-3-8B-Orpo-v0.1",
+    "avgPerf": 22.25,
+    "peakPerf": 23.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 488,
+    "rank": 488,
+    "diff": 0,
+    "tier": "C",
+    "provider": "duyhv1411",
+    "model": "duyhv1411/Llama-3.2-1B-en-vi",
+    "fullName": "duyhv1411/Llama-3.2-1B-en-vi",
+    "avgPerf": 22.18,
+    "peakPerf": 23.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 489,
+    "rank": 489,
+    "diff": 0,
+    "tier": "C",
+    "provider": "duyhv1411",
+    "model": "duyhv1411/Llama-3.2-3B-en-vi",
+    "fullName": "duyhv1411/Llama-3.2-3B-en-vi",
+    "avgPerf": 22.18,
+    "peakPerf": 23.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 490,
+    "rank": 490,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-1.5B",
+    "fullName": "Qwen/Qwen2-1.5B",
+    "avgPerf": 21.33,
+    "peakPerf": 22.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 491,
+    "rank": 491,
+    "diff": 0,
+    "tier": "C",
+    "provider": "pszemraj",
+    "model": "pszemraj/Llama-3-6.3b-v0.1",
+    "fullName": "pszemraj/Llama-3-6.3b-v0.1",
+    "avgPerf": 21.21,
+    "peakPerf": 22.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 492,
+    "rank": 492,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-2b",
+    "fullName": "google/gemma-2-2b",
+    "avgPerf": 21.16,
+    "peakPerf": 22.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 493,
+    "rank": 493,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "fullName": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "avgPerf": 21.14,
+    "peakPerf": 22.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 494,
+    "rank": 494,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/deepseek-moe-16b-chat",
+    "fullName": "deepseek-ai/deepseek-moe-16b-chat",
+    "avgPerf": 21.02,
+    "peakPerf": 22.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 495,
+    "rank": 495,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Fireball-R1.1-Llama-3.1-8B",
+    "fullName": "EpistemeAI/Fireball-R1.1-Llama-3.1-8B",
+    "avgPerf": 20.69,
+    "peakPerf": 21.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 496,
+    "rank": 496,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2-2b",
+    "fullName": "google/gemma-2-2b",
+    "avgPerf": 20.69,
+    "peakPerf": 21.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 497,
+    "rank": 497,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fullName": "Qwen/Qwen2.5-0.5B-Instruct",
+    "avgPerf": 20.64,
+    "peakPerf": 21.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 498,
+    "rank": 498,
+    "diff": 0,
+    "tier": "C",
+    "provider": "cluebbers",
+    "model": "cluebbers/Llama-3.1-8B-paraphrase-type-generation-apty-sigmoid",
+    "fullName": "cluebbers/Llama-3.1-8B-paraphrase-type-generation-apty-sigmoid",
+    "avgPerf": 20.57,
+    "peakPerf": 21.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 499,
+    "rank": 499,
+    "diff": 0,
+    "tier": "C",
+    "provider": "cluebbers",
+    "model": "cluebbers/Llama-3.1-8B-paraphrase-type-generation-apty-ipo",
+    "fullName": "cluebbers/Llama-3.1-8B-paraphrase-type-generation-apty-ipo",
+    "avgPerf": 20.53,
+    "peakPerf": 21.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 500,
+    "rank": 500,
+    "diff": 0,
+    "tier": "C",
+    "provider": "CreitinGameplays",
+    "model": "CreitinGameplays/Llama-3.1-8B-R1-v0.1",
+    "fullName": "CreitinGameplays/Llama-3.1-8B-R1-v0.1",
+    "avgPerf": 20.5,
+    "peakPerf": 21.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 501,
+    "rank": 501,
+    "diff": 0,
+    "tier": "C",
+    "provider": "cluebbers",
+    "model": "cluebbers/Llama-3.1-8B-paraphrase-type-generation-etpc",
+    "fullName": "cluebbers/Llama-3.1-8B-paraphrase-type-generation-etpc",
+    "avgPerf": 19.78,
+    "peakPerf": 20.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 502,
+    "rank": 502,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/flan-t5-large",
+    "fullName": "google/flan-t5-large",
+    "avgPerf": 19.73,
+    "peakPerf": 20.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 503,
+    "rank": 503,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Best-Mix-Llama-3.1-8B",
+    "fullName": "bunnycore/Best-Mix-Llama-3.1-8B",
+    "avgPerf": 19.7,
+    "peakPerf": 20.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 504,
+    "rank": 504,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-2-7b-chat-hf",
+    "fullName": "meta-llama/Llama-2-7b-chat-hf",
+    "avgPerf": 19.63,
+    "peakPerf": 20.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 505,
+    "rank": 505,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Reasoning-Llama-3.2-1B-Instruct-v1.2",
+    "fullName": "EpistemeAI/Reasoning-Llama-3.2-1B-Instruct-v1.2",
+    "avgPerf": 19.42,
+    "peakPerf": 20.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 506,
+    "rank": 506,
+    "diff": 0,
+    "tier": "C",
+    "provider": "LEESM",
+    "model": "LEESM/llama-3-8b-bnb-4b-kowiki231101",
+    "fullName": "LEESM/llama-3-8b-bnb-4b-kowiki231101",
+    "avgPerf": 19.35,
+    "peakPerf": 20.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 507,
+    "rank": 507,
+    "diff": 0,
+    "tier": "C",
+    "provider": "prithivMLmods",
+    "model": "prithivMLmods/Llama-3.2-6B-AlgoCode",
+    "fullName": "prithivMLmods/Llama-3.2-6B-AlgoCode",
+    "avgPerf": 19,
+    "peakPerf": 19.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 508,
+    "rank": 508,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-1.8B",
+    "fullName": "Qwen/Qwen1.5-1.8B",
+    "avgPerf": 18.93,
+    "peakPerf": 19.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 509,
+    "rank": 509,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-1.8B-Chat",
+    "fullName": "Qwen/Qwen1.5-1.8B-Chat",
+    "avgPerf": 18.91,
+    "peakPerf": 19.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 510,
+    "rank": 510,
+    "diff": 0,
+    "tier": "C",
+    "provider": "T145",
+    "model": "T145/Llama-3.1-8B-Zeus",
+    "fullName": "T145/Llama-3.1-8B-Zeus",
+    "avgPerf": 18.54,
+    "peakPerf": 19.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 511,
+    "rank": 511,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-2-7b-hf",
+    "fullName": "meta-llama/Llama-2-7b-hf",
+    "avgPerf": 17.99,
+    "peakPerf": 18.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 512,
+    "rank": 512,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.2-3B",
+    "fullName": "meta-llama/Llama-3.2-3B",
+    "avgPerf": 17.77,
+    "peakPerf": 18.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 513,
+    "rank": 513,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BAAI",
+    "model": "BAAI/OPI-Llama-3.1-8B-Instruct",
+    "fullName": "BAAI/OPI-Llama-3.1-8B-Instruct",
+    "avgPerf": 17.43,
+    "peakPerf": 18.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 514,
+    "rank": 514,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NbAiLab",
+    "model": "NbAiLab/nb-llama-3.1-8B-Instruct",
+    "fullName": "NbAiLab/nb-llama-3.1-8B-Instruct",
+    "avgPerf": 17.32,
+    "peakPerf": 18.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 515,
+    "rank": 515,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/deepseek-llm-7b-base",
+    "fullName": "deepseek-ai/deepseek-llm-7b-base",
+    "avgPerf": 16.8,
+    "peakPerf": 17.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 516,
+    "rank": 516,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.2-SUN-2.4B-checkpoint-34800",
+    "fullName": "meditsolutions/Llama-3.2-SUN-2.4B-checkpoint-34800",
+    "avgPerf": 16.73,
+    "peakPerf": 17.6,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 517,
+    "rank": 517,
+    "diff": 0,
+    "tier": "C",
+    "provider": "NbAiLab",
+    "model": "NbAiLab/nb-llama-3.1-8B-sft",
+    "fullName": "NbAiLab/nb-llama-3.1-8B-sft",
+    "avgPerf": 16.71,
+    "peakPerf": 17.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 518,
+    "rank": 518,
+    "diff": 0,
+    "tier": "C",
+    "provider": "EpistemeAI",
+    "model": "EpistemeAI/Reasoning-Llama-3.2-1B-Instruct-v1.3",
+    "fullName": "EpistemeAI/Reasoning-Llama-3.2-1B-Instruct-v1.3",
+    "avgPerf": 16.69,
+    "peakPerf": 17.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 519,
+    "rank": 519,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fullName": "Qwen/Qwen2.5-0.5B-Instruct",
+    "avgPerf": 16.63,
+    "peakPerf": 17.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 520,
+    "rank": 520,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meditsolutions",
+    "model": "meditsolutions/Llama-3.2-SUN-2.4B-checkpoint-26000",
+    "fullName": "meditsolutions/Llama-3.2-SUN-2.4B-checkpoint-26000",
+    "avgPerf": 16.63,
+    "peakPerf": 17.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 521,
+    "rank": 521,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-1.1-2b-it",
+    "fullName": "google/gemma-1.1-2b-it",
+    "avgPerf": 16.45,
+    "peakPerf": 17.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 522,
+    "rank": 522,
+    "diff": 0,
+    "tier": "C",
+    "provider": "3rd-Degree-Burn",
+    "model": "3rd-Degree-Burn/Llama-3.1-8B-Squareroot-v1",
+    "fullName": "3rd-Degree-Burn/Llama-3.1-8B-Squareroot-v1",
+    "avgPerf": 16.42,
+    "peakPerf": 17.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 523,
+    "rank": 523,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/recurrentgemma-2b-it",
+    "fullName": "google/recurrentgemma-2b-it",
+    "avgPerf": 16.33,
+    "peakPerf": 17.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 524,
+    "rank": 524,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2b-it",
+    "fullName": "google/gemma-2b-it",
+    "avgPerf": 15.29,
+    "peakPerf": 16.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 525,
+    "rank": 525,
+    "diff": 0,
+    "tier": "C",
+    "provider": "deepseek-ai",
+    "model": "deepseek-ai/deepseek-moe-16b-base",
+    "fullName": "deepseek-ai/deepseek-moe-16b-base",
+    "avgPerf": 15.25,
+    "peakPerf": 16,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 526,
+    "rank": 526,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BlackBeenie",
+    "model": "BlackBeenie/Llama-3.1-8B-pythonic-passthrough-merge",
+    "fullName": "BlackBeenie/Llama-3.1-8B-pythonic-passthrough-merge",
+    "avgPerf": 15.11,
+    "peakPerf": 15.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 527,
+    "rank": 527,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/gemma-2b",
+    "fullName": "google/gemma-2b",
+    "avgPerf": 14.96,
+    "peakPerf": 15.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 528,
+    "rank": 528,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-0.5B",
+    "fullName": "Qwen/Qwen2-0.5B",
+    "avgPerf": 14.76,
+    "peakPerf": 15.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 529,
+    "rank": 529,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/codegemma-1.1-2b",
+    "fullName": "google/codegemma-1.1-2b",
+    "avgPerf": 14.57,
+    "peakPerf": 15.3,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 530,
+    "rank": 530,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/recurrentgemma-2b",
+    "fullName": "google/recurrentgemma-2b",
+    "avgPerf": 14.33,
+    "peakPerf": 15,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 531,
+    "rank": 531,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ngxson",
+    "model": "ngxson/MiniThinky-1B-Llama-3.2",
+    "fullName": "ngxson/MiniThinky-1B-Llama-3.2",
+    "avgPerf": 14.17,
+    "peakPerf": 14.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 532,
+    "rank": 532,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Solshine",
+    "model": "Solshine/Llama-3-1-big-thoughtful-passthrough-merge-2",
+    "fullName": "Solshine/Llama-3-1-big-thoughtful-passthrough-merge-2",
+    "avgPerf": 14.15,
+    "peakPerf": 14.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 533,
+    "rank": 533,
+    "diff": 0,
+    "tier": "C",
+    "provider": "oopere",
+    "model": "oopere/pruned10-llama-3.2-3B",
+    "fullName": "oopere/pruned10-llama-3.2-3B",
+    "avgPerf": 14.13,
+    "peakPerf": 14.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 534,
+    "rank": 534,
+    "diff": 0,
+    "tier": "C",
+    "provider": "oopere",
+    "model": "oopere/pruned40-llama-3.2-1B",
+    "fullName": "oopere/pruned40-llama-3.2-1B",
+    "avgPerf": 14.05,
+    "peakPerf": 14.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 535,
+    "rank": 535,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-ProdigyPlusPlus",
+    "fullName": "bunnycore/Llama-3.2-3B-ProdigyPlusPlus",
+    "avgPerf": 13.7,
+    "peakPerf": 14.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 536,
+    "rank": 536,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2-0.5B-Instruct",
+    "fullName": "Qwen/Qwen2-0.5B-Instruct",
+    "avgPerf": 13.45,
+    "peakPerf": 14.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 537,
+    "rank": 537,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "fullName": "Qwen/Qwen2.5-0.5B",
+    "avgPerf": 13.38,
+    "peakPerf": 14,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 538,
+    "rank": 538,
+    "diff": 0,
+    "tier": "C",
+    "provider": "ngxson",
+    "model": "ngxson/MiniThinky-v2-1B-Llama-3.2",
+    "fullName": "ngxson/MiniThinky-v2-1B-Llama-3.2",
+    "avgPerf": 13.38,
+    "peakPerf": 14,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 539,
+    "rank": 539,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/flan-t5-base",
+    "fullName": "google/flan-t5-base",
+    "avgPerf": 13.1,
+    "peakPerf": 13.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 540,
+    "rank": 540,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/flan-t5-small",
+    "fullName": "google/flan-t5-small",
+    "avgPerf": 12.52,
+    "peakPerf": 13.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 541,
+    "rank": 541,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-0.5B-Chat",
+    "fullName": "Qwen/Qwen1.5-0.5B-Chat",
+    "avgPerf": 11.6,
+    "peakPerf": 12.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 542,
+    "rank": 542,
+    "diff": 0,
+    "tier": "C",
+    "provider": "oopere",
+    "model": "oopere/pruned20-llama-3.2-3b",
+    "fullName": "oopere/pruned20-llama-3.2-3b",
+    "avgPerf": 11.55,
+    "peakPerf": 12.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 543,
+    "rank": 543,
+    "diff": 0,
+    "tier": "C",
+    "provider": "oopere",
+    "model": "oopere/pruned40-llama-3.2-3b",
+    "fullName": "oopere/pruned40-llama-3.2-3b",
+    "avgPerf": 10.97,
+    "peakPerf": 11.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 544,
+    "rank": 544,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Qwen",
+    "model": "Qwen/Qwen1.5-0.5B",
+    "fullName": "Qwen/Qwen1.5-0.5B",
+    "avgPerf": 10.93,
+    "peakPerf": 11.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 545,
+    "rank": 545,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/mt5-xl",
+    "fullName": "google/mt5-xl",
+    "avgPerf": 10.6,
+    "peakPerf": 11.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 546,
+    "rank": 546,
+    "diff": 0,
+    "tier": "C",
+    "provider": "oopere",
+    "model": "oopere/pruned60-llama-3.2-3b",
+    "fullName": "oopere/pruned60-llama-3.2-3b",
+    "avgPerf": 10.48,
+    "peakPerf": 11,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 547,
+    "rank": 547,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/mt5-xxl",
+    "fullName": "google/mt5-xxl",
+    "avgPerf": 10.42,
+    "peakPerf": 10.9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 548,
+    "rank": 548,
+    "diff": 0,
+    "tier": "C",
+    "provider": "monsterapi",
+    "model": "monsterapi/Llama-3_1-8B-Instruct-orca-ORPO",
+    "fullName": "monsterapi/Llama-3_1-8B-Instruct-orca-ORPO",
+    "avgPerf": 9.87,
+    "peakPerf": 10.4,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 549,
+    "rank": 549,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/mt5-small",
+    "fullName": "google/mt5-small",
+    "avgPerf": 8.69,
+    "peakPerf": 9.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 550,
+    "rank": 550,
+    "diff": 0,
+    "tier": "C",
+    "provider": "allenai",
+    "model": "allenai/Llama-3.1-Tulu-3-8B-RM",
+    "fullName": "allenai/Llama-3.1-Tulu-3-8B-RM",
+    "avgPerf": 8.65,
+    "peakPerf": 9.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 551,
+    "rank": 551,
+    "diff": 0,
+    "tier": "C",
+    "provider": "prithivMLmods",
+    "model": "prithivMLmods/Llama-3.1-5B-Instruct",
+    "fullName": "prithivMLmods/Llama-3.1-5B-Instruct",
+    "avgPerf": 8.59,
+    "peakPerf": 9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 552,
+    "rank": 552,
+    "diff": 0,
+    "tier": "C",
+    "provider": "meta-llama",
+    "model": "meta-llama/Llama-3.2-1B",
+    "fullName": "meta-llama/Llama-3.2-1B",
+    "avgPerf": 8.57,
+    "peakPerf": 9,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 553,
+    "rank": 553,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavieLion",
+    "model": "DavieLion/Llama-3.2-1B-SPIN-iter0",
+    "fullName": "DavieLion/Llama-3.2-1B-SPIN-iter0",
+    "avgPerf": 8.14,
+    "peakPerf": 8.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 554,
+    "rank": 554,
+    "diff": 0,
+    "tier": "C",
+    "provider": "bunnycore",
+    "model": "bunnycore/Llama-3.2-3B-Deep-Test",
+    "fullName": "bunnycore/Llama-3.2-3B-Deep-Test",
+    "avgPerf": 8.12,
+    "peakPerf": 8.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 555,
+    "rank": 555,
+    "diff": 0,
+    "tier": "C",
+    "provider": "BlackBeenie",
+    "model": "BlackBeenie/Neos-Llama-3.1-base",
+    "fullName": "BlackBeenie/Neos-Llama-3.1-base",
+    "avgPerf": 8.11,
+    "peakPerf": 8.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 556,
+    "rank": 556,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavieLion",
+    "model": "DavieLion/Llama-3.2-1B-SPIN-iter1",
+    "fullName": "DavieLion/Llama-3.2-1B-SPIN-iter1",
+    "avgPerf": 7.66,
+    "peakPerf": 8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 557,
+    "rank": 557,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/mt5-base",
+    "fullName": "google/mt5-base",
+    "avgPerf": 7.59,
+    "peakPerf": 8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 558,
+    "rank": 558,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavieLion",
+    "model": "DavieLion/Llama-3.2-1B-SPIN-iter2",
+    "fullName": "DavieLion/Llama-3.2-1B-SPIN-iter2",
+    "avgPerf": 7.47,
+    "peakPerf": 7.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 559,
+    "rank": 559,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavieLion",
+    "model": "DavieLion/Llama-3.2-1B-SPIN-iter0",
+    "fullName": "DavieLion/Llama-3.2-1B-SPIN-iter0",
+    "avgPerf": 7.4,
+    "peakPerf": 7.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 560,
+    "rank": 560,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavieLion",
+    "model": "DavieLion/Llama-3.2-1B-SPIN-iter3",
+    "fullName": "DavieLion/Llama-3.2-1B-SPIN-iter3",
+    "avgPerf": 7.38,
+    "peakPerf": 7.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 561,
+    "rank": 561,
+    "diff": 0,
+    "tier": "C",
+    "provider": "DavieLion",
+    "model": "DavieLion/Llama-3.2-1B-SPIN-iter3",
+    "fullName": "DavieLion/Llama-3.2-1B-SPIN-iter3",
+    "avgPerf": 7.34,
+    "peakPerf": 7.7,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 562,
+    "rank": 562,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/umt5-base",
+    "fullName": "google/umt5-base",
+    "avgPerf": 7.18,
+    "peakPerf": 7.5,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 563,
+    "rank": 563,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Triangle104",
+    "model": "Triangle104/DS-Distilled-Hermes-Llama-3.1_TIES",
+    "fullName": "Triangle104/DS-Distilled-Hermes-Llama-3.1_TIES",
+    "avgPerf": 6.9,
+    "peakPerf": 7.2,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 564,
+    "rank": 564,
+    "diff": 0,
+    "tier": "C",
+    "provider": "google",
+    "model": "google/switch-base-8",
+    "fullName": "google/switch-base-8",
+    "avgPerf": 6.73,
+    "peakPerf": 7.1,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  },
+  {
+    "id": 565,
+    "rank": 565,
+    "diff": 0,
+    "tier": "C",
+    "provider": "Mostafa8Mehrabi",
+    "model": "Mostafa8Mehrabi/llama-3.2-1b-Insomnia-ChatBot-merged",
+    "fullName": "Mostafa8Mehrabi/llama-3.2-1b-Insomnia-ChatBot-merged",
+    "avgPerf": 6.52,
+    "peakPerf": 6.8,
+    "samples": 1000,
+    "scenarios": [
+      "reasoning",
+      "general"
+    ]
+  }
+]

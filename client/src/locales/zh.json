@@ -1,0 +1,58 @@
+{
+  "app": {
+    "global_economy": "全球经济",
+    "efficiency_matrix": "效率矩阵",
+    "system_active": "系统激活",
+    "models": "模型",
+    "queries": "查询",
+    "realtime": "实时",
+    "status": "状态",
+    "protocol": "协议",
+    "endpoint": "端点",
+    "matrix": "矩阵",
+    "copyright": "© 2026 AgentStats • 技术标准"
+  },
+  "rankings": {
+    "workload_scenario": "工作负载场景",
+    "timeframe": "时间范围",
+    "dataset": "数据集",
+    "score": "评分",
+    "scenarios": {
+      "all": "所有场景",
+      "coding": "编程",
+      "reasoning": "推理",
+      "creative": "创意"
+    },
+    "timeframes": {
+      "current": "当前",
+      "last": "上月",
+      "alltime": "历史"
+    },
+    "tiers": {
+      "S": "S级: 顶尖水平",
+      "A": "A级: 高性能",
+      "B": "B级: 胜任",
+      "C": "C级: 平均",
+      "D": "D级: 基础"
+    }
+  },
+  "efficiency": {
+    "eff": "效率",
+    "efficiency": "效率",
+    "latency": "延迟",
+    "input": "输入 (1M)",
+    "output": "输出 (1M)",
+    "provider": "厂商",
+    "model": "模型",
+    "status_label": "状态",
+    "status": {
+      "excellent": "优异",
+      "good": "良好",
+      "average": "一般",
+      "poor": "较差"
+    }
+  },
+  "common": {
+    "language": "中"
+  }
+}

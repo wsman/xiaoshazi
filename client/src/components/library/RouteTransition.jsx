@@ -97,10 +97,11 @@ export const RouteTransition = memo(({
     return `${baseClass} ${stateClass} ${directionClass} ${animationClass}`.trim();
   };
 
-  // 处理路由变化
+  // 处理内容更新
   useEffect(() => {
-    // 如果路由没有变化，直接返回
+    // 如果路由没有变化，只更新内容
     if (prevLocationRef.current.key === location.key) {
+      setDisplayChildren(children);
       return;
     }
 
@@ -124,15 +125,16 @@ export const RouteTransition = memo(({
       // 立即显示新内容，但应用动画样式
       setDisplayChildren(children);
 
+      // 更新前一个位置引用
+      prevLocationRef.current = location;
+
       return () => clearTimeout(timer);
     } else {
       // 禁用动画时直接更新
       setDisplayChildren(children);
+      prevLocationRef.current = location;
     }
-
-    // 更新前一个位置引用
-    prevLocationRef.current = location;
-  }, [location, children, duration, disabled]);
+  }, [location.key, location.pathname, children, duration, disabled]);
 
   // 如果禁用动画，直接渲染子组件
   if (disabled) {
@@ -151,16 +153,6 @@ export const RouteTransition = memo(({
       </div>
     </div>
   );
-}, (prev, next) => {
-  // 自定义比较函数，避免不必要的重渲染
-  if (prev.disabled !== next.disabled || 
-      prev.animationType !== next.animationType ||
-      prev.duration !== next.duration) {
-    return false;
-  }
-  
-  // 深度比较children（简化版）
-  return React.Children.count(prev.children) === React.Children.count(next.children);
 });
 
 RouteTransition.displayName = 'RouteTransition';

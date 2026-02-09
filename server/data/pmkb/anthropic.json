@@ -1,0 +1,21 @@
+{
+  "provider": "Anthropic",
+  "models": [
+    {
+      "id": "claude-4.6",
+      "model": "Claude 4.6",
+      "specs": {
+        "context": "10M",
+        "swe_bench": "68%",
+        "mmlu": "95.8%",
+        "params": "Unknown"
+      },
+      "pricing": {
+        "input": "$8/1M",
+        "output": "$24/1M"
+      },
+      "url": "https://anthropic.com/claude-4-6",
+      "avgPerf": 98.7
+    }
+  ]
+}

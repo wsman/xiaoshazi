@@ -1,0 +1,37 @@
+[
+  {
+    "model": "claude-4.6",
+    "avgPerf": 98.5,
+    "provider": "Anthropic",
+    "type": "Closed Source",
+    "isProprietary": true
+  },
+  {
+    "model": "gpt-5.3",
+    "avgPerf": 97.8,
+    "provider": "OpenAI",
+    "type": "Closed Source",
+    "isProprietary": true
+  },
+  {
+    "model": "gemini-2.0-ultra",
+    "avgPerf": 96.2,
+    "provider": "Google",
+    "type": "Closed Source",
+    "isProprietary": true
+  },
+  {
+    "model": "gpt-4o",
+    "avgPerf": 92.5,
+    "provider": "OpenAI",
+    "type": "Closed Source",
+    "isProprietary": true
+  },
+  {
+    "model": "claude-3.5-sonnet",
+    "avgPerf": 91.8,
+    "provider": "Anthropic",
+    "type": "Closed Source",
+    "isProprietary": true
+  }
+]

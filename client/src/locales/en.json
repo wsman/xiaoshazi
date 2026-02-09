@@ -1,0 +1,58 @@
+{
+  "app": {
+    "global_economy": "Global Economy",
+    "efficiency_matrix": "Efficiency Matrix",
+    "system_active": "System Active",
+    "models": "Models",
+    "queries": "Queries",
+    "realtime": "Realtime",
+    "status": "Status",
+    "protocol": "Protocol",
+    "endpoint": "Endpoint",
+    "matrix": "Matrix",
+    "copyright": "© 2026 AgentStats • Tech Standard"
+  },
+  "rankings": {
+    "workload_scenario": "Workload Scenario",
+    "timeframe": "Timeframe",
+    "dataset": "Dataset",
+    "score": "Score",
+    "scenarios": {
+      "all": "All Scenarios",
+      "coding": "Coding",
+      "reasoning": "Reasoning",
+      "creative": "Creative"
+    },
+    "timeframes": {
+      "current": "Current",
+      "last": "Last Month",
+      "alltime": "All Time"
+    },
+    "tiers": {
+      "S": "S-Tier: State of the Art",
+      "A": "A-Tier: High Performance",
+      "B": "B-Tier: Competent",
+      "C": "C-Tier: Average",
+      "D": "D-Tier: Basic"
+    }
+  },
+  "efficiency": {
+    "eff": "Eff.",
+    "efficiency": "Efficiency",
+    "latency": "Latency",
+    "input": "Input (1M)",
+    "output": "Output (1M)",
+    "provider": "Provider",
+    "model": "Model",
+    "status_label": "Status",
+    "status": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "average": "Average",
+      "poor": "Poor"
+    }
+  },
+  "common": {
+    "language": "EN"
+  }
+}

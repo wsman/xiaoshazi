@@ -1,0 +1,21 @@
+{
+  "provider": "Google",
+  "models": [
+    {
+      "id": "gemini-3-pro-high",
+      "model": "Gemini 3 Pro High",
+      "specs": {
+        "context": "20M",
+        "swe_bench": "75%",
+        "mmlu": "97.2%",
+        "params": "Unknown"
+      },
+      "pricing": {
+        "input": "$5/1M",
+        "output": "$15/1M"
+      },
+      "url": "https://deepmind.google/gemini-3-pro-high",
+      "avgPerf": 99.8
+    }
+  ]
+}

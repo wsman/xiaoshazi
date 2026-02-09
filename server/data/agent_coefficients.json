@@ -1,0 +1,14 @@
+{
+  "high": {
+    "multiplier": 1.2,
+    "patterns": ["claude", "gpt-4", "gpt-5", "gemini"]
+  },
+  "mid": {
+    "multiplier": 1.1,
+    "patterns": ["llama 3.1", "llama 3.3", "llama3.1", "llama3.3", "deepseek coder", "deepseek-coder", "qwen 2.5", "qwen2.5"]
+  },
+  "low": {
+    "multiplier": 1.0,
+    "patterns": []
+  }
+}
