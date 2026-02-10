@@ -163,7 +163,7 @@ const AgentRankings = () => {
 
   return (
     <RouteTransition animationType="slide-up" duration={300}>
-      <div className={`w-full max-w-6xl mx-auto px-2 transition-opacity duration-300 ${processing ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
+      <div className={`w-full max-w-6xl mx-auto px-2 transition-opacity duration-300 relative z-10 ${processing ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
         <div className="mb-6 flex flex-col items-center gap-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
              <div className="flex flex-col gap-1.5 items-center md:items-start">

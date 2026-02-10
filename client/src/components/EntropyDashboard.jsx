@@ -59,7 +59,7 @@ const EntropyDashboard = () => {
 
   return (
     <RouteTransition animationType="fade" duration={400}>
-      <div className="p-8 max-w-5xl mx-auto">
+      <div className="p-8 max-w-5xl mx-auto relative z-10">
         <div className="mb-8 flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-black text-slate-900 tracking-tight flex items-center gap-3">
