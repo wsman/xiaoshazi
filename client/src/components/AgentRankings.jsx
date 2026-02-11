@@ -155,8 +155,8 @@ const AgentRankings = () => {
 
   if (loading) {
     return (
-      <div className="w-full max-w-5xl mx-auto p-4">
-        <PageSkeleton type="market" showHeader={false} />
+      <div className="w-full max-w-6xl mx-auto px-2">
+        <PageSkeleton type="rankings" showHeader={true} />
       </div>
     );
   }
@@ -236,9 +236,10 @@ const AgentRankings = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
+                            whileHover={{ scale: 1.05, zIndex: 50 }}
                             transition={{ duration: 0.5, ease: "circOut" }}
                             key={item.id} 
-                            className="flex-none w-[190px] flex bg-[#fcfdfe] rounded-xl border border-[#edf2f7] p-3 hover:bg-white hover:border-blue-300/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:scale-[1.05] hover:z-50 transition-all duration-500 ease-out group/card relative overflow-visible cursor-pointer"
+                            className="flex-none w-[190px] flex bg-[#fcfdfe] rounded-xl border border-[#edf2f7] p-3 hover:bg-white hover:border-blue-300/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-colors duration-300 group/card relative overflow-visible cursor-pointer"
                           >
                             {/* Subtle top glow on hover */}
                             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/0 to-transparent group-hover/card:via-blue-500/50 transition-all duration-700"></div>
