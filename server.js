@@ -4,6 +4,9 @@ const path = require('path');
 const redis = require('redis');
 const compression = require('compression');
 const os = require('os');
+const { Server } = require('socket.io');
+const { exec } = require('child_process');
+const fs = require('fs');
 
 // 创建Express应用
 const app = express();
@@ -31,6 +34,95 @@ const MOCK_AGENTS = [
     { id: 14, rank: 14, diff: 0, tier: "D", provider: "Meta", model: "Llama 3.1 70B", avgPerf: 62.5, peakPerf: 70.5, samples: 8900, scenarios: ["coding"] },
     { id: 15, rank: 15, diff: -2, tier: "D", provider: "Groq", model: "Llama 3 Groq", avgPerf: 60.1, peakPerf: 68.2, samples: 3500, scenarios: ["reasoning"] },
 ];
+
+// 获取OpenDoge工作区路径
+// xiaoshazi位于 /home/wsman/OpenDoge/projects/xiaoshazi
+// 所以__dirname是 /home/wsman/OpenDoge/projects/xiaoshazi
+// OpenDoge根目录是 /home/wsman/OpenDoge
+let OPENDOGE_ROOT = path.resolve(__dirname, '../..');
+
+// 验证路径是否正确，如果不对则使用备用路径
+if (!fs.existsSync(path.join(OPENDOGE_ROOT, 'AGENTS.md'))) {
+    // 尝试备用路径
+    const alternatePath = '/home/wsman/OpenDoge';
+    if (fs.existsSync(path.join(alternatePath, 'AGENTS.md'))) {
+        OPENDOGE_ROOT = alternatePath;
+        console.log('✅ Using alternate OpenDoge path:', OPENDOGE_ROOT);
+    }
+}
+
+// 熵值计算API
+app.get('/api/entropy', (req, res) => {
+    const scriptPath = path.join(OPENDOGE_ROOT, 'scripts/monitoring/entropy_calculator_unified.py');
+    const cmd = `cd ${OPENDOGE_ROOT} && python3 ${scriptPath} --json`;
+    
+    exec(cmd, (error, stdout, stderr) => {
+        if (error) {
+            console.error('Entropy calculation error:', error);
+            return res.status(500).json({
+                success: false,
+                error: 'Failed to calculate entropy',
+                message: error.message
+            });
+        }
+        
+        try {
+            const result = JSON.parse(stdout);
+            res.json({
+                success: true,
+                data: result,
+                timestamp: Date.now()
+            });
+        } catch (parseError) {
+            console.error('JSON parse error:', parseError);
+            res.status(500).json({
+                success: false,
+                error: 'Failed to parse entropy data'
+            });
+        }
+    });
+});
+
+// 熵值历史API
+app.get('/api/entropy/history', (req, res) => {
+    const historyPath = path.join(OPENDOGE_ROOT, 'memory/entropy_history.json');
+    
+    if (fs.existsSync(historyPath)) {
+        try {
+            const history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+            res.json({
+                success: true,
+                data: history.slice(-100),
+                timestamp: Date.now()
+            });
+        } catch (error) {
+            console.error('Failed to read entropy history:', error);
+            res.json({
+                success: true,
+                data: [],
+                timestamp: Date.now()
+            });
+        }
+    } else {
+        res.json({
+            success: true,
+            data: [],
+            timestamp: Date.now()
+        });
+    }
+});
+
+// 获取系统指标函数
+function getSystemMetrics() {
+    return {
+        status: 'healthy',
+        uptime: process.uptime(),
+        memory: process.memoryUsage(),
+        cpu: process.cpuUsage(),
+        load: os.loadavg(),
+        timestamp: Date.now()
+    };
+}
 
 async function initRedis() {
     try {
@@ -410,13 +502,43 @@ const server = http.createServer(app);
 async function startServer() {
     await initRedis();
     
+    // 创建 Socket.IO 服务器
+    const io = new Server(server, {
+        cors: {
+            origin: '*',
+            methods: ['GET', 'POST']
+        }
+    });
+    
+    // 监听客户端连接
+    io.on('connection', (socket) => {
+        console.log('🔌 Client connected:', socket.id);
+        
+        // 立即发送当前状态
+        socket.emit('system:metrics', getSystemMetrics());
+        
+        socket.on('disconnect', () => {
+            console.log('🔌 Client disconnected:', socket.id);
+        });
+    });
+    
+    // 定期广播系统指标（每3秒）
+    setInterval(() => {
+        const metrics = getSystemMetrics();
+        io.emit('system:metrics', metrics);
+    }, 3000);
+    
     server.listen(PORT, () => {
         console.log(`✅ Backend Server started on port ${PORT}`);
         console.log(`🌐 Local address: http://localhost:${PORT}`);
+        console.log(`🔌 WebSocket Server started`);
         console.log(`📊 API Endpoints:`);
         console.log(`   - GET http://localhost:${PORT}/api/time`);
         console.log(`   - GET http://localhost:${PORT}/api/health`);
         console.log(`   - GET http://localhost:${PORT}/api/agents`);
+        console.log(`   - GET http://localhost:${PORT}/api/entropy`);
+        console.log(`   - GET http://localhost:${PORT}/api/entropy/history`);
+        console.log(`   - WS  ws://localhost:${PORT}/socket.io/`);
     });
 }
 
