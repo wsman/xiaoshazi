@@ -1,7 +1,8 @@
 // ScenarioSelector Component
 // Select and filter by scenario (coding/reasoning/general/creative)
+// 样式统一: 使用 nordic-minimal.css 主题变量
 
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MotionButton, MotionButtonGroup } from './MotionButton';
@@ -14,36 +15,37 @@ const scenarioIcons = {
   creative: '🎨',
 };
 
+// 使用 nordic-minimal.css 主题变量统一颜色
 const scenarioConfigs = {
   all: {
-    color: 'from-slate-500 to-slate-600',
-    bgColor: 'bg-slate-100',
-    borderColor: 'border-slate-200',
-    hoverColor: 'hover:from-slate-400 hover:to-slate-500',
+    color: 'from-[var(--nordic-stone)] to-[var(--nordic-granite)]',
+    bgColor: 'bg-[var(--bg-tertiary)]',
+    borderColor: 'border-[var(--border-primary)]',
+    hoverColor: 'hover:from-[var(--nordic-granite)] hover:to-[var(--nordic-slate)]',
   },
   coding: {
-    color: 'from-blue-500 to-blue-600',
-    bgColor: 'bg-blue-50',
-    borderColor: 'border-blue-200',
-    hoverColor: 'hover:from-blue-400 hover:to-blue-500',
+    color: 'from-[var(--nordic-fjord)] to-[var(--nordic-fjord-hover)]',
+    bgColor: 'bg-[var(--nordic-fjord-light)]',
+    borderColor: 'border-[var(--nordic-fjord)]',
+    hoverColor: 'hover:from-[var(--nordic-fjord-hover)] hover:to-[var(--nordic-fjord)]',
   },
   reasoning: {
-    color: 'from-purple-500 to-purple-600',
-    bgColor: 'bg-purple-50',
-    borderColor: 'border-purple-200',
-    hoverColor: 'hover:from-purple-400 hover:to-purple-500',
+    color: 'from-[var(--nordic-aurora-purple)] to-[#7A6CA0]',
+    bgColor: 'bg-[var(--nordic-aurora-purple)]/10',
+    borderColor: 'border-[var(--nordic-aurora-purple)]/30',
+    hoverColor: 'hover:from-[var(--nordic-aurora-purple)] hover:to-[var(--nordic-aurora-purple)]',
   },
   general: {
-    color: 'from-emerald-500 to-emerald-600',
-    bgColor: 'bg-emerald-50',
-    borderColor: 'border-emerald-200',
-    hoverColor: 'hover:from-emerald-400 hover:to-emerald-500',
+    color: 'from-[var(--nordic-pine)] to-[var(--nordic-pine-hover)]',
+    bgColor: 'bg-[var(--nordic-pine-light)]',
+    borderColor: 'border-[var(--nordic-pine)]',
+    hoverColor: 'hover:from-[var(--nordic-pine-hover)] hover:to-[var(--nordic-pine)]',
   },
   creative: {
-    color: 'from-orange-500 to-pink-500',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-orange-200',
-    hoverColor: 'hover:from-orange-400 hover:to-pink-400',
+    color: 'from-[var(--nordic-aurora-amber)] to-[var(--nordic-aurora-rose)]',
+    bgColor: 'bg-[var(--nordic-aurora-amber)]/10',
+    borderColor: 'border-[var(--nordic-aurora-amber)]/30',
+    hoverColor: 'hover:from-[var(--nordic-aurora-amber)] hover:to-[var(--nordic-aurora-rose)]',
   },
 };
 
@@ -70,7 +72,7 @@ const ScenarioSelector = ({
   
   return (
     <div className={`scenario-selector ${className}`}>
-      <MotionButtonGroup spacing={2} className="bg-slate-100/80 p-1 rounded-xl border border-slate-200/60 backdrop-blur-xl shadow-sm w-fit">
+      <MotionButtonGroup spacing={2} className="bg-[var(--bg-tertiary)]/80 p-1 rounded-[var(--radius-xl)] border border-[var(--border-primary)]/60 backdrop-blur-xl shadow-[var(--shadow-sm)] w-fit">
         {scenarioList.map((scenario) => {
           const config = scenarioConfigs[scenario.id] || scenarioConfigs.general;
           const isActive = activeScenario === scenario.id;
@@ -81,10 +83,10 @@ const ScenarioSelector = ({
               size={size}
               variant={isActive ? 'primary' : 'ghost'}
               className={`
-                relative rounded-lg px-3 py-1.5 text-xs font-bold transition-all duration-300 overflow-hidden
+                relative rounded-[var(--radius-lg)] px-3 py-1.5 text-xs font-bold transition-all duration-300 overflow-hidden
                 ${isActive 
-                  ? `bg-gradient-to-r ${config.color} text-white shadow-md` 
-                  : 'text-slate-500 hover:text-slate-800 hover:bg-white/60'
+                  ? `bg-gradient-to-r ${config.color} text-white shadow-[var(--shadow-md)]` 
+                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/60'
                 }
               `}
               onClick={() => onScenarioChange && onScenarioChange(scenario.id)}
@@ -125,4 +127,4 @@ export const SCENARIOS = [
   { id: 'creative', label: 'Creative', icon: '🎨', description: 'Creative writing & art' },
 ];
 
-export default ScenarioSelector;
+export default memo(ScenarioSelector);

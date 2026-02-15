@@ -21,6 +21,7 @@
       "all": "所有场景",
       "coding": "编程",
       "reasoning": "推理",
+      "general": "通用",
       "creative": "创意"
     },
     "timeframes": {
@@ -34,7 +35,10 @@
       "B": "B级: 胜任",
       "C": "C级: 平均",
       "D": "D级: 基础"
-    }
+    },
+    "view": "视图",
+    "view_rankings": "排行榜",
+    "view_agentcard": "代理卡片"
   },
   "efficiency": {
     "eff": "效率",

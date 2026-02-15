@@ -169,12 +169,12 @@ async function initRedis() {
         console.log('✅ Redis connected successfully');
         isRedisAvailable = true;
         
-        // Seed data if empty
-        const count = await redisClient.exists('agent:rankings');
+        // Seed data if empty - 使用版本化键名避免冲突
+        const count = await redisClient.exists('xiaoshazi:agent:rankings:v1');
         if (count === 0) {
             console.log('🌱 Seeding Redis with mock data...');
-            await redisClient.set('agent:rankings', JSON.stringify(MOCK_AGENTS));
-            console.log('✅ Mock data seeded to Redis');
+            await redisClient.setEx('xiaoshazi:agent:rankings:v1', 1800, JSON.stringify(MOCK_AGENTS));
+            console.log('✅ Mock data seeded to Redis (30分钟TTL)');
         }
     } catch (error) {
         console.warn('❌ Redis connection error, falling back to in-memory store:', error.message);
@@ -182,7 +182,7 @@ async function initRedis() {
     }
 }
 
-// 缓存预热函数
+// 缓存预热函数 - 30分钟缓存策略
 async function warmUpCache() {
     if (!isRedisAvailable || !redisClient) {
         console.log('⏭️ 缓存预热跳过: Redis不可用');
@@ -190,23 +190,28 @@ async function warmUpCache() {
     }
     
     try {
-        console.log('🔥 开始缓存预热...');
+        console.log('🔥 开始缓存预热 (30分钟TTL)...');
         
-        // 预热排行榜数据
+        // 预热排行榜数据 - 使用唯一键名避免冲突
         const agentsPath = path.join(__dirname, 'server/data/rankings.json');
         if (fs.existsSync(agentsPath)) {
             const data = fs.readFileSync(agentsPath, 'utf8');
-            await redisClient.setEx('agent:rankings', 3600, data);
-            console.log('✅ 缓存预热完成: agent:rankings');
+            await redisClient.setEx('xiaoshazi:agent:rankings:v1', 1800, data);
+            console.log('✅ 缓存预热完成: xiaoshazi:agent:rankings:v1 (30分钟)');
         }
         
-        // 预热中国模型数据
+        // 预热中国模型数据 - 使用唯一键名
         const cnModelsPath = path.join(__dirname, 'server/data/cn_models.json');
         if (fs.existsSync(cnModelsPath)) {
             const data = fs.readFileSync(cnModelsPath, 'utf8');
-            await redisClient.setEx('agent:cn_models', 3600, data);
-            console.log('✅ 缓存预热完成: agent:cn_models');
+            await redisClient.setEx('xiaoshazi:cn_models:v1', 1800, data);
+            console.log('✅ 缓存预热完成: xiaoshazi:cn_models:v1 (30分钟)');
         }
+        
+        // 预热系统指标 - 短暂缓存
+        const metrics = getSystemMetrics();
+        await redisClient.setEx('xiaoshazi:system:metrics:v1', 300, JSON.stringify(metrics));
+        console.log('✅ 缓存预热完成: xiaoshazi:system:metrics:v1 (5分钟)');
         
     } catch (error) {
         console.error('❌ 缓存预热失败:', error.message);
@@ -223,6 +228,14 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+});
+
+// HTTP 缓存头优化 - 静态资源缓存1年
+app.use((req, res, next) => {
+    if (req.url.endsWith('.js') || req.url.endsWith('.css') || req.url.endsWith('.woff2') || req.url.endsWith('.png') || req.url.endsWith('.jpg')) {
+        res.set('Cache-Control', 'public, max-age=31536000');
+    }
     next();
 });
 
@@ -457,8 +470,8 @@ app.post('/api/echo', (req, res) => {
 app.get('/api/agents', async (req, res) => {
     const { scenario } = req.query;
     
-    // Configure proper Cache-Control headers
-    res.set('Cache-Control', 'public, max-age=60, s-maxage=60');
+    // Configure proper Cache-Control headers - 30分钟缓存
+    res.set('Cache-Control', 'public, max-age=1800, s-maxage=1800');
 
     let agentData = [];
     let source = 'memory';
@@ -488,11 +501,11 @@ app.get('/api/agents', async (req, res) => {
                 });
                 source = 'redis';
             } else {
-                // Fallback to old key or file
-                const cachedData = await redisClient.get('agent:rankings');
+                // Fallback to versioned key or file
+                const cachedData = await redisClient.get('xiaoshazi:agent:rankings:v1');
                 if (cachedData) {
                     agentData = JSON.parse(cachedData);
-                    source = 'redis-legacy';
+                    source = 'redis-v1';
                 } else {
                     source = 'file-fallback';
                 }
@@ -559,7 +572,14 @@ async function startServer() {
             methods: ['GET', 'POST']
         }
     });
-    
+
+    // 事件驱动推送函数 - 仅在数据变化时推送
+    function emitMetricsUpdate() {
+        const metrics = getSystemMetrics();
+        io.emit('system:metrics', metrics);
+        return metrics;
+    }
+
     // 监听客户端连接
     io.on('connection', (socket) => {
         console.log('🔌 Client connected:', socket.id);
@@ -567,16 +587,33 @@ async function startServer() {
         // 立即发送当前状态
         socket.emit('system:metrics', getSystemMetrics());
         
+        // 客户端请求更新 - 按需推送
+        socket.on('request:update', () => {
+            console.log(`📡 Client ${socket.id} requested update`);
+            emitMetricsUpdate();
+        });
+
+        // 客户端订阅特定数据
+        socket.on('subscribe:agents', () => {
+            console.log(`📡 Client ${socket.id} subscribed to agents`);
+            socket.emit('agents:update', { source: 'client-subscribe', timestamp: Date.now() });
+        });
+        
         socket.on('disconnect', () => {
             console.log('🔌 Client disconnected:', socket.id);
         });
     });
     
-    // 定期广播系统指标（每3秒）
+    // 移除3秒轮询，改为事件驱动 + 5分钟定时同步
+    // 1. 5分钟定时同步
     setInterval(() => {
-        const metrics = getSystemMetrics();
-        io.emit('system:metrics', metrics);
-    }, 3000);
+        console.log('🔄 Periodic 5-minute sync');
+        emitMetricsUpdate();
+    }, 300000); // 5分钟
+    
+    // 2. 数据变化时推送 (由外部调用emitMetricsUpdate())
+    
+    // 3. 客户端请求更新 (通过socket事件处理)
     
     server.listen(PORT, () => {
         console.log(`✅ Backend Server started on port ${PORT}`);

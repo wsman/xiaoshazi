@@ -21,6 +21,7 @@
       "all": "All Scenarios",
       "coding": "Coding",
       "reasoning": "Reasoning",
+      "general": "General",
       "creative": "Creative"
     },
     "timeframes": {
@@ -34,7 +35,10 @@
       "B": "B-Tier: Competent",
       "C": "C-Tier: Average",
       "D": "D-Tier: Basic"
-    }
+    },
+    "view": "View",
+    "view_rankings": "Rankings",
+    "view_agentcard": "Agent Cards"
   },
   "efficiency": {
     "eff": "Eff.",

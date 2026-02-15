@@ -33,7 +33,7 @@ export const PageSkeleton = ({
                 {/* 数据卡片区域 */}
                 <div className="page-skeleton__cards-grid">
                   {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="p-4 border border-gray-200 rounded-lg">
+                    <div key={i} className="p-4 border border-[var(--border-primary)] rounded-lg">
                       <div className="skeleton-pulse" style={{ height: '80px' }} />
                     </div>
                   ))}
@@ -41,13 +41,13 @@ export const PageSkeleton = ({
                 
                 {/* 主内容区域 */}
                 <div className="page-skeleton__main-grid">
-                  <div className="p-4 border border-gray-200 rounded-lg">
+                  <div className="p-4 border border-[var(--border-primary)] rounded-lg">
                     <div className="skeleton-pulse" style={{ height: '400px' }} />
                   </div>
-                  <div className="p-4 border border-gray-200 rounded-lg">
+                  <div className="p-4 border border-[var(--border-primary)] rounded-lg">
                     <div className="skeleton-pulse" style={{ height: '400px' }} />
                   </div>
-                  <div className="p-4 border border-gray-200 rounded-lg">
+                  <div className="p-4 border border-[var(--border-primary)] rounded-lg">
                     <div className="skeleton-pulse" style={{ height: '400px' }} />
                   </div>
                 </div>
@@ -77,16 +77,16 @@ export const PageSkeleton = ({
             {showMainContent && (
               <div className="flex flex-col gap-4 mb-8 w-full max-w-6xl mx-auto">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <div key={i} className="rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+                  <div key={i} className="rounded-2xl border border-[var(--border-primary)] bg-[var(--bg-primary)] overflow-hidden shadow-sm">
                     {/* Tier Header */}
-                    <div className="px-6 py-2.5 border-b border-gray-200 bg-gray-50 flex items-center h-[46px]">
+                    <div className="px-6 py-2.5 border-b border-[var(--border-primary)] bg-[var(--bg-tertiary)] flex items-center h-[46px]">
                        <div className="skeleton-pulse rounded" style={{ width: '40px', height: '24px' }} />
                     </div>
                     {/* Content Area */}
-                    <div className="bg-white p-4">
+                    <div className="bg-[var(--bg-primary)] p-4">
                       <div className="flex gap-4 overflow-hidden">
                         {[1, 2, 3, 4, 5].map((j) => (
-                           <div key={j} className="flex-none w-[190px] h-[230px] rounded-xl border border-gray-100 p-3 bg-[#fcfdfe]">
+                           <div key={j} className="flex-none w-[190px] h-[230px] rounded-xl border border-[var(--border-primary)] p-3 bg-[#fcfdfe]">
                               <div className="flex flex-row h-full gap-3">
                                 <div className="w-[8px] h-full skeleton-pulse rounded-full" />
                                 <div className="flex-1 flex flex-col">
@@ -96,7 +96,7 @@ export const PageSkeleton = ({
                                    </div>
                                    <div className="w-24 h-4 skeleton-pulse rounded mb-1" />
                                    <div className="w-16 h-3 skeleton-pulse rounded mb-auto" />
-                                   <div className="flex justify-between mt-2 pt-2 border-t border-gray-100">
+                                   <div className="flex justify-between mt-2 pt-2 border-t border-[var(--border-primary)]">
                                       <div className="w-12 h-6 skeleton-pulse rounded" />
                                       <div className="w-12 h-6 skeleton-pulse rounded" />
                                    </div>

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// 样式统一: 使用 nordic-minimal.css 主题变量
+// 圆角: var(--radius-md) = 0.5rem (8px)
+// 边框: var(--border-primary)
+// 背景: var(--bg-elevated), var(--bg-tertiary)
+// 文字: var(--text-primary), var(--text-secondary)
+
 // Inlined buttonRippleVariants
 const buttonRippleVariants = {
   initial: {
@@ -26,6 +32,7 @@ const buttonRippleVariants = {
 /**
  * MotionButton - 增强版按钮组件
  * 提供Framer Motion驱动的流畅动画效果
+ * 样式统一: 使用 nordic-minimal.css 主题变量
  */
 export const MotionButton = ({
   children,
@@ -43,18 +50,18 @@ export const MotionButton = ({
 }) => {
   const [ripples, setRipples] = useState([]);
   
-  // 基础样式类名 - 优化排版和视觉
-  const baseClass = 'btn inline-flex items-center justify-center gap-2 font-semibold tracking-wide border rounded-lg cursor-pointer relative overflow-hidden transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-blue-500 select-none';
+  // 基础样式类名 - 使用 nordic-minimal.css 主题变量
+  const baseClass = 'btn inline-flex items-center justify-center gap-2 font-semibold tracking-wide border rounded-[var(--radius-md)] cursor-pointer relative overflow-hidden transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--bg-primary)] focus:ring-[var(--accent-primary)] select-none';
   
-  // 变体样式 - 适配 AgentStats 暗色主题，增强对比度和层级
+  // 变体样式 - 使用 nordic-minimal.css 主题变量
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent shadow-md shadow-blue-900/20 hover:shadow-lg hover:shadow-blue-900/40 hover:from-blue-500 hover:to-indigo-500',
-    secondary: 'bg-gray-800/50 text-gray-400 border-gray-700/50 backdrop-blur-sm hover:bg-gray-700/80 hover:text-white hover:border-gray-600 hover:shadow-md',
-    ghost: 'bg-transparent text-gray-400 border-transparent hover:bg-gray-800/50 hover:text-white',
-    danger: 'bg-gradient-to-r from-red-600 to-pink-600 text-white border-transparent shadow-md shadow-red-900/20 hover:shadow-lg hover:shadow-red-900/40',
+    primary: 'bg-gradient-to-r from-[var(--accent-primary)] to-[var(--nordic-fjord)] text-white border-transparent shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)] hover:from-[var(--accent-hover)] hover:to-[var(--nordic-fjord-hover)]',
+    secondary: 'bg-[var(--bg-tertiary)]/50 text-[var(--text-secondary)] border-[var(--border-primary)] backdrop-blur-sm hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)] hover:border-[var(--border-secondary)] hover:shadow-[var(--shadow-md)]',
+    ghost: 'bg-transparent text-[var(--text-secondary)] border-transparent hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
+    danger: 'bg-gradient-to-r from-[var(--status-error)] to-[var(--nordic-aurora-rose)] text-white border-transparent shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]',
   };
   
-  // 尺寸样式 - 增加内边距提升呼吸感
+  // 尺寸样式 - 使用 nordic-minimal.css 变量
   const sizeClasses = {
     sm: 'h-8 px-4 text-xs uppercase', // 小尺寸适合紧凑布局
     md: 'h-10 px-6 text-sm',           // 标准尺寸
@@ -63,7 +70,7 @@ export const MotionButton = ({
   
   // 状态样式
   const stateClasses = disabled ? 'opacity-50 cursor-not-allowed grayscale' : '';
-  const activeClasses = active ? 'ring-2 ring-blue-500 ring-offset-1 ring-offset-gray-900' : '';
+  const activeClasses = active ? 'ring-2 ring-[var(--accent-primary)] ring-offset-1 ring-offset-[var(--bg-primary)]' : '';
   const widthClass = fullWidth ? 'w-full' : '';
   
   const buttonClass = `${baseClass} ${variantClasses[variant] || variantClasses.primary} ${sizeClasses[size]} ${stateClasses} ${activeClasses} ${widthClass} ${className}`.trim();
@@ -190,8 +197,10 @@ export const MotionButtonGroup = ({
 }) => {
   const childrenArray = React.Children.toArray(children);
   
+  const spacingClass = spacing === 0 ? '' : spacing === 1 ? 'gap-1' : spacing === 2 ? 'gap-2' : spacing === 3 ? 'gap-3' : spacing === 4 ? 'gap-4' : 'gap-2';
+  
   return (
-    <div className={`flex items-center ${connected ? 'space-x-0' : `gap-${spacing}`} ${className}`}>
+    <div className={`flex items-center ${connected ? 'space-x-0' : spacingClass} ${className}`}>
       {childrenArray.map((child, index) => {
         if (React.isValidElement(child)) {
           let childClassName = child.props.className || '';

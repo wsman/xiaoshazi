@@ -1,13 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { User } from 'lucide-react';
-
 /**
  * 🧩 AgentCard 组件 (适配 xiaoshazi 项目)
  * 
  * 从 MY-DOGE-MACRO/Negentropy-Lab 移植
  * 适配 xiaoshazi 数据结构
+ * 
+ * 样式统一: 使用 nordic-minimal.css 主题变量
+ * - 圆角: var(--radius-lg) = 0.75rem (12px)
+ * - 边框: var(--border-primary)
+ * - 背景: var(--bg-elevated)
+ * - 文字: var(--text-primary), var(--text-secondary)
  */
+
+import React from 'react';
 
 /**
  * AgentCard 组件属性接口
@@ -35,19 +39,19 @@ const AgentCard = React.memo(({
   const isThinking = agentStatus === 'thinking';
   const isSpeaking = agentStatus === 'speaking';
   
-  // 状态颜色映射
+  // 状态颜色映射 - 使用 nordic-minimal.css 主题变量
   const getStatusColor = () => {
     switch (agentStatus) {
       case 'thinking':
-        return { bg: 'bg-emerald-500', text: 'text-emerald-500', pulse: 'bg-emerald-500' };
+        return { bg: 'bg-[var(--status-info)]', text: 'text-[var(--status-info)]', pulse: 'bg-[var(--status-info)]' };
       case 'speaking':
-        return { bg: 'bg-blue-500', text: 'text-blue-500', pulse: 'bg-blue-500' };
+        return { bg: 'bg-[var(--accent-primary)]', text: 'text-[var(--accent-primary)]', pulse: 'bg-[var(--accent-primary)]' };
       case 'executed':
-        return { bg: 'bg-green-500', text: 'text-green-500', pulse: 'bg-green-500' };
+        return { bg: 'bg-[var(--status-success)]', text: 'text-[var(--status-success)]', pulse: 'bg-[var(--status-success)]' };
       case 'offline':
-        return { bg: 'bg-slate-300 dark:bg-slate-600', text: 'text-slate-400', pulse: 'bg-slate-300' };
+        return { bg: 'bg-[var(--nordic-cloud)]', text: 'text-[var(--text-tertiary)]', pulse: 'bg-[var(--nordic-cloud)]' };
       default: // idle
-        return { bg: 'bg-emerald-200 dark:bg-emerald-900', text: 'text-emerald-400', pulse: 'bg-emerald-200' };
+        return { bg: 'bg-[var(--status-success)]/30', text: 'text-[var(--status-success)]', pulse: 'bg-[var(--status-success)]' };
     }
   };
 
@@ -72,7 +76,7 @@ const AgentCard = React.memo(({
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ 
         y: -5, 
-        boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        boxShadow: "var(--shadow-md)",
         transition: { duration: 0.2 }
       }}
       onClick={handleClick}
@@ -80,19 +84,21 @@ const AgentCard = React.memo(({
       className={`
         relative overflow-hidden
         ${isLarge ? 'w-64 p-6' : 'w-48 p-4'} 
-        bg-white dark:bg-[#1a1d20]
-        border border-slate-200 dark:border-slate-700 rounded-2xl 
-        shadow-sm dark:shadow-none
+        bg-[var(--bg-elevated)] 
+        border border-[var(--border-primary)] 
+        rounded-[var(--radius-lg)]
+        shadow-[var(--shadow-xs)]
+        dark:shadow-none
         flex flex-col items-center gap-3
         transition-all duration-300
-        ${clickable ? 'cursor-pointer hover:border-blue-400 dark:hover:border-blue-500' : 'cursor-default'}
+        ${clickable ? 'cursor-pointer hover:border-[var(--accent-primary)]' : 'cursor-default'}
         ${className}
       `}
     >
       {/* 状态指示器和标签 */}
       {showStatusLabel && (
         <div className="absolute top-3 right-3 flex items-center gap-2 z-10">
-          <span className="text-[9px] uppercase tracking-wider text-slate-400 font-bold">
+          <span className="text-[9px] uppercase tracking-wider text-[var(--text-tertiary)] font-bold">
             {agentStatus}
           </span>
           <div className="relative flex h-2 w-2">
@@ -111,23 +117,23 @@ const AgentCard = React.memo(({
       {/* 头像/图标区域 */}
       <div className={`
         ${isLarge ? 'w-24 h-24' : 'w-16 h-16'}
-        rounded-full bg-slate-100 dark:bg-[#242830] border border-slate-200 dark:border-slate-600
-        flex items-center justify-center text-slate-400 dark:text-slate-500 relative
-        shadow-inner
+        rounded-full bg-[var(--bg-tertiary)] border border-[var(--border-primary)]
+        flex items-center justify-center text-[var(--text-tertiary)] relative
+        shadow-[var(--shadow-inset)]
       `}>
         {/* 自定义图标或默认User图标 */}
         {icon || (
           <User 
             size={isLarge ? 48 : 32} 
             strokeWidth={1.2} 
-            className={isActive ? 'text-emerald-500 dark:text-emerald-400' : ''}
+            className={isActive ? 'text-[var(--status-success)]' : ''}
           />
         )}
         
         {/* 活动状态的装饰环 */}
         <div className={`
-          absolute inset-0 rounded-full border border-slate-100 dark:border-slate-700 scale-110 
-          ${isActive ? 'animate-pulse border-emerald-200 dark:border-emerald-800' : ''}
+          absolute inset-0 rounded-full border border-[var(--border-primary)] scale-110 
+          ${isActive ? 'animate-pulse border-[var(--status-success)]/30' : ''}
         `} />
         
         {/* 特定状态的额外指示器 */}
@@ -135,9 +141,9 @@ const AgentCard = React.memo(({
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center"
+            className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[var(--status-info)]/20 flex items-center justify-center"
           >
-            <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+            <div className="w-2 h-2 rounded-full bg-[var(--status-info)]"></div>
           </motion.div>
         )}
         
@@ -145,9 +151,9 @@ const AgentCard = React.memo(({
           <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center"
+            className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[var(--accent-primary)]/20 flex items-center justify-center"
           >
-            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+            <div className="w-2 h-2 rounded-full bg-[var(--accent-primary)]"></div>
           </motion.div>
         )}
       </div>
@@ -156,21 +162,21 @@ const AgentCard = React.memo(({
       <div className="text-center z-10 w-full">
         <h3 className={`
           ${isLarge ? 'text-xl' : 'text-sm'} 
-          font-medium text-slate-700 dark:text-slate-200 truncate tracking-tight
+          font-medium text-[var(--text-primary)] truncate tracking-tight
         `}>
           {agentName}
         </h3>
         <div className="flex items-center justify-center gap-2 mt-1">
-          <div className="h-[1px] w-4 bg-slate-200 dark:bg-slate-700" />
-          <p className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-medium">
+          <div className="h-[1px] w-4 bg-[var(--border-primary)]" />
+          <p className="text-[10px] text-[var(--text-tertiary)] uppercase tracking-[0.2em] font-medium">
             {agentRole}
           </p>
-          <div className="h-[1px] w-4 bg-slate-200 dark:bg-slate-700" />
+          <div className="h-[1px] w-4 bg-[var(--border-primary)]" />
         </div>
         
         {/* 状态描述（可选） */}
         {isLarge && (
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+          <p className="text-xs text-[var(--text-secondary)] mt-2">
             {isOnline ? '在线' : '离线'} • {getStatusDescription(agentStatus)}
           </p>
         )}
@@ -180,14 +186,14 @@ const AgentCard = React.memo(({
       {isActive && (
         <motion.div 
           layoutId="activeGlow"
-          className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-blue-500" 
+          className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--status-info)]" 
         />
       )}
 
       {/* Agent ID标签（小尺寸显示） */}
       {!isLarge && agentId && (
         <div className="absolute bottom-2 left-3">
-          <span className="text-[8px] text-slate-400 font-mono opacity-60">
+          <span className="text-[8px] text-[var(--text-tertiary)] font-mono opacity-60">
             #{typeof agentId === 'string' ? agentId.substring(0, 8) : agentId}
           </span>
         </div>

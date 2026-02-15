@@ -1,3 +1,5 @@
+// 样式统一: 使用 nordic-minimal.css 主题变量
+
 export const getClassColor = (className) => {
   const colors = {
     'Demon Hunter': '#A330C9',
@@ -19,14 +21,15 @@ export const formatNumber = (num) => {
   return new Intl.NumberFormat('en-US', { notation: "compact", maximumFractionDigits: 1 }).format(num);
 };
 
+// 使用 nordic-minimal.css 主题变量统一颜色
 export const getTierColor = (tier) => {
   const colors = {
-    'S': 'text-green-400 border-green-400/30 bg-green-400/10',
-    'A': 'text-blue-400 border-blue-400/30 bg-blue-400/10',
-    'B': 'text-gray-300 border-gray-300/30 bg-gray-300/10',
-    'C': 'text-yellow-400 border-yellow-400/30 bg-yellow-400/10',
-    'D': 'text-orange-400 border-orange-400/30 bg-orange-400/10',
-    'F': 'text-red-400 border-red-400/30 bg-red-400/10',
+    'S': 'text-[var(--nordic-aurora-amber)] border-[var(--nordic-aurora-amber)]/30 bg-[var(--nordic-aurora-amber)]/10',
+    'A': 'text-[var(--nordic-aurora-purple)] border-[var(--nordic-aurora-purple)]/30 bg-[var(--nordic-aurora-purple)]/10',
+    'B': 'text-[var(--nordic-fjord)] border-[var(--nordic-fjord)]/30 bg-[var(--nordic-fjord)]/10',
+    'C': 'text-[var(--nordic-pine)] border-[var(--nordic-pine)]/30 bg-[var(--nordic-pine)]/10',
+    'D': 'text-[var(--nordic-stone)] border-[var(--nordic-stone)]/30 bg-[var(--nordic-stone)]/10',
+    'F': 'text-[var(--status-error)] border-[var(--status-error)]/30 bg-[var(--status-error)]/10',
   };
-  return colors[tier] || 'text-gray-500 border-gray-500/30 bg-gray-500/10';
+  return colors[tier] || 'text-[var(--text-tertiary)] border-[var(--border-primary)] bg-[var(--bg-tertiary)]';
 };

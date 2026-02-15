@@ -33,13 +33,13 @@ const TopologyView = () => {
               type: 'input',
               data: { label: 'Intelligence Gateway' },
               position: { x: 400, y: 0 },
-              className: 'bg-blue-600 text-white font-black rounded-lg px-4 py-2 border-none shadow-lg w-48 text-center',
+              className: 'bg-[var(--accent-primary)] white font-black rounded-lg px-4 py-2 border-none shadow-lg w-48 text-center',
             },
             {
               id: 'router',
               data: { label: 'Semantic Router' },
               position: { x: 400, y: 100 },
-              className: 'bg-slate-800 text-white font-bold rounded-lg px-4 py-2 border-none shadow-md w-48 text-center',
+              className: 'bg-[var(--nordic-slate)] white font-bold rounded-lg px-4 py-2 border-none shadow-md w-48 text-center',
             }
           ];
 
@@ -56,7 +56,7 @@ const TopologyView = () => {
             
             const tierColor = agent.tier === 'S' ? 'bg-yellow-50 border-yellow-200 text-yellow-900' :
                              agent.tier === 'A' ? 'bg-purple-50 border-purple-200 text-purple-900' :
-                             'bg-blue-50 border-blue-200 text-blue-900';
+                             'bg-[var(--bg-tertiary)] border-[var(--border-primary)] text-[var(--nordic-fjord)]';
 
             newNodes.push({
               id: `agent-${agent.id}`,
@@ -104,13 +104,13 @@ const TopologyView = () => {
   return (
     <RouteTransition animationType="fade" duration={500}>
       <div className="w-full h-full bg-[#f8fafc] flex flex-col overflow-hidden">
-        <div className="p-4 bg-white border-b border-slate-100 flex justify-between items-center shrink-0 shadow-sm relative z-10">
+        <div className="p-4 bg-[var(--bg-primary)] border-b border-[var(--border-primary)] flex justify-between items-center shrink-0 shadow-sm relative z-10">
           <div>
             <h2 className="text-sm font-black text-slate-900 uppercase tracking-widest">Interactive Topology</h2>
             <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Dynamic Agent Network & Real-time Routing</p>
           </div>
           <div className="flex gap-2">
-             <div className="px-2 py-1 rounded bg-blue-50 text-blue-600 text-[8px] font-black uppercase tracking-widest border border-blue-100">Live API</div>
+             <div className="px-2 py-1 rounded bg-[var(--bg-tertiary)] text-blue-600 text-[8px] font-black uppercase tracking-widest border border-blue-100">Live API</div>
              <div className="px-2 py-1 rounded bg-emerald-50 text-emerald-600 text-[8px] font-black uppercase tracking-widest border border-emerald-100">Active Nodes: {nodes.length}</div>
           </div>
         </div>
@@ -136,15 +136,15 @@ const TopologyView = () => {
               maskColor="rgba(248, 250, 252, 0.7)"
             />
             <Background variant="dots" gap={12} size={1} color="#cbd5e1" />
-            <Panel position="top-right" className="bg-white/80 backdrop-blur-md p-2 rounded-lg border border-slate-200 shadow-sm mr-4 mt-4">
+            <Panel position="top-right" className="bg-[var(--bg-primary)]/80 backdrop-blur-md p-2 rounded-lg border border-slate-200 shadow-sm mr-4 mt-4">
                 <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-1">Topology Legend</p>
                 <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--accent-primary)]"></div>
                         <span className="text-[8px] font-bold text-slate-600 uppercase">Input Gateway</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-slate-800"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--nordic-slate)]"></div>
                         <span className="text-[8px] font-bold text-slate-600 uppercase">Semantic Router</span>
                     </div>
                     <div className="flex items-center gap-1.5">

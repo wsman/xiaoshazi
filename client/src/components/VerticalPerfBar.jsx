@@ -6,7 +6,7 @@ const VerticalPerfBar = ({ avgPerf, peakPerf, maxPerf, color }) => {
   const peakHeight = (peakPerf / maxPerf) * 100;
 
   return (
-    <div className="h-full w-3.5 relative bg-slate-100 rounded-full overflow-hidden flex flex-col justify-end shadow-[inset_0_1px_4px_rgba(0,0,0,0.05)]">
+    <div className="h-full w-3.5 relative bg-[var(--bg-tertiary)] rounded-full overflow-hidden flex flex-col justify-end shadow-[inset_0_1px_4px_rgba(0,0,0,0.05)]">
       {/* Peak Capability Layer (Background/Faded) - Growing from bottom */}
       <div
         className="absolute bottom-0 w-full opacity-10"

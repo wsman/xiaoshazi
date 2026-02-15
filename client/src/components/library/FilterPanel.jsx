@@ -1,7 +1,8 @@
 // FilterPanel Component
 // Advanced filtering panel with multiple filter options
+// 样式统一: 使用 nordic-minimal.css 主题变量
 
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { SearchBar } from './SearchBar';
@@ -14,20 +15,21 @@ const FilterChip = ({
   count,
   color = 'blue',
 }) => {
+  // 使用 nordic-minimal.css 主题变量统一颜色
   const colorClasses = {
-    blue: 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100',
-    purple: 'bg-purple-50 border-purple-200 text-purple-700 hover:bg-purple-100',
-    emerald: 'bg-emerald-50 border-emerald-200 text-emerald-700 hover:bg-emerald-100',
-    orange: 'bg-orange-50 border-orange-200 text-orange-700 hover:bg-orange-100',
-    slate: 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200',
+    blue: 'bg-[var(--nordic-fjord-light)] border-[var(--border-primary)] text-[var(--nordic-fjord)] hover:bg-[var(--nordic-fjord)]/10',
+    purple: 'bg-[var(--nordic-aurora-purple)]/10 border-[var(--nordic-aurora-purple)]/30 text-[var(--nordic-aurora-purple)] hover:bg-[var(--nordic-aurora-purple)]/20',
+    emerald: 'bg-[var(--nordic-pine-light)] border-[var(--border-primary)] text-[var(--nordic-pine)] hover:bg-[var(--nordic-pine)]/10',
+    orange: 'bg-[var(--nordic-aurora-amber)]/10 border-[var(--nordic-aurora-amber)]/30 text-[var(--nordic-aurora-amber)] hover:bg-[var(--nordic-aurora-amber)]/20',
+    slate: 'bg-[var(--bg-tertiary)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]',
   };
   
   const activeClasses = {
-    blue: 'bg-blue-600 border-blue-600 text-white',
-    purple: 'bg-purple-600 border-purple-600 text-white',
-    emerald: 'bg-emerald-600 border-emerald-600 text-white',
-    orange: 'bg-orange-500 border-orange-500 text-white',
-    slate: 'bg-slate-800 border-slate-800 text-white',
+    blue: 'bg-[var(--nordic-fjord)] border-[var(--nordic-fjord)] text-white',
+    purple: 'bg-[var(--nordic-aurora-purple)] border-[var(--nordic-aurora-purple)] text-white',
+    emerald: 'bg-[var(--nordic-pine)] border-[var(--nordic-pine)] text-white',
+    orange: 'bg-[var(--nordic-aurora-amber)] border-[var(--nordic-aurora-amber)] text-white',
+    slate: 'bg-[var(--nordic-charcoal)] border-[var(--nordic-charcoal)] text-white',
   };
   
   return (
@@ -35,7 +37,7 @@ const FilterChip = ({
       onClick={onClick}
       className={`
         inline-flex items-center gap-1.5 px-3 py-1.5 
-        text-xs font-bold rounded-full border transition-all duration-200
+        text-xs font-bold rounded-[var(--radius-full)] border transition-all duration-200
         ${active ? activeClasses[color] : colorClasses[color]}
       `}
       whileHover={{ scale: 1.02 }}
@@ -43,7 +45,7 @@ const FilterChip = ({
     >
       <span>{label}</span>
       {count !== undefined && (
-        <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${active ? 'bg-white/20' : 'bg-slate-200'}`}>
+        <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${active ? 'bg-white/20' : 'bg-[var(--bg-tertiary)]'}`}>
           {count}
         </span>
       )}
@@ -60,17 +62,17 @@ const FilterSection = ({
   const [isOpen, setIsOpen] = useState(defaultOpen);
   
   return (
-    <div className="filter-section border-b border-slate-100 pb-4">
+    <div className="filter-section border-b border-[var(--border-primary)] pb-4">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full mb-3"
       >
-        <span className="text-[10px] font-black uppercase tracking-wider text-slate-400">
+        <span className="text-[10px] font-black uppercase tracking-wider text-[var(--text-tertiary)]">
           {title}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
-          className="text-slate-400"
+          className="text-[var(--text-tertiary)]"
         >
           ▼
         </motion.span>
@@ -183,13 +185,13 @@ const FilterPanel = ({
   };
   
   return (
-    <div className={`filter-panel bg-white rounded-xl border border-slate-200 shadow-sm ${className}`}>
+    <div className={`filter-panel bg-[var(--bg-elevated)] rounded-[var(--radius-xl)] border border-[var(--border-primary)] shadow-[var(--shadow-sm)] ${className}`}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-slate-100">
+      <div className="flex items-center justify-between p-4 border-b border-[var(--border-primary)]">
         <div className="flex items-center gap-2">
-          <span className="text-sm font-black text-slate-700">Filters</span>
+          <span className="text-sm font-black text-[var(--text-primary)]">Filters</span>
           {getActiveFilterCount() > 0 && (
-            <span className="px-2 py-0.5 text-[10px] font-bold bg-blue-600 text-white rounded-full">
+            <span className="px-2 py-0.5 text-[10px] font-bold bg-[var(--accent-primary)] text-white rounded-full">
               {getActiveFilterCount()}
             </span>
           )}
@@ -198,7 +200,7 @@ const FilterPanel = ({
         {hasActiveFilters && showClearAll && (
           <button
             onClick={handleClearAll}
-            className="text-xs font-medium text-slate-500 hover:text-blue-600 transition-colors"
+            className="text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition-colors"
           >
             Clear All
           </button>
@@ -207,7 +209,7 @@ const FilterPanel = ({
       
       {/* Search */}
       {showSearch && (
-        <div className="p-4 border-b border-slate-100">
+        <div className="p-4 border-b border-[var(--border-primary)]">
           <SearchBar
             value={searchValue}
             onChange={onSearchChange}
@@ -276,5 +278,5 @@ const FilterBar = ({
   );
 };
 
-export { FilterPanel, FilterBar, FilterChip };
-export default FilterPanel;
+export { FilterPanel, FilterBar, FilterChip, memo };
+export default memo(FilterPanel);

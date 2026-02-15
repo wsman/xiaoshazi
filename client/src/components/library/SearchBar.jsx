@@ -1,7 +1,7 @@
 // SearchBar Component
 // Search input with optional suggestions dropdown
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Simple SVG Icons (inline)
@@ -88,11 +88,11 @@ const SearchBar = ({
           autoFocus={autoFocus}
           className={`
             w-full ${config.height} ${config.padding} pl-10 pr-10
-            bg-white border border-slate-200 rounded-lg
-            text-slate-800 ${config.fontSize} font-medium
-            placeholder:text-slate-400 placeholder:font-normal
-            focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500
-            disabled:bg-slate-50 disabled:text-slate-400 disabled:cursor-not-allowed
+            bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded-[var(--radius-md)]
+            text-[var(--text-primary)] ${config.fontSize} font-medium
+            placeholder:text-[var(--text-tertiary)] placeholder:font-normal
+            focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/20 focus:border-[var(--accent-primary)]
+            disabled:bg-[var(--bg-tertiary)] disabled:text-[var(--text-tertiary)] disabled:cursor-not-allowed
             transition-all duration-200
           `}
         />
@@ -102,7 +102,7 @@ const SearchBar = ({
           <button
             type="button"
             onClick={handleClear}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors"
           >
             <CloseIcon size={config.iconSize} />
           </button>
@@ -117,8 +117,8 @@ const SearchBar = ({
           disabled={disabled || !value}
           className={`
             ${config.height} px-4
-            bg-slate-900 text-white rounded-lg
-            hover:bg-slate-800 active:scale-95
+            bg-[var(--accent-primary)] text-white rounded-[var(--radius-md)]
+            hover:opacity-90 active:scale-95
             disabled:opacity-50 disabled:cursor-not-allowed
             transition-all duration-200 flex items-center justify-center
           `}
@@ -173,18 +173,18 @@ const SearchBarWithSuggestions = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full left-0 right-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden z-50"
+            className="absolute top-full left-0 right-0 mt-1 bg-[var(--bg-elevated)] border border-[var(--border-primary)] rounded-[var(--radius-md)] shadow-[var(--shadow-lg)] overflow-hidden z-50"
           >
             {filteredSuggestions.map((suggestion) => (
               <div
                 key={suggestion.id}
                 onClick={() => handleSelect(suggestion)}
-                className="flex items-center gap-3 px-4 py-2.5 cursor-pointer hover:bg-slate-50 transition-colors"
+                className="flex items-center gap-3 px-4 py-2.5 cursor-pointer hover:bg-[var(--bg-tertiary)] transition-colors"
               >
-                <SearchIcon size={14} className="text-slate-400" />
-                <span className="text-sm text-slate-700">{suggestion.label}</span>
+                <SearchIcon size={14} className="text-[var(--text-tertiary)]" />
+                <span className="text-sm text-[var(--text-primary)]">{suggestion.label}</span>
                 {suggestion.type && (
-                  <span className="ml-auto text-xs text-slate-400">{suggestion.type}</span>
+                  <span className="ml-auto text-xs text-[var(--text-tertiary)]">{suggestion.type}</span>
                 )}
               </div>
             ))}
@@ -204,4 +204,4 @@ const SearchBarWithSuggestions = ({
 };
 
 export { SearchBar, SearchBarWithSuggestions };
-export default SearchBar;
+export default memo(SearchBar);
