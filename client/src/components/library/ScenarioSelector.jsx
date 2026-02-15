@@ -56,6 +56,8 @@ const ScenarioSelector = ({
   size = 'sm',
   showLabels = true,
   className = '',
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   const { t } = useTranslation();
   
@@ -90,6 +92,8 @@ const ScenarioSelector = ({
                 }
               `}
               onClick={() => onScenarioChange && onScenarioChange(scenario.id)}
+              onMouseEnter={() => onMouseEnter && onMouseEnter(scenario.id)}
+              onMouseLeave={() => onMouseLeave && onMouseLeave(scenario.id)}
               showRipple={false}
             >
               <div className="flex items-center gap-1.5 relative z-10">

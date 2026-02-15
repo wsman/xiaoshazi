@@ -17,8 +17,9 @@ import { MotionButton, MotionButtonGroup } from './library/MotionButton';
 import ScenarioSelector from './library/ScenarioSelector';
 import SearchBar from './library/SearchBar';
 import FilterPanel from './library/FilterPanel';
-import ChartWorkerManager from '../utils/ChartWorkerManager';
+import { useWorker } from '../hooks/useWorker';
 import { usePredictivePrefetch } from '../hooks/usePredictivePrefetch';
+import { useUserBehaviorPredictor } from '../hooks/useUserBehaviorPredictor';
 import { formatModelName } from '../utils/modelNameFormatter';
 import { API_BASE_URL } from '../config';
 
@@ -301,11 +302,24 @@ const AgentRankings = () => {
   ];
 
   const { handleMouseEnter, handleMouseLeave, getCachedResult } = usePredictivePrefetch(API_BASE_URL);
+  
+  // 使用 UserBehaviorPredictor 进行 hover intent 预加载
+  const { 
+    handleMouseEnter: predictHoverEnter, 
+    handleMouseLeave: predictHoverLeave,
+    getCachedResult: getPredictedResult,
+  } = useUserBehaviorPredictor({
+    baseUrl: API_BASE_URL,
+    hoverDelay: 80,
+    onPrefetchStart: (scenario) => console.log(`[HoverIntent] Starting prefetch for: ${scenario}`),
+    onPrefetchComplete: (scenario) => console.log(`[HoverIntent] Prefetch complete for: ${scenario}`),
+  });
 
-  // Initialize Worker Manager
-  useEffect(() => {
-    ChartWorkerManager.initialize();
-  }, []);
+  // Use worker hook for scoring and sorting
+  const { isReady: workerReady, isProcessing: workerProcessing, processData: processWithWorker } = useWorker({
+    scenario: activeScenario,
+    autoInitialize: true
+  });
 
   // Memoized filtered data - only recalculate when dependencies change
   const finalData = useMemo(() => {
@@ -376,18 +390,8 @@ const AgentRankings = () => {
         if (response.data.success) {
           const rawData = response.data.data;
           
-          // Offload sorting, weighting and rank update to Web Worker
-          let processedData;
-          try {
-            const workerResult = await ChartWorkerManager.processData(rawData, activeScenario);
-            processedData = workerResult;
-          } catch (workerError) {
-            console.warn('Worker failed, falling back to main thread:', workerError);
-            processedData = rawData.sort((a, b) => b.avgPerf - a.avgPerf).map((item, index) => ({
-              ...item,
-              rank: index + 1
-            }));
-          }
+          // Offload sorting, weighting and rank update to Web Worker via hook
+          const processedData = await processWithWorker(rawData);
 
           setData(processedData);
           const max = Math.max(...processedData.map(item => item.peakPerf), 1);
@@ -426,6 +430,8 @@ const AgentRankings = () => {
                <ScenarioSelector 
                  activeScenario={activeScenario}
                  onScenarioChange={handleScenarioChange}
+                 onMouseEnter={predictHoverEnter}
+                 onMouseLeave={predictHoverLeave}
                />
              </div>
             
