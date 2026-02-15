@@ -1,0 +1,17 @@
+[Unit]
+Description=xiaoshazi AgentStats Server
+After=network.target redis.service
+Wants=redis.service
+
+[Service]
+Type=simple
+User=wsman
+WorkingDirectory=/home/wsman/桌面/Coding Task/xiaoshazi
+ExecStart=/home/wsman/.nvm/versions/node/v22.22.0/bin/node server.js
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=PORT=14514
+
+[Install]
+WantedBy=multi-user.target

@@ -8,6 +8,24 @@ const { Server } = require('socket.io');
 const { exec } = require('child_process');
 const fs = require('fs');
 
+// 结构化日志函数
+const LOG_FILE = process.env.LOG_FILE || '/tmp/xiaoshazi.log';
+
+function log(level, message, meta = {}) {
+    const timestamp = new Date().toISOString();
+    const logEntry = JSON.stringify({ timestamp, level, message, ...meta });
+    console.log(`[${level}] ${message}`);
+    fs.appendFile(LOG_FILE, logEntry + '\n', (err) => {
+        if (err) console.error('日志写入失败:', err);
+    });
+}
+
+const logger = {
+    info: (msg, meta) => log('INFO', msg, meta),
+    warn: (msg, meta) => log('WARN', msg, meta),
+    error: (msg, meta) => log('ERROR', msg, meta),
+};
+
 // 创建Express应用
 const app = express();
 
@@ -161,6 +179,37 @@ async function initRedis() {
     } catch (error) {
         console.warn('❌ Redis connection error, falling back to in-memory store:', error.message);
         isRedisAvailable = false;
+    }
+}
+
+// 缓存预热函数
+async function warmUpCache() {
+    if (!isRedisAvailable || !redisClient) {
+        console.log('⏭️ 缓存预热跳过: Redis不可用');
+        return;
+    }
+    
+    try {
+        console.log('🔥 开始缓存预热...');
+        
+        // 预热排行榜数据
+        const agentsPath = path.join(__dirname, 'server/data/rankings.json');
+        if (fs.existsSync(agentsPath)) {
+            const data = fs.readFileSync(agentsPath, 'utf8');
+            await redisClient.setEx('agent:rankings', 3600, data);
+            console.log('✅ 缓存预热完成: agent:rankings');
+        }
+        
+        // 预热中国模型数据
+        const cnModelsPath = path.join(__dirname, 'server/data/cn_models.json');
+        if (fs.existsSync(cnModelsPath)) {
+            const data = fs.readFileSync(cnModelsPath, 'utf8');
+            await redisClient.setEx('agent:cn_models', 3600, data);
+            console.log('✅ 缓存预热完成: agent:cn_models');
+        }
+        
+    } catch (error) {
+        console.error('❌ 缓存预热失败:', error.message);
     }
 }
 
@@ -501,6 +550,7 @@ const server = http.createServer(app);
 // 初始化Redis并启动服务器
 async function startServer() {
     await initRedis();
+    await warmUpCache();
     
     // 创建 Socket.IO 服务器
     const io = new Server(server, {
