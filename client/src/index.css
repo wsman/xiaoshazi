@@ -1,4 +1,4 @@
-@import './themes/nordic.css';
+@import './themes/nordic-minimal.css';
 
 @tailwind base;
 @tailwind components;
