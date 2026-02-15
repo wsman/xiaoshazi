@@ -1,4 +1,4 @@
-/* ScrollingEconomicColumn.css */
+/* ScrollingEconomicColumn.css - GPU Accelerated */
 
 .scrolling-column-container {
   position: relative;
@@ -34,13 +34,20 @@
   display: flex;
   flex-direction: column;
   animation: scroll-vertical linear infinite;
+  /* GPU Acceleration */
   will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .scrolling-item-wrapper {
   opacity: 0.85;
   filter: grayscale(0.2) contrast(0.95);
   transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  /* GPU Acceleration */
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
 }
 
 /* Decorative glass effect for the sticky headers in sidebars */
@@ -52,10 +59,10 @@
 
 @keyframes scroll-vertical {
   0% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) translateY(0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translate3d(0, 0, 0) translateY(-50%);
   }
 }
 

@@ -1,13 +1,34 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import AgentRankings from './components/AgentRankings';
 import ScrollingEconomicColumn from './components/library/ScrollingEconomicColumn';
+import RouteTransition from './components/library/RouteTransition';
 import './components/library/RouteTransition.css';
 
-// Lazy load components
+// Lazy load components for code splitting
 const EntropyDashboard = lazy(() => import('./components/EntropyDashboard'));
 const TopologyView = lazy(() => import('./components/TopologyView'));
+const RollingNumber = lazy(() => import('./components/library/RollingNumber'));
+
+// GPU-accelerated skeleton fallback with transform3d
+const GPUAcceleratedSkeleton = () => (
+  <div 
+    className="flex items-center justify-center h-full" 
+    style={{ 
+      transform: 'translate3d(0,0,0)',
+      backfaceVisibility: 'hidden'
+    }}
+  >
+    <div 
+      className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"
+      style={{
+        transform: 'translate3d(0,0,0)',
+        willChange: 'transform'
+      }}
+    />
+  </div>
+);
 
 // Mock Data for Sidebars (reused from CostEfficiencyDashboard)
 const sidebarData = [
@@ -107,49 +128,49 @@ function App() {
             </div>
           </header>
 
-          {/* Scrollable Model Area */}
-          <div className="flex-1 overflow-hidden bg-transparent relative">
-            <Routes>
-              <Route path="/" element={
-                <div className="h-full flex flex-col relative z-10 overflow-y-auto no-scrollbar scroll-smooth">
-                  <main className="px-4 py-6">
-                    <AgentRankings />
-                  </main>
+          {/* Scrollable Model Area - GPU Accelerated with Route Transition */}
+          <div 
+            className="flex-1 overflow-hidden bg-transparent relative"
+            style={{
+              transform: 'translate3d(0,0,0)',
+              willChange: 'contents'
+            }}
+          >
+            <RouteTransition animationType="slide-up" duration={300}>
+              <Routes>
+                <Route path="/" element={
+                  <div className="h-full flex flex-col relative z-10 overflow-y-auto no-scrollbar scroll-smooth">
+                    <main className="px-4 py-6">
+                      <AgentRankings />
+                    </main>
 
-                  <footer className="mt-auto py-4 border-t border-slate-50 text-center text-slate-300 text-[10px] px-6">
-                    <div className="flex justify-center gap-8 mb-2">
-                      <Link to="/topology" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Topology</Link>
-                      <Link to="/admin/dashboard" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Dashboard</Link>
-                      <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">{t('app.protocol')}</a>
-                      <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">{t('app.endpoint')}</a>
+                    <footer className="mt-auto py-4 border-t border-slate-50 text-center text-slate-300 text-[10px] px-6">
+                      <div className="flex justify-center gap-8 mb-2">
+                        <Link to="/topology" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Topology</Link>
+                        <Link to="/admin/dashboard" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">Dashboard</Link>
+                        <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">{t('app.protocol')}</a>
+                        <a href="#" className="hover:text-blue-500 transition-colors uppercase font-black tracking-[0.2em]">{t('app.endpoint')}</a>
+                      </div>
+                      <p className="mt-1 opacity-30 uppercase tracking-[0.3em] font-black">{t('app.copyright')}</p>
+                    </footer>
+                  </div>
+                } />
+
+                <Route path="/topology" element={
+                  <Suspense fallback={<GPUAcceleratedSkeleton />}>
+                    <TopologyView />
+                  </Suspense>
+                } />
+                
+                <Route path="/admin/dashboard" element={
+                  <Suspense fallback={<GPUAcceleratedSkeleton />}>
+                    <div className="h-full overflow-y-auto">
+                      <EntropyDashboard />
                     </div>
-                    <p className="mt-1 opacity-30 uppercase tracking-[0.3em] font-black">{t('app.copyright')}</p>
-                  </footer>
-                </div>
-              } />
-
-              <Route path="/topology" element={
-                <Suspense fallback={
-                  <div className="flex items-center justify-center h-full">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                  </div>
-                }>
-                  <TopologyView />
-                </Suspense>
-              } />
-              
-              <Route path="/admin/dashboard" element={
-                <Suspense fallback={
-                  <div className="flex items-center justify-center h-full">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                  </div>
-                }>
-                  <div className="h-full overflow-y-auto">
-                    <EntropyDashboard />
-                  </div>
-                </Suspense>
-              } />
-            </Routes>
+                  </Suspense>
+                } />
+              </Routes>
+            </RouteTransition>
           </div>
         </div>
 

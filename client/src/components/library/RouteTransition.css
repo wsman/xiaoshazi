@@ -1,24 +1,35 @@
-/* RouteTransition.css */
+/* RouteTransition.css - GPU Accelerated Version */
+/* Performance: Using transform3d for GPU layer promotion */
+
 .route-transition {
   transition: all var(--transition-duration, 300ms) ease-in-out;
+  /* GPU Acceleration */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
 }
 
 .route-transition__container {
   width: 100%;
   height: 100%;
+  /* GPU Acceleration */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
-/* Animation States */
+/* Animation States - GPU Accelerated */
 .route-transition--idle {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .route-transition--animating {
   opacity: 0;
+  transform: translate3d(0, 0, 0);
 }
 
-/* Animation Types */
+/* Animation Types - GPU Accelerated with transform3d */
 .route-transition--fade {
   opacity: 0;
 }
@@ -30,66 +41,66 @@
 }
 
 .route-transition--slide-up {
-  transform: translateY(20px);
+  transform: translate3d(0, 20px, 0);
   opacity: 0;
 }
 .route-transition--animating.route-transition--slide-up {
-  transform: translateY(20px);
+  transform: translate3d(0, 20px, 0);
   opacity: 0;
 }
 .route-transition--idle.route-transition--slide-up {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 .route-transition--slide-down {
-  transform: translateY(-20px);
+  transform: translate3d(0, -20px, 0);
   opacity: 0;
 }
 .route-transition--animating.route-transition--slide-down {
-  transform: translateY(-20px);
+  transform: translate3d(0, -20px, 0);
   opacity: 0;
 }
 .route-transition--idle.route-transition--slide-down {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 .route-transition--slide-left {
-  transform: translateX(20px);
+  transform: translate3d(20px, 0, 0);
   opacity: 0;
 }
 .route-transition--animating.route-transition--slide-left {
-  transform: translateX(20px);
+  transform: translate3d(20px, 0, 0);
   opacity: 0;
 }
 .route-transition--idle.route-transition--slide-left {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 .route-transition--slide-right {
-  transform: translateX(-20px);
+  transform: translate3d(-20px, 0, 0);
   opacity: 0;
 }
 .route-transition--animating.route-transition--slide-right {
-  transform: translateX(-20px);
+  transform: translate3d(-20px, 0, 0);
   opacity: 0;
 }
 .route-transition--idle.route-transition--slide-right {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 .route-transition--scale {
-  transform: scale(0.95);
+  transform: translate3d(0, 0, 0) scale(0.95);
   opacity: 0;
 }
 .route-transition--animating.route-transition--scale {
-  transform: scale(0.95);
+  transform: translate3d(0, 0, 0) scale(0.95);
   opacity: 0;
 }
 .route-transition--idle.route-transition--scale {
-  transform: scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
   opacity: 1;
 }
