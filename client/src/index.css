@@ -1,13 +1,28 @@
+@import './themes/nordic.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  /* Nordic Theme - Phase 1 Integration */
+  /* 应用北欧主题变量到全局 */
+  --bg-primary: var(--nordic-white);
+  --text-primary: var(--nordic-charcoal);
+  --border-primary: var(--nordic-mist);
+}
+
+html {
+  background-color: var(--nordic-white);
+  color: var(--nordic-charcoal);
 }
 
 body {
   @apply bg-[#f1f4f9] text-slate-900;
+  background-color: var(--nordic-white);
+  color: var(--nordic-charcoal);
   background-image: radial-gradient(#d1d9e6 0.5px, transparent 0.5px);
   background-size: 24px 24px;
 }
