@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-02-17T14:33:09.269352",
+  "file_hashes": {
+    "src": "",
+    "templates/t1_axioms/system_patterns.md": "",
+    "templates/t1_axioms/tech_context.md": "",
+    "src/**/*.py": "",
+    "src/**/*.ts": "",
+    "tests": ""
+  },
+  "metrics_cache": {
+    "c_dir": {
+      "value": 0.5,
+      "hash_deps": {
+        "src/": "",
+        "templates/t1_axioms/system_patterns.md": ""
+      },
+      "timestamp": "2026-02-17T14:33:09.025061"
+    },
+    "c_sig": {
+      "value": 0.5,
+      "hash_deps": {
+        "templates/t1_axioms/tech_context.md": "",
+        "src/**/*.py": "",
+        "src/**/*.ts": ""
+      },
+      "timestamp": "2026-02-17T14:33:09.026717"
+    },
+    "c_test": {
+      "value": 0.5,
+      "hash_deps": {
+        "tests/": "",
+        "src/": ""
+      },
+      "timestamp": "2026-02-17T14:33:09.269347"
+    }
+  }
+}

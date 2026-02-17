@@ -30,6 +30,14 @@ const {
     register 
 } = require('./server/metrics');
 
+// API Routes - Modularized in Phase 4
+const entropyRoutes = require('./server/routes/entropy');
+const auditRoutes = require('./server/routes/audit');
+const systemRoutes = require('./server/routes/system');
+const usersRoutes = require('./server/routes/users');
+const agentsRoutes = require('./server/routes/agents');
+const authRoutes = require('./server/routes/auth');
+
 // Old log function - keep for compatibility but use Winston internally
 const LOG_FILE = process.env.LOG_FILE || '/tmp/xiaoshazi.log';
 
@@ -102,68 +110,8 @@ if (!fs.existsSync(path.join(OPENDOGE_ROOT, 'AGENTS.md'))) {
     }
 }
 
-// 熵值计算API
-app.get('/api/entropy', (req, res) => {
-    const scriptPath = path.join(OPENDOGE_ROOT, 'scripts/monitoring/entropy_calculator_unified.py');
-    const cmd = `cd ${OPENDOGE_ROOT} && python3 ${scriptPath} --json`;
-    
-    exec(cmd, (error, stdout, stderr) => {
-        if (error) {
-            console.error('Entropy calculation error:', error);
-            return res.status(500).json({
-                success: false,
-                error: 'Failed to calculate entropy',
-                message: error.message
-            });
-        }
-        
-        try {
-            const result = JSON.parse(stdout);
-            res.json({
-                success: true,
-                data: result,
-                timestamp: Date.now()
-            });
-        } catch (parseError) {
-            console.error('JSON parse error:', parseError);
-            res.status(500).json({
-                success: false,
-                error: 'Failed to parse entropy data'
-            });
-        }
-    });
-});
-
-// 熵值历史API
-app.get('/api/entropy/history', (req, res) => {
-    const historyPath = path.join(OPENDOGE_ROOT, 'memory/entropy_history.json');
-    
-    if (fs.existsSync(historyPath)) {
-        try {
-            const history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
-            res.json({
-                success: true,
-                data: history.slice(-100),
-                timestamp: Date.now()
-            });
-        } catch (error) {
-            console.error('Failed to read entropy history:', error);
-            res.json({
-                success: true,
-                data: [],
-                timestamp: Date.now()
-            });
-        }
-    } else {
-        res.json({
-            success: true,
-            data: [],
-            timestamp: Date.now()
-        });
-    }
-});
-
-// 获取系统指标函数
+// API Routes - 使用模块化路由 (Phase 4 重构)
+app.use('/api', entropyRoutes);
 function getSystemMetrics() {
     return {
         status: 'healthy',
@@ -216,6 +164,9 @@ async function initRedis() {
         isRedisAvailable = false;
         updateRedisStatus(false);
     }
+    
+    // 设置 Agents 路由的 Redis 客户端 (Phase 4 重构)
+    agentsRoutes.setRedisClient(redisClient, isRedisAvailable);
 }
 
 // 缓存预热函数 - 30分钟缓存策略
@@ -276,11 +227,6 @@ app.get('/metrics', async (req, res) => {
     }
 });
 
-// Health endpoint with metrics data
-app.get('/api/health', (req, res) => {
-    res.json(getHealthData());
-});
-
 // Swagger/OpenAPI 文档
 const swaggerUi = require('swagger-ui-express');
 const { swaggerSpec } = require('./server/config/swagger');
@@ -310,114 +256,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
     }
 }));
 
-// 认证路由
-const authRoutes = require('./server/routes/auth');
+// 认证路由 (已在顶部导入)
 app.use('/api/auth', authRoutes);
 
-// 审计日志端点 (需要管理员权限)
-const AUDIT_LOG_FILE = process.env.AUDIT_LOG_FILE || '/tmp/xiaoshazi-audit.log';
-
-app.get('/api/audit/logs', (req, res) => {
-    // 简单验证：可以通过配置管理访问
-    const { limit = 50, offset = 0, event } = req.query;
-    
-    try {
-        if (!fs.existsSync(AUDIT_LOG_FILE)) {
-            return res.json({
-                success: true,
-                data: [],
-                total: 0
-            });
-        }
-        
-        const content = fs.readFileSync(AUDIT_LOG_FILE, 'utf8');
-        const lines = content.trim().split('\n').reverse(); // 最新的在前
-        
-        let filtered = lines;
-        if (event) {
-            filtered = lines.filter(line => {
-                try {
-                    const log = JSON.parse(line);
-                    return log.event === event;
-                } catch {
-                    return false;
-                }
-            });
-        }
-        
-        const total = filtered.length;
-        const paginated = filtered.slice(parseInt(offset), parseInt(offset) + parseInt(limit));
-        
-        const logs = paginated.map(line => {
-            try {
-                return JSON.parse(line);
-            } catch {
-                return { raw: line };
-            }
-        });
-        
-        res.json({
-            success: true,
-            data: logs,
-            total,
-            limit: parseInt(limit),
-            offset: parseInt(offset)
-        });
-    } catch (error) {
-        console.error('Audit log read error:', error);
-        res.status(500).json({
-            success: false,
-            error: 'Failed to read audit logs',
-            message: error.message
-        });
-    }
-});
-
-// 审计统计端点
-app.get('/api/audit/stats', (req, res) => {
-    try {
-        if (!fs.existsSync(AUDIT_LOG_FILE)) {
-            return res.json({
-                success: true,
-                data: {
-                    total: 0,
-                    events: {}
-                }
-            });
-        }
-        
-        const content = fs.readFileSync(AUDIT_LOG_FILE, 'utf8');
-        const lines = content.trim().split('\n');
-        
-        const events = {};
-        let total = 0;
-        
-        lines.forEach(line => {
-            try {
-                const log = JSON.parse(line);
-                total++;
-                events[log.event] = (events[log.event] || 0) + 1;
-            } catch {
-                // ignore
-            }
-        });
-        
-        res.json({
-            success: true,
-            data: {
-                total,
-                events
-            }
-        });
-    } catch (error) {
-        console.error('Audit stats error:', error);
-        res.status(500).json({
-            success: false,
-            error: 'Failed to get audit stats',
-            message: error.message
-        });
-    }
-});
+// 审计路由 (Phase 4 重构)
+app.use('/api/audit', auditRoutes);
 
 // HTTP 缓存头优化 - 静态资源缓存1年
 app.use((req, res, next) => {
@@ -596,138 +439,10 @@ app.get('/', (req, res) => {
 });
 */
 
-// API路由 - 动态功能
-app.get('/api/time', (req, res) => {
-    res.json({
-        success: true,
-        timestamp: Date.now(),
-        serverTime: new Date().toISOString(),
-        timezone: 'Asia/Shanghai (UTC+8)',
-        message: '当前服务器时间'
-    });
-});
-
-app.get('/api/health', (req, res) => {
-    res.json({
-        status: 'healthy',
-        uptime: process.uptime(),
-        memory: process.memoryUsage(),
-        cpu: process.cpuUsage(),
-        load: os.loadavg(),
-        timestamp: Date.now()
-    });
-});
-
-app.get('/api/info', (req, res) => {
-    res.json({
-        server: 'HTTP测试服务器',
-        version: '1.0.0',
-        nodeVersion: process.version,
-        platform: process.platform,
-        port: 14514,
-        protocol: 'HTTP',
-        features: ['动态API', '静态文件服务', 'JSON支持']
-    });
-});
-
-app.get('/api/users', (req, res) => {
-    const users = [
-        { id: 1, name: '测试用户1', email: 'user1@test.com', role: 'admin' },
-        { id: 2, name: '测试用户2', email: 'user2@test.com', role: 'user' },
-        { id: 3, name: '测试用户3', email: 'user3@test.com', role: 'user' }
-    ];
-    res.json({
-        success: true,
-        count: users.length,
-        users: users,
-        timestamp: Date.now()
-    });
-});
-
-// POST API示例
-app.post('/api/echo', (req, res) => {
-    res.json({
-        success: true,
-        message: '数据已接收',
-        receivedData: req.body,
-        timestamp: Date.now()
-    });
-});
-
-// Mock Agent Data Endpoint with Scenario Support
-app.get('/api/agents', async (req, res) => {
-    const { scenario } = req.query;
-    
-    // Configure proper Cache-Control headers - 30分钟缓存
-    res.set('Cache-Control', 'public, max-age=1800, s-maxage=1800');
-
-    let agentData = [];
-    let source = 'memory';
-
-    try {
-        if (isRedisAvailable) {
-            // New Mission Strategy: leaderboard:overall (ZSet) -> agent:metadata:{id} (Hash)
-            const ids = await redisClient.zRange('leaderboard:overall', 0, -1, { REV: true });
-            
-            if (ids && ids.length > 0) {
-                // Fetch all details using a pipeline
-                const pipeline = redisClient.multi();
-                ids.forEach(id => {
-                    pipeline.hGetAll(`agent:metadata:${id}`);
-                });
-                const rawDetails = await pipeline.exec();
-                
-                // Process and format data
-                agentData = rawDetails.map((details, index) => {
-                    return {
-                        ...details,
-                        rank: index + 1,
-                        avgPerf: parseFloat(details.avgPerf || details.overall_score || 0),
-                        // Scenarios might be stored as comma-separated string or array
-                        scenarios: details.scenarios ? details.scenarios.split(',') : ["reasoning", "general"]
-                    };
-                });
-                source = 'redis';
-            } else {
-                // Fallback to versioned key or file
-                const cachedData = await redisClient.get('xiaoshazi:agent:rankings:v1');
-                if (cachedData) {
-                    agentData = JSON.parse(cachedData);
-                    source = 'redis-v1';
-                } else {
-                    source = 'file-fallback';
-                }
-            }
-        }
-        
-        // If Redis failed or was empty, use file fallback
-        if (agentData.length === 0) {
-            const fs = require('fs');
-            const path = require('path');
-            const filePath = path.join(__dirname, 'server/data/rankings.json');
-            if (fs.existsSync(filePath)) {
-                agentData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-                if (source === 'memory') source = 'file';
-            } else {
-                agentData = MOCK_AGENTS;
-            }
-        }
-    } catch (error) {
-        console.error('Data retrieval error (falling back to memory):', error.message);
-        agentData = MOCK_AGENTS;
-    }
-
-    if (scenario && scenario !== 'all') {
-        agentData = agentData.filter(a => a.scenarios && a.scenarios.includes(scenario));
-    }
-
-    res.json({
-        success: true,
-        data: agentData,
-        timestamp: Date.now(),
-        source: source
-    });
-});
+// API路由 - 使用模块化路由 (Phase 4 重构)
+app.use('/api', systemRoutes);
+app.use('/api', usersRoutes);
+app.use('/api', agentsRoutes);
 
 // 错误处理中间件 - 使用统一的错误处理
 app.use(notFoundHandler);
