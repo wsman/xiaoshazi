@@ -7,27 +7,60 @@ const os = require('os');
 const { Server } = require('socket.io');
 const { exec } = require('child_process');
 const fs = require('fs');
+const cors = require('cors');
 
-// 结构化日志函数
+// Error handling middleware
+const { 
+    errorHandler, 
+    notFoundHandler,
+    handleUnhandledRejections,
+    handleUncaughtExceptions 
+} = require('./server/middleware/errorHandler');
+
+// Winston Logger - Phase 1: Logging System
+const logger = require('./server/utils/logger');
+
+// Prometheus Metrics - Phase 1: Monitoring
+const { 
+    metricsMiddleware, 
+    getMetrics, 
+    getHealthData,
+    updateRedisStatus,
+    updateSocketConnections,
+    register 
+} = require('./server/metrics');
+
+// Old log function - keep for compatibility but use Winston internally
 const LOG_FILE = process.env.LOG_FILE || '/tmp/xiaoshazi.log';
-
-function log(level, message, meta = {}) {
-    const timestamp = new Date().toISOString();
-    const logEntry = JSON.stringify({ timestamp, level, message, ...meta });
-    console.log(`[${level}] ${message}`);
-    fs.appendFile(LOG_FILE, logEntry + '\n', (err) => {
-        if (err) console.error('日志写入失败:', err);
-    });
-}
-
-const logger = {
-    info: (msg, meta) => log('INFO', msg, meta),
-    warn: (msg, meta) => log('WARN', msg, meta),
-    error: (msg, meta) => log('ERROR', msg, meta),
-};
 
 // 创建Express应用
 const app = express();
+
+// CORS 配置 - 从 '*' 收紧到指定域名
+const ALLOWED_ORIGINS = [
+  'http://localhost:5173',  // Vite 开发服务器
+  'http://localhost:3000',  // 备用开发服务器
+  'http://127.0.0.1:5173',
+  'http://127.0.0.1:3000'
+];
+
+// 生产环境可以添加实际域名
+if (process.env.ALLOWED_ORIGINS) {
+  ALLOWED_ORIGINS.push(...process.env.ALLOWED_ORIGINS.split(','));
+}
+
+const corsOptions = {
+  origin: process.env.NODE_ENV === 'production' 
+    ? ALLOWED_ORIGINS 
+    : ALLOWED_ORIGINS,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  exposedHeaders: ['Authorization'],
+  maxAge: 86400 // 预检请求缓存 24 小时
+};
+
+app.use(cors(corsOptions));
 
 // Redis Client Configuration
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
@@ -160,14 +193,16 @@ async function initRedis() {
         redisClient.on('error', (err) => {
             // Only log if it was previously available to avoid spamming
             if (isRedisAvailable) {
-                console.warn('⚠️ Redis Error (Fallback to memory active):', err.message);
+                logger.warn('⚠️ Redis Error (Fallback to memory active):', { error: err.message });
             }
             isRedisAvailable = false;
+            updateRedisStatus(false);
         });
 
         await redisClient.connect();
-        console.log('✅ Redis connected successfully');
+        logger.info('✅ Redis connected successfully');
         isRedisAvailable = true;
+        updateRedisStatus(true);
         
         // Seed data if empty - 使用版本化键名避免冲突
         const count = await redisClient.exists('xiaoshazi:agent:rankings:v1');
@@ -177,27 +212,28 @@ async function initRedis() {
             console.log('✅ Mock data seeded to Redis (30分钟TTL)');
         }
     } catch (error) {
-        console.warn('❌ Redis connection error, falling back to in-memory store:', error.message);
+        logger.warn('❌ Redis connection error, falling back to in-memory store:', { error: error.message });
         isRedisAvailable = false;
+        updateRedisStatus(false);
     }
 }
 
 // 缓存预热函数 - 30分钟缓存策略
 async function warmUpCache() {
     if (!isRedisAvailable || !redisClient) {
-        console.log('⏭️ 缓存预热跳过: Redis不可用');
+        logger.info('⏭️ 缓存预热跳过: Redis不可用');
         return;
     }
     
     try {
-        console.log('🔥 开始缓存预热 (30分钟TTL)...');
+        logger.info('🔥 开始缓存预热 (30分钟TTL)...');
         
         // 预热排行榜数据 - 使用唯一键名避免冲突
         const agentsPath = path.join(__dirname, 'server/data/rankings.json');
         if (fs.existsSync(agentsPath)) {
             const data = fs.readFileSync(agentsPath, 'utf8');
             await redisClient.setEx('xiaoshazi:agent:rankings:v1', 1800, data);
-            console.log('✅ 缓存预热完成: xiaoshazi:agent:rankings:v1 (30分钟)');
+            logger.info('✅ 缓存预热完成: xiaoshazi:agent:rankings:v1 (30分钟)');
         }
         
         // 预热中国模型数据 - 使用唯一键名
@@ -205,16 +241,16 @@ async function warmUpCache() {
         if (fs.existsSync(cnModelsPath)) {
             const data = fs.readFileSync(cnModelsPath, 'utf8');
             await redisClient.setEx('xiaoshazi:cn_models:v1', 1800, data);
-            console.log('✅ 缓存预热完成: xiaoshazi:cn_models:v1 (30分钟)');
+            logger.info('✅ 缓存预热完成: xiaoshazi:cn_models:v1 (5分钟)');
         }
         
         // 预热系统指标 - 短暂缓存
         const metrics = getSystemMetrics();
         await redisClient.setEx('xiaoshazi:system:metrics:v1', 300, JSON.stringify(metrics));
-        console.log('✅ 缓存预热完成: xiaoshazi:system:metrics:v1 (5分钟)');
+        logger.info('✅ 缓存预热完成: xiaoshazi:system:metrics:v1 (5分钟)');
         
     } catch (error) {
-        console.error('❌ 缓存预热失败:', error.message);
+        logger.error('❌ 缓存预热失败:', { error: error.message });
     }
 }
 
@@ -223,12 +259,164 @@ app.use(compression()); // 启用Gzip压缩
 app.use(express.json()); // 解析JSON请求体
 app.use(express.urlencoded({ extended: true })); // 解析URL编码请求体
 
-// CORS Middleware
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
+// Rate Limiting - 通用限流
+const { apiLimiter } = require('./server/middleware/rateLimiter');
+app.use('/api/', apiLimiter);
+
+// Phase 1: Prometheus Metrics Middleware
+app.use(metricsMiddleware());
+
+// Metrics endpoint (excluded from rate limiting)
+app.get('/metrics', async (req, res) => {
+    try {
+        res.set('Content-Type', register.contentType);
+        res.end(await getMetrics());
+    } catch (err) {
+        res.status(500).end(err.message);
+    }
+});
+
+// Health endpoint with metrics data
+app.get('/api/health', (req, res) => {
+    res.json(getHealthData());
+});
+
+// Swagger/OpenAPI 文档
+const swaggerUi = require('swagger-ui-express');
+const { swaggerSpec } = require('./server/config/swagger');
+
+// Swagger 文档端点 (JSON)
+app.get('/api-docs.json', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(swaggerSpec);
+});
+
+// Swagger UI
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+    customCss: `
+        .swagger-ui .topbar { display: none }
+        .swagger-ui .info .title { font-size: 2.5em; }
+        .swagger-ui .info .description { font-size: 1.1em; line-height: 1.6; }
+    `,
+    customSiteTitle: '小沙子 API 文档',
+    customfavIcon: '/favicon.ico',
+    swaggerOptions: {
+        persistAuthorization: true,
+        displayRequestDuration: true,
+        docExpansion: 'list',
+        filter: true,
+        showExtensions: true,
+        showCommonExtensions: true
+    }
+}));
+
+// 认证路由
+const authRoutes = require('./server/routes/auth');
+app.use('/api/auth', authRoutes);
+
+// 审计日志端点 (需要管理员权限)
+const AUDIT_LOG_FILE = process.env.AUDIT_LOG_FILE || '/tmp/xiaoshazi-audit.log';
+
+app.get('/api/audit/logs', (req, res) => {
+    // 简单验证：可以通过配置管理访问
+    const { limit = 50, offset = 0, event } = req.query;
+    
+    try {
+        if (!fs.existsSync(AUDIT_LOG_FILE)) {
+            return res.json({
+                success: true,
+                data: [],
+                total: 0
+            });
+        }
+        
+        const content = fs.readFileSync(AUDIT_LOG_FILE, 'utf8');
+        const lines = content.trim().split('\n').reverse(); // 最新的在前
+        
+        let filtered = lines;
+        if (event) {
+            filtered = lines.filter(line => {
+                try {
+                    const log = JSON.parse(line);
+                    return log.event === event;
+                } catch {
+                    return false;
+                }
+            });
+        }
+        
+        const total = filtered.length;
+        const paginated = filtered.slice(parseInt(offset), parseInt(offset) + parseInt(limit));
+        
+        const logs = paginated.map(line => {
+            try {
+                return JSON.parse(line);
+            } catch {
+                return { raw: line };
+            }
+        });
+        
+        res.json({
+            success: true,
+            data: logs,
+            total,
+            limit: parseInt(limit),
+            offset: parseInt(offset)
+        });
+    } catch (error) {
+        console.error('Audit log read error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to read audit logs',
+            message: error.message
+        });
+    }
+});
+
+// 审计统计端点
+app.get('/api/audit/stats', (req, res) => {
+    try {
+        if (!fs.existsSync(AUDIT_LOG_FILE)) {
+            return res.json({
+                success: true,
+                data: {
+                    total: 0,
+                    events: {}
+                }
+            });
+        }
+        
+        const content = fs.readFileSync(AUDIT_LOG_FILE, 'utf8');
+        const lines = content.trim().split('\n');
+        
+        const events = {};
+        let total = 0;
+        
+        lines.forEach(line => {
+            try {
+                const log = JSON.parse(line);
+                total++;
+                events[log.event] = (events[log.event] || 0) + 1;
+            } catch {
+                // ignore
+            }
+        });
+        
+        res.json({
+            success: true,
+            data: {
+                total,
+                events
+            }
+        });
+    } catch (error) {
+        console.error('Audit stats error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to get audit stats',
+            message: error.message
+        });
+    }
 });
 
 // HTTP 缓存头优化 - 静态资源缓存1年
@@ -541,20 +729,19 @@ app.get('/api/agents', async (req, res) => {
     });
 });
 
-// Catch-all route for SPA
-app.get(/.*/, (req, res) => {
+// 错误处理中间件 - 使用统一的错误处理
+app.use(notFoundHandler);
+app.use(errorHandler);
+
+// Catch-all route for SPA - only root and static assets
+// API routes are handled above, anything else falls through to 404
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/dist/index.html'));
 });
 
-// 错误处理中间件
-app.use((err, req, res, next) => {
-    console.error('服务器错误:', err);
-    res.status(500).json({
-        error: '内部服务器错误',
-        message: process.env.NODE_ENV === 'development' ? err.message : '请联系管理员',
-        timestamp: Date.now()
-    });
-});
+// 设置全局异常处理器
+handleUnhandledRejections();
+handleUncaughtExceptions();
 
 // 创建HTTP服务器
 const PORT = 14514;
@@ -568,8 +755,11 @@ async function startServer() {
     // 创建 Socket.IO 服务器
     const io = new Server(server, {
         cors: {
-            origin: '*',
-            methods: ['GET', 'POST']
+            origin: process.env.NODE_ENV === 'production' 
+                ? ALLOWED_ORIGINS 
+                : ALLOWED_ORIGINS,
+            methods: ['GET', 'POST'],
+            credentials: true
         }
     });
 
@@ -582,32 +772,34 @@ async function startServer() {
 
     // 监听客户端连接
     io.on('connection', (socket) => {
-        console.log('🔌 Client connected:', socket.id);
+        logger.info('🔌 Client connected:', { socketId: socket.id });
+        updateSocketConnections(io.engine.clientsCount);
         
         // 立即发送当前状态
         socket.emit('system:metrics', getSystemMetrics());
         
         // 客户端请求更新 - 按需推送
         socket.on('request:update', () => {
-            console.log(`📡 Client ${socket.id} requested update`);
+            logger.http(`📡 Client ${socket.id} requested update`);
             emitMetricsUpdate();
         });
 
         // 客户端订阅特定数据
         socket.on('subscribe:agents', () => {
-            console.log(`📡 Client ${socket.id} subscribed to agents`);
+            logger.http(`📡 Client ${socket.id} subscribed to agents`);
             socket.emit('agents:update', { source: 'client-subscribe', timestamp: Date.now() });
         });
         
         socket.on('disconnect', () => {
-            console.log('🔌 Client disconnected:', socket.id);
+            logger.info('🔌 Client disconnected:', { socketId: socket.id });
+            updateSocketConnections(io.engine.clientsCount);
         });
     });
     
     // 移除3秒轮询，改为事件驱动 + 5分钟定时同步
     // 1. 5分钟定时同步
     setInterval(() => {
-        console.log('🔄 Periodic 5-minute sync');
+        logger.http('🔄 Periodic 5-minute sync');
         emitMetricsUpdate();
     }, 300000); // 5分钟
     
@@ -616,16 +808,17 @@ async function startServer() {
     // 3. 客户端请求更新 (通过socket事件处理)
     
     server.listen(PORT, () => {
-        console.log(`✅ Backend Server started on port ${PORT}`);
-        console.log(`🌐 Local address: http://localhost:${PORT}`);
-        console.log(`🔌 WebSocket Server started`);
-        console.log(`📊 API Endpoints:`);
-        console.log(`   - GET http://localhost:${PORT}/api/time`);
-        console.log(`   - GET http://localhost:${PORT}/api/health`);
-        console.log(`   - GET http://localhost:${PORT}/api/agents`);
-        console.log(`   - GET http://localhost:${PORT}/api/entropy`);
-        console.log(`   - GET http://localhost:${PORT}/api/entropy/history`);
-        console.log(`   - WS  ws://localhost:${PORT}/socket.io/`);
+        logger.info(`✅ Backend Server started on port ${PORT}`);
+        logger.info(`🌐 Local address: http://localhost:${PORT}`);
+        logger.info(`🔌 WebSocket Server started`);
+        logger.info(`📊 API Endpoints:`);
+        logger.info(`   - GET http://localhost:${PORT}/api/time`);
+        logger.info(`   - GET http://localhost:${PORT}/api/health`);
+        logger.info(`   - GET http://localhost:${PORT}/api/agents`);
+        logger.info(`   - GET http://localhost:${PORT}/api/entropy`);
+        logger.info(`   - GET http://localhost:${PORT}/api/entropy/history`);
+        logger.info(`   - GET http://localhost:${PORT}/metrics (Prometheus)`);
+        logger.info(`   - WS  ws://localhost:${PORT}/socket.io/`);
     });
 }
 
@@ -633,9 +826,9 @@ startServer();
 
 // 优雅关闭
 process.on('SIGTERM', () => {
-    console.log('正在关闭服务器...');
+    logger.info('正在关闭服务器...');
     server.close(() => {
-        console.log('服务器已关闭');
+        logger.info('服务器已关闭');
         process.exit(0);
     });
 });

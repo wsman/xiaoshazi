@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.min.js
+
+# Coverage
+coverage/
+
+# Logs
+*.log
+
+# Cache
+.cache/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files
+server/data/
+*.json (except package.json, tsconfig.json)
+
+# Third-party configs
+web.config

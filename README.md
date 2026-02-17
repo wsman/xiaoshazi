@@ -308,3 +308,68 @@ curl http://localhost:14514/api/agents?scenario=coding
 ---
 
 **AgentStats** - 为AI Agent性能评估提供专业的数据驱动解决方案 🚀
+---
+
+## 🧪 测试
+
+本项目使用 Vitest 进行单元测试。
+
+### 运行测试
+
+```bash
+# 安装依赖
+cd client && pnpm install
+
+# 运行所有测试
+pnpm test
+
+# 运行测试并生成覆盖率报告
+pnpm test:coverage
+
+# 监听模式运行测试
+pnpm test:watch
+```
+
+### 测试覆盖率目标
+
+| 模块 | 目标覆盖 |
+|------|----------|
+| components | 85% |
+| hooks | 80% |
+| utils | 90% |
+
+---
+
+## 🔄 CI/CD
+
+本项目使用 GitHub Actions 实现自动化 CI/CD 流程。
+
+### 工作流程
+
+1. **客户端测试**: 运行单元测试和语法检查
+2. **服务端测试**: 验证服务器代码语法
+3. **安全审计**: 检查依赖漏洞
+4. **构建**: 生成生产环境文件
+5. **部署**: 自动部署到生产环境（仅 main 分支）
+
+### GitHub Actions 配置
+
+配置文件位于 `.github/workflows/ci.yml`
+
+---
+
+## 📝 贡献指南
+
+请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## 🚢 部署指南
+
+请参阅 [DEPLOY.md](DEPLOY.md)
+
+---
+
+## 📄 许可证
+
+ISC

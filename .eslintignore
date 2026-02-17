@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.min.js
+
+# Coverage
+coverage/
+
+# Logs
+*.log
+*.pid
+
+# Cache
+.cache/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files
+server/data/
+*.json
+
+# Config files that aren't JavaScript
+*.config.js
+!eslint.config.js
+
+# Scripts (may have different linting rules)
+server/scripts/
+
+# Third-party
+public/

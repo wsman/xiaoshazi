@@ -121,8 +121,8 @@ const AgentCardWrapper = React.memo(({ item }) => {
 
 AgentCardWrapper.displayName = 'AgentCardWrapper';
 
-// Virtualized Row for react-window
-const VirtualizedRow = useCallback(({ index, data }) => {
+// Virtualized Row for react-window - defined as regular function
+const VirtualizedRow = ({ index, data }) => {
   const { items, maxPerf, t, formatModelName } = data;
   const item = items[index];
   const providerColor = getProviderColor(item.provider);
@@ -149,7 +149,7 @@ const VirtualizedRow = useCallback(({ index, data }) => {
       formatModelName={formatModelName}
     />
   );
-}, []);
+};
 
 // Helper Component for Drag-to-Scroll functionality
 const DraggableScrollContainer = ({ children, virtualized, items, maxPerf, t, formatModelName }) => {

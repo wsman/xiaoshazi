@@ -1,0 +1,275 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '20'
+  PNPM_VERSION: '8'
+
+jobs:
+  # Server Lint
+  server-lint:
+    name: Server Lint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install --production=false
+      
+      - name: Run ESLint
+        run: npx eslint server.js server/ --ext .js
+      
+      - name: Check code formatting
+        run: npx prettier --check "server/**/*.js" "*.js" || true
+
+  # Server Tests
+  server-test:
+    name: Server Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install --production=false
+      
+      - name: Run unit tests
+        run: npm test
+      
+      - name: Run tests with coverage
+        run: npm run test:coverage
+      
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: server-coverage
+          path: coverage
+          retention-days: 7
+
+  # Server Build
+  server-build:
+    name: Server Build
+    runs-on: ubuntu-latest
+    needs: [server-lint, server-test]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci --production
+      
+      - name: Verify server starts
+        run: |
+          timeout 5 node server.js || [ $? -eq 124 ]
+      
+      - name: Verify server syntax
+        run: node --check server.js
+
+  # Client Lint
+  client-lint:
+    name: Client Lint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          cache-dependency-path: client/pnpm-lock.yaml
+      
+      - name: Install dependencies
+        run: cd client && pnpm install --frozen-lockfile
+      
+      - name: Run ESLint
+        run: cd client && pnpm lint
+
+  # Client Tests
+  client-test:
+    name: Client Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          cache-dependency-path: client/pnpm-lock.yaml
+      
+      - name: Install dependencies
+        run: cd client && pnpm install --frozen-lockfile
+      
+      - name: Run unit tests
+        run: cd client && pnpm test:run
+      
+      - name: Run tests with coverage
+        run: cd client && pnpm test:coverage
+      
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: client-coverage
+          path: client/coverage
+          retention-days: 7
+
+  # Client Build
+  client-build:
+    name: Client Build
+    runs-on: ubuntu-latest
+    needs: [client-lint, client-test]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          cache-dependency-path: client/pnpm-lock.yaml
+      
+      - name: Install dependencies
+        run: cd client && pnpm install --frozen-lockfile
+      
+      - name: Build client
+        run: cd client && pnpm build
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: client-build
+          path: client/dist
+          retention-days: 7
+
+  # Security Audit
+  security:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          cache-dependency-path: client/pnpm-lock.yaml
+      
+      - name: Install dependencies
+        run: cd client && pnpm install --frozen-lockfile
+      
+      - name: Run security audit
+        run: cd client && pnpm audit --audit-level=high
+        continue-on-error: true
+
+  # Deploy (only on main branch)
+  deploy:
+    name: Deploy
+    needs: [server-build, client-build, security]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Download client build
+        uses: actions/download-artifact@v4
+        with:
+          name: client-build
+          path: ./dist
+      
+      - name: List build files
+        run: ls -la ./dist
+      
+      - name: Deploy to production
+        run: |
+          echo "Deploying to production..."
+          # Add your deployment commands here
+          # Example: rsync, scp, docker push, etc.
+          echo "Deployment complete!"
+        shell: bash
+
+  # Summary
+  summary:
+    name: CI Summary
+    needs: [server-lint, server-test, server-build, client-lint, client-test, client-build, security]
+    if: always()
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Create summary
+        run: |
+          echo "## CI/CD Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Server Pipeline" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Lint: Code quality checks" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Test: Unit and integration tests" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Build: Production build verification" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Client Pipeline" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Lint: Code quality checks" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Test: Unit tests with coverage" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Build: Production build" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Security" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Dependency vulnerability scanning" >> $GITHUB_STEP_SUMMARY

@@ -1,5 +1,8 @@
 // ChartWorkerManager - Web Worker Management Service
 // Mission: Offload heavy scoring and sorting logic to a Web Worker
+// Uses shared scoringUtils for consistent logic with worker
+
+import { sortAgents } from './scoringUtils';
 
 export class ChartWorkerManager {
   constructor() {
@@ -14,7 +17,8 @@ export class ChartWorkerManager {
       successfulRequests: 0,
       failedRequests: 0,
       avgLatency: 0,
-      lastHealthCheck: null
+      lastHealthCheck: null,
+      workerReady: false
     };
   }
 
@@ -40,6 +44,7 @@ export class ChartWorkerManager {
         this.workerReady = true;
         this.isInitialized = true;
         this.fallbackToMainThread = false;
+        this.metrics.workerReady = true;
         console.log('[ChartWorkerManager] Worker initialized successfully');
         return true;
       } else {
@@ -49,6 +54,7 @@ export class ChartWorkerManager {
       console.warn('[ChartWorkerManager] Worker initialization failed, falling back to main thread', e);
       this.fallbackToMainThread = true;
       this.isInitialized = true;
+      this.metrics.workerReady = false;
       return false;
     }
   }
@@ -101,6 +107,7 @@ export class ChartWorkerManager {
     console.error('[ChartWorkerManager] Worker error:', error);
     this.fallbackToMainThread = true;
     this.workerReady = false;
+    this.metrics.workerReady = false;
     this.requestQueue.forEach(item => item.reject(new Error('Worker error')));
     this.requestQueue.clear();
   }
@@ -155,74 +162,9 @@ export class ChartWorkerManager {
     }
   }
 
+  // Main thread fallback - uses shared sortAgents for consistency
   processDataOnMainThread(agents, scenario) {
-    // Scenario-Based Weighting Logic (Synced with Worker)
-    const weighted = agents.map(item => {
-        let multiplier = 1.0;
-        const modelName = (item.model || '').toLowerCase();
-        const modelId = (item.id || '').toLowerCase();
-        const searchStr = `${modelName} ${modelId}`;
-
-        // 1. Scenario: Coding
-        if (scenario === 'coding') {
-          const isBonus = searchStr.includes('coder') || searchStr.includes('sonnet 3.5') || 
-                          searchStr.includes('sonnet-3-5') || searchStr.includes('deepseek-coder');
-          const isWeak = searchStr.includes('flash') || searchStr.includes('mini') || 
-                         searchStr.includes('turbo') || searchStr.includes('small') ||
-                         searchStr.includes('haiku');
-
-          if (isBonus) multiplier = 1.0;
-          else if (isWeak) multiplier = 0.85;
-          else multiplier = 0.95;
-        } 
-        // 2. Scenario: Reasoning
-        else if (scenario === 'reasoning') {
-          const isBonus = searchStr.includes('qwq') || searchStr.includes('o1') || 
-                          searchStr.includes('r1') || searchStr.includes('opus');
-          const isPenalty = searchStr.includes('turbo') || searchStr.includes('flash') || 
-                            searchStr.includes('mini');
-          
-          if (isBonus) multiplier = 1.0;
-          else if (isPenalty) multiplier = 0.90;
-        } 
-        // 3. Scenario: Creative
-        else if (scenario === 'creative') {
-          const isBonus = searchStr.includes('opus') || searchStr.includes('gpt-4o') || 
-                          searchStr.includes('gemini pro') || searchStr.includes('gemini-pro');
-          const isPenalty = searchStr.includes('coder') || searchStr.includes('math');
-          
-          if (isBonus) multiplier = 1.0;
-          else if (isPenalty) multiplier = 0.85;
-        }
-
-        const baseScore = item.avgPerf || item.overall_score || item.score || 0;
-        const newAvgPerf = parseFloat(baseScore) * multiplier;
-        
-        // Dynamic Tier Recalculation
-        let newTier = item.tier;
-        if (scenario !== 'all' && scenario) {
-          if (newAvgPerf >= 85) newTier = 'S';
-          else if (newAvgPerf >= 75) newTier = 'A';
-          else if (newAvgPerf >= 60) newTier = 'B';
-          else if (newAvgPerf >= 40) newTier = 'C';
-          else newTier = 'D';
-        }
-
-        return {
-          ...item,
-          avgPerf: newAvgPerf,
-          tier: newTier
-        };
-    });
-
-    // Sort by avgPerf descending
-    weighted.sort((a, b) => b.avgPerf - a.avgPerf);
-
-    // Update ranks based on sorted order
-    return weighted.map((item, index) => ({
-        ...item,
-        rank: index + 1
-    }));
+    return sortAgents(agents, scenario);
   }
 
   updateLatencyMetrics(latency) {
@@ -231,12 +173,55 @@ export class ChartWorkerManager {
       : (this.metrics.avgLatency * 0.7 + latency * 0.3);
   }
 
+  // Get current metrics
+  getMetrics() {
+    return { ...this.metrics };
+  }
+
+  // Check if worker is available
+  isWorkerAvailable() {
+    return this.workerReady && !this.fallbackToMainThread;
+  }
+
+  // Health check
+  async checkHealth() {
+    if (!this.workerReady) {
+      return {
+        status: 'unhealthy',
+        workerType: 'scoring',
+        memory: 'unknown',
+        latency: null,
+        timestamp: Date.now()
+      };
+    }
+
+    try {
+      const response = await this.sendRequest({ type: 'health_check' }, 5000);
+      return {
+        status: 'healthy',
+        workerType: 'scoring',
+        memory: response.result?.memory || 'unknown',
+        latency: this.metrics.avgLatency,
+        timestamp: response.result?.timestamp || Date.now()
+      };
+    } catch (error) {
+      return {
+        status: 'unhealthy',
+        workerType: 'scoring',
+        memory: 'unknown',
+        latency: null,
+        timestamp: Date.now()
+      };
+    }
+  }
+
   terminate() {
     if (this.worker) {
       this.worker.terminate();
       this.worker = null;
       this.workerReady = false;
       this.isInitialized = false;
+      this.metrics.workerReady = false;
     }
   }
 }

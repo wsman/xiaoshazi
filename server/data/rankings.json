@@ -1892,22 +1892,6 @@
     "rank": 119,
     "diff": 0,
     "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-ORPO-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-ORPO-v0.2",
-    "avgPerf": 53.04,
-    "peakPerf": 55.7,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 120,
-    "rank": 120,
-    "diff": 0,
-    "tier": "C",
     "provider": "OpenScholar",
     "model": "OpenScholar/Llama-3.1_OpenScholar-8B",
     "fullName": "OpenScholar/Llama-3.1_OpenScholar-8B",
@@ -1920,8 +1904,8 @@
     ]
   },
   {
-    "id": 121,
-    "rank": 121,
+    "id": 120,
+    "rank": 120,
     "diff": 0,
     "tier": "C",
     "provider": "Lyte",
@@ -1936,8 +1920,8 @@
     ]
   },
   {
-    "id": 122,
-    "rank": 122,
+    "id": 121,
+    "rank": 121,
     "diff": 0,
     "tier": "C",
     "provider": "FuseAI",
@@ -1952,8 +1936,8 @@
     ]
   },
   {
-    "id": 123,
-    "rank": 123,
+    "id": 122,
+    "rank": 122,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -1968,40 +1952,8 @@
     ]
   },
   {
-    "id": 124,
-    "rank": 124,
-    "diff": 0,
-    "tier": "C",
-    "provider": "qingy2024",
-    "model": "qingy2024/Benchmaxx-Llama-3.2-1B-Instruct",
-    "fullName": "qingy2024/Benchmaxx-Llama-3.2-1B-Instruct",
-    "avgPerf": 52.49,
-    "peakPerf": 55.1,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 125,
-    "rank": 125,
-    "diff": 0,
-    "tier": "C",
-    "provider": "sethuiyer",
-    "model": "sethuiyer/Llama-3.1-8B-Experimental-1206-Instruct",
-    "fullName": "sethuiyer/Llama-3.1-8B-Experimental-1206-Instruct",
-    "avgPerf": 52.46,
-    "peakPerf": 55.1,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 126,
-    "rank": 126,
+    "id": 123,
+    "rank": 123,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -2016,8 +1968,8 @@
     ]
   },
   {
-    "id": 127,
-    "rank": 127,
+    "id": 124,
+    "rank": 124,
     "diff": 0,
     "tier": "C",
     "provider": "cognitivecomputations",
@@ -2032,8 +1984,8 @@
     ]
   },
   {
-    "id": 128,
-    "rank": 128,
+    "id": 125,
+    "rank": 125,
     "diff": 0,
     "tier": "C",
     "provider": "Hastagaras",
@@ -2048,24 +2000,8 @@
     ]
   },
   {
-    "id": 129,
-    "rank": 129,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF",
-    "avgPerf": 51.69,
-    "peakPerf": 54.3,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 130,
-    "rank": 130,
+    "id": 126,
+    "rank": 126,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -2080,24 +2016,8 @@
     ]
   },
   {
-    "id": 131,
-    "rank": 131,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-DPO-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-DPO-v0.2",
-    "avgPerf": 51.49,
-    "peakPerf": 54.1,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 132,
-    "rank": 132,
+    "id": 127,
+    "rank": 127,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -2112,24 +2032,8 @@
     ]
   },
   {
-    "id": 133,
-    "rank": 133,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-RDPO-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RDPO-v0.2",
-    "avgPerf": 51.13,
-    "peakPerf": 53.7,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 134,
-    "rank": 134,
+    "id": 128,
+    "rank": 128,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -2144,8 +2048,8 @@
     ]
   },
   {
-    "id": 135,
-    "rank": 135,
+    "id": 129,
+    "rank": 129,
     "diff": 0,
     "tier": "C",
     "provider": "haoranxu",
@@ -2160,8 +2064,8 @@
     ]
   },
   {
-    "id": 136,
-    "rank": 136,
+    "id": 130,
+    "rank": 130,
     "diff": 0,
     "tier": "C",
     "provider": "Replete-AI",
@@ -2176,8 +2080,8 @@
     ]
   },
   {
-    "id": 137,
-    "rank": 137,
+    "id": 131,
+    "rank": 131,
     "diff": 0,
     "tier": "C",
     "provider": "T145",
@@ -2192,8 +2096,8 @@
     ]
   },
   {
-    "id": 138,
-    "rank": 138,
+    "id": 132,
+    "rank": 132,
     "diff": 0,
     "tier": "C",
     "provider": "haoranxu",
@@ -2208,24 +2112,8 @@
     ]
   },
   {
-    "id": 139,
-    "rank": 139,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-CPO-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-CPO-v0.2",
-    "avgPerf": 50.83,
-    "peakPerf": 53.4,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 140,
-    "rank": 140,
+    "id": 133,
+    "rank": 133,
     "diff": 0,
     "tier": "C",
     "provider": "NousResearch",
@@ -2240,8 +2128,8 @@
     ]
   },
   {
-    "id": 141,
-    "rank": 141,
+    "id": 134,
+    "rank": 134,
     "diff": 0,
     "tier": "C",
     "provider": "UCLA-AGI",
@@ -2256,24 +2144,8 @@
     ]
   },
   {
-    "id": 142,
-    "rank": 142,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-SimPO-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SimPO-v0.2",
-    "avgPerf": 50.55,
-    "peakPerf": 53.1,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 143,
-    "rank": 143,
+    "id": 135,
+    "rank": 135,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -2288,8 +2160,8 @@
     ]
   },
   {
-    "id": 144,
-    "rank": 144,
+    "id": 136,
+    "rank": 136,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -2304,24 +2176,8 @@
     ]
   },
   {
-    "id": 145,
-    "rank": 145,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-KTO-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-KTO-v0.2",
-    "avgPerf": 50.37,
-    "peakPerf": 52.9,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 146,
-    "rank": 146,
+    "id": 137,
+    "rank": 137,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -2336,8 +2192,8 @@
     ]
   },
   {
-    "id": 147,
-    "rank": 147,
+    "id": 138,
+    "rank": 138,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -2352,8 +2208,8 @@
     ]
   },
   {
-    "id": 148,
-    "rank": 148,
+    "id": 139,
+    "rank": 139,
     "diff": 0,
     "tier": "C",
     "provider": "mattshumer",
@@ -2368,8 +2224,8 @@
     ]
   },
   {
-    "id": 149,
-    "rank": 149,
+    "id": 140,
+    "rank": 140,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -2384,8 +2240,8 @@
     ]
   },
   {
-    "id": 150,
-    "rank": 150,
+    "id": 141,
+    "rank": 141,
     "diff": 0,
     "tier": "C",
     "provider": "lordjia",
@@ -2400,8 +2256,8 @@
     ]
   },
   {
-    "id": 151,
-    "rank": 151,
+    "id": 142,
+    "rank": 142,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -2416,8 +2272,8 @@
     ]
   },
   {
-    "id": 152,
-    "rank": 152,
+    "id": 143,
+    "rank": 143,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -2432,8 +2288,8 @@
     ]
   },
   {
-    "id": 153,
-    "rank": 153,
+    "id": 144,
+    "rank": 144,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -2448,8 +2304,8 @@
     ]
   },
   {
-    "id": 154,
-    "rank": 154,
+    "id": 145,
+    "rank": 145,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -2464,8 +2320,8 @@
     ]
   },
   {
-    "id": 155,
-    "rank": 155,
+    "id": 146,
+    "rank": 146,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -2480,8 +2336,8 @@
     ]
   },
   {
-    "id": 156,
-    "rank": 156,
+    "id": 147,
+    "rank": 147,
     "diff": 0,
     "tier": "C",
     "provider": "PJMixers",
@@ -2496,8 +2352,8 @@
     ]
   },
   {
-    "id": 157,
-    "rank": 157,
+    "id": 148,
+    "rank": 148,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -2512,8 +2368,8 @@
     ]
   },
   {
-    "id": 158,
-    "rank": 158,
+    "id": 149,
+    "rank": 149,
     "diff": 0,
     "tier": "C",
     "provider": "DebateLabKIT",
@@ -2528,8 +2384,8 @@
     ]
   },
   {
-    "id": 159,
-    "rank": 159,
+    "id": 150,
+    "rank": 150,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -2544,24 +2400,8 @@
     ]
   },
   {
-    "id": 160,
-    "rank": 160,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-RRHF",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RRHF",
-    "avgPerf": 49.19,
-    "peakPerf": 51.6,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 161,
-    "rank": 161,
+    "id": 151,
+    "rank": 151,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -2576,8 +2416,8 @@
     ]
   },
   {
-    "id": 162,
-    "rank": 162,
+    "id": 152,
+    "rank": 152,
     "diff": 0,
     "tier": "C",
     "provider": "ZhangShenao",
@@ -2592,8 +2432,8 @@
     ]
   },
   {
-    "id": 163,
-    "rank": 163,
+    "id": 153,
+    "rank": 153,
     "diff": 0,
     "tier": "C",
     "provider": "UCLA-AGI",
@@ -2608,8 +2448,8 @@
     ]
   },
   {
-    "id": 164,
-    "rank": 164,
+    "id": 154,
+    "rank": 154,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -2624,8 +2464,8 @@
     ]
   },
   {
-    "id": 165,
-    "rank": 165,
+    "id": 155,
+    "rank": 155,
     "diff": 0,
     "tier": "C",
     "provider": "jebish7",
@@ -2640,8 +2480,8 @@
     ]
   },
   {
-    "id": 166,
-    "rank": 166,
+    "id": 156,
+    "rank": 156,
     "diff": 0,
     "tier": "C",
     "provider": "noname0202",
@@ -2656,24 +2496,8 @@
     ]
   },
   {
-    "id": 167,
-    "rank": 167,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-CPO",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-CPO",
-    "avgPerf": 49.02,
-    "peakPerf": 51.5,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 168,
-    "rank": 168,
+    "id": 157,
+    "rank": 157,
     "diff": 0,
     "tier": "C",
     "provider": "lightblue",
@@ -2688,8 +2512,8 @@
     ]
   },
   {
-    "id": 169,
-    "rank": 169,
+    "id": 158,
+    "rank": 158,
     "diff": 0,
     "tier": "C",
     "provider": "ArliAI",
@@ -2704,8 +2528,8 @@
     ]
   },
   {
-    "id": 170,
-    "rank": 170,
+    "id": 159,
+    "rank": 159,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -2720,8 +2544,8 @@
     ]
   },
   {
-    "id": 171,
-    "rank": 171,
+    "id": 160,
+    "rank": 160,
     "diff": 0,
     "tier": "C",
     "provider": "failspy",
@@ -2736,8 +2560,8 @@
     ]
   },
   {
-    "id": 172,
-    "rank": 172,
+    "id": 161,
+    "rank": 161,
     "diff": 0,
     "tier": "C",
     "provider": "khoantap",
@@ -2752,8 +2576,8 @@
     ]
   },
   {
-    "id": 173,
-    "rank": 173,
+    "id": 162,
+    "rank": 162,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -2768,8 +2592,8 @@
     ]
   },
   {
-    "id": 174,
-    "rank": 174,
+    "id": 163,
+    "rank": 163,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -2784,8 +2608,8 @@
     ]
   },
   {
-    "id": 175,
-    "rank": 175,
+    "id": 164,
+    "rank": 164,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -2800,8 +2624,8 @@
     ]
   },
   {
-    "id": 176,
-    "rank": 176,
+    "id": 165,
+    "rank": 165,
     "diff": 0,
     "tier": "C",
     "provider": "Locutusque",
@@ -2816,8 +2640,8 @@
     ]
   },
   {
-    "id": 177,
-    "rank": 177,
+    "id": 166,
+    "rank": 166,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -2832,8 +2656,8 @@
     ]
   },
   {
-    "id": 178,
-    "rank": 178,
+    "id": 167,
+    "rank": 167,
     "diff": 0,
     "tier": "C",
     "provider": "mkxu",
@@ -2848,8 +2672,8 @@
     ]
   },
   {
-    "id": 179,
-    "rank": 179,
+    "id": 168,
+    "rank": 168,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -2864,8 +2688,8 @@
     ]
   },
   {
-    "id": 180,
-    "rank": 180,
+    "id": 169,
+    "rank": 169,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -2880,24 +2704,8 @@
     ]
   },
   {
-    "id": 181,
-    "rank": 181,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-RRHF-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RRHF-v0.2",
-    "avgPerf": 48.52,
-    "peakPerf": 50.9,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 182,
-    "rank": 182,
+    "id": 170,
+    "rank": 170,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -2912,24 +2720,8 @@
     ]
   },
   {
-    "id": 183,
-    "rank": 183,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF-v0.2",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SLiC-HF-v0.2",
-    "avgPerf": 48.47,
-    "peakPerf": 50.9,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 184,
-    "rank": 184,
+    "id": 171,
+    "rank": 171,
     "diff": 0,
     "tier": "C",
     "provider": "UCLA-AGI",
@@ -2944,8 +2736,8 @@
     ]
   },
   {
-    "id": 185,
-    "rank": 185,
+    "id": 172,
+    "rank": 172,
     "diff": 0,
     "tier": "C",
     "provider": "lightblue",
@@ -2960,24 +2752,8 @@
     ]
   },
   {
-    "id": 186,
-    "rank": 186,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-SimPO",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-SimPO",
-    "avgPerf": 48.33,
-    "peakPerf": 50.7,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 187,
-    "rank": 187,
+    "id": 173,
+    "rank": 173,
     "diff": 0,
     "tier": "C",
     "provider": "lightblue",
@@ -2992,8 +2768,8 @@
     ]
   },
   {
-    "id": 188,
-    "rank": 188,
+    "id": 174,
+    "rank": 174,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -3008,40 +2784,8 @@
     ]
   },
   {
-    "id": 189,
-    "rank": 189,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-ORPO",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-ORPO",
-    "avgPerf": 48.25,
-    "peakPerf": 50.7,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 190,
-    "rank": 190,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-RDPO",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-RDPO",
-    "avgPerf": 48.21,
-    "peakPerf": 50.6,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 191,
-    "rank": 191,
+    "id": 175,
+    "rank": 175,
     "diff": 0,
     "tier": "C",
     "provider": "CarrotAI",
@@ -3056,40 +2800,8 @@
     ]
   },
   {
-    "id": 192,
-    "rank": 192,
-    "diff": 0,
-    "tier": "C",
-    "provider": "sethuiyer",
-    "model": "sethuiyer/Llama-3.1-8B-Experimental-1208-Instruct",
-    "fullName": "sethuiyer/Llama-3.1-8B-Experimental-1208-Instruct",
-    "avgPerf": 48.02,
-    "peakPerf": 50.4,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 193,
-    "rank": 193,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-DPO",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-DPO",
-    "avgPerf": 48,
-    "peakPerf": 50.4,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 194,
-    "rank": 194,
+    "id": 176,
+    "rank": 176,
     "diff": 0,
     "tier": "C",
     "provider": "NousResearch",
@@ -3104,8 +2816,8 @@
     ]
   },
   {
-    "id": 195,
-    "rank": 195,
+    "id": 177,
+    "rank": 177,
     "diff": 0,
     "tier": "C",
     "provider": "nhyha",
@@ -3120,8 +2832,8 @@
     ]
   },
   {
-    "id": 196,
-    "rank": 196,
+    "id": 178,
+    "rank": 178,
     "diff": 0,
     "tier": "C",
     "provider": "Edgerunners",
@@ -3136,8 +2848,8 @@
     ]
   },
   {
-    "id": 197,
-    "rank": 197,
+    "id": 179,
+    "rank": 179,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -3152,24 +2864,8 @@
     ]
   },
   {
-    "id": 198,
-    "rank": 198,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Instruct-8B-KTO",
-    "fullName": "princeton-nlp/Llama-3-Instruct-8B-KTO",
-    "avgPerf": 47.83,
-    "peakPerf": 50.2,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 199,
-    "rank": 199,
+    "id": 180,
+    "rank": 180,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -3184,8 +2880,8 @@
     ]
   },
   {
-    "id": 200,
-    "rank": 200,
+    "id": 181,
+    "rank": 181,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -3200,8 +2896,8 @@
     ]
   },
   {
-    "id": 201,
-    "rank": 201,
+    "id": 182,
+    "rank": 182,
     "diff": 0,
     "tier": "C",
     "provider": "ZeroXClem",
@@ -3216,8 +2912,8 @@
     ]
   },
   {
-    "id": 202,
-    "rank": 202,
+    "id": 183,
+    "rank": 183,
     "diff": 0,
     "tier": "C",
     "provider": "NAPS-ai",
@@ -3232,8 +2928,8 @@
     ]
   },
   {
-    "id": 203,
-    "rank": 203,
+    "id": 184,
+    "rank": 184,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -3248,8 +2944,8 @@
     ]
   },
   {
-    "id": 204,
-    "rank": 204,
+    "id": 185,
+    "rank": 185,
     "diff": 0,
     "tier": "C",
     "provider": "Nekochu",
@@ -3264,8 +2960,8 @@
     ]
   },
   {
-    "id": 205,
-    "rank": 205,
+    "id": 186,
+    "rank": 186,
     "diff": 0,
     "tier": "C",
     "provider": "Joseph717171",
@@ -3280,8 +2976,8 @@
     ]
   },
   {
-    "id": 206,
-    "rank": 206,
+    "id": 187,
+    "rank": 187,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -3296,8 +2992,8 @@
     ]
   },
   {
-    "id": 207,
-    "rank": 207,
+    "id": 188,
+    "rank": 188,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -3312,8 +3008,8 @@
     ]
   },
   {
-    "id": 208,
-    "rank": 208,
+    "id": 189,
+    "rank": 189,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -3328,8 +3024,8 @@
     ]
   },
   {
-    "id": 209,
-    "rank": 209,
+    "id": 190,
+    "rank": 190,
     "diff": 0,
     "tier": "C",
     "provider": "mlabonne",
@@ -3344,24 +3040,8 @@
     ]
   },
   {
-    "id": 210,
-    "rank": 210,
-    "diff": 0,
-    "tier": "C",
-    "provider": "refuelai",
-    "model": "refuelai/Llama-3-Refueled",
-    "fullName": "refuelai/Llama-3-Refueled",
-    "avgPerf": 47.35,
-    "peakPerf": 49.7,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 211,
-    "rank": 211,
+    "id": 191,
+    "rank": 191,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -3376,8 +3056,8 @@
     ]
   },
   {
-    "id": 212,
-    "rank": 212,
+    "id": 192,
+    "rank": 192,
     "diff": 0,
     "tier": "C",
     "provider": "UCLA-AGI",
@@ -3392,8 +3072,8 @@
     ]
   },
   {
-    "id": 213,
-    "rank": 213,
+    "id": 193,
+    "rank": 193,
     "diff": 0,
     "tier": "C",
     "provider": "chujiezheng",
@@ -3408,8 +3088,8 @@
     ]
   },
   {
-    "id": 214,
-    "rank": 214,
+    "id": 194,
+    "rank": 194,
     "diff": 0,
     "tier": "C",
     "provider": "Jimmy19991222",
@@ -3424,8 +3104,8 @@
     ]
   },
   {
-    "id": 215,
-    "rank": 215,
+    "id": 195,
+    "rank": 195,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -3440,24 +3120,8 @@
     ]
   },
   {
-    "id": 216,
-    "rank": 216,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-8B-ProLong-64k-Instruct",
-    "fullName": "princeton-nlp/Llama-3-8B-ProLong-64k-Instruct",
-    "avgPerf": 47.02,
-    "peakPerf": 49.4,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 217,
-    "rank": 217,
+    "id": 196,
+    "rank": 196,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -3472,8 +3136,8 @@
     ]
   },
   {
-    "id": 218,
-    "rank": 218,
+    "id": 197,
+    "rank": 197,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -3488,8 +3152,8 @@
     ]
   },
   {
-    "id": 219,
-    "rank": 219,
+    "id": 198,
+    "rank": 198,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -3504,8 +3168,8 @@
     ]
   },
   {
-    "id": 220,
-    "rank": 220,
+    "id": 199,
+    "rank": 199,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -3520,8 +3184,8 @@
     ]
   },
   {
-    "id": 221,
-    "rank": 221,
+    "id": 200,
+    "rank": 200,
     "diff": 0,
     "tier": "C",
     "provider": "ZeroXClem",
@@ -3536,8 +3200,8 @@
     ]
   },
   {
-    "id": 222,
-    "rank": 222,
+    "id": 201,
+    "rank": 201,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -3552,8 +3216,8 @@
     ]
   },
   {
-    "id": 223,
-    "rank": 223,
+    "id": 202,
+    "rank": 202,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI2",
@@ -3568,8 +3232,8 @@
     ]
   },
   {
-    "id": 224,
-    "rank": 224,
+    "id": 203,
+    "rank": 203,
     "diff": 0,
     "tier": "C",
     "provider": "Locutusque",
@@ -3584,8 +3248,8 @@
     ]
   },
   {
-    "id": 225,
-    "rank": 225,
+    "id": 204,
+    "rank": 204,
     "diff": 0,
     "tier": "C",
     "provider": "PJMixers-Dev",
@@ -3600,8 +3264,8 @@
     ]
   },
   {
-    "id": 226,
-    "rank": 226,
+    "id": 205,
+    "rank": 205,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -3616,8 +3280,8 @@
     ]
   },
   {
-    "id": 227,
-    "rank": 227,
+    "id": 206,
+    "rank": 206,
     "diff": 0,
     "tier": "C",
     "provider": "allenai",
@@ -3632,8 +3296,8 @@
     ]
   },
   {
-    "id": 228,
-    "rank": 228,
+    "id": 207,
+    "rank": 207,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -3648,8 +3312,8 @@
     ]
   },
   {
-    "id": 229,
-    "rank": 229,
+    "id": 208,
+    "rank": 208,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -3664,8 +3328,8 @@
     ]
   },
   {
-    "id": 230,
-    "rank": 230,
+    "id": 209,
+    "rank": 209,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -3680,8 +3344,8 @@
     ]
   },
   {
-    "id": 231,
-    "rank": 231,
+    "id": 210,
+    "rank": 210,
     "diff": 0,
     "tier": "C",
     "provider": "Triangle104",
@@ -3696,8 +3360,8 @@
     ]
   },
   {
-    "id": 232,
-    "rank": 232,
+    "id": 211,
+    "rank": 211,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -3712,8 +3376,8 @@
     ]
   },
   {
-    "id": 233,
-    "rank": 233,
+    "id": 212,
+    "rank": 212,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -3728,8 +3392,8 @@
     ]
   },
   {
-    "id": 234,
-    "rank": 234,
+    "id": 213,
+    "rank": 213,
     "diff": 0,
     "tier": "C",
     "provider": "ehristoforu",
@@ -3744,8 +3408,8 @@
     ]
   },
   {
-    "id": 235,
-    "rank": 235,
+    "id": 214,
+    "rank": 214,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -3760,8 +3424,8 @@
     ]
   },
   {
-    "id": 236,
-    "rank": 236,
+    "id": 215,
+    "rank": 215,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -3776,8 +3440,8 @@
     ]
   },
   {
-    "id": 237,
-    "rank": 237,
+    "id": 216,
+    "rank": 216,
     "diff": 0,
     "tier": "C",
     "provider": "NousResearch",
@@ -3792,24 +3456,8 @@
     ]
   },
   {
-    "id": 238,
-    "rank": 238,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
-    "fullName": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
-    "avgPerf": 44.82,
-    "peakPerf": 47.1,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 239,
-    "rank": 239,
+    "id": 217,
+    "rank": 217,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -3824,8 +3472,8 @@
     ]
   },
   {
-    "id": 240,
-    "rank": 240,
+    "id": 218,
+    "rank": 218,
     "diff": 0,
     "tier": "C",
     "provider": "dnhkng",
@@ -3840,8 +3488,8 @@
     ]
   },
   {
-    "id": 241,
-    "rank": 241,
+    "id": 219,
+    "rank": 219,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -3856,8 +3504,8 @@
     ]
   },
   {
-    "id": 242,
-    "rank": 242,
+    "id": 220,
+    "rank": 220,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -3872,8 +3520,8 @@
     ]
   },
   {
-    "id": 243,
-    "rank": 243,
+    "id": 221,
+    "rank": 221,
     "diff": 0,
     "tier": "C",
     "provider": "PJMixers-Dev",
@@ -3888,8 +3536,8 @@
     ]
   },
   {
-    "id": 244,
-    "rank": 244,
+    "id": 222,
+    "rank": 222,
     "diff": 0,
     "tier": "C",
     "provider": "TheDrummer",
@@ -3904,8 +3552,8 @@
     ]
   },
   {
-    "id": 245,
-    "rank": 245,
+    "id": 223,
+    "rank": 223,
     "diff": 0,
     "tier": "C",
     "provider": "Columbia-NLP",
@@ -3920,8 +3568,8 @@
     ]
   },
   {
-    "id": 246,
-    "rank": 246,
+    "id": 224,
+    "rank": 224,
     "diff": 0,
     "tier": "C",
     "provider": "PJMixers-Dev",
@@ -3936,8 +3584,8 @@
     ]
   },
   {
-    "id": 247,
-    "rank": 247,
+    "id": 225,
+    "rank": 225,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -3952,8 +3600,8 @@
     ]
   },
   {
-    "id": 248,
-    "rank": 248,
+    "id": 226,
+    "rank": 226,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -3968,8 +3616,8 @@
     ]
   },
   {
-    "id": 249,
-    "rank": 249,
+    "id": 227,
+    "rank": 227,
     "diff": 0,
     "tier": "C",
     "provider": "Xkev",
@@ -3984,8 +3632,8 @@
     ]
   },
   {
-    "id": 250,
-    "rank": 250,
+    "id": 228,
+    "rank": 228,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -4000,8 +3648,8 @@
     ]
   },
   {
-    "id": 251,
-    "rank": 251,
+    "id": 229,
+    "rank": 229,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -4016,8 +3664,8 @@
     ]
   },
   {
-    "id": 252,
-    "rank": 252,
+    "id": 230,
+    "rank": 230,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4032,8 +3680,8 @@
     ]
   },
   {
-    "id": 253,
-    "rank": 253,
+    "id": 231,
+    "rank": 231,
     "diff": 0,
     "tier": "C",
     "provider": "Etherll",
@@ -4048,8 +3696,8 @@
     ]
   },
   {
-    "id": 254,
-    "rank": 254,
+    "id": 232,
+    "rank": 232,
     "diff": 0,
     "tier": "C",
     "provider": "Nekochu",
@@ -4064,40 +3712,8 @@
     ]
   },
   {
-    "id": 255,
-    "rank": 255,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-8B-ProLong-512k-Base",
-    "fullName": "princeton-nlp/Llama-3-8B-ProLong-512k-Base",
-    "avgPerf": 44.28,
-    "peakPerf": 46.5,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 256,
-    "rank": 256,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-8B-ProLong-64k-Base",
-    "fullName": "princeton-nlp/Llama-3-8B-ProLong-64k-Base",
-    "avgPerf": 44.22,
-    "peakPerf": 46.4,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 257,
-    "rank": 257,
+    "id": 233,
+    "rank": 233,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4112,8 +3728,8 @@
     ]
   },
   {
-    "id": 258,
-    "rank": 258,
+    "id": 234,
+    "rank": 234,
     "diff": 0,
     "tier": "C",
     "provider": "BlackBeenie",
@@ -4128,8 +3744,8 @@
     ]
   },
   {
-    "id": 259,
-    "rank": 259,
+    "id": 235,
+    "rank": 235,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -4144,8 +3760,8 @@
     ]
   },
   {
-    "id": 260,
-    "rank": 260,
+    "id": 236,
+    "rank": 236,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -4160,8 +3776,8 @@
     ]
   },
   {
-    "id": 261,
-    "rank": 261,
+    "id": 237,
+    "rank": 237,
     "diff": 0,
     "tier": "C",
     "provider": "lightblue",
@@ -4176,8 +3792,8 @@
     ]
   },
   {
-    "id": 262,
-    "rank": 262,
+    "id": 238,
+    "rank": 238,
     "diff": 0,
     "tier": "C",
     "provider": "Groq",
@@ -4192,8 +3808,8 @@
     ]
   },
   {
-    "id": 263,
-    "rank": 263,
+    "id": 239,
+    "rank": 239,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4208,8 +3824,8 @@
     ]
   },
   {
-    "id": 264,
-    "rank": 264,
+    "id": 240,
+    "rank": 240,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4224,8 +3840,8 @@
     ]
   },
   {
-    "id": 265,
-    "rank": 265,
+    "id": 241,
+    "rank": 241,
     "diff": 0,
     "tier": "C",
     "provider": "BlackBeenie",
@@ -4240,8 +3856,8 @@
     ]
   },
   {
-    "id": 266,
-    "rank": 266,
+    "id": 242,
+    "rank": 242,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4256,8 +3872,8 @@
     ]
   },
   {
-    "id": 267,
-    "rank": 267,
+    "id": 243,
+    "rank": 243,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4272,8 +3888,8 @@
     ]
   },
   {
-    "id": 268,
-    "rank": 268,
+    "id": 244,
+    "rank": 244,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -4288,8 +3904,8 @@
     ]
   },
   {
-    "id": 269,
-    "rank": 269,
+    "id": 245,
+    "rank": 245,
     "diff": 0,
     "tier": "C",
     "provider": "nbeerbower",
@@ -4304,8 +3920,8 @@
     ]
   },
   {
-    "id": 270,
-    "rank": 270,
+    "id": 246,
+    "rank": 246,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4320,8 +3936,8 @@
     ]
   },
   {
-    "id": 271,
-    "rank": 271,
+    "id": 247,
+    "rank": 247,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -4336,8 +3952,8 @@
     ]
   },
   {
-    "id": 272,
-    "rank": 272,
+    "id": 248,
+    "rank": 248,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -4352,8 +3968,8 @@
     ]
   },
   {
-    "id": 273,
-    "rank": 273,
+    "id": 249,
+    "rank": 249,
     "diff": 0,
     "tier": "C",
     "provider": "Kukedlc",
@@ -4368,8 +3984,8 @@
     ]
   },
   {
-    "id": 274,
-    "rank": 274,
+    "id": 250,
+    "rank": 250,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -4384,8 +4000,8 @@
     ]
   },
   {
-    "id": 275,
-    "rank": 275,
+    "id": 251,
+    "rank": 251,
     "diff": 0,
     "tier": "C",
     "provider": "Lyte",
@@ -4400,8 +4016,8 @@
     ]
   },
   {
-    "id": 276,
-    "rank": 276,
+    "id": 252,
+    "rank": 252,
     "diff": 0,
     "tier": "C",
     "provider": "maldv",
@@ -4416,8 +4032,8 @@
     ]
   },
   {
-    "id": 277,
-    "rank": 277,
+    "id": 253,
+    "rank": 253,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -4432,8 +4048,8 @@
     ]
   },
   {
-    "id": 278,
-    "rank": 278,
+    "id": 254,
+    "rank": 254,
     "diff": 0,
     "tier": "C",
     "provider": "khulaifi95",
@@ -4448,8 +4064,8 @@
     ]
   },
   {
-    "id": 279,
-    "rank": 279,
+    "id": 255,
+    "rank": 255,
     "diff": 0,
     "tier": "C",
     "provider": "maldv",
@@ -4464,24 +4080,8 @@
     ]
   },
   {
-    "id": 280,
-    "rank": 280,
-    "diff": 0,
-    "tier": "C",
-    "provider": "prithivMLmods",
-    "model": "prithivMLmods/Llama-3.1-8B-Open-SFT",
-    "fullName": "prithivMLmods/Llama-3.1-8B-Open-SFT",
-    "avgPerf": 42.98,
-    "peakPerf": 45.1,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 281,
-    "rank": 281,
+    "id": 256,
+    "rank": 256,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI2",
@@ -4496,8 +4096,8 @@
     ]
   },
   {
-    "id": 282,
-    "rank": 282,
+    "id": 257,
+    "rank": 257,
     "diff": 0,
     "tier": "C",
     "provider": "gaverfraxz",
@@ -4512,8 +4112,8 @@
     ]
   },
   {
-    "id": 283,
-    "rank": 283,
+    "id": 258,
+    "rank": 258,
     "diff": 0,
     "tier": "C",
     "provider": "athirdpath",
@@ -4528,24 +4128,8 @@
     ]
   },
   {
-    "id": 284,
-    "rank": 284,
-    "diff": 0,
-    "tier": "C",
-    "provider": "prithivMLmods",
-    "model": "prithivMLmods/Deepthink-Llama-3-8B-Preview",
-    "fullName": "prithivMLmods/Deepthink-Llama-3-8B-Preview",
-    "avgPerf": 42.81,
-    "peakPerf": 45,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 285,
-    "rank": 285,
+    "id": 259,
+    "rank": 259,
     "diff": 0,
     "tier": "C",
     "provider": "maldv",
@@ -4560,8 +4144,8 @@
     ]
   },
   {
-    "id": 286,
-    "rank": 286,
+    "id": 260,
+    "rank": 260,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -4576,8 +4160,8 @@
     ]
   },
   {
-    "id": 287,
-    "rank": 287,
+    "id": 261,
+    "rank": 261,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -4592,8 +4176,8 @@
     ]
   },
   {
-    "id": 288,
-    "rank": 288,
+    "id": 262,
+    "rank": 262,
     "diff": 0,
     "tier": "C",
     "provider": "Skywork",
@@ -4608,8 +4192,8 @@
     ]
   },
   {
-    "id": 289,
-    "rank": 289,
+    "id": 263,
+    "rank": 263,
     "diff": 0,
     "tier": "C",
     "provider": "Columbia-NLP",
@@ -4624,8 +4208,8 @@
     ]
   },
   {
-    "id": 290,
-    "rank": 290,
+    "id": 264,
+    "rank": 264,
     "diff": 0,
     "tier": "C",
     "provider": "mlabonne",
@@ -4640,8 +4224,8 @@
     ]
   },
   {
-    "id": 291,
-    "rank": 291,
+    "id": 265,
+    "rank": 265,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -4656,8 +4240,8 @@
     ]
   },
   {
-    "id": 292,
-    "rank": 292,
+    "id": 266,
+    "rank": 266,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -4672,8 +4256,8 @@
     ]
   },
   {
-    "id": 293,
-    "rank": 293,
+    "id": 267,
+    "rank": 267,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -4688,8 +4272,8 @@
     ]
   },
   {
-    "id": 294,
-    "rank": 294,
+    "id": 268,
+    "rank": 268,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -4704,8 +4288,8 @@
     ]
   },
   {
-    "id": 295,
-    "rank": 295,
+    "id": 269,
+    "rank": 269,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4720,8 +4304,8 @@
     ]
   },
   {
-    "id": 296,
-    "rank": 296,
+    "id": 270,
+    "rank": 270,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -4736,8 +4320,8 @@
     ]
   },
   {
-    "id": 297,
-    "rank": 297,
+    "id": 271,
+    "rank": 271,
     "diff": 0,
     "tier": "C",
     "provider": "Locutusque",
@@ -4752,8 +4336,8 @@
     ]
   },
   {
-    "id": 298,
-    "rank": 298,
+    "id": 272,
+    "rank": 272,
     "diff": 0,
     "tier": "C",
     "provider": "grimjim",
@@ -4768,8 +4352,8 @@
     ]
   },
   {
-    "id": 299,
-    "rank": 299,
+    "id": 273,
+    "rank": 273,
     "diff": 0,
     "tier": "C",
     "provider": "VIRNECT",
@@ -4784,8 +4368,8 @@
     ]
   },
   {
-    "id": 300,
-    "rank": 300,
+    "id": 274,
+    "rank": 274,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4800,8 +4384,8 @@
     ]
   },
   {
-    "id": 301,
-    "rank": 301,
+    "id": 275,
+    "rank": 275,
     "diff": 0,
     "tier": "C",
     "provider": "MLP-KTLim",
@@ -4816,8 +4400,8 @@
     ]
   },
   {
-    "id": 302,
-    "rank": 302,
+    "id": 276,
+    "rank": 276,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI2",
@@ -4832,8 +4416,8 @@
     ]
   },
   {
-    "id": 303,
-    "rank": 303,
+    "id": 277,
+    "rank": 277,
     "diff": 0,
     "tier": "C",
     "provider": "ehristoforu",
@@ -4848,8 +4432,8 @@
     ]
   },
   {
-    "id": 304,
-    "rank": 304,
+    "id": 278,
+    "rank": 278,
     "diff": 0,
     "tier": "C",
     "provider": "maldv",
@@ -4864,8 +4448,8 @@
     ]
   },
   {
-    "id": 305,
-    "rank": 305,
+    "id": 279,
+    "rank": 279,
     "diff": 0,
     "tier": "C",
     "provider": "CarrotAI",
@@ -4880,8 +4464,8 @@
     ]
   },
   {
-    "id": 306,
-    "rank": 306,
+    "id": 280,
+    "rank": 280,
     "diff": 0,
     "tier": "C",
     "provider": "lightblue",
@@ -4896,8 +4480,8 @@
     ]
   },
   {
-    "id": 307,
-    "rank": 307,
+    "id": 281,
+    "rank": 281,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4912,8 +4496,8 @@
     ]
   },
   {
-    "id": 308,
-    "rank": 308,
+    "id": 282,
+    "rank": 282,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -4928,8 +4512,8 @@
     ]
   },
   {
-    "id": 309,
-    "rank": 309,
+    "id": 283,
+    "rank": 283,
     "diff": 0,
     "tier": "C",
     "provider": "VIRNECT",
@@ -4944,8 +4528,8 @@
     ]
   },
   {
-    "id": 310,
-    "rank": 310,
+    "id": 284,
+    "rank": 284,
     "diff": 0,
     "tier": "C",
     "provider": "KingNish",
@@ -4960,8 +4544,8 @@
     ]
   },
   {
-    "id": 311,
-    "rank": 311,
+    "id": 285,
+    "rank": 285,
     "diff": 0,
     "tier": "C",
     "provider": "MoonRide",
@@ -4976,8 +4560,8 @@
     ]
   },
   {
-    "id": 312,
-    "rank": 312,
+    "id": 286,
+    "rank": 286,
     "diff": 0,
     "tier": "C",
     "provider": "mlabonne",
@@ -4992,8 +4576,8 @@
     ]
   },
   {
-    "id": 313,
-    "rank": 313,
+    "id": 287,
+    "rank": 287,
     "diff": 0,
     "tier": "C",
     "provider": "DavidAU",
@@ -5008,8 +4592,8 @@
     ]
   },
   {
-    "id": 314,
-    "rank": 314,
+    "id": 288,
+    "rank": 288,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -5024,8 +4608,8 @@
     ]
   },
   {
-    "id": 315,
-    "rank": 315,
+    "id": 289,
+    "rank": 289,
     "diff": 0,
     "tier": "C",
     "provider": "cloudyu",
@@ -5040,8 +4624,8 @@
     ]
   },
   {
-    "id": 316,
-    "rank": 316,
+    "id": 290,
+    "rank": 290,
     "diff": 0,
     "tier": "C",
     "provider": "migtissera",
@@ -5056,8 +4640,8 @@
     ]
   },
   {
-    "id": 317,
-    "rank": 317,
+    "id": 291,
+    "rank": 291,
     "diff": 0,
     "tier": "C",
     "provider": "Hastagaras",
@@ -5072,8 +4656,8 @@
     ]
   },
   {
-    "id": 318,
-    "rank": 318,
+    "id": 292,
+    "rank": 292,
     "diff": 0,
     "tier": "C",
     "provider": "ContactDoctor",
@@ -5088,24 +4672,8 @@
     ]
   },
   {
-    "id": 319,
-    "rank": 319,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-SimPO",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-SimPO",
-    "avgPerf": 40.56,
-    "peakPerf": 42.6,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 320,
-    "rank": 320,
+    "id": 293,
+    "rank": 293,
     "diff": 0,
     "tier": "C",
     "provider": "Columbia-NLP",
@@ -5120,8 +4688,8 @@
     ]
   },
   {
-    "id": 321,
-    "rank": 321,
+    "id": 294,
+    "rank": 294,
     "diff": 0,
     "tier": "C",
     "provider": "argilla-warehouse",
@@ -5136,8 +4704,8 @@
     ]
   },
   {
-    "id": 322,
-    "rank": 322,
+    "id": 295,
+    "rank": 295,
     "diff": 0,
     "tier": "C",
     "provider": "lemon07r",
@@ -5152,8 +4720,8 @@
     ]
   },
   {
-    "id": 323,
-    "rank": 323,
+    "id": 296,
+    "rank": 296,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -5168,8 +4736,8 @@
     ]
   },
   {
-    "id": 324,
-    "rank": 324,
+    "id": 297,
+    "rank": 297,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -5184,8 +4752,8 @@
     ]
   },
   {
-    "id": 325,
-    "rank": 325,
+    "id": 298,
+    "rank": 298,
     "diff": 0,
     "tier": "C",
     "provider": "mkxu",
@@ -5200,24 +4768,8 @@
     ]
   },
   {
-    "id": 326,
-    "rank": 326,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-SLiC-HF",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-SLiC-HF",
-    "avgPerf": 40.33,
-    "peakPerf": 42.3,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 327,
-    "rank": 327,
+    "id": 299,
+    "rank": 299,
     "diff": 0,
     "tier": "C",
     "provider": "PJMixers-Dev",
@@ -5232,8 +4784,8 @@
     ]
   },
   {
-    "id": 328,
-    "rank": 328,
+    "id": 300,
+    "rank": 300,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -5248,8 +4800,8 @@
     ]
   },
   {
-    "id": 329,
-    "rank": 329,
+    "id": 301,
+    "rank": 301,
     "diff": 0,
     "tier": "C",
     "provider": "Etherll",
@@ -5264,8 +4816,8 @@
     ]
   },
   {
-    "id": 330,
-    "rank": 330,
+    "id": 302,
+    "rank": 302,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -5280,8 +4832,8 @@
     ]
   },
   {
-    "id": 331,
-    "rank": 331,
+    "id": 303,
+    "rank": 303,
     "diff": 0,
     "tier": "C",
     "provider": "BlackBeenie",
@@ -5296,8 +4848,8 @@
     ]
   },
   {
-    "id": 332,
-    "rank": 332,
+    "id": 304,
+    "rank": 304,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5312,8 +4864,8 @@
     ]
   },
   {
-    "id": 333,
-    "rank": 333,
+    "id": 305,
+    "rank": 305,
     "diff": 0,
     "tier": "C",
     "provider": "lemon07r",
@@ -5328,8 +4880,8 @@
     ]
   },
   {
-    "id": 334,
-    "rank": 334,
+    "id": 306,
+    "rank": 306,
     "diff": 0,
     "tier": "C",
     "provider": "chargoddard",
@@ -5344,8 +4896,8 @@
     ]
   },
   {
-    "id": 335,
-    "rank": 335,
+    "id": 307,
+    "rank": 307,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5360,40 +4912,8 @@
     ]
   },
   {
-    "id": 336,
-    "rank": 336,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-ORPO",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-ORPO",
-    "avgPerf": 39.36,
-    "peakPerf": 41.3,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 337,
-    "rank": 337,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
-    "fullName": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
-    "avgPerf": 39.3,
-    "peakPerf": 41.3,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 338,
-    "rank": 338,
+    "id": 308,
+    "rank": 308,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -5408,8 +4928,8 @@
     ]
   },
   {
-    "id": 339,
-    "rank": 339,
+    "id": 309,
+    "rank": 309,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -5424,8 +4944,8 @@
     ]
   },
   {
-    "id": 340,
-    "rank": 340,
+    "id": 310,
+    "rank": 310,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -5440,8 +4960,8 @@
     ]
   },
   {
-    "id": 341,
-    "rank": 341,
+    "id": 311,
+    "rank": 311,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -5456,8 +4976,8 @@
     ]
   },
   {
-    "id": 342,
-    "rank": 342,
+    "id": 312,
+    "rank": 312,
     "diff": 0,
     "tier": "C",
     "provider": "failspy",
@@ -5472,24 +4992,8 @@
     ]
   },
   {
-    "id": 343,
-    "rank": 343,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-RDPO",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-RDPO",
-    "avgPerf": 39.1,
-    "peakPerf": 41.1,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 344,
-    "rank": 344,
+    "id": 313,
+    "rank": 313,
     "diff": 0,
     "tier": "C",
     "provider": "SicariusSicariiStuff",
@@ -5504,8 +5008,8 @@
     ]
   },
   {
-    "id": 345,
-    "rank": 345,
+    "id": 314,
+    "rank": 314,
     "diff": 0,
     "tier": "C",
     "provider": "DavidAU",
@@ -5520,8 +5024,8 @@
     ]
   },
   {
-    "id": 346,
-    "rank": 346,
+    "id": 315,
+    "rank": 315,
     "diff": 0,
     "tier": "C",
     "provider": "abacusai",
@@ -5536,8 +5040,8 @@
     ]
   },
   {
-    "id": 347,
-    "rank": 347,
+    "id": 316,
+    "rank": 316,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5552,8 +5056,8 @@
     ]
   },
   {
-    "id": 348,
-    "rank": 348,
+    "id": 317,
+    "rank": 317,
     "diff": 0,
     "tier": "C",
     "provider": "Bllossom",
@@ -5568,8 +5072,8 @@
     ]
   },
   {
-    "id": 349,
-    "rank": 349,
+    "id": 318,
+    "rank": 318,
     "diff": 0,
     "tier": "C",
     "provider": "cloudyu",
@@ -5584,8 +5088,8 @@
     ]
   },
   {
-    "id": 350,
-    "rank": 350,
+    "id": 319,
+    "rank": 319,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -5600,8 +5104,8 @@
     ]
   },
   {
-    "id": 351,
-    "rank": 351,
+    "id": 320,
+    "rank": 320,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5616,8 +5120,8 @@
     ]
   },
   {
-    "id": 352,
-    "rank": 352,
+    "id": 321,
+    "rank": 321,
     "diff": 0,
     "tier": "C",
     "provider": "DavidAU",
@@ -5632,8 +5136,8 @@
     ]
   },
   {
-    "id": 353,
-    "rank": 353,
+    "id": 322,
+    "rank": 322,
     "diff": 0,
     "tier": "C",
     "provider": "VIRNECT",
@@ -5648,40 +5152,8 @@
     ]
   },
   {
-    "id": 354,
-    "rank": 354,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-IPO",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-IPO",
-    "avgPerf": 38.24,
-    "peakPerf": 40.2,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 355,
-    "rank": 355,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-KTO",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-KTO",
-    "avgPerf": 38.08,
-    "peakPerf": 40,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 356,
-    "rank": 356,
+    "id": 323,
+    "rank": 323,
     "diff": 0,
     "tier": "C",
     "provider": "Salesforce",
@@ -5696,8 +5168,8 @@
     ]
   },
   {
-    "id": 357,
-    "rank": 357,
+    "id": 324,
+    "rank": 324,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5712,8 +5184,8 @@
     ]
   },
   {
-    "id": 358,
-    "rank": 358,
+    "id": 325,
+    "rank": 325,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -5728,8 +5200,8 @@
     ]
   },
   {
-    "id": 359,
-    "rank": 359,
+    "id": 326,
+    "rank": 326,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5744,8 +5216,8 @@
     ]
   },
   {
-    "id": 360,
-    "rank": 360,
+    "id": 327,
+    "rank": 327,
     "diff": 0,
     "tier": "C",
     "provider": "DavidAU",
@@ -5760,8 +5232,8 @@
     ]
   },
   {
-    "id": 361,
-    "rank": 361,
+    "id": 328,
+    "rank": 328,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -5776,8 +5248,8 @@
     ]
   },
   {
-    "id": 362,
-    "rank": 362,
+    "id": 329,
+    "rank": 329,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -5792,8 +5264,8 @@
     ]
   },
   {
-    "id": 363,
-    "rank": 363,
+    "id": 330,
+    "rank": 330,
     "diff": 0,
     "tier": "C",
     "provider": "BlackBeenie",
@@ -5808,8 +5280,8 @@
     ]
   },
   {
-    "id": 364,
-    "rank": 364,
+    "id": 331,
+    "rank": 331,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -5824,24 +5296,8 @@
     ]
   },
   {
-    "id": 365,
-    "rank": 365,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-DPO",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-DPO",
-    "avgPerf": 37.53,
-    "peakPerf": 39.4,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 366,
-    "rank": 366,
+    "id": 332,
+    "rank": 332,
     "diff": 0,
     "tier": "C",
     "provider": "dfurman",
@@ -5856,8 +5312,8 @@
     ]
   },
   {
-    "id": 367,
-    "rank": 367,
+    "id": 333,
+    "rank": 333,
     "diff": 0,
     "tier": "C",
     "provider": "gradientai",
@@ -5872,8 +5328,8 @@
     ]
   },
   {
-    "id": 368,
-    "rank": 368,
+    "id": 334,
+    "rank": 334,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5888,8 +5344,8 @@
     ]
   },
   {
-    "id": 369,
-    "rank": 369,
+    "id": 335,
+    "rank": 335,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5904,8 +5360,8 @@
     ]
   },
   {
-    "id": 370,
-    "rank": 370,
+    "id": 336,
+    "rank": 336,
     "diff": 0,
     "tier": "C",
     "provider": "Enno-Ai",
@@ -5920,8 +5376,8 @@
     ]
   },
   {
-    "id": 371,
-    "rank": 371,
+    "id": 337,
+    "rank": 337,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -5936,8 +5392,8 @@
     ]
   },
   {
-    "id": 372,
-    "rank": 372,
+    "id": 338,
+    "rank": 338,
     "diff": 0,
     "tier": "C",
     "provider": "jebish7",
@@ -5952,8 +5408,8 @@
     ]
   },
   {
-    "id": 373,
-    "rank": 373,
+    "id": 339,
+    "rank": 339,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -5968,8 +5424,8 @@
     ]
   },
   {
-    "id": 374,
-    "rank": 374,
+    "id": 340,
+    "rank": 340,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -5984,8 +5440,8 @@
     ]
   },
   {
-    "id": 375,
-    "rank": 375,
+    "id": 341,
+    "rank": 341,
     "diff": 0,
     "tier": "C",
     "provider": "kms7530",
@@ -6000,8 +5456,8 @@
     ]
   },
   {
-    "id": 376,
-    "rank": 376,
+    "id": 342,
+    "rank": 342,
     "diff": 0,
     "tier": "C",
     "provider": "Magpie-Align",
@@ -6016,8 +5472,8 @@
     ]
   },
   {
-    "id": 377,
-    "rank": 377,
+    "id": 343,
+    "rank": 343,
     "diff": 0,
     "tier": "C",
     "provider": "collaiborateorg",
@@ -6032,8 +5488,8 @@
     ]
   },
   {
-    "id": 378,
-    "rank": 378,
+    "id": 344,
+    "rank": 344,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -6048,8 +5504,8 @@
     ]
   },
   {
-    "id": 379,
-    "rank": 379,
+    "id": 345,
+    "rank": 345,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -6064,8 +5520,8 @@
     ]
   },
   {
-    "id": 380,
-    "rank": 380,
+    "id": 346,
+    "rank": 346,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -6080,8 +5536,8 @@
     ]
   },
   {
-    "id": 381,
-    "rank": 381,
+    "id": 347,
+    "rank": 347,
     "diff": 0,
     "tier": "C",
     "provider": "Kukedlc",
@@ -6096,8 +5552,8 @@
     ]
   },
   {
-    "id": 382,
-    "rank": 382,
+    "id": 348,
+    "rank": 348,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -6112,8 +5568,8 @@
     ]
   },
   {
-    "id": 383,
-    "rank": 383,
+    "id": 349,
+    "rank": 349,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -6128,24 +5584,8 @@
     ]
   },
   {
-    "id": 384,
-    "rank": 384,
-    "diff": 0,
-    "tier": "C",
-    "provider": "riaz",
-    "model": "riaz/FineLlama-3.1-8B",
-    "fullName": "riaz/FineLlama-3.1-8B",
-    "avgPerf": 36.07,
-    "peakPerf": 37.9,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 385,
-    "rank": 385,
+    "id": 350,
+    "rank": 350,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -6160,8 +5600,8 @@
     ]
   },
   {
-    "id": 386,
-    "rank": 386,
+    "id": 351,
+    "rank": 351,
     "diff": 0,
     "tier": "C",
     "provider": "Triangle104",
@@ -6176,8 +5616,8 @@
     ]
   },
   {
-    "id": 387,
-    "rank": 387,
+    "id": 352,
+    "rank": 352,
     "diff": 0,
     "tier": "C",
     "provider": "Magpie-Align",
@@ -6192,8 +5632,8 @@
     ]
   },
   {
-    "id": 388,
-    "rank": 388,
+    "id": 353,
+    "rank": 353,
     "diff": 0,
     "tier": "C",
     "provider": "Magpie-Align",
@@ -6208,24 +5648,8 @@
     ]
   },
   {
-    "id": 389,
-    "rank": 389,
-    "diff": 0,
-    "tier": "C",
-    "provider": "prithivMLmods",
-    "model": "prithivMLmods/Llama-3.2-3B-Math-Oct",
-    "fullName": "prithivMLmods/Llama-3.2-3B-Math-Oct",
-    "avgPerf": 35.63,
-    "peakPerf": 37.4,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 390,
-    "rank": 390,
+    "id": 354,
+    "rank": 354,
     "diff": 0,
     "tier": "C",
     "provider": "Magpie-Align",
@@ -6240,8 +5664,8 @@
     ]
   },
   {
-    "id": 391,
-    "rank": 391,
+    "id": 355,
+    "rank": 355,
     "diff": 0,
     "tier": "C",
     "provider": "ewre324",
@@ -6256,8 +5680,8 @@
     ]
   },
   {
-    "id": 392,
-    "rank": 392,
+    "id": 356,
+    "rank": 356,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -6272,8 +5696,8 @@
     ]
   },
   {
-    "id": 393,
-    "rank": 393,
+    "id": 357,
+    "rank": 357,
     "diff": 0,
     "tier": "C",
     "provider": "insightfactory",
@@ -6288,24 +5712,8 @@
     ]
   },
   {
-    "id": 394,
-    "rank": 394,
-    "diff": 0,
-    "tier": "C",
-    "provider": "riaz",
-    "model": "riaz/FineLlama-3.1-8B",
-    "fullName": "riaz/FineLlama-3.1-8B",
-    "avgPerf": 35.02,
-    "peakPerf": 36.8,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 395,
-    "rank": 395,
+    "id": 358,
+    "rank": 358,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -6320,8 +5728,8 @@
     ]
   },
   {
-    "id": 396,
-    "rank": 396,
+    "id": 359,
+    "rank": 359,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -6336,8 +5744,8 @@
     ]
   },
   {
-    "id": 397,
-    "rank": 397,
+    "id": 360,
+    "rank": 360,
     "diff": 0,
     "tier": "C",
     "provider": "mkurman",
@@ -6352,8 +5760,8 @@
     ]
   },
   {
-    "id": 398,
-    "rank": 398,
+    "id": 361,
+    "rank": 361,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -6368,8 +5776,8 @@
     ]
   },
   {
-    "id": 399,
-    "rank": 399,
+    "id": 362,
+    "rank": 362,
     "diff": 0,
     "tier": "C",
     "provider": "Gryphe",
@@ -6384,8 +5792,8 @@
     ]
   },
   {
-    "id": 400,
-    "rank": 400,
+    "id": 363,
+    "rank": 363,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -6400,8 +5808,8 @@
     ]
   },
   {
-    "id": 401,
-    "rank": 401,
+    "id": 364,
+    "rank": 364,
     "diff": 0,
     "tier": "C",
     "provider": "Triangle104",
@@ -6416,8 +5824,8 @@
     ]
   },
   {
-    "id": 402,
-    "rank": 402,
+    "id": 365,
+    "rank": 365,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -6432,8 +5840,8 @@
     ]
   },
   {
-    "id": 403,
-    "rank": 403,
+    "id": 366,
+    "rank": 366,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -6448,8 +5856,8 @@
     ]
   },
   {
-    "id": 404,
-    "rank": 404,
+    "id": 367,
+    "rank": 367,
     "diff": 0,
     "tier": "C",
     "provider": "Magpie-Align",
@@ -6464,8 +5872,8 @@
     ]
   },
   {
-    "id": 405,
-    "rank": 405,
+    "id": 368,
+    "rank": 368,
     "diff": 0,
     "tier": "C",
     "provider": "Magpie-Align",
@@ -6480,8 +5888,8 @@
     ]
   },
   {
-    "id": 406,
-    "rank": 406,
+    "id": 369,
+    "rank": 369,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -6496,24 +5904,8 @@
     ]
   },
   {
-    "id": 407,
-    "rank": 407,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-RRHF",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-RRHF",
-    "avgPerf": 33.26,
-    "peakPerf": 34.9,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 408,
-    "rank": 408,
+    "id": 370,
+    "rank": 370,
     "diff": 0,
     "tier": "C",
     "provider": "DavidAU",
@@ -6528,8 +5920,8 @@
     ]
   },
   {
-    "id": 409,
-    "rank": 409,
+    "id": 371,
+    "rank": 371,
     "diff": 0,
     "tier": "C",
     "provider": "Locutusque",
@@ -6544,8 +5936,8 @@
     ]
   },
   {
-    "id": 410,
-    "rank": 410,
+    "id": 372,
+    "rank": 372,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -6560,8 +5952,8 @@
     ]
   },
   {
-    "id": 411,
-    "rank": 411,
+    "id": 373,
+    "rank": 373,
     "diff": 0,
     "tier": "C",
     "provider": "NAPS-ai",
@@ -6576,8 +5968,8 @@
     ]
   },
   {
-    "id": 412,
-    "rank": 412,
+    "id": 374,
+    "rank": 374,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -6592,24 +5984,8 @@
     ]
   },
   {
-    "id": 413,
-    "rank": 413,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT",
-    "avgPerf": 32.61,
-    "peakPerf": 34.2,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 414,
-    "rank": 414,
+    "id": 375,
+    "rank": 375,
     "diff": 0,
     "tier": "C",
     "provider": "Magpie-Align",
@@ -6624,24 +6000,8 @@
     ]
   },
   {
-    "id": 415,
-    "rank": 415,
-    "diff": 0,
-    "tier": "C",
-    "provider": "princeton-nlp",
-    "model": "princeton-nlp/Llama-3-Base-8B-SFT-CPO",
-    "fullName": "princeton-nlp/Llama-3-Base-8B-SFT-CPO",
-    "avgPerf": 32.59,
-    "peakPerf": 34.2,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 416,
-    "rank": 416,
+    "id": 376,
+    "rank": 376,
     "diff": 0,
     "tier": "C",
     "provider": "meditsolutions",
@@ -6656,8 +6016,8 @@
     ]
   },
   {
-    "id": 417,
-    "rank": 417,
+    "id": 377,
+    "rank": 377,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -6672,8 +6032,8 @@
     ]
   },
   {
-    "id": 418,
-    "rank": 418,
+    "id": 378,
+    "rank": 378,
     "diff": 0,
     "tier": "C",
     "provider": "NAPS-ai",
@@ -6688,8 +6048,8 @@
     ]
   },
   {
-    "id": 419,
-    "rank": 419,
+    "id": 379,
+    "rank": 379,
     "diff": 0,
     "tier": "C",
     "provider": "Enno-Ai",
@@ -6704,8 +6064,8 @@
     ]
   },
   {
-    "id": 420,
-    "rank": 420,
+    "id": 380,
+    "rank": 380,
     "diff": 0,
     "tier": "C",
     "provider": "failspy",
@@ -6720,8 +6080,8 @@
     ]
   },
   {
-    "id": 421,
-    "rank": 421,
+    "id": 381,
+    "rank": 381,
     "diff": 0,
     "tier": "C",
     "provider": "EnnoAi",
@@ -6736,8 +6096,8 @@
     ]
   },
   {
-    "id": 422,
-    "rank": 422,
+    "id": 382,
+    "rank": 382,
     "diff": 0,
     "tier": "C",
     "provider": "Enno-Ai",
@@ -6752,8 +6112,8 @@
     ]
   },
   {
-    "id": 423,
-    "rank": 423,
+    "id": 383,
+    "rank": 383,
     "diff": 0,
     "tier": "C",
     "provider": "meditsolutions",
@@ -6768,8 +6128,8 @@
     ]
   },
   {
-    "id": 424,
-    "rank": 424,
+    "id": 384,
+    "rank": 384,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -6784,8 +6144,8 @@
     ]
   },
   {
-    "id": 425,
-    "rank": 425,
+    "id": 385,
+    "rank": 385,
     "diff": 0,
     "tier": "C",
     "provider": "NousResearch",
@@ -6800,8 +6160,8 @@
     ]
   },
   {
-    "id": 426,
-    "rank": 426,
+    "id": 386,
+    "rank": 386,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -6816,8 +6176,8 @@
     ]
   },
   {
-    "id": 427,
-    "rank": 427,
+    "id": 387,
+    "rank": 387,
     "diff": 0,
     "tier": "C",
     "provider": "DavidAU",
@@ -6832,8 +6192,8 @@
     ]
   },
   {
-    "id": 428,
-    "rank": 428,
+    "id": 388,
+    "rank": 388,
     "diff": 0,
     "tier": "C",
     "provider": "mlabonne",
@@ -6848,8 +6208,8 @@
     ]
   },
   {
-    "id": 429,
-    "rank": 429,
+    "id": 389,
+    "rank": 389,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -6864,8 +6224,8 @@
     ]
   },
   {
-    "id": 430,
-    "rank": 430,
+    "id": 390,
+    "rank": 390,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -6880,8 +6240,8 @@
     ]
   },
   {
-    "id": 431,
-    "rank": 431,
+    "id": 391,
+    "rank": 391,
     "diff": 0,
     "tier": "C",
     "provider": "DavidAU",
@@ -6896,8 +6256,8 @@
     ]
   },
   {
-    "id": 432,
-    "rank": 432,
+    "id": 392,
+    "rank": 392,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -6912,8 +6272,8 @@
     ]
   },
   {
-    "id": 433,
-    "rank": 433,
+    "id": 393,
+    "rank": 393,
     "diff": 0,
     "tier": "C",
     "provider": "BEE-spoke-data",
@@ -6928,8 +6288,8 @@
     ]
   },
   {
-    "id": 434,
-    "rank": 434,
+    "id": 394,
+    "rank": 394,
     "diff": 0,
     "tier": "C",
     "provider": "Lyte",
@@ -6944,8 +6304,8 @@
     ]
   },
   {
-    "id": 435,
-    "rank": 435,
+    "id": 395,
+    "rank": 395,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -6960,8 +6320,8 @@
     ]
   },
   {
-    "id": 436,
-    "rank": 436,
+    "id": 396,
+    "rank": 396,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -6976,8 +6336,8 @@
     ]
   },
   {
-    "id": 437,
-    "rank": 437,
+    "id": 397,
+    "rank": 397,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -6992,8 +6352,8 @@
     ]
   },
   {
-    "id": 438,
-    "rank": 438,
+    "id": 398,
+    "rank": 398,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -7008,8 +6368,8 @@
     ]
   },
   {
-    "id": 439,
-    "rank": 439,
+    "id": 399,
+    "rank": 399,
     "diff": 0,
     "tier": "C",
     "provider": "AI-Sweden-Models",
@@ -7024,8 +6384,8 @@
     ]
   },
   {
-    "id": 440,
-    "rank": 440,
+    "id": 400,
+    "rank": 400,
     "diff": 0,
     "tier": "C",
     "provider": "DeepAutoAI",
@@ -7040,8 +6400,8 @@
     ]
   },
   {
-    "id": 441,
-    "rank": 441,
+    "id": 401,
+    "rank": 401,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -7056,8 +6416,8 @@
     ]
   },
   {
-    "id": 442,
-    "rank": 442,
+    "id": 402,
+    "rank": 402,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7072,8 +6432,8 @@
     ]
   },
   {
-    "id": 443,
-    "rank": 443,
+    "id": 403,
+    "rank": 403,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -7088,8 +6448,8 @@
     ]
   },
   {
-    "id": 444,
-    "rank": 444,
+    "id": 404,
+    "rank": 404,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -7104,8 +6464,8 @@
     ]
   },
   {
-    "id": 445,
-    "rank": 445,
+    "id": 405,
+    "rank": 405,
     "diff": 0,
     "tier": "C",
     "provider": "Corianas",
@@ -7120,8 +6480,8 @@
     ]
   },
   {
-    "id": 446,
-    "rank": 446,
+    "id": 406,
+    "rank": 406,
     "diff": 0,
     "tier": "C",
     "provider": "meditsolutions",
@@ -7136,8 +6496,8 @@
     ]
   },
   {
-    "id": 447,
-    "rank": 447,
+    "id": 407,
+    "rank": 407,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7152,8 +6512,8 @@
     ]
   },
   {
-    "id": 448,
-    "rank": 448,
+    "id": 408,
+    "rank": 408,
     "diff": 0,
     "tier": "C",
     "provider": "Sakalti",
@@ -7168,8 +6528,8 @@
     ]
   },
   {
-    "id": 449,
-    "rank": 449,
+    "id": 409,
+    "rank": 409,
     "diff": 0,
     "tier": "C",
     "provider": "DeepAutoAI",
@@ -7184,8 +6544,8 @@
     ]
   },
   {
-    "id": 450,
-    "rank": 450,
+    "id": 410,
+    "rank": 410,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7200,8 +6560,8 @@
     ]
   },
   {
-    "id": 451,
-    "rank": 451,
+    "id": 411,
+    "rank": 411,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7216,8 +6576,8 @@
     ]
   },
   {
-    "id": 452,
-    "rank": 452,
+    "id": 412,
+    "rank": 412,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7232,8 +6592,8 @@
     ]
   },
   {
-    "id": 453,
-    "rank": 453,
+    "id": 413,
+    "rank": 413,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7248,8 +6608,8 @@
     ]
   },
   {
-    "id": 454,
-    "rank": 454,
+    "id": 414,
+    "rank": 414,
     "diff": 0,
     "tier": "C",
     "provider": "meditsolutions",
@@ -7264,8 +6624,8 @@
     ]
   },
   {
-    "id": 455,
-    "rank": 455,
+    "id": 415,
+    "rank": 415,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -7280,8 +6640,8 @@
     ]
   },
   {
-    "id": 456,
-    "rank": 456,
+    "id": 416,
+    "rank": 416,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -7296,8 +6656,8 @@
     ]
   },
   {
-    "id": 457,
-    "rank": 457,
+    "id": 417,
+    "rank": 417,
     "diff": 0,
     "tier": "C",
     "provider": "LEESM",
@@ -7312,8 +6672,8 @@
     ]
   },
   {
-    "id": 458,
-    "rank": 458,
+    "id": 418,
+    "rank": 418,
     "diff": 0,
     "tier": "C",
     "provider": "agentlans",
@@ -7328,8 +6688,8 @@
     ]
   },
   {
-    "id": 459,
-    "rank": 459,
+    "id": 419,
+    "rank": 419,
     "diff": 0,
     "tier": "C",
     "provider": "aloobun",
@@ -7344,8 +6704,8 @@
     ]
   },
   {
-    "id": 460,
-    "rank": 460,
+    "id": 420,
+    "rank": 420,
     "diff": 0,
     "tier": "C",
     "provider": "DeepAutoAI",
@@ -7360,8 +6720,8 @@
     ]
   },
   {
-    "id": 461,
-    "rank": 461,
+    "id": 421,
+    "rank": 421,
     "diff": 0,
     "tier": "C",
     "provider": "meditsolutions",
@@ -7376,8 +6736,8 @@
     ]
   },
   {
-    "id": 462,
-    "rank": 462,
+    "id": 422,
+    "rank": 422,
     "diff": 0,
     "tier": "C",
     "provider": "fulim",
@@ -7392,8 +6752,8 @@
     ]
   },
   {
-    "id": 463,
-    "rank": 463,
+    "id": 423,
+    "rank": 423,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -7408,8 +6768,8 @@
     ]
   },
   {
-    "id": 464,
-    "rank": 464,
+    "id": 424,
+    "rank": 424,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7424,8 +6784,8 @@
     ]
   },
   {
-    "id": 465,
-    "rank": 465,
+    "id": 425,
+    "rank": 425,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -7440,8 +6800,8 @@
     ]
   },
   {
-    "id": 466,
-    "rank": 466,
+    "id": 426,
+    "rank": 426,
     "diff": 0,
     "tier": "C",
     "provider": "mistralai",
@@ -7456,8 +6816,8 @@
     ]
   },
   {
-    "id": 467,
-    "rank": 467,
+    "id": 427,
+    "rank": 427,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7472,8 +6832,8 @@
     ]
   },
   {
-    "id": 468,
-    "rank": 468,
+    "id": 428,
+    "rank": 428,
     "diff": 0,
     "tier": "C",
     "provider": "Enno-Ai",
@@ -7488,8 +6848,8 @@
     ]
   },
   {
-    "id": 469,
-    "rank": 469,
+    "id": 429,
+    "rank": 429,
     "diff": 0,
     "tier": "C",
     "provider": "ModelCloud",
@@ -7504,8 +6864,8 @@
     ]
   },
   {
-    "id": 470,
-    "rank": 470,
+    "id": 430,
+    "rank": 430,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7520,8 +6880,8 @@
     ]
   },
   {
-    "id": 471,
-    "rank": 471,
+    "id": 431,
+    "rank": 431,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -7536,8 +6896,8 @@
     ]
   },
   {
-    "id": 472,
-    "rank": 472,
+    "id": 432,
+    "rank": 432,
     "diff": 0,
     "tier": "C",
     "provider": "gaverfraxz",
@@ -7552,8 +6912,8 @@
     ]
   },
   {
-    "id": 473,
-    "rank": 473,
+    "id": 433,
+    "rank": 433,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7568,8 +6928,8 @@
     ]
   },
   {
-    "id": 474,
-    "rank": 474,
+    "id": 434,
+    "rank": 434,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7584,8 +6944,8 @@
     ]
   },
   {
-    "id": 475,
-    "rank": 475,
+    "id": 435,
+    "rank": 435,
     "diff": 0,
     "tier": "C",
     "provider": "01-ai",
@@ -7600,8 +6960,8 @@
     ]
   },
   {
-    "id": 476,
-    "rank": 476,
+    "id": 436,
+    "rank": 436,
     "diff": 0,
     "tier": "C",
     "provider": "lodrick-the-lafted",
@@ -7616,8 +6976,8 @@
     ]
   },
   {
-    "id": 477,
-    "rank": 477,
+    "id": 437,
+    "rank": 437,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7632,8 +6992,8 @@
     ]
   },
   {
-    "id": 478,
-    "rank": 478,
+    "id": 438,
+    "rank": 438,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7648,8 +7008,8 @@
     ]
   },
   {
-    "id": 479,
-    "rank": 479,
+    "id": 439,
+    "rank": 439,
     "diff": 0,
     "tier": "C",
     "provider": "nvidia",
@@ -7664,8 +7024,8 @@
     ]
   },
   {
-    "id": 480,
-    "rank": 480,
+    "id": 440,
+    "rank": 440,
     "diff": 0,
     "tier": "C",
     "provider": "johnsutor",
@@ -7680,8 +7040,8 @@
     ]
   },
   {
-    "id": 481,
-    "rank": 481,
+    "id": 441,
+    "rank": 441,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7696,8 +7056,8 @@
     ]
   },
   {
-    "id": 482,
-    "rank": 482,
+    "id": 442,
+    "rank": 442,
     "diff": 0,
     "tier": "C",
     "provider": "3rd-Degree-Burn",
@@ -7712,8 +7072,8 @@
     ]
   },
   {
-    "id": 483,
-    "rank": 483,
+    "id": 443,
+    "rank": 443,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -7728,8 +7088,8 @@
     ]
   },
   {
-    "id": 484,
-    "rank": 484,
+    "id": 444,
+    "rank": 444,
     "diff": 0,
     "tier": "C",
     "provider": "dfurman",
@@ -7744,8 +7104,8 @@
     ]
   },
   {
-    "id": 485,
-    "rank": 485,
+    "id": 445,
+    "rank": 445,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -7760,8 +7120,8 @@
     ]
   },
   {
-    "id": 486,
-    "rank": 486,
+    "id": 446,
+    "rank": 446,
     "diff": 0,
     "tier": "C",
     "provider": "DeepAutoAI",
@@ -7776,8 +7136,8 @@
     ]
   },
   {
-    "id": 487,
-    "rank": 487,
+    "id": 447,
+    "rank": 447,
     "diff": 0,
     "tier": "C",
     "provider": "dfurman",
@@ -7792,8 +7152,8 @@
     ]
   },
   {
-    "id": 488,
-    "rank": 488,
+    "id": 448,
+    "rank": 448,
     "diff": 0,
     "tier": "C",
     "provider": "duyhv1411",
@@ -7808,8 +7168,8 @@
     ]
   },
   {
-    "id": 489,
-    "rank": 489,
+    "id": 449,
+    "rank": 449,
     "diff": 0,
     "tier": "C",
     "provider": "duyhv1411",
@@ -7824,8 +7184,8 @@
     ]
   },
   {
-    "id": 490,
-    "rank": 490,
+    "id": 450,
+    "rank": 450,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7840,24 +7200,8 @@
     ]
   },
   {
-    "id": 491,
-    "rank": 491,
-    "diff": 0,
-    "tier": "C",
-    "provider": "pszemraj",
-    "model": "pszemraj/Llama-3-6.3b-v0.1",
-    "fullName": "pszemraj/Llama-3-6.3b-v0.1",
-    "avgPerf": 21.21,
-    "peakPerf": 22.3,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 492,
-    "rank": 492,
+    "id": 451,
+    "rank": 451,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7872,8 +7216,8 @@
     ]
   },
   {
-    "id": 493,
-    "rank": 493,
+    "id": 452,
+    "rank": 452,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -7888,8 +7232,8 @@
     ]
   },
   {
-    "id": 494,
-    "rank": 494,
+    "id": 453,
+    "rank": 453,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -7904,8 +7248,8 @@
     ]
   },
   {
-    "id": 495,
-    "rank": 495,
+    "id": 454,
+    "rank": 454,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -7920,8 +7264,8 @@
     ]
   },
   {
-    "id": 496,
-    "rank": 496,
+    "id": 455,
+    "rank": 455,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -7936,8 +7280,8 @@
     ]
   },
   {
-    "id": 497,
-    "rank": 497,
+    "id": 456,
+    "rank": 456,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -7952,8 +7296,8 @@
     ]
   },
   {
-    "id": 498,
-    "rank": 498,
+    "id": 457,
+    "rank": 457,
     "diff": 0,
     "tier": "C",
     "provider": "cluebbers",
@@ -7968,8 +7312,8 @@
     ]
   },
   {
-    "id": 499,
-    "rank": 499,
+    "id": 458,
+    "rank": 458,
     "diff": 0,
     "tier": "C",
     "provider": "cluebbers",
@@ -7984,8 +7328,8 @@
     ]
   },
   {
-    "id": 500,
-    "rank": 500,
+    "id": 459,
+    "rank": 459,
     "diff": 0,
     "tier": "C",
     "provider": "CreitinGameplays",
@@ -8000,8 +7344,8 @@
     ]
   },
   {
-    "id": 501,
-    "rank": 501,
+    "id": 460,
+    "rank": 460,
     "diff": 0,
     "tier": "C",
     "provider": "cluebbers",
@@ -8016,8 +7360,8 @@
     ]
   },
   {
-    "id": 502,
-    "rank": 502,
+    "id": 461,
+    "rank": 461,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8032,8 +7376,8 @@
     ]
   },
   {
-    "id": 503,
-    "rank": 503,
+    "id": 462,
+    "rank": 462,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -8048,8 +7392,8 @@
     ]
   },
   {
-    "id": 504,
-    "rank": 504,
+    "id": 463,
+    "rank": 463,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -8064,8 +7408,8 @@
     ]
   },
   {
-    "id": 505,
-    "rank": 505,
+    "id": 464,
+    "rank": 464,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -8080,8 +7424,8 @@
     ]
   },
   {
-    "id": 506,
-    "rank": 506,
+    "id": 465,
+    "rank": 465,
     "diff": 0,
     "tier": "C",
     "provider": "LEESM",
@@ -8096,24 +7440,8 @@
     ]
   },
   {
-    "id": 507,
-    "rank": 507,
-    "diff": 0,
-    "tier": "C",
-    "provider": "prithivMLmods",
-    "model": "prithivMLmods/Llama-3.2-6B-AlgoCode",
-    "fullName": "prithivMLmods/Llama-3.2-6B-AlgoCode",
-    "avgPerf": 19,
-    "peakPerf": 19.9,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 508,
-    "rank": 508,
+    "id": 466,
+    "rank": 466,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8128,8 +7456,8 @@
     ]
   },
   {
-    "id": 509,
-    "rank": 509,
+    "id": 467,
+    "rank": 467,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8144,8 +7472,8 @@
     ]
   },
   {
-    "id": 510,
-    "rank": 510,
+    "id": 468,
+    "rank": 468,
     "diff": 0,
     "tier": "C",
     "provider": "T145",
@@ -8160,8 +7488,8 @@
     ]
   },
   {
-    "id": 511,
-    "rank": 511,
+    "id": 469,
+    "rank": 469,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -8176,8 +7504,8 @@
     ]
   },
   {
-    "id": 512,
-    "rank": 512,
+    "id": 470,
+    "rank": 470,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -8192,8 +7520,8 @@
     ]
   },
   {
-    "id": 513,
-    "rank": 513,
+    "id": 471,
+    "rank": 471,
     "diff": 0,
     "tier": "C",
     "provider": "BAAI",
@@ -8208,8 +7536,8 @@
     ]
   },
   {
-    "id": 514,
-    "rank": 514,
+    "id": 472,
+    "rank": 472,
     "diff": 0,
     "tier": "C",
     "provider": "NbAiLab",
@@ -8224,8 +7552,8 @@
     ]
   },
   {
-    "id": 515,
-    "rank": 515,
+    "id": 473,
+    "rank": 473,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -8240,8 +7568,8 @@
     ]
   },
   {
-    "id": 516,
-    "rank": 516,
+    "id": 474,
+    "rank": 474,
     "diff": 0,
     "tier": "C",
     "provider": "meditsolutions",
@@ -8256,8 +7584,8 @@
     ]
   },
   {
-    "id": 517,
-    "rank": 517,
+    "id": 475,
+    "rank": 475,
     "diff": 0,
     "tier": "C",
     "provider": "NbAiLab",
@@ -8272,8 +7600,8 @@
     ]
   },
   {
-    "id": 518,
-    "rank": 518,
+    "id": 476,
+    "rank": 476,
     "diff": 0,
     "tier": "C",
     "provider": "EpistemeAI",
@@ -8288,8 +7616,8 @@
     ]
   },
   {
-    "id": 519,
-    "rank": 519,
+    "id": 477,
+    "rank": 477,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8304,8 +7632,8 @@
     ]
   },
   {
-    "id": 520,
-    "rank": 520,
+    "id": 478,
+    "rank": 478,
     "diff": 0,
     "tier": "C",
     "provider": "meditsolutions",
@@ -8320,8 +7648,8 @@
     ]
   },
   {
-    "id": 521,
-    "rank": 521,
+    "id": 479,
+    "rank": 479,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8336,8 +7664,8 @@
     ]
   },
   {
-    "id": 522,
-    "rank": 522,
+    "id": 480,
+    "rank": 480,
     "diff": 0,
     "tier": "C",
     "provider": "3rd-Degree-Burn",
@@ -8352,8 +7680,8 @@
     ]
   },
   {
-    "id": 523,
-    "rank": 523,
+    "id": 481,
+    "rank": 481,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8368,8 +7696,8 @@
     ]
   },
   {
-    "id": 524,
-    "rank": 524,
+    "id": 482,
+    "rank": 482,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8384,8 +7712,8 @@
     ]
   },
   {
-    "id": 525,
-    "rank": 525,
+    "id": 483,
+    "rank": 483,
     "diff": 0,
     "tier": "C",
     "provider": "deepseek-ai",
@@ -8400,8 +7728,8 @@
     ]
   },
   {
-    "id": 526,
-    "rank": 526,
+    "id": 484,
+    "rank": 484,
     "diff": 0,
     "tier": "C",
     "provider": "BlackBeenie",
@@ -8416,8 +7744,8 @@
     ]
   },
   {
-    "id": 527,
-    "rank": 527,
+    "id": 485,
+    "rank": 485,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8432,8 +7760,8 @@
     ]
   },
   {
-    "id": 528,
-    "rank": 528,
+    "id": 486,
+    "rank": 486,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8448,8 +7776,8 @@
     ]
   },
   {
-    "id": 529,
-    "rank": 529,
+    "id": 487,
+    "rank": 487,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8464,8 +7792,8 @@
     ]
   },
   {
-    "id": 530,
-    "rank": 530,
+    "id": 488,
+    "rank": 488,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8480,8 +7808,8 @@
     ]
   },
   {
-    "id": 531,
-    "rank": 531,
+    "id": 489,
+    "rank": 489,
     "diff": 0,
     "tier": "C",
     "provider": "ngxson",
@@ -8496,8 +7824,8 @@
     ]
   },
   {
-    "id": 532,
-    "rank": 532,
+    "id": 490,
+    "rank": 490,
     "diff": 0,
     "tier": "C",
     "provider": "Solshine",
@@ -8512,8 +7840,8 @@
     ]
   },
   {
-    "id": 533,
-    "rank": 533,
+    "id": 491,
+    "rank": 491,
     "diff": 0,
     "tier": "C",
     "provider": "oopere",
@@ -8528,8 +7856,8 @@
     ]
   },
   {
-    "id": 534,
-    "rank": 534,
+    "id": 492,
+    "rank": 492,
     "diff": 0,
     "tier": "C",
     "provider": "oopere",
@@ -8544,8 +7872,8 @@
     ]
   },
   {
-    "id": 535,
-    "rank": 535,
+    "id": 493,
+    "rank": 493,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -8560,8 +7888,8 @@
     ]
   },
   {
-    "id": 536,
-    "rank": 536,
+    "id": 494,
+    "rank": 494,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8576,8 +7904,8 @@
     ]
   },
   {
-    "id": 537,
-    "rank": 537,
+    "id": 495,
+    "rank": 495,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8592,8 +7920,8 @@
     ]
   },
   {
-    "id": 538,
-    "rank": 538,
+    "id": 496,
+    "rank": 496,
     "diff": 0,
     "tier": "C",
     "provider": "ngxson",
@@ -8608,8 +7936,8 @@
     ]
   },
   {
-    "id": 539,
-    "rank": 539,
+    "id": 497,
+    "rank": 497,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8624,8 +7952,8 @@
     ]
   },
   {
-    "id": 540,
-    "rank": 540,
+    "id": 498,
+    "rank": 498,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8640,8 +7968,8 @@
     ]
   },
   {
-    "id": 541,
-    "rank": 541,
+    "id": 499,
+    "rank": 499,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8656,8 +7984,8 @@
     ]
   },
   {
-    "id": 542,
-    "rank": 542,
+    "id": 500,
+    "rank": 500,
     "diff": 0,
     "tier": "C",
     "provider": "oopere",
@@ -8672,8 +8000,8 @@
     ]
   },
   {
-    "id": 543,
-    "rank": 543,
+    "id": 501,
+    "rank": 501,
     "diff": 0,
     "tier": "C",
     "provider": "oopere",
@@ -8688,8 +8016,8 @@
     ]
   },
   {
-    "id": 544,
-    "rank": 544,
+    "id": 502,
+    "rank": 502,
     "diff": 0,
     "tier": "C",
     "provider": "Qwen",
@@ -8704,8 +8032,8 @@
     ]
   },
   {
-    "id": 545,
-    "rank": 545,
+    "id": 503,
+    "rank": 503,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8720,8 +8048,8 @@
     ]
   },
   {
-    "id": 546,
-    "rank": 546,
+    "id": 504,
+    "rank": 504,
     "diff": 0,
     "tier": "C",
     "provider": "oopere",
@@ -8736,8 +8064,8 @@
     ]
   },
   {
-    "id": 547,
-    "rank": 547,
+    "id": 505,
+    "rank": 505,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8752,8 +8080,8 @@
     ]
   },
   {
-    "id": 548,
-    "rank": 548,
+    "id": 506,
+    "rank": 506,
     "diff": 0,
     "tier": "C",
     "provider": "monsterapi",
@@ -8768,8 +8096,8 @@
     ]
   },
   {
-    "id": 549,
-    "rank": 549,
+    "id": 507,
+    "rank": 507,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8784,8 +8112,8 @@
     ]
   },
   {
-    "id": 550,
-    "rank": 550,
+    "id": 508,
+    "rank": 508,
     "diff": 0,
     "tier": "C",
     "provider": "allenai",
@@ -8800,24 +8128,8 @@
     ]
   },
   {
-    "id": 551,
-    "rank": 551,
-    "diff": 0,
-    "tier": "C",
-    "provider": "prithivMLmods",
-    "model": "prithivMLmods/Llama-3.1-5B-Instruct",
-    "fullName": "prithivMLmods/Llama-3.1-5B-Instruct",
-    "avgPerf": 8.59,
-    "peakPerf": 9,
-    "samples": 1000,
-    "scenarios": [
-      "reasoning",
-      "general"
-    ]
-  },
-  {
-    "id": 552,
-    "rank": 552,
+    "id": 509,
+    "rank": 509,
     "diff": 0,
     "tier": "C",
     "provider": "meta-llama",
@@ -8832,8 +8144,8 @@
     ]
   },
   {
-    "id": 553,
-    "rank": 553,
+    "id": 510,
+    "rank": 510,
     "diff": 0,
     "tier": "C",
     "provider": "DavieLion",
@@ -8848,8 +8160,8 @@
     ]
   },
   {
-    "id": 554,
-    "rank": 554,
+    "id": 511,
+    "rank": 511,
     "diff": 0,
     "tier": "C",
     "provider": "bunnycore",
@@ -8864,8 +8176,8 @@
     ]
   },
   {
-    "id": 555,
-    "rank": 555,
+    "id": 512,
+    "rank": 512,
     "diff": 0,
     "tier": "C",
     "provider": "BlackBeenie",
@@ -8880,8 +8192,8 @@
     ]
   },
   {
-    "id": 556,
-    "rank": 556,
+    "id": 513,
+    "rank": 513,
     "diff": 0,
     "tier": "C",
     "provider": "DavieLion",
@@ -8896,8 +8208,8 @@
     ]
   },
   {
-    "id": 557,
-    "rank": 557,
+    "id": 514,
+    "rank": 514,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8912,8 +8224,8 @@
     ]
   },
   {
-    "id": 558,
-    "rank": 558,
+    "id": 515,
+    "rank": 515,
     "diff": 0,
     "tier": "C",
     "provider": "DavieLion",
@@ -8928,8 +8240,8 @@
     ]
   },
   {
-    "id": 559,
-    "rank": 559,
+    "id": 516,
+    "rank": 516,
     "diff": 0,
     "tier": "C",
     "provider": "DavieLion",
@@ -8944,8 +8256,8 @@
     ]
   },
   {
-    "id": 560,
-    "rank": 560,
+    "id": 517,
+    "rank": 517,
     "diff": 0,
     "tier": "C",
     "provider": "DavieLion",
@@ -8960,8 +8272,8 @@
     ]
   },
   {
-    "id": 561,
-    "rank": 561,
+    "id": 518,
+    "rank": 518,
     "diff": 0,
     "tier": "C",
     "provider": "DavieLion",
@@ -8976,8 +8288,8 @@
     ]
   },
   {
-    "id": 562,
-    "rank": 562,
+    "id": 519,
+    "rank": 519,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -8992,8 +8304,8 @@
     ]
   },
   {
-    "id": 563,
-    "rank": 563,
+    "id": 520,
+    "rank": 520,
     "diff": 0,
     "tier": "C",
     "provider": "Triangle104",
@@ -9008,8 +8320,8 @@
     ]
   },
   {
-    "id": 564,
-    "rank": 564,
+    "id": 521,
+    "rank": 521,
     "diff": 0,
     "tier": "C",
     "provider": "google",
@@ -9024,8 +8336,8 @@
     ]
   },
   {
-    "id": 565,
-    "rank": 565,
+    "id": 522,
+    "rank": 522,
     "diff": 0,
     "tier": "C",
     "provider": "Mostafa8Mehrabi",
