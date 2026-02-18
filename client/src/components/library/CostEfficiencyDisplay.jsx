@@ -2,7 +2,7 @@
 // Original: EntropyPriceDisplay.tsx
 // Refactored for Token Cost Efficiency Display
 
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './CostEfficiencyDisplay.css';
 
@@ -15,26 +15,36 @@ export const CostEfficiencyDisplay = ({
 }) => {
   const { t } = useTranslation();
   const [flash, setFlash] = useState(null);
-  const prevDataRef = useRef(data);
+  // 防御性编程：确保data有默认值
+  const safeData = data && typeof data === 'object' ? data : {
+    model: 'Unknown',
+    provider: 'Unknown',
+    inputCost: 0,
+    outputCost: 0,
+    efficiencyScore: 0,
+    latency: 0,
+    status: 'average'
+  };
+  const prevDataRef = useRef(safeData);
   const [isHovering, setIsHovering] = useState(false);
 
   // Flash animation on change
   useEffect(() => {
-    if (prevDataRef.current.efficiencyScore !== data.efficiencyScore) {
-      const trend = data.efficiencyScore > prevDataRef.current.efficiencyScore 
+    if (prevDataRef.current.efficiencyScore !== safeData.efficiencyScore) {
+      const trend = safeData.efficiencyScore > prevDataRef.current.efficiencyScore 
         ? 'improving' 
         : 'worsening';
       setFlash(trend);
-      prevDataRef.current = data;
+      prevDataRef.current = safeData;
       
       const timer = setTimeout(() => setFlash(null), 300);
       return () => clearTimeout(timer);
     }
-  }, [data.efficiencyScore]);
+  }, [safeData.efficiencyScore]);
 
   // Color classes based on tier
   const getTierClass = () => {
-    switch (data.status) {
+    switch (safeData.status) {
       case 'excellent': return 'efficiency-tier--excellent';
       case 'good': return 'efficiency-tier--good';
       case 'average': return 'efficiency-tier--average';
@@ -49,7 +59,7 @@ export const CostEfficiencyDisplay = ({
   };
 
   const handleClick = () => {
-    if (onClick) onClick(data);
+    if (onClick) onClick(safeData);
   };
 
   const renderContent = () => {
@@ -61,7 +71,16 @@ export const CostEfficiencyDisplay = ({
       getFlashClass(),
     ].filter(Boolean).join(' ');
 
-    const costString = `$${data.inputCost.toFixed(2)} / $${data.outputCost.toFixed(2)}`;
+    // 安全地获取成本数据，提供默认值
+    const inputCost = typeof safeData.inputCost === 'number' ? safeData.inputCost : 0;
+    const outputCost = typeof safeData.outputCost === 'number' ? safeData.outputCost : 0;
+    const efficiencyScore = typeof safeData.efficiencyScore === 'number' ? safeData.efficiencyScore : 0;
+    const latency = typeof safeData.latency === 'number' ? safeData.latency : 0;
+    const model = safeData.model || 'Unknown';
+    const provider = safeData.provider || 'Unknown';
+    const status = safeData.status || 'average';
+    
+    const costString = `$${inputCost.toFixed(2)} / $${outputCost.toFixed(2)}`;
     
     switch (variant) {
       case 'minimal':
@@ -72,7 +91,7 @@ export const CostEfficiencyDisplay = ({
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <span className="cost-value">{data.efficiencyScore}</span>
+            <span className="cost-value">{efficiencyScore}</span>
             <span className="cost-sub">{t('efficiency.eff')}</span>
           </div>
         );
@@ -87,20 +106,20 @@ export const CostEfficiencyDisplay = ({
           >
             <div className="flex flex-col gap-1">
               <div className="flex justify-between items-start">
-                <span className="font-black text-sm tracking-tight leading-tight max-w-[160px] truncate">{data.model}</span>
-                <span className="text-[10px] font-black px-1.5 py-0.5 rounded bg-black/5 uppercase tracking-tighter">{t(`efficiency.status.${data.status}`)}</span>
+                <span className="font-black text-sm tracking-tight leading-tight max-w-[160px] truncate">{model}</span>
+                <span className="text-[10px] font-black px-1.5 py-0.5 rounded bg-black/5 uppercase tracking-tighter">{t(`efficiency.status.${status}`)}</span>
               </div>
-              <span className="text-[10px] font-bold opacity-40 uppercase tracking-widest">{data.provider}</span>
+              <span className="text-[10px] font-bold opacity-40 uppercase tracking-widest">{provider}</span>
             </div>
 
             <div className="flex items-center justify-between mt-auto pt-4 border-t border-black/[0.03]">
               <div className="flex flex-col">
                 <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">{t('efficiency.efficiency')}</span>
-                <span className="text-xl font-black tracking-tighter leading-none">{data.efficiencyScore}</span>
+                <span className="text-xl font-black tracking-tighter leading-none">{efficiencyScore}</span>
               </div>
               <div className="flex flex-col items-end text-right">
                 <span className="text-[8px] font-black uppercase tracking-widest opacity-30 mb-0.5">{t('efficiency.latency')}</span>
-                <span className="text-sm font-bold tracking-tighter leading-none">{data.latency}ms</span>
+                <span className="text-sm font-bold tracking-tighter leading-none">{latency}ms</span>
               </div>
             </div>
             
@@ -108,15 +127,15 @@ export const CostEfficiencyDisplay = ({
               <div className="cost-tooltip">
                 <div className="tooltip-row">
                   <span>{t('efficiency.input')}:</span>
-                  <span className="font-mono">${data.inputCost.toFixed(2)}</span>
+                  <span className="font-mono">${inputCost.toFixed(2)}</span>
                 </div>
                 <div className="tooltip-row">
                   <span>{t('efficiency.output')}:</span>
-                  <span className="font-mono">${data.outputCost.toFixed(2)}</span>
+                  <span className="font-mono">${outputCost.toFixed(2)}</span>
                 </div>
                 <div className="tooltip-row">
                   <span>{t('efficiency.latency')}:</span>
-                  <span className="font-mono">{data.latency}ms</span>
+                  <span className="font-mono">{latency}ms</span>
                 </div>
               </div>
             )}
@@ -132,21 +151,21 @@ export const CostEfficiencyDisplay = ({
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <span className="cost-value">{data.efficiencyScore}</span>
+            <span className="cost-value">{efficiencyScore}</span>
             <span className="cost-sub text-xs ml-2">{costString}</span>
             {isHovering && showDetailsOnHover && (
               <div className="cost-tooltip">
                 <div className="tooltip-row">
                   <span>{t('efficiency.provider')}:</span>
-                  <span>{data.provider}</span>
+                  <span>{provider}</span>
                 </div>
                 <div className="tooltip-row">
                   <span>{t('efficiency.model')}:</span>
-                  <span>{data.model}</span>
+                  <span>{model}</span>
                 </div>
                 <div className="tooltip-row">
                   <span>{t('efficiency.status_label')}:</span>
-                  <span className="capitalize">{t(`efficiency.status.${data.status}`)}</span>
+                  <span className="capitalize">{t(`efficiency.status.${status}`)}</span>
                 </div>
               </div>
             )}

@@ -1,11 +1,11 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen, waitFor, act } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import AgentRankings from './AgentRankings';
+import { render } from '@testing-library/react';
 import axios from 'axios';
+import { BrowserRouter } from 'react-router-dom';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import AgentRankings from './AgentRankings';
 
 // Mock axios
 vi.mock('axios');
@@ -55,7 +55,7 @@ vi.mock('../utils/modelNameFormatter', () => ({
 }));
 
 vi.mock('../config', () => ({
-  API_BASE_URL: 'http://localhost:3000',
+  API_BASE_URL: 'http://localhost:14514',
 }));
 
 // Helper to render with providers

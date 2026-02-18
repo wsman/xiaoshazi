@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { renderHook, act, waitFor } from '@testing-library/react';
+import { act, renderHook } from '@testing-library/react';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { useUserBehaviorPredictor } from './useUserBehaviorPredictor';
 
 // Mock axios
@@ -48,7 +48,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should return initial state', () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     expect(result.current.isPrefetching).toBe(false);
@@ -61,7 +61,7 @@ describe('useUserBehaviorPredictor', () => {
   it('should return configuration', () => {
     const { result } = renderHook(() => 
       useUserBehaviorPredictor({ 
-        baseUrl: 'http://localhost:3000',
+        baseUrl: 'http://localhost:14514',
         hoverDelay: 100 
       })
     );
@@ -72,7 +72,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should not trigger prefetch for "all" scenario', async () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     act(() => {
@@ -89,7 +89,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should not trigger prefetch for empty scenario', async () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     act(() => {
@@ -105,7 +105,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should check if scenario is prefetched', () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     expect(result.current.isPrefetched('coding')).toBe(false);
@@ -114,7 +114,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should get cached result returns null for non-cached scenario', () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     expect(result.current.getCachedResult('coding')).toBeNull();
@@ -122,7 +122,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should return prefetchScenario function', () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     expect(result.current.prefetchScenario).toBeDefined();
@@ -131,7 +131,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should return prefetchMultiple function', () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     expect(result.current.prefetchMultiple).toBeDefined();
@@ -140,7 +140,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should return clearCache function', () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     expect(result.current.clearCache).toBeDefined();
@@ -149,7 +149,7 @@ describe('useUserBehaviorPredictor', () => {
 
   it('should return clearScenarioCache function', () => {
     const { result } = renderHook(() => 
-      useUserBehaviorPredictor({ baseUrl: 'http://localhost:3000' })
+      useUserBehaviorPredictor({ baseUrl: 'http://localhost:14514' })
     );
 
     expect(result.current.clearScenarioCache).toBeDefined();
@@ -161,7 +161,7 @@ describe('useUserBehaviorPredictor', () => {
     
     const { result } = renderHook(() => 
       useUserBehaviorPredictor({ 
-        baseUrl: 'http://localhost:3000',
+        baseUrl: 'http://localhost:14514',
         onPrefetchStart,
         hoverDelay: 10 // Use short delay for testing
       })
@@ -189,7 +189,7 @@ describe('useUserBehaviorPredictor', () => {
     
     const { result } = renderHook(() => 
       useUserBehaviorPredictor({ 
-        baseUrl: 'http://localhost:3000',
+        baseUrl: 'http://localhost:14514',
         onPrefetchStart,
         onPrefetchComplete,
         hoverDelay: 100

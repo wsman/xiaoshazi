@@ -1,30 +1,53 @@
-import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import axios from 'axios';
+import { motion } from 'framer-motion';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
 import { List } from 'react-window';
-import PerfBar from './PerfBar';
-import VerticalPerfBar from './VerticalPerfBar';
-import TierBadge from './TierBadge';
-import AgentCard from './AgentCard';
-import { PriceDisplay } from './PriceDisplay';
-import { getProviderColor } from '../utils/providerColors';
-import { PageSkeleton } from './library/PageSkeleton';
-import RouteTransition from './library/RouteTransition';
-import CostEfficiencyDashboard from './library/CostEfficiencyDashboard';
-import { RollingNumber } from './library/RollingNumber';
-import { MotionButton, MotionButtonGroup } from './library/MotionButton';
-import ScenarioSelector from './library/ScenarioSelector';
-import SearchBar from './library/SearchBar';
-import FilterPanel from './library/FilterPanel';
-import { useWorker } from '../hooks/useWorker';
+import { API_BASE_URL } from '../config';
 import { usePredictivePrefetch } from '../hooks/usePredictivePrefetch';
 import { useUserBehaviorPredictor } from '../hooks/useUserBehaviorPredictor';
+import { useWorker } from '../hooks/useWorker';
 import { formatModelName } from '../utils/modelNameFormatter';
-import { API_BASE_URL } from '../config';
+import { getProviderColor } from '../utils/providerColors';
+import AgentCard from './AgentCard';
+import FilterPanel from './library/FilterPanel';
+import { MotionButton, MotionButtonGroup } from './library/MotionButton';
+import { PageSkeleton } from './library/PageSkeleton';
+import { RollingNumber } from './library/RollingNumber';
+import RouteTransition from './library/RouteTransition';
+import ScenarioSelector from './library/ScenarioSelector';
+import SearchBar from './library/SearchBar';
+import { PriceDisplay } from './PriceDisplay';
+import VerticalPerfBar from './VerticalPerfBar';
 
 // Memoized Card Component for virtual list
 const RankingCard = React.memo(({ item, maxPerf, providerColor, config, tier, t, formatModelName }) => {
+  // 防御性编程：如果item为null或undefined，渲染占位符
+  if (!item || typeof item !== 'object') {
+    return (
+      <div className="flex-none w-[190px] flex bg-[var(--bg-secondary)] rounded-[var(--radius-lg)] border border-[var(--border-primary)] p-3 animate-pulse">
+        <div className="mr-3 h-28 w-3.5 bg-[var(--bg-tertiary)] rounded-full"></div>
+        <div className="flex-1 flex flex-col min-w-0">
+          <div className="h-5 mb-1.5 bg-[var(--bg-tertiary)] rounded w-3/4"></div>
+          <div className="flex-1 bg-[var(--bg-tertiary)] rounded mb-3"></div>
+          <div className="pt-2 flex justify-between">
+            <div className="w-1/2 h-4 bg-[var(--bg-tertiary)] rounded"></div>
+            <div className="w-1/2 h-4 bg-[var(--bg-tertiary)] rounded"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  
+  // 安全地获取item属性，提供默认值
+  const safeAvgPerf = typeof item.avgPerf === 'number' ? item.avgPerf : 0;
+  const safePeakPerf = typeof item.peakPerf === 'number' ? item.peakPerf : 0;
+  const safeRank = item.rank || 0;
+  const safeDiff = typeof item.diff === 'number' ? item.diff : 0;
+  const safeModel = item.model || 'Unknown Model';
+  const safeProvider = item.provider || 'Unknown Provider';
+  const safeSamples = item.samples || 0;
+
   return (
     <div className="flex-none w-[190px] flex bg-[var(--bg-secondary)] rounded-[var(--radius-lg)] border border-[var(--border-primary)] p-3 hover:bg-[var(--bg-elevated)] hover:border-[var(--accent-primary)]/30 hover:shadow-[var(--shadow-lg)] transition-colors duration-300 group/card relative overflow-visible cursor-pointer">
       {/* Subtle top glow on hover */}
@@ -33,8 +56,8 @@ const RankingCard = React.memo(({ item, maxPerf, providerColor, config, tier, t,
       {/* Left: Water Level PerfBar (Compressed) */}
       <div className="mr-3 h-28 relative shrink-0">
          <VerticalPerfBar 
-            avgPerf={item.avgPerf}
-            peakPerf={item.peakPerf}
+            avgPerf={safeAvgPerf}
+            peakPerf={safePeakPerf}
             maxPerf={maxPerf}
             color={providerColor}
          />
@@ -45,10 +68,10 @@ const RankingCard = React.memo(({ item, maxPerf, providerColor, config, tier, t,
         {/* Rank and Momentum */}
         <div className="flex justify-between items-center mb-1.5 h-5">
             <div className="flex items-baseline gap-1.5">
-              <span className="text-lg font-black text-[var(--text-primary)] leading-none group-hover/card:text-[var(--accent-primary)] transition-colors w-8">#{item.rank}</span>
+              <span className="text-lg font-black text-[var(--text-primary)] leading-none group-hover/card:text-[var(--accent-primary)] transition-colors w-8">#{safeRank}</span>
               <div className="flex items-center min-w-[30px]">
-                {item.diff > 0 && <span className="text-[var(--status-success)] text-[8px] font-black bg-[var(--status-success)]/10 px-1 py-0.5 rounded shadow-sm">↑{item.diff}</span>}
-                {item.diff < 0 && <span className="text-[var(--status-error)] text-[8px] font-black bg-[var(--status-error)]/10 px-1.5 py-0.5 rounded shadow-sm">↓{Math.abs(item.diff)}</span>}
+                {safeDiff > 0 && <span className="text-[var(--status-success)] text-[8px] font-black bg-[var(--status-success)]/10 px-1 py-0.5 rounded shadow-sm">↑{safeDiff}</span>}
+                {safeDiff < 0 && <span className="text-[var(--status-error)] text-[8px] font-black bg-[var(--status-error)]/10 px-1.5 py-0.5 rounded shadow-sm">↓{Math.abs(safeDiff)}</span>}
               </div>
             </div>
             <div className="opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 shrink-0">
@@ -59,10 +82,10 @@ const RankingCard = React.memo(({ item, maxPerf, providerColor, config, tier, t,
         {/* Model and Provider */}
         <div className="mb-auto min-h-[32px]">
           <span className="font-black text-[11px] text-[var(--text-primary)] group-hover/card:text-[var(--text-primary)] group-hover/card:whitespace-normal transition-all duration-300 truncate block leading-tight">
-            {formatModelName(item.model)}
+            {formatModelName(safeModel)}
           </span>
           <span className="text-[8px] font-black uppercase tracking-tighter opacity-60 group-hover/card:opacity-100 transition-opacity block mt-0.5 truncate" style={{ color: providerColor }}>
-            {item.provider}
+            {safeProvider}
           </span>
         </div>
 
@@ -73,7 +96,7 @@ const RankingCard = React.memo(({ item, maxPerf, providerColor, config, tier, t,
                 <span className="text-[6px] uppercase font-black text-[var(--text-tertiary)] leading-none opacity-0 group-hover/card:opacity-100 transition-opacity truncate w-full" style={{ color: config.titleColor.includes('var') ? 'var(--nordic-aurora-amber)' : config.titleColor }}>{t('rankings.dataset')}</span>
               </div>
               <span className="text-[8px] font-bold text-[var(--text-tertiary)] font-mono mt-0.5">
-                <RollingNumber value={item.samples} duration={800} />
+                <RollingNumber value={safeSamples} duration={800} />
               </span>
            </div>
            <div className="flex flex-col items-end text-right w-[50%]">
@@ -81,7 +104,7 @@ const RankingCard = React.memo(({ item, maxPerf, providerColor, config, tier, t,
                 <span className="text-[6px] uppercase font-black text-[var(--text-tertiary)] leading-none opacity-0 group-hover/card:opacity-100 transition-opacity truncate w-full" style={{ color: config.titleColor.includes('var') ? 'var(--nordic-aurora-amber)' : config.titleColor }}>{t('rankings.score')}</span>
               </div>
               <PriceDisplay 
-                value={item.avgPerf} 
+                value={safeAvgPerf} 
                 decimals={0}
                 showChange={false}
                 showFlash={true}
@@ -98,17 +121,28 @@ RankingCard.displayName = 'RankingCard';
 
 // Memoized AgentCard wrapper
 const AgentCardWrapper = React.memo(({ item }) => {
+  // 防御性编程：如果 item 为 null 或 undefined，渲染一个占位符
+  if (!item) {
+    return (
+      <div className="w-48 p-4 bg-[var(--bg-elevated)] border border-[var(--border-primary)] rounded-[var(--radius-lg)] flex flex-col items-center justify-center gap-3">
+        <div className="w-16 h-16 rounded-full bg-[var(--bg-tertiary)] animate-pulse"></div>
+        <div className="w-full h-4 bg-[var(--bg-tertiary)] rounded animate-pulse"></div>
+        <div className="w-2/3 h-3 bg-[var(--bg-tertiary)] rounded animate-pulse"></div>
+      </div>
+    );
+  }
+
   return (
     <AgentCard
       agent={{
-        id: item.id,
-        name: item.model,
-        role: item.provider,
+        id: item.id || '',
+        name: item.model || 'Unknown Model',
+        role: item.provider || 'Unknown Provider',
         status: item.avgPerf > 80 ? 'thinking' : item.avgPerf > 50 ? 'idle' : 'offline',
         metadata: {
-          rank: item.rank,
-          avgPerf: item.avgPerf,
-          tier: item.tier
+          rank: item.rank || 0,
+          avgPerf: item.avgPerf || 0,
+          tier: item.tier || 'D'
         }
       }}
       isLarge={true}
@@ -122,10 +156,25 @@ const AgentCardWrapper = React.memo(({ item }) => {
 AgentCardWrapper.displayName = 'AgentCardWrapper';
 
 // Virtualized Row for react-window - defined as regular function
-const VirtualizedRow = ({ index, data }) => {
-  const { items, maxPerf, t, formatModelName } = data;
-  const item = items[index];
-  const providerColor = getProviderColor(item.provider);
+const VirtualizedRow = ({ index, items, maxPerf, t, formatModelName }) => {
+  // 防御性编程：确保 items 是有效的数组
+  if (!Array.isArray(items) || items.length === 0) {
+    return <div className="px-1 w-[190px] h-[180px] flex items-center justify-center text-gray-400 text-xs">
+      <span>Loading...</span>
+    </div>;
+  }
+  
+  // 确保索引在有效范围内
+  const item = index >= 0 && index < items.length ? items[index] : null;
+  
+  // 防御性编程：如果 item 为 null 或 undefined，渲染空项
+  if (!item || typeof item !== 'object') {
+    return <div className="px-1 w-[190px] h-[180px] flex items-center justify-center text-gray-400 text-xs">
+      <span>Loading...</span>
+    </div>;
+  }
+  
+  const providerColor = getProviderColor(item.provider || 'Unknown');
   
   // Get tier config
   const tier = item.tier || 'D';
@@ -176,9 +225,18 @@ const DraggableScrollContainer = ({ children, virtualized, items, maxPerf, t, fo
   }, [isDragging, startX, scrollLeft]);
 
   // Use virtual list if enabled and items exist
-  if (virtualized && items && items.length > 0) {
+  if (virtualized && items && Array.isArray(items) && items.length > 0) {
     const itemWidth = 198; // Card width + gap
     const containerWidth = containerRef.current?.clientWidth || 800;
+    const safeContainerWidth = containerWidth > 0 ? containerWidth : 800;
+
+    // 防御性编程：确保items是有效的数组
+    const safeItems = Array.isArray(items) ? items : [];
+    const safeT = t || (() => '');
+    const safeFormatModelName = formatModelName || ((name) => name || '');
+
+    // 确保有有效的itemCount
+    const itemCount = safeItems.length > 0 ? safeItems.length : 1;
 
     return (
       <div 
@@ -191,17 +249,28 @@ const DraggableScrollContainer = ({ children, virtualized, items, maxPerf, t, fo
         style={{ width: '100%', overflowX: 'auto' }}
       >
         <List
-          style={{ width: 'max-content' }}
-          rowCount={items.length}
-          rowHeight={180}
-          rowComponent={({ index, data, style }) => (
-            <div style={style} className="px-1">
-              <VirtualizedRow index={index} data={data} />
-            </div>
-          )}
+          height={180}
+          width={safeContainerWidth}
+          itemCount={itemCount}
+          itemSize={198}
           overscanCount={3}
-          rowData={{ items, maxPerf, t, formatModelName }}
-        />
+        >
+          {({ index, style }) => {
+            // 防御性编程：确保索引在有效范围内
+            const item = index < safeItems.length ? safeItems[index] : null;
+            return (
+              <div style={style} className="px-1">
+                <VirtualizedRow 
+                  index={index}
+                  items={safeItems}
+                  maxPerf={maxPerf}
+                  t={safeT}
+                  formatModelName={safeFormatModelName}
+                />
+              </div>
+            );
+          }}
+        </List>
       </div>
     );
   }
@@ -323,22 +392,29 @@ const AgentRankings = () => {
 
   // Memoized filtered data - only recalculate when dependencies change
   const finalData = useMemo(() => {
+    // Ensure data is always an array
+    if (!Array.isArray(data)) return [];
+    
     let filtered = data;
 
     // Apply search and filters
     if (searchQuery || activeFilters.provider.length > 0 || activeFilters.tier.length > 0 || activeFilters.status.length > 0) {
       filtered = filtered.filter(item => {
+        // Defensive check for item existence
+        if (!item || typeof item !== 'object') return false;
+        
         // Search filter
         if (searchQuery) {
           const query = searchQuery.toLowerCase();
-          const matchModel = item.model.toLowerCase().includes(query);
-          const matchProvider = item.provider.toLowerCase().includes(query);
+          const matchModel = item.model?.toLowerCase().includes(query) || false;
+          const matchProvider = item.provider?.toLowerCase().includes(query) || false;
           if (!matchModel && !matchProvider) return false;
         }
         
         // Provider filter
         if (activeFilters.provider.length > 0) {
-          if (!activeFilters.provider.includes(item.provider.toLowerCase())) return false;
+          const provider = item.provider || '';
+          if (!provider || !activeFilters.provider.includes(provider.toLowerCase())) return false;
         }
         
         // Tier filter
@@ -349,7 +425,8 @@ const AgentRankings = () => {
         
         // Status filter
         if (activeFilters.status.length > 0) {
-          if (!activeFilters.status.includes(item.status)) return false;
+          const status = item.status || '';
+          if (!status || !activeFilters.status.includes(status)) return false;
         }
         
         return true;
@@ -361,13 +438,20 @@ const AgentRankings = () => {
 
   // Memoized grouped data
   const groupedData = useMemo(() => {
+    // Ensure finalData is always an array
+    if (!Array.isArray(finalData)) return {};
+    
     return finalData.reduce((acc, item) => {
+      if (!item) return acc; // Skip null items
       const tier = item.tier || 'D';
       if (!acc[tier]) acc[tier] = [];
       acc[tier].push(item);
       return acc;
     }, {});
   }, [finalData]);
+  
+  // 确保groupedData总是对象
+  const safeGroupedData = groupedData || {};
 
   useEffect(() => {
     const fetchData = async () => {
@@ -376,7 +460,7 @@ const AgentRankings = () => {
         // Zero-Latency UX: Check if we have pre-calculated data from hover prefetch
         const cachedResult = getCachedResult(activeScenario);
         
-        if (cachedResult) {
+        if (cachedResult && Array.isArray(cachedResult) && cachedResult.length > 0) {
           setData(cachedResult);
           const max = Math.max(...cachedResult.map(item => item.peakPerf), 1);
           setMaxPerf(max);
@@ -387,18 +471,24 @@ const AgentRankings = () => {
 
         // Fallback: Normal fetch and process
         const response = await axios.get(`${API_BASE_URL}/api/agents?scenario=${activeScenario}`);
-        if (response.data.success) {
-          const rawData = response.data.data;
+        if (response && response.data && response.data.success) {
+          const rawData = response.data.data || [];
           
           // Offload sorting, weighting and rank update to Web Worker via hook
           const processedData = await processWithWorker(rawData);
 
-          setData(processedData);
-          const max = Math.max(...processedData.map(item => item.peakPerf), 1);
+          setData(processedData || []);
+          const max = processedData && processedData.length > 0 ? 
+            Math.max(...processedData.map(item => item.peakPerf), 1) : 1;
           setMaxPerf(max);
+        } else {
+          // Ensure data is always an array even if API returns failure
+          setData([]);
         }
       } catch (error) {
         console.error('Error fetching Agent data:', error);
+        // Ensure data is always an array on error
+        setData([]);
       } finally {
         setLoading(false);
         setProcessing(false);
@@ -406,7 +496,7 @@ const AgentRankings = () => {
     };
 
     fetchData();
-  }, [activeScenario, activeTimeframe, getCachedResult]);
+  }, [activeScenario, activeTimeframe, getCachedResult, processWithWorker]);
 
   const orderedTiers = ['S', 'A', 'B', 'C', 'D'];
 
@@ -527,7 +617,7 @@ const AgentRankings = () => {
           // AgentCard View Mode
           <div className="flex flex-col gap-4 mb-8">
             {orderedTiers.map(tier => {
-              const tierGroup = groupedData[tier];
+              const tierGroup = safeGroupedData[tier];
               if (!tierGroup || tierGroup.length === 0) return null;
 
               const config = TIER_CONFIG[tier] || TIER_CONFIG.D;
@@ -552,7 +642,7 @@ const AgentRankings = () => {
                           key={item.id}
                           className="flex-none transition-opacity duration-300 opacity-100"
                         >
-                          <AgentCardWrapper agent={item} />
+                          <AgentCardWrapper item={item} />
                         </div>
                       ))}
                     </div>
@@ -565,7 +655,7 @@ const AgentRankings = () => {
           // Original Rankings View Mode - with virtual scrolling
           <div className="flex flex-col gap-4 mb-8">
           {orderedTiers.map(tier => {
-            const tierGroup = groupedData[tier];
+            const tierGroup = safeGroupedData[tier];
             if (!tierGroup || tierGroup.length === 0) return null;
 
             const config = TIER_CONFIG[tier] || TIER_CONFIG.D;

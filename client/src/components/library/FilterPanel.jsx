@@ -2,8 +2,8 @@
 // Advanced filtering panel with multiple filter options
 // 样式统一: 使用 nordic-minimal.css 主题变量
 
-import React, { useState, memo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SearchBar } from './SearchBar';
 
@@ -146,12 +146,17 @@ const FilterPanel = ({
   const filterConfig = { ...defaultFilters, ...availableFilters };
   
   // Check if any filters are active
-  const hasActiveFilters = Object.values(filters).some(
+  const hasActiveFilters = filters && Object.values(filters).some(
     (value) => Array.isArray(value) ? value.length > 0 : value
   );
   
+  // 确保filters是一个对象，即使为空
+  const safeFilters = filters || {};
+  
   // Handle filter toggle
   const handleFilterToggle = (filterKey, optionId) => {
+    if (!filters) return;
+    
     const currentValues = filters[filterKey] || [];
     let newValues;
     
@@ -169,8 +174,12 @@ const FilterPanel = ({
   
   // Clear all filters
   const handleClearAll = () => {
+    if (!filters) return;
+    
     const emptyFilters = {};
-    Object.keys(filters).forEach((key) => {
+    // 安全地获取filters的键
+    const filterKeys = Object.keys(filters || {});
+    filterKeys.forEach((key) => {
       emptyFilters[key] = [];
     });
     onFilterChange(emptyFilters);
@@ -179,6 +188,8 @@ const FilterPanel = ({
   
   // Get active filter count
   const getActiveFilterCount = () => {
+    if (!filters) return 0;
+    
     return Object.values(filters).reduce((acc, val) => {
       return acc + (Array.isArray(val) ? val.length : 0);
     }, 0);
@@ -278,5 +289,5 @@ const FilterBar = ({
   );
 };
 
-export { FilterPanel, FilterBar, FilterChip, memo };
+export { FilterBar, FilterChip, FilterPanel, memo };
 export default memo(FilterPanel);

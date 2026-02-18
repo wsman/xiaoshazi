@@ -2,7 +2,7 @@
 // Mission: Predict user behavior using three algorithms + Zustand store
 // Implementation uses React Context for state management (backward compatible)
 
-import { createContext, useContext, useReducer, useCallback, useMemo } from 'react';
+import { createContext, useCallback, useContext, useMemo, useReducer } from 'react';
 
 // ==================== PREDICTION ALGORITHMS ====================
 
@@ -45,15 +45,22 @@ export const collaborativeFilter = (userHistory, allUsersData, targetItem) => {
  * Predicts based on item features and user preferences
  */
 export const contentBasedFilter = (userPreferences, itemFeatures) => {
-  if (!userPreferences || Object.keys(userPreferences).length === 0) return 0.5;
-  if (!itemFeatures || Object.keys(itemFeatures).length === 0) return 0.5;
+  // 防御性编程：确保参数是有效的对象
+  const safeUserPrefs = userPreferences && typeof userPreferences === 'object' ? userPreferences : {};
+  const safeItemFeatures = itemFeatures && typeof itemFeatures === 'object' ? itemFeatures : {};
+  
+  const userPrefKeys = Object.keys(safeUserPrefs);
+  const itemFeatureKeys = Object.keys(safeItemFeatures);
+  
+  if (userPrefKeys.length === 0) return 0.5;
+  if (itemFeatureKeys.length === 0) return 0.5;
   
   let score = 0;
   let weightSum = 0;
   
   // Match user preference weights with item feature scores
-  Object.entries(userPreferences).forEach(([feature, weight]) => {
-    const featureScore = itemFeatures[feature] || 0;
+  Object.entries(safeUserPrefs).forEach(([feature, weight]) => {
+    const featureScore = safeItemFeatures[feature] || 0;
     score += weight * featureScore;
     weightSum += Math.abs(weight);
   });
@@ -70,8 +77,9 @@ export const hybridPredict = (userHistory, allUsersData, userPreferences, target
   const contentScore = contentBasedFilter(userPreferences, itemFeatures);
   
   // Adaptive weighting based on data availability
-  const collabWeight = userHistory.length > 5 ? 0.6 : 0.3;
-  const contentWeight = Object.keys(userPreferences).length > 0 ? 0.6 : 0.3;
+  const collabWeight = userHistory && userHistory.length > 5 ? 0.6 : 0.3;
+  const safeUserPrefs = userPreferences && typeof userPreferences === 'object' ? userPreferences : {};
+  const contentWeight = Object.keys(safeUserPrefs).length > 0 ? 0.6 : 0.3;
   const baseWeight = 1 - (collabWeight + contentWeight - 0.3);
   
   return (collabScore * collabWeight) + (contentScore * contentWeight) + (0.5 * baseWeight);

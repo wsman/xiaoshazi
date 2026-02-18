@@ -47,9 +47,9 @@ const app = express();
 // CORS 配置 - 从 '*' 收紧到指定域名
 const ALLOWED_ORIGINS = [
   'http://localhost:5173',  // Vite 开发服务器
-  'http://localhost:3000',  // 备用开发服务器
+  'http://localhost:14514',  // 备用开发服务器
   'http://127.0.0.1:5173',
-  'http://127.0.0.1:3000'
+  'http://127.0.0.1:14514'
 ];
 
 // 生产环境可以添加实际域名
@@ -262,10 +262,18 @@ app.use('/api/auth', authRoutes);
 // 审计路由 (Phase 4 重构)
 app.use('/api/audit', auditRoutes);
 
-// HTTP 缓存头优化 - 静态资源缓存1年
+// HTTP 缓存头优化 - 根据环境调整缓存策略
 app.use((req, res, next) => {
     if (req.url.endsWith('.js') || req.url.endsWith('.css') || req.url.endsWith('.woff2') || req.url.endsWith('.png') || req.url.endsWith('.jpg')) {
-        res.set('Cache-Control', 'public, max-age=31536000');
+        if (process.env.NODE_ENV === 'production') {
+            // 生产环境：缓存1年
+            res.set('Cache-Control', 'public, max-age=31536000, immutable');
+        } else {
+            // 开发环境：禁用缓存，强制每次请求新文件
+            res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+            res.set('Pragma', 'no-cache');
+            res.set('Expires', '0');
+        }
     }
     next();
 });
